@@ -1,0 +1,176 @@
+<template>
+<div>
+    <section class="lab_internal internal lab">
+        <article class="screen">
+            <img :src="article.screen" :title="article.title" :alt="article.title" />
+            <a class="btn" :href="article.url" target="_blank">Link →</a>
+        </article>
+        <article class="description">
+            <h2>{{article.title}}</h2>
+            <p>{{article.description}}</p>
+            <h3>Usei:</h3>
+            <ul>
+                <li v-for="item in article.tags" :key="item">{{item}}</li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+        <div class="lab_back">
+            <a class="btn" @click="labBack()">← Voltar</a>
+        </div>
+    </footer>
+    <div class="footer_mobile">
+        <a class="btn project" :href="article.url" target="_blank">Link →</a>
+        <a class="btn back" @click="labBack()">← Voltar</a>
+    </div>
+</div>
+</template>
+<script>
+export default {
+  name: "PortfolioDetalhe",
+
+//   data() {
+//     return {
+//      article: []
+//     }
+//   },
+  created() {
+    this.article = this.$route.params.data
+  },
+  methods: {
+    labBack() {
+        window.history.back();
+    },
+    labScroll() {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+.lab_internal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 55px;
+}
+.screen{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: center;
+    border-radius: 20px;
+    img{
+        width: 100%;
+        box-shadow: 1px 1px 3px #ccc;
+        margin-bottom: 40px;
+    }
+    .btn{
+        background: #320d6d;
+        a{
+            color: #fff;
+        }
+    }
+    i{
+        font-size: 1.2em;
+    }
+}
+.description{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    h2{
+        font-size: 1.6em;
+        font-weight: normal;
+    }
+    h3{
+        font-size: 1.1em;
+        font-weight: normal;
+        margin-bottom: 6px;
+    }
+    p{
+        font-size: 1.4em;
+        margin: 15px 0;
+    }
+    ul{
+    padding: 0px;
+    }
+    li{
+        border-radius: 100px;
+        border: 1px solid #000;
+        float: left;
+        font-size: 0.9em;
+        margin-right: 7px;
+        margin-bottom: 7px;
+        padding: 10px 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+footer{
+    position: absolute;
+    position: fixed;
+    right: 55px;
+    bottom: 25px;
+    i{
+        font-size: 1.2em;
+    }
+    .btn{
+        background: #ffd447;
+        color: #000;
+    }
+}
+.footer_mobile{
+    background: #fff;
+    box-shadow: 2px 1px 2px 2px #ccc;
+    bottom: 0;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    display: none;
+    .btn{
+        background: #000;
+        margin-right: 5px;
+        
+        font-size: 0.6em;
+        a{
+            color: #fff;
+            padding: 10px 20px;
+        }
+    }
+    .project{
+        background: #320d6d;
+    }
+    .back{
+        background: #ffd447;
+        color: #000;
+    }
+}
+/* MEDIA QUERIES START */
+@media(max-width: 60em){
+    .lab_internal{
+        grid-template-columns: 1fr;
+    }
+    .screen {
+        .btn{
+            display: none;
+        }
+        img{
+            margin-bottom: -50px;
+        }
+    } 
+    .description{
+        grid-column-start: 1;
+        grid-column-end: 2; 
+    }
+    footer{
+        display: none;
+    }
+    .footer_mobile{
+        display: block;
+    }
+}
+/* MEDIA QUERIES END  */
+</style>

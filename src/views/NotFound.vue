@@ -2,10 +2,8 @@
   <div>
         <section class="home">
         <article>
-            <h2>renato7oliveira · webdesigner</h2>
-            <p>Olá, trabalho com desenvolvimento responsivo de websites e gestão de comunicação digital.</p>
-            <!-- <router-link to="/lab" class="btn btn_home">lab</router-link> -->
-            <router-link to="/portfolio" class="btn">Ver Portfolio →</router-link>
+            <h2>página não encontrada...</h2>
+            <router-link to="/" class="btn">← Home</router-link>
         </article>
     </section>
   </div>
@@ -23,14 +21,11 @@
         color: #320d6d;
         font-size: 2.2em;
         font-weight: bolder;
+        margin-bottom: 20px;
         text-shadow: 0px 0px 0px!important;
     }
         router-link, .btn{
             background: #320d6d;
-    }
-    p{
-        font-size: 1.4em;
-        margin-bottom: 20px;
     }
 }
 /* MEDIA QUERIES START */
@@ -38,7 +33,7 @@
     .home{
         grid-template-columns: 1fr;
         align-content: initial;
-        padding-top: 120px;
+        padding-top: 90px;
     }
 }
 /* MEDIA QUERIES END  */
