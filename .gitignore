@@ -4,6 +4,7 @@ src/App copy.vue
 .DS_Store
 node_modules
 /dist
+/src
 
 
 # local env files
