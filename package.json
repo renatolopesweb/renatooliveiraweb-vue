@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "push-dir --dir=dist/renato7oliveira-webdesigner --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist/ --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "core-js": "^3.6.5",
