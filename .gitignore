@@ -1,12 +1,13 @@
 #me
-src/App copy.vue
 trash
 src
 
 .DS_Store
 node_modules
-# /dist
+src
+src/
 /src
+# /dist
 
 
 # local env files
