@@ -35,8 +35,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  routes,
-  base: "/portfolio/"
+  routes
 });
 
 router.beforeEach((to, from, next) =>{
