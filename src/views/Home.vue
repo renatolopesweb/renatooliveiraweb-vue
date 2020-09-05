@@ -5,13 +5,14 @@
             <h2>renato7oliveira · webdesigner</h2>
             <p>Olá, trabalho com desenvolvimento responsivo de websites e gestão de comunicação digital.</p>
             <!-- <router-link to="/lab" class="btn btn_home">lab</router-link> -->
-            <router-link to="/portfolio" class="btn">Ver Portfolio →</router-link>
+            <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </article>
     </section>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
 .home{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -30,6 +31,9 @@
     }
     p{
         margin-bottom: 20px;
+    }
+    i{
+        font-size: 1em;
     }
 }
 /* MEDIA QUERIES START */

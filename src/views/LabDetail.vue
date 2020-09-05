@@ -3,7 +3,7 @@
     <section class="lab_internal internal lab">
         <article class="screen">
             <img :src="article.screen" :title="article.title" :alt="article.title" />
-            <a class="btn" :href="article.url" target="_blank">Link →</a>
+            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-launch"></i> Link</a>
         </article>
         <article class="description">
             <h2>{{article.title}}</h2>
@@ -16,12 +16,12 @@
     </section>
     <footer>
         <div class="lab_back">
-            <a class="btn" @click="labBack()">← Voltar</a>
+            <a class="btn" @click="labBack()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
         </div>
     </footer>
     <div class="footer_mobile">
-        <a class="btn project" :href="article.url" target="_blank">Link →</a>
-        <a class="btn back" @click="labBack()">← Voltar</a>
+        <a class="btn project" :href="article.url" target="_blank"><i class="material-icons-outline md-launch"></i> Link</a>
+        <a class="btn back" @click="labBack()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
     </div>
 </div>
 </template>
@@ -75,7 +75,7 @@ export default {
         }
     }
     i{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 .description{
@@ -112,9 +112,9 @@ footer{
     position: absolute;
     position: fixed;
     right: 55px;
-    bottom: 25px;
+    bottom: 35px;
     i{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .btn{
         background: #ffd447;
@@ -125,18 +125,19 @@ footer{
     background: #fff;
     box-shadow: 2px 1px 2px 2px #ccc;
     bottom: 0;
-    padding: 25px 0 25px 10px;
+    padding: 23px 0 25px 10px;
     position: fixed;
     width: 100%;
     display: none;
     .btn{
         background: #000;
         margin-right: 10px;
-        
-        font-size: 0.6em;
+        font-size: 0.8em;
         a{
             color: #fff;
-            padding: 10px 20px;
+        }
+        i{
+            font-size: 1.2em;
         }
     }
     .project{
@@ -157,7 +158,7 @@ footer{
             display: none;
         }
         img{
-            margin-bottom: -50px;
+            margin-bottom: -40px;
         }
     } 
     .description{

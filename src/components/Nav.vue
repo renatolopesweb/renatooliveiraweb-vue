@@ -18,6 +18,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 header{
     background: #fff;
     display: grid;
@@ -68,6 +69,9 @@ header{
         background: #320d6d;
         box-shadow: 0px 0px 0px 0px;
         grid-template-columns: 65px auto;
+        h1{
+            font-size: 1.1em;
+        }
         h1 a , .nav i{
             color: #fff;
             font-weight: bolder;
@@ -75,10 +79,10 @@ header{
     }
 }
 .sidebar {
-//    box-shadow: 1px 2px 5px 2px #ccc;
+    box-shadow: 1px 2px 5px 2px #ccc;
     background: #fff;
     height: 100vh;
-    margin-left: -248px;
+    margin-left: -258px;
     position: relative;
     position: fixed;
     transition: all 0.4s;
@@ -90,8 +94,8 @@ header{
 }
 @media(max-width: 50em){
     .sidebar{
-        margin-left: -230px;
-        width: 230px;
+        margin-left: -280px;
+        width: 270px;
     }
 }
 .sidebar.active {
@@ -121,8 +125,9 @@ header{
         margin-left: 0px;
     }
 }
+
 .overlay{
-    background: #000;
+    background: #fff;
     display: none;
     height: 100%;
     height: 100vh;

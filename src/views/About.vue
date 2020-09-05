@@ -43,14 +43,14 @@
     }
     i{
         font-size: 1.4em;
-        margin-right: 7px;
+        margin-right: 9px;
     }
     .social a{
         color: #000;
         opacity: 1;
         transition-duration: 0.2s;
         &:hover{
-        opacity: 0.8;
+        color: #320d6d;
         }
     }
 }

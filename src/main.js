@@ -34,6 +34,9 @@ document.querySelector('.sidebar').onclick = function () {
     mainContent.classList.toggle('ds_block');
     scrollTop();
 }
+document.querySelector('h1').onclick = function () {
+    scrollTop();
+}
 document.querySelector('.overlay').onclick = function () {
     sidebar.classList.toggle('active');
     mainContent.classList.toggle('ds_block');
