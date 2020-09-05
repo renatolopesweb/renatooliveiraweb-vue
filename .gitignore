@@ -4,7 +4,7 @@ src
 
 .DS_Store
 node_modules
-src
+./src
 src/
 /src
 # /dist

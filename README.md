@@ -1,24 +1,9 @@
-# portfolio
+## Portfolio Vue.js
+// https://www.renato7oliveira.com.br
 
-## Project setup
-```
-npm install
-```
+### `Server Free`
+// Netlify -> https://app.netlify.com/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### `Frontend`
+// Vue.js -> https://vuejs.org/
+// Sass -> https://sass-lang.com/
