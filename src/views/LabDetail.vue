@@ -86,12 +86,11 @@ export default {
         font-weight: normal;
     }
     h3{
-        font-size: 1.1em;
+        font-size: 1.3em;
         font-weight: normal;
         margin-bottom: 6px;
     }
     p{
-        font-size: 1.4em;
         margin: 15px 0;
     }
     ul{
@@ -126,13 +125,13 @@ footer{
     background: #fff;
     box-shadow: 2px 1px 2px 2px #ccc;
     bottom: 0;
-    padding: 15px;
+    padding: 25px 0 25px 10px;
     position: fixed;
     width: 100%;
     display: none;
     .btn{
         background: #000;
-        margin-right: 5px;
+        margin-right: 10px;
         
         font-size: 0.6em;
         a{

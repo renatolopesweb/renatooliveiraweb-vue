@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <div class="nav"><i class="material-icons">menu</i></div>
+            <div class="nav"><i class="material-icons-outline md-menu"></i></div>
             <div><h1><router-link to="/">renato7oliveira · webdesigner</router-link></h1></div>
         </header>
         <nav>
@@ -67,8 +67,10 @@ header{
     header{
         background: #320d6d;
         box-shadow: 0px 0px 0px 0px;
+        grid-template-columns: 65px auto;
         h1 a , .nav i{
             color: #fff;
+            font-weight: bolder;
         }
     }
 }

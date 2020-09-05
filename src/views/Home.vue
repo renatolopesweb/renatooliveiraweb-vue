@@ -29,7 +29,6 @@
             background: #320d6d;
     }
     p{
-        font-size: 1.4em;
         margin-bottom: 20px;
     }
 }

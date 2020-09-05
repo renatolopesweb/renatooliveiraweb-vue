@@ -35,7 +35,7 @@
         box-shadow: 1px 1px 3px #ccc;
     }
     p{
-        font-size: 1.4em;
+        margin-bottom: 15px;
     }
     h3{
         font-size: 1.4em;
