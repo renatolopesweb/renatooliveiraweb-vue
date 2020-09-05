@@ -3,7 +3,7 @@ src/App copy.vue
 
 .DS_Store
 node_modules
-/dist
+# /dist
 /src
 
 
