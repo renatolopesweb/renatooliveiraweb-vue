@@ -132,7 +132,7 @@ footer{
     .btn{
         background: #000;
         margin-right: 10px;
-        font-size: 0.6em;
+        font-size: 0.7em;
         padding: 12px;
         a{
             color: #fff;
