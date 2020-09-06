@@ -125,19 +125,20 @@ footer{
     background: #fff;
     box-shadow: 2px 1px 2px 2px #ccc;
     bottom: 0;
-    padding: 23px 0 25px 10px;
+    padding: 18px 0 20px 10px;
     position: fixed;
     width: 100%;
     display: none;
     .btn{
         background: #000;
         margin-right: 10px;
-        font-size: 0.8em;
+        font-size: 0.6em;
+        padding: 12px;
         a{
             color: #fff;
         }
         i{
-            font-size: 1.2em;
+            font-size: 1em;
         }
     }
     .project{

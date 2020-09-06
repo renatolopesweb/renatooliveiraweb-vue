@@ -79,7 +79,7 @@ header{
     }
 }
 .sidebar {
-    box-shadow: 1px 2px 5px 2px #ccc;
+    // box-shadow: 1px 2px 5px 2px #ccc;
     background: #fff;
     height: 100vh;
     margin-left: -258px;
@@ -127,7 +127,7 @@ header{
 }
 
 .overlay{
-    background: #fff;
+    background: #000;
     display: none;
     height: 100%;
     height: 100vh;
@@ -142,6 +142,7 @@ header{
 //    animation-delay: 0.4s;
     animation-fill-mode: forwards;
 }
+
 .ds_block{
     display: block!important;
     transition: all 0.5s;

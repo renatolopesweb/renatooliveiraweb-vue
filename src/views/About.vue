@@ -13,7 +13,7 @@
         <p>Tenho o hobby de pedalar e toco um violão bem modesto. Amo música nacional mas o que seria de nós sem Beatles?</p>
         <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.
         </p>
-        <h3>Mais informações:</h3>
+        <h3>Mídias Sociais:</h3>
         <p class="social">
             <a href="https://bit.ly/2x9Bgj7" alt="Github" title="Github" target="_blank"><i class="fa fa-github"></i></a>
             <a href="https://bit.ly/2QzoMZ8" alt="Linkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
