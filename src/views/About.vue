@@ -3,7 +3,7 @@
         <section class="about internal">
         <div>
             <figure>
-                <img src="../assets/images/renato7oliveira.gif" width="100%" alt="">
+                <img src="../assets/images/renato7oliveira.gif" width="100%" alt="renato7oliveira" title="renato7oliveira">
             </figure>
         </div>
         <div>

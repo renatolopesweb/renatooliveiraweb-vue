@@ -94,8 +94,8 @@ header{
 }
 @media(max-width: 50em){
     .sidebar{
-        margin-left: -280px;
-        width: 270px;
+        margin-left: -250px;
+        width: 250px;
     }
 }
 .sidebar.active {

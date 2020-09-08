@@ -42,6 +42,16 @@
         grid-template-columns: 1fr;
         align-content: initial;
         padding-top: 120px;
+            h2{
+                font-weight: normal;
+                font-size: 2em;
+            }
+            p{
+                font-weight: normal;
+                font-size: 1.2em;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
     }
 }
 /* MEDIA QUERIES END  */
