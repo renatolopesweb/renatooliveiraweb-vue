@@ -39,6 +39,12 @@ html, body{
 p{
     font-size: 1.4em;
 }
+@media(max-width: 60em){
+    p{
+        font-weight: normal;
+        font-size: 1.2em;
+    }  
+}
 /* BOOT END */
 
 /* TEMPLATE START */

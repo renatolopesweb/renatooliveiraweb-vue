@@ -8,11 +8,9 @@
         </div>
         <div>
         <p>Trabalho com web desde 2009, época onde fazia desde animações em Flash (RIP!) à websites estáticos. 
-            Hoje estou dedicado ao desenvolvimento frontend para web, UX e Gestão de Comunicação Digital.
-        </p>
+            Hoje estou dedicado ao frontend, UX e Comunicação Digital.</p>
         <p>Tenho o hobby de pedalar e toco um violão bem modesto. Amo música nacional mas o que seria de nós sem Beatles?</p>
-        <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.
-        </p>
+        <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>
         <h3>Mídias Sociais:</h3>
         <p class="social">
             <a href="https://bit.ly/2x9Bgj7" alt="Github" title="Github" target="_blank"><i class="fa fa-github"></i></a>

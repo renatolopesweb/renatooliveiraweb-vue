@@ -120,7 +120,6 @@ export default {
         margin-bottom: 8px
     }
     p{
-        font-size: 1.2em;
         margin: 15px 0;
     }
 }

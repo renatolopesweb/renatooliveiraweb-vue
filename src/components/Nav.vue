@@ -31,7 +31,7 @@ header{
     width: 100%;
     z-index: 1;
     h1{
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: lighter;
         margin-top: -2px;
         padding: 0px;
@@ -51,6 +51,7 @@ header{
         text-align: center;
         i{
             border-radius: 50%;
+            color: #000;
             transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             margin-top: 4px;       
             &:hover{

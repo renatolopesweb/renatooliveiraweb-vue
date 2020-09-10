@@ -1,10 +1,9 @@
 <template>
   <div>
-        <section class="home">
+    <section class="home">
         <article>
             <h2>renato7oliveira · webdesigner</h2>
             <p>Olá, trabalho com desenvolvimento responsivo de websites e gestão de comunicação digital.</p>
-            <!-- <router-link to="/lab" class="btn btn_home">lab</router-link> -->
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </article>
     </section>
@@ -45,12 +44,6 @@
             h2{
                 font-weight: normal;
                 font-size: 2em;
-            }
-            p{
-                font-weight: normal;
-                font-size: 1.2em;
-                margin-top: 10px;
-                margin-bottom: 20px;
             }
     }
 }
