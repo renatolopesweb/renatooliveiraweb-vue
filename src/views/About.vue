@@ -7,8 +7,10 @@
             </figure>
         </div>
         <div>
-        <p>Trabalho com web desde 2009, época onde fazia desde animações em Flash (RIP!) à websites estáticos. 
-            Hoje estou dedicado ao frontend, UX e Comunicação Digital.</p>
+        <p>Trabalho com web desde 2009, época onde criava de animações em Flash à websites estáticos. 
+            Hoje estou dedicado a webdesign e Comunicação Digital. Já passei por empresas atuando  
+            no desenvolvimento frontend das aplicações, assim como responsável por Gerenciamento de Novos Projetos para Web.
+        </p>
         <p>Tenho o hobby de pedalar e toco um violão bem modesto. Amo música nacional mas o que seria de nós sem Beatles?</p>
         <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>
         <h3>Mídias Sociais:</h3>

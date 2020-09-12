@@ -1,6 +1,9 @@
 <template>
   <div>
     <section class="home">
+        <div class="mobile_home">
+            <img src="../assets/images/mobile_home.svg" alt="webdesign">
+        </div>
         <article>
             <h2>renato7oliveira · webdesigner</h2>
             <p>Olá, trabalho com desenvolvimento responsivo de websites e gestão de comunicação digital.</p>
@@ -35,16 +38,24 @@
         font-size: 1em;
     }
 }
+.mobile_home{
+    background: #320d6d;
+    margin-bottom: 15px;
+    display: none;
+}
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
     .home{
         grid-template-columns: 1fr;
         align-content: initial;
-        padding-top: 120px;
+        padding-top: 100px;
             h2{
                 font-weight: normal;
                 font-size: 2em;
             }
+    }
+    .mobile_home{
+        display: block;
     }
 }
 /* MEDIA QUERIES END  */

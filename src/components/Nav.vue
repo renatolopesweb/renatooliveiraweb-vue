@@ -67,14 +67,12 @@ header{
 // 800px
 @media(max-width: 50em){
     header{
-        background: #320d6d;
-        box-shadow: 0px 0px 0px 0px;
+
         grid-template-columns: 65px auto;
         h1{
             font-size: 1.1em;
         }
         h1 a , .nav i{
-            color: #fff;
             font-weight: bolder;
         }
     }
@@ -95,8 +93,8 @@ header{
 }
 @media(max-width: 50em){
     .sidebar{
-        margin-left: -250px;
-        width: 250px;
+        margin-left: -200px;
+        width: 200px;
     }
 }
 .sidebar.active {
