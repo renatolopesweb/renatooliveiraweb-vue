@@ -69,7 +69,7 @@ export default {
         margin-bottom: 40px;
     }
     .btn{
-        background: #320d6d;
+        background: #030F92;
         a{
             color: #fff;
         }
@@ -117,8 +117,8 @@ footer{
         font-size: 1.1em;
     }
     .btn{
-        background: #ffd447;
-        color: #000;
+        background: #FA3423;
+        color: #fff;
     }
 }
 .footer_mobile{
@@ -142,11 +142,11 @@ footer{
         }
     }
     .project{
-        background: #320d6d;
+        background: #030F92;
     }
     .back{
-        background: #ffd447;
-        color: #000;
+        background: #FA3423;
+        color: #fff;
     }
 }
 /* MEDIA QUERIES START */

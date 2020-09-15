@@ -6,7 +6,7 @@
         </div>
         <article>
             <h2>renato7oliveira · webdesigner</h2>
-            <p>Olá, trabalho com desenvolvimento responsivo de websites e gestão de comunicação digital.</p>
+            <p>Olá, trabalho com desenvolvimento responsivo de website e comunicação digital.</p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </article>
     </section>
@@ -23,13 +23,13 @@
     h2{
         background: transparent;
         border: 0px;
-        color: #320d6d;
+        color: #030F92;
         font-size: 2.2em;
         font-weight: bolder;
         text-shadow: 0px 0px 0px!important;
     }
-        router-link, .btn{
-            background: #320d6d;
+    router-link, .btn{
+        background: #030F92;
     }
     p{
         margin-bottom: 20px;
@@ -39,7 +39,7 @@
     }
 }
 .mobile_home{
-    background: #320d6d;
+    background: #030F92;
     margin-bottom: 15px;
     display: none;
 }
