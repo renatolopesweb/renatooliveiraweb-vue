@@ -18,14 +18,14 @@
     h2{
         background: transparent;
         border: 0px;
-        color: #320d6d;
+        color: #030F92;
         font-size: 2.2em;
         font-weight: bolder;
         margin-bottom: 20px;
         text-shadow: 0px 0px 0px!important;
     }
         router-link, .btn{
-            background: #320d6d;
+            background: #030F92;
     }
 }
 /* MEDIA QUERIES START */
