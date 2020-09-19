@@ -1,12 +1,17 @@
 <template>
   <div>
     <section class="home">
-        <div class="mobile_home">
-            <img src="../assets/images/mobile_home.svg" alt="webdesign">
-        </div>
         <article>
+            <figure>
+          <img
+            src="../assets/images/renato7oliveira-home.jpg"
+            width="100%"
+            alt="renato7oliveira"
+            title="renato7oliveira"
+          />
+        </figure>
             <h2>renato7oliveira · webdesigner</h2>
-            <p>Olá, trabalho com desenvolvimento responsivo de website e comunicação digital.</p>
+            <p>Olá, trabalho com desenvolvimento de website e comunicação digital.</p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </article>
     </section>
@@ -16,15 +21,19 @@
 <style lang="scss" scoped>
 
 .home{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
     align-content: center;
+     display: grid;
+    // grid-template-columns: 1fr;
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
     h2{
         background: transparent;
         border: 0px;
         color: #030F92;
-        font-size: 2.2em;
+        font-size: 1.5em;
         font-weight: bolder;
         text-shadow: 0px 0px 0px!important;
     }
@@ -33,15 +42,22 @@
     }
     p{
         margin-bottom: 20px;
+        font-size: 1.1em;
     }
     i{
         font-size: 1em;
     }
-}
-.mobile_home{
-    background: #030F92;
-    margin-bottom: 15px;
-    display: none;
+    img{
+        background: #f0f0f0;
+        border-radius: 50%;
+        filter: grayscale(100%);
+        text-align: center;
+        transition: 0.3s all;
+        width: 100px;
+            &:hover{
+                filter: grayscale(0%);
+            }
+    }
 }
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
@@ -49,13 +65,7 @@
         grid-template-columns: 1fr;
         align-content: initial;
         padding-top: 100px;
-            h2{
-                font-weight: normal;
-                font-size: 2em;
-            }
-    }
-    .mobile_home{
-        display: block;
+
     }
 }
 /* MEDIA QUERIES END  */

@@ -4,7 +4,7 @@
       <div>
         <figure>
           <img
-            src="../assets/images/renato7oliveira.gif"
+            src="../assets/images/renato7oliveira-home.jpg"
             width="100%"
             alt="renato7oliveira"
             title="renato7oliveira"
@@ -27,8 +27,8 @@
         </p>
       </div>
       <div>
-        <p>Me chamo Renato e trabalho como webdesigner desde 2009. Tenho habilidades para desenvoler e gerenciar projetos web.
-           Meu foco é o frontend mas sou próximo de equipes de UX, Design, Comunicação & Marketing. 
+        <p>Me chamo Renato, trabalho como webdesigner desde 2009.
+           Os meus interesses profissionais são: Desenvolvimento Frontend, Design, Comunicação & Marketing. 
         </p>
         <p>Tenho o hobby estranho de pedalar e toco um violão pra lá de modesto.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>
