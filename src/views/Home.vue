@@ -3,12 +3,13 @@
     <section class="home">
         <article>
             <figure>
+                <router-link to="/sobre">
           <img
             src="../assets/images/renato7oliveira-home.jpg"
-            width="100%"
             alt="renato7oliveira"
             title="renato7oliveira"
           />
+          </router-link>
         </figure>
             <h2>renato7oliveira · webdesigner</h2>
             <p>Olá, trabalho com desenvolvimento de website e comunicação digital.</p>
@@ -65,7 +66,6 @@
         grid-template-columns: 1fr;
         align-content: initial;
         padding-top: 100px;
-
     }
 }
 /* MEDIA QUERIES END  */

@@ -4,8 +4,7 @@
       <div>
         <figure>
           <img
-            src="../assets/images/renato7oliveira-home.jpg"
-            width="100%"
+            src="../assets/images/renato7oliveira-home.jpg" 
             alt="renato7oliveira"
             title="renato7oliveira"
           />

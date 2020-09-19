@@ -8,7 +8,7 @@
         <article class="description">
             <h2>{{article.title}}</h2>
             <p>{{article.description}}</p>
-            <h3>Usei:</h3>
+            <h3>Stack:</h3>
             <ul>
                 <li v-for="item in article.tags" :key="item">{{item}}</li>
             </ul>
@@ -66,7 +66,7 @@ export default {
     img{
         width: 100%;
         box-shadow: 1px 1px 3px #ccc;
-        margin-bottom: 40px;
+        margin-bottom: 55px;
     }
     .btn{
         background: #030F92;
