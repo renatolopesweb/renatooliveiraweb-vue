@@ -42,7 +42,7 @@ p{
 @media(max-width: 60em){
     p{
         font-weight: normal;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }  
 }
 /* BOOT END */

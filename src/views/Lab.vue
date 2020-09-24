@@ -16,21 +16,29 @@ export default {
     return {
       articles: [
         {
-          screen: require("../assets/images/portfolio-street-fighter.jpg"),
-          title: "Street Fighter Tribute (old school)",
+          screen: require("../assets/images/portfolio-beatles.jpg"),
+          title: "Beatles Tributo",
           description: `
-                    Sua interface é fluída portanto a melhor experiência é desktop.
-                    As imagens foram retiradas do Pinterest.  
-                    Demora um pouco para carregar pois tem um vídeo na introdução, mas vale a pena esperar :·)
+                    Singela homenagem a melhor banda do mundo. Interessante aqui foi o modal componentizado do vueJs.
+                    `,
+          url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
+          tags: ["vue", "css grids" , "photoshop"],
+        },
+        {
+          screen: require("../assets/images/portfolio-street-fighter.jpg"),
+          title: "Street Fighter Tributo (old school)",
+          description: `
+                    Melhor experiência no desktop mas é responsivo. As imagens são do Pinterest, creditei no Readme.  
+                    Demora para carregar pois tem vídeo introdutório, vale a pena esperar :·)
                     `,
           url: "https://renato7oliveira.github.io/street-fighter-audio-project",
-          tags: ["edge", "photoshop"],
+          tags: ["edge", "photoshop" , "design"],
         },
         {
           screen: require("../assets/images/portfolio-breaking-infografico.jpg"),
           title: "Infográfico do Breaking Bad",
           description: `
-          Criei este infográfico com fotos e frases intrigantes dos personagens da minha série favorita.
+          Criei este infográfico com frases intrigantes dos personagens da minha série favorita💕
           `,
           url: "https://br.pinterest.com/pin/102949541465385965/",
           tags: ["Illustrator"],
