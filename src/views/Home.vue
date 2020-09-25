@@ -28,7 +28,7 @@
     height: 100vh;
     width: 90%;
     margin: auto;
-    max-width: 800px;
+    max-width: 630px;
     text-align: center;
     img{
         background: #f0f0f0;
@@ -43,7 +43,7 @@
     }
     h2{
         color: #030F92;
-        font-size: 2.2em;
+        font-size: 1.8em;
         font-weight: bolder;
         text-shadow: 0px 0px 0px!important;
     }
@@ -52,7 +52,7 @@
     }
     p{
         margin-bottom: 20px;
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     i{
         font-size: 1em;

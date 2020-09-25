@@ -3,7 +3,7 @@
     <section class="lab_internal internal lab">
         <article class="screen">
             <img :src="article.screen" :title="article.title" :alt="article.title" />
-            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-launch"></i> Link</a>
+            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
         </article>
         <article class="description">
             <h2>{{article.title}}</h2>
@@ -20,7 +20,7 @@
         </div>
     </footer>
     <div class="footer_mobile">
-        <a class="btn project" :href="article.url" target="_blank"><i class="material-icons-outline md-launch"></i> Link</a>
+        <a class="btn project" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
         <a class="btn back" @click="labBack()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
     </div>
 </div>

@@ -7,7 +7,6 @@
       </article>
     </section>
   </div>
-  <!-- <router-link to="/lab"><button class="btn btn_home">Laboratório →</button></router-link> -->
 </template>
 <script>
 export default {
@@ -25,14 +24,11 @@ export default {
           tags: ["vue", "css grids" , "photoshop"],
         },
         {
-          screen: require("../assets/images/portfolio-street-fighter.jpg"),
-          title: "Street Fighter Tributo (old school)",
-          description: `
-                    Melhor experiência no desktop mas é responsivo. As imagens são do Pinterest, creditei no Readme.  
-                    Demora para carregar pois tem vídeo introdutório, vale a pena esperar :·)
-                    `,
-          url: "https://renato7oliveira.github.io/street-fighter-audio-project",
-          tags: ["edge", "photoshop" , "design"],
+          screen: require("../assets/images/portfolio-breaking-bad-video.jpg"),
+          title: "Breaking Bad - Vídeo slide show",
+          description: "Um slide show básico com imagens da série.",
+          url: "https://www.youtube.com/watch?v=qHwl86jkmGg",
+          tags: ["Premiere"],
         },
         {
           screen: require("../assets/images/portfolio-breaking-infografico.jpg"),
@@ -44,11 +40,14 @@ export default {
           tags: ["Illustrator"],
         },
         {
-          screen: require("../assets/images/portfolio-breaking-bad-video.jpg"),
-          title: "Breaking Bad Slide Show",
-          description: "Um slide show básico com imagens da série.",
-          url: "https://www.youtube.com/watch?v=qHwl86jkmGg",
-          tags: ["Premiere"],
+          screen: require("../assets/images/portfolio-street-fighter.jpg"),
+          title: "Street Fighter Tributo (old school)",
+          description: `
+                    Melhor experiência no desktop mas é responsivo. As imagens são do Pinterest, creditei no Readme.  
+                    Demora para carregar pois tem vídeo introdutório, mas vale a pena esperar :·)
+                    `,
+          url: "https://renato7oliveira.github.io/street-fighter-audio-project",
+          tags: ["edge", "photoshop" , "design"],
         },
       ],
     };
