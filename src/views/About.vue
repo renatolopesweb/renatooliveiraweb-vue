@@ -61,7 +61,7 @@
     opacity: 1;
     transition-duration: 0.2s;
     &:hover {
-      color: #030F92;
+      color: #FA3423;
     }
     i{
         margin-right: 9px;
@@ -69,7 +69,7 @@
     }
   }
   router-link, .btn{
-    background: #030F92;
+    background: #FA3423;
     font-size: 0.6em;
     i{
         font-size: 1em;

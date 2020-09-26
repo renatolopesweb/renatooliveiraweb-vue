@@ -12,7 +12,7 @@
           </router-link>
         </figure>
             <h2>renato7oliveira · webdesigner</h2>
-            <p>Olá, trabalho com desenvolvimento de website e comunicação digital.</p>
+            <p>Olá, trabalho com desenvolvimento web e comunicação digital.</p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </article>
     </section>
@@ -33,22 +33,22 @@
     img{
         background: #f0f0f0;
         border-radius: 50%;
-        filter: grayscale(100%);
+        // filter: grayscale(70%);
         text-align: center;
         transition: 0.3s all;
         width: 150px;
-            &:hover{
-                filter: grayscale(0%);
-            }
+            // &:hover{
+            //     filter: grayscale(0%);
+            // }
     }
     h2{
-        color: #030F92;
+        color: #FA3423;
         font-size: 1.8em;
         font-weight: bolder;
         text-shadow: 0px 0px 0px!important;
     }
     router-link, .btn{
-        background: #030F92;
+        background: #FA3423;
     }
     p{
         margin-bottom: 20px;

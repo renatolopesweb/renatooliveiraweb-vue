@@ -26,7 +26,7 @@ header{
     height: 80px;
     align-content: center;
     align-items: center;
-    box-shadow: 1px 1px 2px 1px #ccc;
+    box-shadow: 1px 1px 2px 1px #f0f0f0;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -35,6 +35,7 @@ header{
         font-weight: lighter;
         margin-top: -2px;
         padding: 0px;
+        text-shadow: 0px 0px 1px #666;
         a{
             color: #111;
             &:hover{

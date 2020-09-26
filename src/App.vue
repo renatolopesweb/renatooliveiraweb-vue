@@ -31,7 +31,7 @@ export default {
     font-family: 'Roboto', sans-serif;
 }
 html, body{
-    text-shadow: 0px 0px 1px #666;
+    // text-shadow: 0px 0px 1px #666;
     // font-family: 'Roboto', sans-serif;
     color: #111;
  //   background: #333;

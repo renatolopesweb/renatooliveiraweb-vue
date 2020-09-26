@@ -69,7 +69,7 @@ export default {
         margin-bottom: 55px;
     }
     .btn{
-        background: #030F92;
+        background: #FA3423;
         a{
             color: #fff;
         }
@@ -98,7 +98,7 @@ export default {
     }
     li{
         border-radius: 100px;
-        border: 1px solid #000;
+        border: 1px dashed #000;
         float: left;
         font-size: 0.9em;
         margin-right: 7px;
@@ -117,7 +117,7 @@ footer{
         font-size: 1.1em;
     }
     .btn{
-        background: #FA3423;
+        background: #030F92;
         color: #fff;
     }
 }
@@ -142,10 +142,10 @@ footer{
         }
     }
     .project{
-        background: #030F92;
+        background: #FA3423;
     }
     .back{
-        background: #FA3423;
+        background: #030F92;
         color: #fff;
     }
 }
