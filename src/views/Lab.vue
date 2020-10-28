@@ -68,6 +68,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.dark-mode:root{
+      .lab article{
+        background: #010c0d;
+        box-shadow: 1px 1px 3px #010c0d;
+        &:hover{
+        box-shadow: 1px 1px 3px #000;
+        }
+    }
+}
 .lab {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

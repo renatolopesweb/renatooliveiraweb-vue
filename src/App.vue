@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Nav />
+    <i class="material-icons-round md-brightness_2" id="switch"></i>
     <router-view/>
   </div>
 </template>
@@ -30,12 +31,42 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-html, body{
-    // text-shadow: 0px 0px 1px #666;
-    // font-family: 'Roboto', sans-serif;
-    color: #111;
- //   background: #333;
+:root{
+    --body-bg: #fff;
+    --body-color: #111;
 }
+
+.dark-mode:root{
+    --body-bg: #021416;
+    --body-color: #fff;
+    header{
+        background: #010c0d;
+        box-shadow: 1px 1px 2px 1px #010c0d;
+        h1 a , i{
+            color: #fff;
+        }
+    }
+}
+#switch{
+    cursor: pointer;
+    padding-top: 30px;
+    left: 96%;
+    position: absolute;
+    z-index: 2;
+}
+@media (max-width: 60em) {
+  #switch {
+    display: none;
+  }
+}
+
+body{
+    background: var(--body-bg);
+    color: var(--body-color);
+    margin: 0px;
+    transition: 0.5s;
+}
+
 p{
     font-size: 1.4em;
 }

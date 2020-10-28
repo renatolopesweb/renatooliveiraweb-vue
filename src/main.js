@@ -41,3 +41,10 @@ document.querySelector('.overlay').onclick = function () {
     sidebar.classList.toggle('active');
     mainContent.classList.toggle('ds_block');
 }
+// DARKMODE
+const $html = document.querySelector('html')
+const $checkbox = document.querySelector('#switch')
+$checkbox.addEventListener('click' , function(){
+    $html.classList.toggle('dark-mode')
+})
+// DARKMODE

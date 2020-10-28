@@ -40,6 +40,14 @@
 </template>
 
 <style lang="scss" scoped>
+.dark-mode:root{
+  .about img{
+    box-shadow: 1px 1px 3px #000;
+  }
+  .social a{
+    color: #fff;
+  }
+}
 .about {
   display: grid;
   grid-template-columns: 180px auto;

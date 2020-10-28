@@ -52,7 +52,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.dark-mode:root{
+    .screen{
+        img{
+            box-shadow: 1px 1px 3px #000;
+        }
+    }
+    .description li{
+        border: 1px dashed #fff;
+    }
+}
 .lab_internal{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
