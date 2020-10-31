@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav />
-    <i class="material-icons-round md-brightness_2" id="switch"></i>
+    <i class="material-icons-round md-brightness_2" id="switch" title="Click!"></i>
     <router-view/>
   </div>
 </template>
@@ -37,15 +37,8 @@ export default {
 }
 
 .dark-mode:root{
-    --body-bg: #021416;
+    --body-bg: #041017;
     --body-color: #fff;
-    header{
-        background: #010c0d;
-        box-shadow: 1px 1px 2px 1px #010c0d;
-        h1 a , i{
-            color: #fff;
-        }
-    }
 }
 #switch{
     cursor: pointer;

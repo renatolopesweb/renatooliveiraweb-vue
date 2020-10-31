@@ -26,8 +26,8 @@
         </p>
       </div>
       <div>
-        <p>Me chamo Renato, trabalho como webdesigner desde 2009.
-           Os meus interesses profissionais são: Desenvolvimento Frontend, Design, Comunicação & Marketing. 
+        <p>Me chamo Renato, trabalho com web desde 2009 e atuo profissionalmente com 
+          Desenvolvimento Frontend, Design, Comunicação & Marketing. 
         </p>
         <p>Tenho o hobby estranho de pedalar e toco um violão pra lá de modesto.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>

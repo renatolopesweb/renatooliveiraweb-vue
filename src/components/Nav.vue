@@ -20,8 +20,8 @@
 <style lang="scss" scoped>
 .dark-mode:root{
     header{
-        background: #010c0d;
-        box-shadow: 1px 1px 2px 1px #010c0d;
+        background: #02070A;
+        box-shadow: 1px 1px 2px 1px #02070A;
         h1 a , i{
             color: #fff;
         }

@@ -16,9 +16,9 @@ export default {
       articles: [
         {
           screen: require("../assets/images/portfolio-beatles.jpg"),
-          title: "Beatles Tributo",
+          title: "Beatles Tribute",
           description: `
-                    Singela homenagem a melhor banda do mundo. Interessante aqui foi o modal componentizado do vueJs.
+                    Homenagem a melhor banda do mundo.
                     `,
           url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
           tags: ["vue", "css grids" , "photoshop"],
@@ -26,24 +26,24 @@ export default {
         {
           screen: require("../assets/images/portfolio-breaking-bad-video.jpg"),
           title: "Breaking Bad - Vídeo slide show",
-          description: "Um slide show básico com imagens da série.",
+          description: "Slide show básico com imagens da minha série favorita💕",
           url: "https://www.youtube.com/watch?v=qHwl86jkmGg",
           tags: ["Premiere"],
         },
         {
           screen: require("../assets/images/portfolio-breaking-infografico.jpg"),
-          title: "Infográfico do Breaking Bad",
+          title: "Infográfico Breaking Bad",
           description: `
-          Criei este infográfico com frases intrigantes dos personagens da minha série favorita💕
+          Infográfico com frases intrigantes dos personagens da minha série favorita💕
           `,
           url: "https://br.pinterest.com/pin/102949541465385965/",
           tags: ["Illustrator"],
         },
         {
           screen: require("../assets/images/portfolio-street-fighter.jpg"),
-          title: "Street Fighter Tributo (old school)",
+          title: "Street Fighter Tribute (old school)",
           description: `
-                    Melhor experiência no desktop mas é responsivo. As imagens são do Pinterest, creditei no Readme.  
+                    Projeto interativo feito para desktop mas é responsivo. Imagens são do Pinterest creditadas no Readme.  
                     Demora para carregar pois tem vídeo introdutório, mas vale a pena esperar :·)
                     `,
           url: "https://renato7oliveira.github.io/street-fighter-audio-project",
@@ -70,8 +70,8 @@ export default {
 <style lang="scss" scoped>
 .dark-mode:root{
       .lab article{
-        background: #010c0d;
-        box-shadow: 1px 1px 3px #010c0d;
+        background: #02070A;
+        box-shadow: 1px 1px 3px #02070A;
         &:hover{
         box-shadow: 1px 1px 3px #000;
         }
