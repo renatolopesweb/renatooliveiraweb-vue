@@ -26,10 +26,9 @@
         </p>
       </div>
       <div>
-        <p>Me chamo Renato, trabalho com web desde 2009 e atuo profissionalmente com 
-          Desenvolvimento Frontend, Design, Comunicação & Marketing. 
-        </p>
-        <p>Tenho o hobby estranho de pedalar e toco um violão pra lá de modesto.</p>
+        <p>Me chamo Renato, trabalho com web desde 2009 e atuo profissionalmente em: 
+          Desenvolvimento Frontend, Design Web, Comunicação & Marketing. Além das áreas 
+          pontuais, tenho experiência com Gestão de Mídias Digitais.
         <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>
         <p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
