@@ -27,6 +27,9 @@
         }
     }
 }
+.link_active{
+    font-weight: bold;
+}
 header{
     background: #fff;
     display: grid;
@@ -34,7 +37,7 @@ header{
     height: 80px;
     align-content: center;
     align-items: center;
-    box-shadow: 1px 1px 2px 1px #f0f0f0;
+    box-shadow: 1px 1px 2px 1px #ccc;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -46,6 +49,7 @@ header{
         text-shadow: 0px 0px 1px #666;
         a{
             color: #111;
+            font-weight: lighter!important;
             &:hover{
 
                 animation-name: logo;

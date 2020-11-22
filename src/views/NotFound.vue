@@ -2,7 +2,7 @@
   <div>
         <section class="home">
         <article>
-            <h2>página não encontrada...</h2>
+            <h2>página não encontrada... 😥</h2>
             <router-link to="/" class="btn">← Home</router-link>
         </article>
     </section>
@@ -18,14 +18,14 @@
     h2{
         background: transparent;
         border: 0px;
-        color: #030F92;
+        color: #FA3423;
         font-size: 2.2em;
         font-weight: bolder;
         margin-bottom: 20px;
         text-shadow: 0px 0px 0px!important;
     }
         router-link, .btn{
-            background: #030F92;
+            background: #FA3423;
     }
 }
 /* MEDIA QUERIES START */

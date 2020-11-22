@@ -35,6 +35,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  linkExactActiveClass: 'link_active',
   routes
 });
 

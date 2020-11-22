@@ -2,7 +2,9 @@
   <div id="app">
     <Nav />
     <i class="material-icons-round md-brightness_2" id="switch" title="Click!"></i>
-    <router-view/>
+    <transition name="fade-view" mode="out-in">
+        <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -52,7 +54,12 @@ export default {
     display: none;
   }
 }
-
+.fade-view-enter , .fade-view-leave-to{
+    opacity: 0;
+}
+.fade-view-enter-active , .fade-view-leave-active{
+    transition: opacity .3s ease-in-out ;
+}
 body{
     background: var(--body-bg);
     color: var(--body-color);
@@ -142,7 +149,7 @@ section{
         opacity: 0;
     }
 }
-section , header{
+header{
     animation: fadeIn 0.2s ease-out;
 }
 .fadeOut{
