@@ -11,25 +11,12 @@
         </figure>
         <h2>Mídias Sociais:</h2>
         <p class="social">
-          <a href="https://bit.ly/2x9Bgj7" alt="Github" title="Github" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="https://bit.ly/2QzoMZ8" alt="Linkedin" title="Linkedin" target="_blank">
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="https://bit.ly/2QySUDD" alt="Instagram" title="Instagram" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="https://bit.ly/2BRwU2r" alt="Twitter" title="Twitter" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
+          <a v-for="item in social" :title="item.title" :key="item.id" :href="item.url" target="_blank"><i :class="item.img"></i></a>
         </p>
       </div>
       <div>
-        <p>Me chamo Renato, trabalho com web desde 2009 e atuo profissionalmente em: 
-          Desenvolvimento Frontend, Design Web, Comunicação & Marketing. Além das áreas 
-          pontuais, tenho experiência com Gestão de Mídias Digitais.
-        <p>Casado com a Delma, pai da Ana Luiza e da Cyndi.</p>
+        <p>Me chamo Renato e trabalho profissionalmente com web desde 2009. Tenho vasta habilidade em: Desenvolvimento Frontend, Design para Web, Comunicação & Marketing. 
+        <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
         </p>
@@ -37,6 +24,38 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      social: [
+        {
+          title: 'Github',
+          img: 'fa fa-github',
+          url: 'https://github.com/renato7oliveira'
+        },{
+          title: 'Linkedin',
+          img: 'fa fa-linkedin',
+          url: 'https://www.linkedin.com/in/renato7oliveira'
+        },{
+          title: 'Instagram',
+          img: 'fa fa-instagram',
+          url: 'https://www.instagram.com/renato7oliveira'
+        },{
+          title: 'Twitter',
+          img: 'fa fa-twitter',
+          url: 'https://twitter.com/renato7oliveira'
+        },{
+          title: 'Facebook',
+          img: 'fa fa-facebook',
+          url: 'https://facebook.com/renato7oliveira'
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .dark-mode:root{
@@ -47,6 +66,7 @@
     color: #fff;
   }
 }
+.dog{color: brown}
 .about {
   display: grid;
   grid-template-columns: 180px auto;
@@ -72,7 +92,7 @@
     }
     i{
         margin-right: 9px;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
   }
   router-link, .btn{

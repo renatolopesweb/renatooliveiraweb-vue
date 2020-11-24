@@ -2,7 +2,7 @@
     <div>
         <header>
             <div class="nav"><i class="material-icons-outline md-menu"></i></div>
-            <div><h1><router-link to="/">renato7oliveira · webdesigner</router-link></h1></div>
+            <div><h1>renato7oliveira · webdesigner</h1></div>
         </header>
         <nav>
             <div class="overlay"></div>
@@ -22,13 +22,14 @@
     header{
         background: #02070A;
         box-shadow: 1px 1px 2px 1px #02070A;
-        h1 a , i{
+        h1 , i{
             color: #fff;
         }
     }
 }
 .link_active{
     font-weight: bold;
+    color: #FA3423!important;
 }
 header{
     background: #fff;
@@ -47,8 +48,8 @@ header{
         margin-top: -2px;
         padding: 0px;
         text-shadow: 0px 0px 1px #666;
+        color: #111;
         a{
-            color: #111;
             font-weight: lighter!important;
             &:hover{
 
