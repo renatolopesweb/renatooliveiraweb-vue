@@ -11,9 +11,9 @@
           />
           </router-link>
         </figure>
-            <h2>renato7oliveira · webdesigner</h2>
-            <p>Olá, trabalho com desenvolvimento web e comunicação digital.</p>
-            <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
+            <h2>renato7oliveira</h2>
+            <p>frontend · transformação web</p>
+            <router-link to="/sobre" class="btn"><i class="material-icons-outline md-account_circle"></i> Sobre</router-link>
         </article>
     </section>
   </div>
@@ -55,7 +55,7 @@
         font-size: 1.4em;
     }
     i{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 /* MEDIA QUERIES START */

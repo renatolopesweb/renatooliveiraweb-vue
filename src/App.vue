@@ -20,9 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
-// @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* BOOT START */
 *{
@@ -47,7 +44,8 @@ export default {
     padding-top: 30px;
     left: 96%;
     position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 1;
 }
 @media (max-width: 60em) {
   #switch {
@@ -108,7 +106,7 @@ section{
         animation-name: button_pulse;
         animation-duration: 2s;
         animation-iteration-count: infinite;
-        animation-delay: 1s;
+        // animation-delay: 1s;
         filter: brightness(80%);
     }
     &:active{

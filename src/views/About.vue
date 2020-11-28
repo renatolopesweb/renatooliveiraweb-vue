@@ -15,7 +15,7 @@
         </p>
       </div>
       <div>
-        <p>Me chamo Renato e trabalho profissionalmente com web desde 2009. Tenho vasta habilidade em: Desenvolvimento Frontend, Design para Web, Comunicação & Marketing. 
+        <p>Me chamo Renato e trabalho profissionalmente com web desde 2009. Vivo pelo Desenvolvimento Frontend, Design Web, Comunicação & Marketing. 
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <p>
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
@@ -66,7 +66,7 @@ export default {
     color: #fff;
   }
 }
-.dog{color: brown}
+.dog{color: #704734}
 .about {
   display: grid;
   grid-template-columns: 180px auto;

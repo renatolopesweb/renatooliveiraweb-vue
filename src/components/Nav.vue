@@ -2,7 +2,7 @@
     <div>
         <header>
             <div class="nav"><i class="material-icons-outline md-menu"></i></div>
-            <div><h1>renato7oliveira · webdesigner</h1></div>
+            <div><h1>renato7oliveira</h1></div>
         </header>
         <nav>
             <div class="overlay"></div>
@@ -100,7 +100,7 @@ header{
     position: fixed;
     transition: all 0.4s;
     width: 248px;
-    z-index: 2;
+    z-index: 3;
     i{
         font-size: 1.2em;
     }
@@ -148,7 +148,7 @@ header{
     position: absolute;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 
     animation-name: navOverlay;
     animation-duration: 0.4s;
