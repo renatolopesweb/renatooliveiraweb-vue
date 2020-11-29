@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="about internal">
-      <div>
+      <div> 
         <figure>
           <img
             src="../assets/images/renato7oliveira-home.jpg" 
@@ -15,11 +15,11 @@
         </p>
       </div>
       <div>
-        <p>Me chamo Renato e trabalho profissionalmente com web desde 2009. Vivo pelo Desenvolvimento Frontend, Design Web, Comunicação & Marketing. 
+        <p>Desde 2009 trabalho para empresas na área de web. Dou meu melhor quer seja no frontend, quer seja desenhando interfaces ou gerindo projetos. Presente nas divisões de Marketing, Comunicação e TI.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
-        <p>
+        <span @click="toTop()">
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
-        </p>
+        </span>
       </div>
     </section>
   </div>
@@ -29,6 +29,7 @@
 export default {
   data(){
     return{
+
       social: [
         {
           title: 'Github',
@@ -53,7 +54,15 @@ export default {
         }
       ]
     }
-  }
+  },
+   methods:{
+        toTop(){
+          window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+    }
 }
 </script>
 
@@ -97,10 +106,7 @@ export default {
   }
   router-link, .btn{
     background: #FA3423;
-    font-size: 0.6em;
-    i{
-        font-size: 1em;
-    }
+    // font-size: 0.6em;
 }
 }
 /* MEDIA QUERIES START */

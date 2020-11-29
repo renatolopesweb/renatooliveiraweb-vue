@@ -12,7 +12,7 @@
           </router-link>
         </figure>
             <h2>renato7oliveira</h2>
-            <p>frontend · transformação web</p>
+            <p>focado no frontend, design web e transformação digital</p>
             <router-link to="/sobre" class="btn"><i class="material-icons-outline md-account_circle"></i> Sobre</router-link>
         </article>
     </section>
@@ -49,6 +49,7 @@
     }
     router-link, .btn{
         background: #FA3423;
+        // font-size: 0.6em;
     }
     p{
         margin-bottom: 20px;

@@ -112,6 +112,9 @@ section{
     &:active{
         filter: brightness(100%);
     }
+    i{
+            font-size: 1em;
+        }
 }
 
 .btn_animate{

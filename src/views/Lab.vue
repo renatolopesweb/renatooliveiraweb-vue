@@ -2,7 +2,7 @@
   <div>
     <section class="internal lab">
       <article v-for="(item , article) in articles" :key="article" @click="shareData(article)">
-        <img :src="item.screen" :title="item.title" :alt="item.title" />
+        <img :src="item.screen" :title="item.title" :alt="item.title" class="lab_img" />
         <h2>{{item.title}}</h2>
       </article>
     </section>

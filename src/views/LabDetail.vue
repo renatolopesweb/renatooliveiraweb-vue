@@ -16,12 +16,12 @@
     </section>
     <footer>
         <div class="lab_back">
-            <a class="btn" @click="labBack()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
+            <a class="btn" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
         </div>
     </footer>
     <div class="footer_mobile">
         <a class="btn project" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
-        <a class="btn back" @click="labBack()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
+        <a class="btn back" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
     </div>
 </div>
 </template>
@@ -38,14 +38,12 @@ export default {
     this.article = this.$route.params.data
   },
   methods: {
-    labBack() {
+    labScroll(){
         window.history.back();
-    },
-    labScroll() {
         window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
+          top: 0,
+          behavior: 'smooth',
+        });
     }
   }
 }
@@ -60,6 +58,10 @@ export default {
     }
     .description li{
         border: 1px dashed #fff;
+    }
+    .footer_mobile{
+        background: #02070A;
+        box-shadow: 2px 1px 2px 2px #02070A;
     }
 }
 .lab_internal{
