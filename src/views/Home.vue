@@ -62,9 +62,6 @@
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
     .home{
-        grid-template-columns: 1fr;
-        align-content: initial;
-        padding-top: 100px;
         h2{
             font-size: 1.5em;
         }
