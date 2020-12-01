@@ -35,9 +35,9 @@ header{
     background: #fff;
     display: grid;
     grid-template-columns: 80px auto;
-    height: 80px;
     align-content: center;
     align-items: center;
+    height: 80px;
     box-shadow: 1px 1px 2px 1px #ccc;
     position: fixed;
     width: 100%;
@@ -45,7 +45,7 @@ header{
     h1{
         font-size: 1.1em;
         font-weight: lighter;
-        margin-top: -2px;
+        margin-top: -3px;
         padding: 0px;
         text-shadow: 0px 0px 1px #666;
         color: #111;
@@ -81,9 +81,13 @@ header{
 // 800px
 @media(max-width: 50em){
     header{
-
         grid-template-columns: 65px auto;
+        background: #FA3423;
+        box-shadow: 0px 0px 0px 0px #ccc;
 
+        h1, .nav, i{
+            color: #fff!important;
+        }
     }
 }
 .sidebar {
