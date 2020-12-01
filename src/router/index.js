@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
   { path: '/', 
   name: 'Home', 
-  meta:{title: 'renato7oliveira · frontend · ux'},
+  meta:{title: 'renato7oliveira · frontend · ux · ui'},
   component: Home },
   { 
     path: '/sobre', 

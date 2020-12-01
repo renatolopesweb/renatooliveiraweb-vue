@@ -12,7 +12,7 @@
           </router-link>
         </figure>
             <h2>renato7oliveira</h2>
-            <p>frontend · ux</p>
+            <p>frontend · ux · ui</p>
             <router-link to="/sobre" class="btn"><i class="material-icons-outline md-account_circle"></i> Sobre</router-link>
         </article>
     </section>

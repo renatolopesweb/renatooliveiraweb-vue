@@ -2,7 +2,7 @@
     <div>
         <header>
             <div class="nav"><i class="material-icons-outline md-menu"></i></div>
-            <div><h1>renato7oliveira · frontend · ux</h1></div>
+            <div><h1>renato7oliveira</h1></div>
         </header>
         <nav>
             <div class="overlay"></div>
