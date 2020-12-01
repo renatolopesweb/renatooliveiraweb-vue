@@ -15,7 +15,7 @@
         </p>
       </div>
       <div>
-        <p>Desde 2009 trabalho para empresas na área de web. Dou meu melhor quer seja no frontend, quer seja desenhando interfaces ou gerindo projetos. Presente nas divisões de Marketing, Comunicação e TI.</p>
+        <p>Desde 2009 trabalho para empresas na área de web. Dou meu melhor quer seja no frontend, quer seja projetando interfaces ou gerindo projetos digitais. Presente nas divisões de Marketing, Comunicação e TI.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <span @click="toTop()">
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
@@ -104,6 +104,7 @@ export default {
         font-size: 1.2em;
     }
   }
+  .span
   router-link, .btn{
     background: #FA3423;
     // font-size: 0.6em;
