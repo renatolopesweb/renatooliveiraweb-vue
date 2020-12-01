@@ -83,13 +83,7 @@ header{
     header{
 
         grid-template-columns: 65px auto;
-        h1{
-            font-size: 1.1em;
-            font-weight: bolder;
-        }
-        h1, .nav i{
-            font-weight: bolder;
-        }
+
     }
 }
 .sidebar {
