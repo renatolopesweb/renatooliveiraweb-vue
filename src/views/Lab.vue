@@ -15,6 +15,15 @@ export default {
     return {
       articles: [
         {
+          screen: require("../assets/images/portfolio-mobile-first.jpg"),
+          title: "Responsive Test",
+          description: `
+                    Insira a URL e escolha uma resolução para testar.
+                    `,
+          url: "https://renato7oliveira.github.io/mobile-test/src/index.html",
+          tags: ["css grids" , "javascript"],
+        },
+        {
           screen: require("../assets/images/portfolio-beatles.jpg"),
           title: "Beatles Tribute",
           description: `
