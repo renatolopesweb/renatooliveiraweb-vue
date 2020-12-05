@@ -15,10 +15,10 @@
         </p>
       </div>
       <div>
-        <p>Desde 2009 trabalho para empresas na área de web. Dou meu melhor quer seja no frontend, quer seja projetando interfaces ou gerindo projetos digitais. Presente nas divisões de Marketing, Comunicação e TI.</p>
+        <p>Desde 2009 trabalho para empresas na parte de web. Detalhista quer seja no frontend, quer seja projetando interfaces ou gerindo projetos digitais. Presente nas divisões de Marketing, Comunicação e TI.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <span @click="toTop()">
-            <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Ver Portfolio</router-link>
+            <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Portfolio</router-link>
         </span>
       </div>
     </section>

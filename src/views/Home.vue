@@ -4,11 +4,11 @@
         <article>
             <figure>
                 <router-link to="/sobre">
-          <img
+          <!-- <img
             src="../assets/images/renato7oliveira-home.jpg"
             alt="renato7oliveira"
             title="renato7oliveira"
-          />
+          /> -->
           </router-link>
         </figure>
             <h2>renato7oliveira</h2>
@@ -43,8 +43,8 @@
     }
     h2{
         color: #FA3423;
-        font-size: 1.8em;
-        font-weight: bolder;
+        font-size: 3.6em;
+        font-weight: lighter;
         text-shadow: 0px 0px 0px!important;
     }
     router-link, .btn{
@@ -53,7 +53,8 @@
     }
     p{
         margin-bottom: 20px;
-        font-size: 1.4em;
+        font-size: 2em;
+        font-weight: lighter;
     }
     i{
         font-size: 1.2em;
@@ -63,10 +64,10 @@
 @media(max-width: 60em){
     .home{
         h2{
-            font-size: 1.5em;
+            font-size: 2.5em;
         }
         p{
-            font-size: 1.1em;
+            font-size: 1.6em;
         }
     }
 }

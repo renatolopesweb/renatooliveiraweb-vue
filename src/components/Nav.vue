@@ -38,7 +38,7 @@ header{
     align-content: center;
     align-items: center;
     height: 80px;
-    box-shadow: 1px 1px 2px 1px #ccc;
+    box-shadow: 1px 1px 2px 1px #f0f0f0;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -87,6 +87,7 @@ header{
 
         h1, .nav, i{
             color: #fff!important;
+            font-weight: bolder;
         }
     }
 }

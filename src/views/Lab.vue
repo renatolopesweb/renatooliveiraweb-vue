@@ -18,7 +18,7 @@ export default {
           screen: require("../assets/images/portfolio-beatles.jpg"),
           title: "Beatles Tribute",
           description: `
-                    Homenagem a melhor banda do mundo.
+                    Mera homenagem a melhor banda do mundo.
                     `,
           url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
           tags: ["vue", "css grids" , "photoshop"],
@@ -43,7 +43,7 @@ export default {
           screen: require("../assets/images/portfolio-street-fighter.jpg"),
           title: "Street Fighter Tribute (old school)",
           description: `
-                    Projeto interativo feito para desktop mas é responsivo. Imagens são do Pinterest creditadas no Readme.  
+                    Projeto interativo feito para desktop mas é responsivo. Imagens do Pinterest e estão creditadas.  
                     Demora para carregar pois tem vídeo introdutório, mas vale a pena esperar :·)
                     `,
           url: "https://renato7oliveira.github.io/street-fighter-audio-project",

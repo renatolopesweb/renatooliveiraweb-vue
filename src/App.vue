@@ -30,6 +30,7 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
+
 :root{
     --body-bg: #fff;
     --body-color: #111;
@@ -113,8 +114,8 @@ section{
         filter: brightness(100%);
     }
     i{
-            font-size: 1em;
-        }
+        font-size: 1em;
+    }
 }
 
 .btn_animate{
