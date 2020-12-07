@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Nav />
+    <Contact />
     <i class="material-icons-round md-brightness_2" id="switch" title="Click!"></i>
     <transition name="fade-view" mode="out-in">
         <router-view/>
@@ -11,10 +12,12 @@
 <script>
 
 import Nav from '../src/components/Nav'
+import Contact from '../src/components/Contact'
 
 export default {
   components:{
-    Nav
+    Nav,
+    Contact
   }
 }
 </script>

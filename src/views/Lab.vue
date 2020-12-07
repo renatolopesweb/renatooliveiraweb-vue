@@ -18,7 +18,7 @@ export default {
           screen: require("../assets/images/portfolio-mobile-first.jpg"),
           title: "Responsive Test",
           description: `
-                    Insira a URL e escolha uma resolução para testar.
+                    Aplicação onde você insire uma URL válida e analisa como ficou a página em diversas resoluções. Conta com recurso de preferências.
                     `,
           url: "https://renato7oliveira.github.io/mobile-test/src/index.html",
           tags: ["css grids" , "javascript"],

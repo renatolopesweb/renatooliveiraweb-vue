@@ -11,11 +11,19 @@
                     <li><router-link to="/">home</router-link></li>
                     <li><router-link to="/sobre">sobre</router-link></li>
                     <li><router-link to="/portfolio">portfolio</router-link></li>
+                    <li class="contact"><a @click="(modalShow = true)">contato</a></li>
                 </ul>
             </div>
         </nav>
+
+        
+
+
+
     </div>
 </template>
+
+
 
 <style lang="scss" scoped>
 .dark-mode:root{
@@ -87,7 +95,6 @@ header{
 
         h1, .nav, i{
             color: #fff!important;
-            font-weight: bolder;
         }
     }
 }
@@ -105,6 +112,7 @@ header{
         font-size: 1.2em;
     }
 }
+// 800px
 @media(max-width: 50em){
     .sidebar{
         margin-left: -200px;
@@ -126,6 +134,7 @@ header{
 }
 .sidebar li a, .sidebar ul li a {
     color: #000;
+    cursor: pointer;
     display: block;
     text-decoration: none;
     padding: 20px 0 20px 20px;
@@ -149,11 +158,22 @@ header{
     position: fixed;
     width: 100%;
     z-index: 2;
-
     animation-name: navOverlay;
     animation-duration: 0.4s;
-//    animation-delay: 0.4s;
     animation-fill-mode: forwards;
+}
+
+// FOOTER
+
+.contact{
+    display: none;
+}
+
+// 800px
+@media(max-width: 60em){
+    .contact{
+        display: block;
+    }
 }
 
 .ds_block{
