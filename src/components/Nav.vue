@@ -11,15 +11,9 @@
                     <li><router-link to="/">home</router-link></li>
                     <li><router-link to="/sobre">sobre</router-link></li>
                     <li><router-link to="/portfolio">portfolio</router-link></li>
-                    <li class="contact"><a @click="(modalShow = true)">contato</a></li>
                 </ul>
             </div>
         </nav>
-
-        
-
-
-
     </div>
 </template>
 
