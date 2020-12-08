@@ -17,6 +17,7 @@
       <div>
         <p>Desde 2009 trabalho para empresas na parte de web. Detalhista quer seja no frontend, quer seja projetando interfaces ou gerindo projetos digitais. Presente nas divisões de Marketing, Comunicação e TI.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
+        <p>Se deseja entrar em contato, <a href="https://forms.gle/Ny9FhRcy3BcyKG7t9" target="_blank">clique aqui</a> e preencha um simples formulário de 4 campos.</p>
         <span @click="toTop()">
             <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Portfolio</router-link>
         </span>
@@ -86,6 +87,9 @@ export default {
   }
   p {
     margin-bottom: 15px;
+    a{
+      color: #FA3423;
+    }
   }
   h2 {
     font-size: 1em;
