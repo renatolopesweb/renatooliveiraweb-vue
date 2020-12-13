@@ -122,8 +122,8 @@ export default {
 footer{
     position: absolute;
     position: fixed;
-    right: 70px;
-    bottom: 32px;
+    right: 3%;
+    bottom: 35px;
     i{
         font-size: 1.1em;
     }

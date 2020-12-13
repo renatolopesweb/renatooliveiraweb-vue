@@ -107,7 +107,7 @@ section{
         animation-name: button_pulse;
         animation-duration: 2s;
         animation-iteration-count: infinite;
-        // animation-delay: 1s;
+        animation-delay: 1s;
         filter: brightness(80%);
     }
     &:active{
