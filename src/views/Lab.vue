@@ -15,6 +15,15 @@ export default {
     return {
       articles: [
         {
+          screen: require("../assets/images/portfolio-clone-google.jpg"),
+          title: "Desafio Clone Google",
+          description: `
+                    CSS Grids com template área.
+                    `,
+          url: "https://renato7oliveira.github.io/clone-google/src/index.html",
+          tags: ["css grids"],
+        },
+        {
           screen: require("../assets/images/portfolio-mobile-first.jpg"),
           title: "Responsive Test",
           description: `
