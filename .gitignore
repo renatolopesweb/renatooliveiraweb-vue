@@ -1,12 +1,11 @@
 #me
 trash
 src
+public
+src
 
 .DS_Store
 node_modules
-./src
-src/
-/src
 # /dist
 
 

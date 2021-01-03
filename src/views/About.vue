@@ -15,7 +15,7 @@
         </p>
       </div>
       <div>
-        <p>Desde 2009 trabalho para empresas na parte de web e me dedico ao Desenvolvimento Frontend; Design de Interfaces e Gestão de projetos digitais.</p>
+        <p>Desde 2009 trabalho para empresas na parte de web. Destinado ao Desenvolvimento Frontend; Design de Interface e Gestão de Projetos Web.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <p>Se deseja entrar em contato, <a href="https://forms.gle/Ny9FhRcy3BcyKG7t9" target="_blank">clique aqui</a> e preencha um simples formulário.</p>
         <span @click="toTop()">
@@ -80,7 +80,7 @@ export default {
 .about {
   display: grid;
   grid-template-columns: 180px auto;
-  grid-gap: 60px;
+  grid-gap: 30px;
   img {
     width: 100%;
     box-shadow: 1px 1px 3px #ccc;

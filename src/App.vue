@@ -43,7 +43,7 @@ export default {
 #switch{
     cursor: pointer;
     padding-top: 30px;
-    left: 96%;
+    left: 96.5%;
     position: absolute;
     position: fixed;
     z-index: 1;

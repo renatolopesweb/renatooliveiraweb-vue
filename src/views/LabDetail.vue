@@ -1,17 +1,15 @@
 <template>
 <div>
     <section class="lab_internal internal lab">
-        <article class="screen">
+        <figure class="screen">
             <img :src="article.screen" :title="article.title" :alt="article.title" />
-            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
-        </article>
+        </figure>
         <article class="description">
             <h2>{{article.title}}</h2>
-            <p>{{article.description}}</p>
-            <h3>Stack:</h3>
             <ul>
                 <li v-for="item in article.tags" :key="item">{{item}}</li>
             </ul>
+            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
         </article>
     </section>
     <footer>
@@ -66,18 +64,39 @@ export default {
 }
 .lab_internal{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 55px;
+    grid-template-rows: 160px auto;
+    text-align: center;
 }
 .screen{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    text-align: center;
-    border-radius: 20px;
     img{
         width: 100%;
-        box-shadow: 1px 1px 3px #ccc;
-        margin-bottom: 55px;
+        max-width: 400px;
+        box-shadow: 1px 1px 3px #999;
+    }
+}
+.description{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    h2{
+        font-size: 1.1em;
+        font-weight: bolder;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+    ul{
+        padding: 0px;
+        margin: 0 0 35px 0;
+    }
+    li{
+        border-radius: 100px;
+        border: 1px dashed #000;
+        display: inline;
+        font-size: 0.9em;
+        margin-right: 7px;
+        padding: 10px 20px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .btn{
         background: #FA3423;
@@ -89,40 +108,10 @@ export default {
         font-size: 1.1em;
     }
 }
-.description{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    h2{
-        font-size: 1.6em;
-        font-weight: normal;
-    }
-    h3{
-        font-size: 1.3em;
-        font-weight: normal;
-        margin-bottom: 6px;
-    }
-    p{
-        margin: 15px 0;
-    }
-    ul{
-    padding: 0px;
-    }
-    li{
-        border-radius: 100px;
-        border: 1px dashed #000;
-        float: left;
-        font-size: 0.9em;
-        margin-right: 7px;
-        margin-bottom: 7px;
-        padding: 10px 20px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
 footer{
     position: absolute;
     position: fixed;
-    right: 3%;
+    right: 2.5%;
     bottom: 35px;
     i{
         font-size: 1.1em;
@@ -162,20 +151,13 @@ footer{
 }
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
-    .lab_internal{
-        grid-template-columns: 1fr;
-    }
-    .screen {
+.lab_internal{
+    grid-template-rows: 140px auto;
+}
+    .description{
         .btn{
             display: none;
         }
-        img{
-            margin-bottom: -40px;
-        }
-    } 
-    .description{
-        grid-column-start: 1;
-        grid-column-end: 2; 
     }
     footer{
         display: none;
