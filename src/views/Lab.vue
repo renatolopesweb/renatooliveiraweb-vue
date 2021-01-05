@@ -33,7 +33,7 @@ export default {
         {
           screen: require("../assets/images/portfolio-mobile-first.jpg"),
           title: "Responsive Test",
-          url: "https://renato7oliveira.github.io/mobile-test/src/index.html",
+          url: "https://renato7oliveira.github.io/responsive-test/dist/index.html",
           tags: ["css grids" , "javascript"],
         },
         {
@@ -99,7 +99,6 @@ export default {
     }
 }
 .lab_default{
-    text-align: center;
     font-weight: normal;
     font-size: 1em;
     ul{
@@ -108,10 +107,11 @@ export default {
     }
     li{
       margin-bottom: 20px;
-      transition: 0.2s;
+      transition: 0.3s;
       display: block;
       &:hover{
         color: #FA3423;
+        margin-left: 10px;
       }
       a{
         cursor: pointer;
