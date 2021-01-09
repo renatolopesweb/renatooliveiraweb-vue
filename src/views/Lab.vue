@@ -38,7 +38,7 @@ export default {
         },
         {
           screen: require("../assets/images/portfolio-clone-google.jpg"),
-          title: "Desafio Clone Google",
+          title: "Clone Google Desafio",
           url: "https://renato7oliveira.github.io/clone-google/src/index.html",
           tags: ["css grids"],
         },
@@ -46,7 +46,7 @@ export default {
           screen: require("../assets/images/portfolio-beatles.jpg"),
           title: "Beatles Tribute",
           url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
-          tags: ["vue", "css grids" , "photoshop"],
+          tags: ["css grids" , "vue"],
         },
         {
           screen: require("../assets/images/portfolio-breaking-bad-video.jpg"),
@@ -101,6 +101,7 @@ export default {
 .lab_default{
     font-weight: normal;
     font-size: 1em;
+    text-align: center;
     ul{
       margin: 0px;
       padding: 0px;

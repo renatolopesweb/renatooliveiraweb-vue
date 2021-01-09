@@ -9,14 +9,14 @@
             <ul>
                 <li v-for="item in article.tags" :key="item">{{item}}</li>
             </ul>
-            <a class="btn" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
+            <div>
+                <a class="btn btn_show_project" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
+            </div>
+            <div>
+                <a class="btn btn_back" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
+            </div>
         </article>
     </section>
-    <footer>
-        <div class="lab_back">
-            <a class="btn" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
-        </div>
-    </footer>
     <div class="footer_mobile">
         <a class="btn project" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
         <a class="btn back" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
@@ -98,15 +98,19 @@ export default {
         text-align: center;
         text-transform: uppercase;
     }
-    .btn{
-        background: #FA3423;
-        a{
-            color: #fff;
-        }
+    div{
+        height: 57px;
     }
     i{
         font-size: 1.1em;
     }
+}
+.btn_show_project{
+    background: #FA3423;
+}
+.btn_back{
+    border: 1px dashed #FA3423;
+    color: #FA3423;
 }
 footer{
     position: absolute;
@@ -115,10 +119,6 @@ footer{
     bottom: 35px;
     i{
         font-size: 1.1em;
-    }
-    .btn{
-        background: #030F92;
-        color: #fff;
     }
 }
 .footer_mobile{
