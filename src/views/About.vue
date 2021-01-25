@@ -79,6 +79,7 @@ section {
   }
   p {
     margin-bottom: 15px;
+    font-size: 1.2em;
     a{
       color: blue;
     }
@@ -98,7 +99,7 @@ section {
     }
     i{
         margin-right: 5px;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
   }
 }
@@ -107,6 +108,9 @@ section {
   section {
     grid-template-columns: 1fr;
     grid-gap: 0px;
+    p{
+      font-size: 1em;
+    }
   }
 }
 /* MEDIA QUERIES END  */

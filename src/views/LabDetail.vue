@@ -1,7 +1,6 @@
 <template>
     <div>
         <section class="internal">
-            <div></div>
             <article>
                 <img :src="article.screen" :title="article.title" :alt="article.title" />
                 <div class="description">
@@ -13,7 +12,6 @@
                 <a class="btn btn_secondary" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
                 </div>
             </article>
-            <div></div>
         </section>
     </div>
 </template>
@@ -41,6 +39,9 @@ export default {
         display: grid;
         grid-template-columns: repeat(3 , 1fr);
         article{
+            display: grid;
+            grid-column-start: 2;
+            grid-column-end: 3;
             background: #fff;
             box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
             img{
