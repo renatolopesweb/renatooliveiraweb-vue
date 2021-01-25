@@ -1,40 +1,24 @@
 <template>
-  <div>
-        <section class="home">
+    <section>
         <article>
             <h2>página não encontrada... 😥</h2>
-            <router-link to="/" class="btn">← Home</router-link>
+            <router-link to="/" class="btn btn_primary">← Home</router-link>
         </article>
     </section>
-  </div>
 </template>
 
 <style lang="scss" scoped>
-.home{
+section{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 350px;
+    margin: auto;
     height: 100vh;
     align-content: center;
-    h2{
-        background: transparent;
-        border: 0px;
-        color: #FA3423;
-        font-size: 2.2em;
+    text-align: center;
+    h2{        
+        font-size: 1.4em;
         font-weight: bolder;
-        margin-bottom: 20px;
-        text-shadow: 0px 0px 0px!important;
-    }
-        router-link, .btn{
-            background: #FA3423;
+        margin-bottom: 10px;
     }
 }
-/* MEDIA QUERIES START */
-@media(max-width: 60em){
-    .home{
-        grid-template-columns: 1fr;
-        align-content: initial;
-        padding-top: 90px;
-    }
-}
-/* MEDIA QUERIES END  */
 </style>

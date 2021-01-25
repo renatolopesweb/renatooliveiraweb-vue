@@ -1,99 +1,78 @@
 <template>
     <div>
         <header>
-            <div class="nav"><i class="material-icons-outline md-menu"></i></div>
-            <div><h1>renato7oliveira</h1></div>
+            <div>
+                <h1>@renato7oliveira · webdesign</h1>
+            </div>
+            <nav class="hide_mobile">
+                <ul>
+                    <li><router-link to="/">home</router-link></li>
+                    <li><router-link to="/sobre">sobre</router-link></li>
+                </ul>
+            </nav>
         </header>
+        <div class="mobile_menu show_mobile"><i class="material-icons-outline md-menu"></i></div>
         <nav>
             <div class="overlay"></div>
             <div class="sidebar">
                 <ul>             
                     <li><router-link to="/">home</router-link></li>
                     <li><router-link to="/sobre">sobre</router-link></li>
-                    <li><router-link to="/portfolio">portfolio</router-link></li>
                 </ul>
             </div>
         </nav>
     </div>
 </template>
-
-
-
 <style lang="scss" scoped>
-.dark-mode:root{
-    header{
-        background: #02070A;
-        box-shadow: 1px 1px 2px 1px #02070A;
-        h1 , i{
-            color: #fff;
-        }
-    }
-}
 .link_active{
-    font-weight: bold;
-    color: #FA3423!important;
+    font-weight: bolder;
 }
 header{
-    background: #fff;
     display: grid;
-    grid-template-columns: 80px auto;
-    align-content: center;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 65px;
     align-items: center;
-    height: 80px;
-    box-shadow: 1px 1px 2px 1px #f0f0f0;
+    background: #fff;
+    box-shadow: 0px 0px 13px -7px #999;
     position: fixed;
     width: 100%;
     z-index: 1;
     h1{
-        font-size: 1.1em;
-        font-weight: lighter;
+        font-size: 0.9em;
+        font-weight: bold;
         margin-top: -3px;
-        padding: 0px;
-        text-shadow: 0px 0px 1px #666;
+        padding-left: 20px;
+        text-shadow: 0px 0px 1px #333;
         color: #111;
-        a{
-            font-weight: lighter!important;
-            &:hover{
-
-                animation-name: logo;
-                animation-duration: 0.3s;
-                animation-delay: 0.1s;
-                animation-fill-mode: forwards;
-            }
-        }
     }
-    .nav{
-        cursor: pointer;
-        text-align: center;
-        i{
-            border-radius: 50%;
-            color: #000;
-            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            margin-top: 4px;       
-            &:hover{
-                animation-name: nav_click;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-delay: 1s;
+    nav{
+        ul{
+            li{
+                cursor: pointer;
+                float: left;
+                font-size: 0.8em;
+                text-transform: uppercase;
+                margin-right: 20px;
+                a{
+                    color: #000;
+                }
             }
-            
         }
     }
 }
-// 800px
-@media(max-width: 50em){
-    header{
-        grid-template-columns: 65px auto;
-        background: #FA3423;
-        box-shadow: 0px 0px 0px 0px #ccc;
-
-        h1, .nav, i{
-            color: #fff!important;
-        }
-    }
+.mobile_menu{
+    position: absolute;
+    position: fixed;
+    color: #000;
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+}
+.ds_block{
+    display: block!important;
+    transition: all 0.3s;
 }
 .sidebar {
-    // box-shadow: 1px 2px 5px 2px #ccc;
     background: #fff;
     height: 100vh;
     margin-left: -258px;
@@ -106,24 +85,18 @@ header{
         font-size: 1.2em;
     }
 }
-// 800px
-@media(max-width: 50em){
-    .sidebar{
-        margin-left: -200px;
-        width: 200px;
-    }
-}
+
 .sidebar.active {
     margin-left: 0px;
 }
 .sidebar ul {
-    padding-top: 55px;
+    padding-top: 25px;
     position: relative;
 }
 .sidebar li {
     margin: 0 0 1px 0px;
     list-style-type: none;
-    font-size: 0.9em;
+    font-size: 0.8em;
     background: #fff;
 }
 .sidebar li a, .sidebar ul li a {
@@ -133,6 +106,7 @@ header{
     text-decoration: none;
     padding: 20px 0 20px 20px;
     transition: all 0.3s;
+    text-transform: uppercase;
     &:hover{
         margin-left: 5px;
         background: #f0f0f0;
@@ -141,7 +115,6 @@ header{
         margin-left: 0px;
     }
 }
-
 .overlay{
     background: #000;
     display: none;
@@ -157,23 +130,6 @@ header{
     animation-fill-mode: forwards;
 }
 
-// FOOTER
-
-.contact{
-    display: none;
-}
-
-// 800px
-@media(max-width: 60em){
-    .contact{
-        display: block;
-    }
-}
-
-.ds_block{
-    display: block!important;
-    transition: all 0.5s;
-}
 @keyframes navOverlay{
     to{
         opacity: 0.5;
@@ -187,7 +143,6 @@ header{
         opacity: 0;
     }
 }
-
 @keyframes nav_click {
     0% {
       box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
@@ -196,4 +151,17 @@ header{
       box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
     }
 }
+
+/* MEDIA QUERIES START */
+@media(max-width: 60em){
+    header h1{
+        grid-template-columns: 1fr;
+        padding-left: 60px;
+    }
+    .sidebar{
+        margin-left: -200px;
+        width: 200px;
+    }
+}
+/* MEDIA QUERIES END */
 </style>

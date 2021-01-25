@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="about internal">
+    <section>
       <div> 
         <figure>
           <img

@@ -25,7 +25,7 @@ function scrollTop(){
         behavior: 'smooth',
     });
 }
-document.querySelector('.nav').onclick = function () {
+document.querySelector('.mobile_menu').onclick = function () {
     sidebar.classList.toggle('active');
     mainContent.classList.toggle('ds_block');
 }
@@ -34,17 +34,7 @@ document.querySelector('.sidebar').onclick = function () {
     mainContent.classList.toggle('ds_block');
     scrollTop();
 }
-// document.querySelector('h1').onclick = function () {
-//     scrollTop();
-// }
 document.querySelector('.overlay').onclick = function () {
     sidebar.classList.toggle('active');
     mainContent.classList.toggle('ds_block');
 }
-// DARKMODE
-const $html = document.querySelector('html')
-const $checkbox = document.querySelector('#switch')
-$checkbox.addEventListener('click' , function(){
-    $html.classList.toggle('dark-mode')
-})
-// DARKMODE

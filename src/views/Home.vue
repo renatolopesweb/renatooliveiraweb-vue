@@ -1,75 +1,93 @@
 <template>
-  <div>
-    <section class="home">
-        <article>
-            <figure>
-                <router-link to="/sobre">
-          <!-- <img
-            src="../assets/images/renato7oliveira-home.jpg"
-            alt="renato7oliveira"
-            title="renato7oliveira"
-          /> -->
-          </router-link>
-        </figure>
-            <h2>renato7oliveira</h2>
-            <p>frontend · webdesign</p>
-            <router-link to="/sobre" class="btn"><i class="material-icons-outline md-account_circle"></i> Sobre</router-link>
-        </article>
+    <section>
+      <article v-for="(item , article) in articles" :key="article" @click="shareData(article)">
+        <img :src="item.screen" :title="item.title" :alt="item.title" />
+        <h2>{{item.title}}</h2>
+      </article>
     </section>
-  </div>
 </template>
+<script>
+export default {
+  name: "Lab",
+  data() {
+    
+    return {
+
+      articles: [
+        {
+          screen: require("../assets/images/portfolio-mobile-first.jpg"),
+          title: "Responsive Test",
+          url: "https://renato7oliveira.github.io/responsive-test/dist/index.html",
+          tags: ["css grids" , "javascript"],
+        },
+        {
+          screen: require("../assets/images/portfolio-clone-google.jpg"),
+          title: "Clone Google Desafio",
+          url: "https://renato7oliveira.github.io/clone-google/src/index.html",
+          tags: ["css grids"],
+        },
+        {
+          screen: require("../assets/images/portfolio-beatles.jpg"),
+          title: "Beatles Tribute",
+          url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
+          tags: ["css grids" , "vue"],
+        },
+        {
+          screen: require("../assets/images/portfolio-street-fighter.jpg"),
+          title: "Street Fighter Tribute (old school)",
+          url: "https://renato7oliveira.github.io/street-fighter-audio-project",
+          tags: ["edge", "photoshop"],
+        },
+      ],
+    };
+  },
+  methods: {
+    shareData(keyDetail) {
+      this.$router.push({
+        name: "PortfolioDetalhe",
+        params: { data: this.articles[keyDetail] },
+      });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+};
+</script>
+
 
 <style lang="scss" scoped>
-
-.home{
-    align-content: center;
-     display: grid;
-    // grid-template-columns: 1fr;
-    height: 100vh;
-    width: 90%;
-    margin: auto;
-    max-width: 630px;
-    text-align: center;
-    img{
-        background: #f0f0f0;
-        border-radius: 50%;
-        // filter: grayscale(70%);
-        text-align: center;
-        transition: 0.3s all;
-        width: 150px;
-            // &:hover{
-            //     filter: grayscale(0%);
-            // }
+section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  article {
+    background: #fff;
+    box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
+    transition: 0.5s;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-5px);
     }
-    h2{
-        color: #FA3423;
-        font-size: 3.6em;
-        font-weight: lighter;
-        text-shadow: 0px 0px 0px!important;
+    &:active {
+      transform: translateY(0px);
     }
-    router-link, .btn{
-        background: #FA3423;
-        // font-size: 0.6em;
+    h2 {
+      font-size: 0.9em;
+      font-weight: normal;
+      padding: 15px;
     }
-    p{
-        margin-bottom: 20px;
-        font-size: 2em;
-        font-weight: lighter;
+    img {
+      width: 100%;
     }
-    i{
-        font-size: 1.2em;
-    }
+  }
 }
 /* MEDIA QUERIES START */
-@media(max-width: 60em){
-    .home{
-        h2{
-            font-size: 2.5em;
-        }
-        p{
-            font-size: 1.6em;
-        }
-    }
+@media (max-width: 60em) {
+  section{
+    grid-template-columns: 1fr;
+  }
 }
 /* MEDIA QUERIES END  */
 </style>

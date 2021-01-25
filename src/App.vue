@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Nav />
-    <i class="material-icons-round md-brightness_2" id="switch" title="Click!"></i>
     <transition name="fade-view" mode="out-in">
         <router-view/>
     </transition>
@@ -9,9 +8,7 @@
 </template>
 
 <script>
-
 import Nav from '../src/components/Nav'
-
 export default {
   components:{
     Nav
@@ -20,7 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 /* BOOT START */
 *{
     padding: 0px;
@@ -30,28 +26,10 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-
-:root{
-    --body-bg: #fff;
-    --body-color: #111;
-}
-
-.dark-mode:root{
-    --body-bg: #041017;
-    --body-color: #fff;
-}
-#switch{
-    cursor: pointer;
-    padding-top: 30px;
-    left: 96.5%;
-    position: absolute;
-    position: fixed;
-    z-index: 1;
-}
-@media (max-width: 60em) {
-  #switch {
-    display: none;
-  }
+html, body{
+    background: rgb(242, 242, 242);
+    margin: 0px;
+    transition: 0.5s;
 }
 .fade-view-enter , .fade-view-leave-to{
     opacity: 0;
@@ -59,63 +37,52 @@ export default {
 .fade-view-enter-active , .fade-view-leave-active{
     transition: opacity .3s ease-in-out ;
 }
-body{
-    background: var(--body-bg);
-    color: var(--body-color);
-    margin: 0px;
-    transition: 0.5s;
-}
 
-p{
-    font-size: 1.4em;
-}
-@media(max-width: 60em){
-    p{
-        font-weight: normal;
-        font-size: 1.1em;
-    }  
-}
 /* BOOT END */
-
 /* TEMPLATE START */
 section{
-    padding: 80px;
-}
-/*1024px*/
-@media(max-width: 64em){
-    section{
-        padding: 15px 15px 80px 15px;
-    }
-}
-.internal{
-    padding-top: 100px;
+    padding: 90px 20px 20px 20px;
 }
 /* TEMPLATE END */
-
 /* BUTTON START */
-.btn{
-    border: 0;
-    border-radius: 100px;
+.btn {
+  border: 0px;
+  box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
+  cursor: pointer;
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 13px;
+  outline: 0;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 100%;
+  &:hover{
+    animation-name: button_pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+  }
+  i {
+    font-size: 1em;
+  }
+}
+
+.btn_primary{
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  &:hover{
+    background: #000;
+  }
+}
+.btn_secondary{
+  background: rgba(0, 0, 0, 0.1);
+  color: #999;
+  &:hover{
+    background: #000;
     color: #fff;
-    cursor: pointer;
-    font-size: 0.8em;
-    outline: 0;
-    padding: 15px 20px;
-    text-transform: uppercase;
-    transition: 0.3s;
-    &:hover{
-        animation-name: button_pulse;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-delay: 1s;
-        filter: brightness(80%);
-    }
-    &:active{
-        filter: brightness(100%);
-    }
-    i{
-        font-size: 1em;
-    }
+  }
 }
 
 .btn_animate{
@@ -123,7 +90,7 @@ section{
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
+/* BUTTON END */
 @keyframes button_pulse {
     0% {
       box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
@@ -133,7 +100,6 @@ section{
     }
   }
 /* BUTTON END */
-
 /* TRANSITIONS START */
 @keyframes fadeIn {
     0% {
@@ -158,4 +124,20 @@ header{
     animation: fadeOut 0.2s ease-out forwards;
 }
 /* TRANSITIONS END */
+/* MEDIA QUERIES START */
+.hide_mobile{
+  display: block;
+}
+.show_mobile{
+  display: none;
+}
+@media (max-width: 60em) {
+  .hide_mobile{
+    display: none;
+  }
+  .show_mobile{
+    display: block;
+  }
+}
+/* MEDIA QUERIES END  */
 </style>
