@@ -157,6 +157,7 @@ header{
     header h1{
         grid-template-columns: 1fr;
         padding-left: 60px;
+        font-weight: normal;
     }
     .sidebar{
         margin-left: -200px;

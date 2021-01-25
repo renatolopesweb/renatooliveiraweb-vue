@@ -42,6 +42,18 @@ html, body{
 /* TEMPLATE START */
 section{
     padding: 90px 20px 20px 20px;
+      ul{
+        margin: 10px 0 15px;
+      }
+      li{
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        color: #777;
+        display: inline;
+        font-size: 0.8em;
+        margin-right: 10px;
+        padding: 3px 8px;
+      }
 }
 /* TEMPLATE END */
 /* BUTTON START */

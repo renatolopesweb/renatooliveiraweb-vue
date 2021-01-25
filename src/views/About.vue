@@ -1,10 +1,9 @@
 <template>
-  <div>
     <section>
       <div> 
         <figure>
           <img
-            src="../assets/images/renato7oliveira-home.jpg" 
+            src="../assets/images/renato7oliveira-about.jpg" 
             alt="renato7oliveira"
             title="renato7oliveira"
           />
@@ -15,15 +14,15 @@
         </p>
       </div>
       <div>
-        <p>Desde 2009 trabalho para empresas na parte de web. Destinado ao Desenvolvimento Frontend; Design de Interface e Gestão de Projetos Web.</p>
+        <p>Desde 2009 trabalho para empresas na parte de web. Destinado ao Desenvolvimento Frontend de aplicações Web; Design de Interface e Gestão de Projetos.</p>
         <p>Casado com a Delma, pai da Ana Luiza e da <span class="dog">Cyndi</span>.</p>
         <p>Se deseja entrar em contato, <a href="https://forms.gle/Ny9FhRcy3BcyKG7t9" target="_blank">clique aqui</a> e preencha um simples formulário.</p>
-        <span @click="toTop()">
-            <router-link to="/portfolio" class="btn"><i class="material-icons-outline md-apps"></i> Portfolio</router-link>
-        </span>
+        <h2>O que uso:</h2>
+        <ul>
+          <li v-for="item in skills" :key="item">{{item}}</li>
+        </ul>
       </div>
     </section>
-  </div>
 </template>
 
 <script>
@@ -53,7 +52,8 @@ export default {
           img: 'fa fa-facebook',
           url: 'https://facebook.com/renato7oliveira'
         }
-      ]
+      ],
+      skills:['vue' , 'javascript' , 'css grid' , '{{sass}}' , 'html' , 'wordpress' , 'XD'  ]
     }
   },
    methods:{
@@ -68,18 +68,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dark-mode:root{
-  .about img{
-    box-shadow: 1px 1px 3px #000;
-  }
-  .social a{
-    color: #fff;
-  }
-}
 .dog{color: #704734}
-.about {
+section {
   display: grid;
-  grid-template-columns: 180px auto;
+  grid-template-columns: 300px auto;
   grid-gap: 30px;
   img {
     width: 100%;
@@ -88,9 +80,10 @@ export default {
   p {
     margin-bottom: 15px;
     a{
-      color: #FA3423;
+      color: blue;
     }
   }
+
   h2 {
     font-size: 1em;
     margin-top: 10px;
@@ -101,22 +94,17 @@ export default {
     opacity: 1;
     transition-duration: 0.2s;
     &:hover {
-      color: #FA3423;
+      opacity: 0.5;
     }
     i{
-        margin-right: 9px;
-        font-size: 1.2em;
+        margin-right: 5px;
+        font-size: 1.5em;
     }
   }
-  .span
-  router-link, .btn{
-    background: #FA3423;
-    // font-size: 0.6em;
-}
 }
 /* MEDIA QUERIES START */
 @media (max-width: 60em) {
-  .about {
+  section {
     grid-template-columns: 1fr;
     grid-gap: 0px;
   }
