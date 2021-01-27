@@ -26,8 +26,9 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
+$color-main: rgb(29, 0, 34);
 html, body{
-    background: rgb(242, 242, 242);
+    background: rgb(29, 0, 34);
     margin: 0px;
     transition: 0.5s;
 }
@@ -46,30 +47,29 @@ section{
         margin: 10px 0 15px;
       }
       li{
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
-        color: #777;
+        background: orangered;
+        border-radius: 5px;
+        color: #fff;
         display: inline;
         font-size: 0.8em;
         margin-right: 10px;
-        padding: 3px 8px;
+        padding: 5px 12px;
       }
 }
 /* TEMPLATE END */
 /* BUTTON START */
 .btn {
   border: 0px;
-  box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
+  // box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
+  border-radius: 6px;
   cursor: pointer;
-  display: block;
   font-size: 0.8em;
-  margin-bottom: 13px;
   outline: 0;
-  padding: 12px;
+  margin-bottom: 10px;
+  padding: 14px 20px;
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
-  width: 100%;
+  transition: 0.3s;
   &:hover{
     animation-name: button_pulse;
     animation-duration: 2s;
@@ -94,6 +94,13 @@ section{
   &:hover{
     background: #000;
     color: #fff;
+  }
+}
+.btn_white{
+  background: rgb(255, 255, 255);
+  color: $color-main;
+  &:hover{
+    background: rgba(255, 255, 255, 0.8);
   }
 }
 

@@ -43,13 +43,18 @@ export default {
             grid-column-start: 2;
             grid-column-end: 3;
             background: #fff;
-            box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
+            border-radius: 10px;
+            // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(112, 48, 160, 0.8);
             img{
                 width: 100%;
+                border-radius: 10px 10px 0 0;
             }
             h2{
                 font-size: 1em;
                 margin-top: 7px;
+            }
+            .btn{
+              display: block;
             }
         }
         

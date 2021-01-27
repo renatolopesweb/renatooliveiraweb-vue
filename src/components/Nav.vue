@@ -2,11 +2,12 @@
     <div>
         <header>
             <div>
-                <h1>@renato7oliveira · webdesign</h1>
+                <h1>@renato7oliveira</h1>
             </div>
             <nav class="hide_mobile">
                 <ul>
                     <li><router-link to="/">home</router-link></li>
+                    <li><router-link to="/portfolio">portfolio</router-link></li>
                     <li><router-link to="/sobre">sobre</router-link></li>
                 </ul>
             </nav>
@@ -16,8 +17,9 @@
             <div class="overlay"></div>
             <div class="sidebar">
                 <ul>             
-                    <li><router-link to="/">home</router-link></li>
-                    <li><router-link to="/sobre">sobre</router-link></li>
+                    <li><router-link to="/"><i class="material-icons-outline md-account_circle"></i> home</router-link></li>
+                    <li><router-link to="/portfolio"><i class="material-icons-outline md-account_circle"></i> portfolio</router-link></li>
+                    <li><router-link to="/sobre"><i class="material-icons-outline md-account_circle"></i> sobre</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -25,37 +27,45 @@
 </template>
 <style lang="scss" scoped>
 .link_active{
-    font-weight: bolder;
+    background: #fff;
+    color: rgb(29, 0, 34);
 }
 header{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: 65px;
     align-items: center;
-    background: #fff;
-    box-shadow: 0px 0px 13px -7px #999;
+    background: rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     z-index: 1;
     h1{
+        color: rgba(255, 255, 255, 0.7);
         font-size: 0.9em;
-        font-weight: bold;
+        font-weight: normal;
         margin-top: -3px;
-        padding-left: 20px;
-        text-shadow: 0px 0px 1px #333;
-        color: #111;
+        padding-left: 10px;
     }
     nav{
         ul{
             li{
                 cursor: pointer;
                 float: left;
-                font-size: 0.8em;
+                font-size: 0.7em;
                 text-transform: uppercase;
-                margin-right: 20px;
+                margin-right: 10px;
                 a{
-                    color: #000;
+                    border: 1px solid #fff;
+                    border-radius: 500px;
+                    color: #fff;
+                    padding: 8px 15px;
+                    transition: 0.3s;
+                    &:hover{
+                        background: #fff;
+                        color: rgb(29, 0, 34);
+                    }
                 }
+
             }
         }
     }
@@ -67,6 +77,9 @@ header{
     z-index: 1;
     left: 20px;
     top: 20px;
+    i{
+        color: rgba(255, 255, 255, 0.7);
+    }
 }
 .ds_block{
     display: block!important;
@@ -154,10 +167,13 @@ header{
 
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
-    header h1{
+    header{
         grid-template-columns: 1fr;
-        padding-left: 60px;
-        font-weight: normal;
+        background:  rgb(21, 0, 24);
+        h1{
+            padding-left: 60px;
+            font-weight: normal;
+        }
     }
     .sidebar{
         margin-left: -200px;

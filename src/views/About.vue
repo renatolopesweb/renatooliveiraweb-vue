@@ -80,22 +80,24 @@ section {
   p {
     margin-bottom: 15px;
     font-size: 1.2em;
+    color: #fff;
     a{
       color: blue;
     }
   }
 
   h2 {
+    color: #fff;
     font-size: 1em;
     margin-top: 10px;
     margin-bottom: 5px;
   }
   .social a {
-    color: #000;
+    color: #fff;
     opacity: 1;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     &:hover {
-      opacity: 0.5;
+      opacity: 0.3;
     }
     i{
         margin-right: 5px;

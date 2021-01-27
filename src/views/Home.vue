@@ -1,93 +1,42 @@
 <template>
     <section>
-      <article v-for="(item , article) in articles" :key="article" @click="shareData(article)">
-        <img :src="item.screen" :title="item.title" :alt="item.title" />
-        <h2>{{item.title}}</h2>
+      <article>
+        <h2>renato7oliveira</h2>
+            <p>Hello, my name is Renato Oliveira. I’m work with frontend, UX & UI and management web projects.</p>
+            <router-link to="/portfolio" class="btn btn_white"><i class="material-icons-outline md-account_circle"></i> portfolio</router-link>
       </article>
     </section>
 </template>
-<script>
-export default {
-  name: "Lab",
-  data() {
-    
-    return {
-
-      articles: [
-        {
-          screen: require("../assets/images/portfolio-mobile-first.jpg"),
-          title: "Responsive Test",
-          url: "https://renato7oliveira.github.io/responsive-test/dist/index.html",
-          tags: ["css grid" , "javascript"],
-        },
-        {
-          screen: require("../assets/images/portfolio-clone-google.jpg"),
-          title: "Clone Google Desafio",
-          url: "https://renato7oliveira.github.io/clone-google/src/index.html",
-          tags: ["css grid"],
-        },
-        {
-          screen: require("../assets/images/portfolio-beatles.jpg"),
-          title: "Beatles Tribute",
-          url: "https://renato7oliveira.github.io/beatles-tributo/src/index.html",
-          tags: ["css grid" , "vue"],
-        },
-        {
-          screen: require("../assets/images/portfolio-street-fighter.jpg"),
-          title: "Street Fighter Tribute (old school)",
-          url: "https://renato7oliveira.github.io/street-fighter-audio-project",
-          tags: ["edge animate"],
-        },
-      ],
-    };
-  },
-  methods: {
-    shareData(keyDetail) {
-      this.$router.push({
-        name: "PortfolioDetalhe",
-        params: { data: this.articles[keyDetail] },
-      });
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-  },
-};
-</script>
-
 
 <style lang="scss" scoped>
+header{
+  display: none;
+}
 section{
+  align-content: center;
+  color: rgba(255, 255, 255, 0.9);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  article {
-    background: #fff;
-    box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
-    transition: 0.5s;
-    &:hover {
-      cursor: pointer;
-      transform: translateY(-5px);
-    }
-    &:active {
-      transform: translateY(0px);
-    }
-    h2 {
-      font-size: 0.9em;
-      font-weight: normal;
-      padding: 15px;
-    }
-    img {
-      width: 100%;
-    }
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  max-width: 630px;
+  text-align: center;
+  h2{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 3.6em;
+    margin-bottom: 5px;
+  }
+  p{
+    font-size: 1.2em;
+    font-weight: lighter;
+    line-height: 30px;
+    margin-bottom: 20px;
   }
 }
-/* MEDIA QUERIES START */
 @media (max-width: 60em) {
-  section{
-    grid-template-columns: 1fr;
+  section h2{
+    font-size: 2em;
   }
 }
-/* MEDIA QUERIES END  */
 </style>
