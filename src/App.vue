@@ -27,8 +27,9 @@ export default {
     font-family: 'Roboto', sans-serif;
 }
 $color-main: rgb(29, 0, 34);
+// $color-main: rgb(6,79,70);
 html, body{
-    background: rgb(29, 0, 34);
+    background: $color-main;
     margin: 0px;
     transition: 0.5s;
 }
@@ -42,14 +43,14 @@ html, body{
 /* BOOT END */
 /* TEMPLATE START */
 section{
-    padding: 90px 20px 20px 20px;
+    padding: 90px 10px 20px 10px;
       ul{
         margin: 10px 0 15px;
       }
       li{
-        background: orangered;
-        border-radius: 5px;
-        color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        color: #999;
         display: inline;
         font-size: 0.8em;
         margin-right: 10px;
@@ -60,24 +61,23 @@ section{
 /* BUTTON START */
 .btn {
   border: 0px;
-  // box-shadow: 0px 10px 13px -7px #ccc, 5px 5px 15px 5px rgba(0,0,0,0);
-  border-radius: 6px;
+  border-radius: 3px;
   cursor: pointer;
   font-size: 0.8em;
   outline: 0;
   margin-bottom: 10px;
-  padding: 14px 20px;
+  padding: 12px 15px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
   &:hover{
     animation-name: button_pulse;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-delay: 1s;
   }
   i {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 
@@ -97,8 +97,8 @@ section{
   }
 }
 .btn_white{
-  background: rgb(255, 255, 255);
-  color: $color-main;
+  background: rgba(255, 255, 255 , 0.9);
+  color: rgba(0, 0, 0, 0.8);
   &:hover{
     background: rgba(255, 255, 255, 0.8);
   }
@@ -112,10 +112,10 @@ section{
 /* BUTTON END */
 @keyframes button_pulse {
     0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 0 0px rgba(100, 100, 100, 0.9);
     }
     100% {
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+      box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
     }
   }
 /* BUTTON END */

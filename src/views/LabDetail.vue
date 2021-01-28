@@ -43,15 +43,15 @@ export default {
             grid-column-start: 2;
             grid-column-end: 3;
             background: #fff;
-            border-radius: 10px;
+            border-radius: 5px;
             // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(112, 48, 160, 0.8);
             img{
                 width: 100%;
-                border-radius: 10px 10px 0 0;
+                border-radius: 5px 5px 0 0;
             }
             h2{
                 font-size: 1em;
-                margin-top: 7px;
+                margin: 12px 0 12px 0;
             }
             .btn{
               display: block;
@@ -69,4 +69,5 @@ export default {
   }
 }
 /* MEDIA QUERIES END  */
+
 </style>

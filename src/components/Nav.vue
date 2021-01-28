@@ -27,8 +27,8 @@
 </template>
 <style lang="scss" scoped>
 .link_active{
-    background: #fff;
-    color: rgb(29, 0, 34);
+    background: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.8);
 }
 header{
     display: grid;
@@ -55,14 +55,18 @@ header{
                 text-transform: uppercase;
                 margin-right: 10px;
                 a{
-                    border: 1px solid #fff;
-                    border-radius: 500px;
-                    color: #fff;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 3px;
+                    color: rgba(255, 255, 255, 0.4);
                     padding: 8px 15px;
                     transition: 0.3s;
                     &:hover{
-                        background: #fff;
-                        color: rgb(29, 0, 34);
+                        animation-name: button_pulse;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: infinite;
+                        animation-delay: 1s;
+                        background: rgba(255, 255, 255, 0.9);
+                        color: rgba(0, 0, 0, 0.8);
                     }
                 }
 
@@ -74,6 +78,7 @@ header{
     position: absolute;
     position: fixed;
     color: #000;
+    cursor: pointer;
     z-index: 1;
     left: 20px;
     top: 20px;

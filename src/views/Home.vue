@@ -2,16 +2,13 @@
     <section>
       <article>
         <h2>renato7oliveira</h2>
-            <p>Hello, my name is Renato Oliveira. I’m work with frontend, UX & UI and management web projects.</p>
+            <p>Olá, meu nome é Renato Oliveira, trabalho com webdesign e desenvolvimento frontend para web.</p>
             <router-link to="/portfolio" class="btn btn_white"><i class="material-icons-outline md-account_circle"></i> portfolio</router-link>
       </article>
     </section>
 </template>
 
 <style lang="scss" scoped>
-header{
-  display: none;
-}
 section{
   align-content: center;
   color: rgba(255, 255, 255, 0.9);
@@ -35,8 +32,12 @@ section{
   }
 }
 @media (max-width: 60em) {
-  section h2{
-    font-size: 2em;
+  section{
+    align-content: initial;
+    h2{
+      font-size: 2em;
+      margin-top: 20%;
+    }
   }
 }
 </style>
