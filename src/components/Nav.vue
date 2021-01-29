@@ -88,7 +88,7 @@ header{
     left: 20px;
     top: 20px;
     i{
-        color: rgba(255, 255, 255, 0.7);
+        color: #fff;
     }
 }
 .ds_block{

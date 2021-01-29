@@ -48,7 +48,7 @@ html, body{
 /* BOOT END */
 /* TEMPLATE START */
 section{
-    padding: 80px 20px 20px 20px;
+    padding: 90px 20px 20px 20px;
       ul{
         margin: 10px 0 15px;
       }
@@ -87,27 +87,27 @@ section{
 }
 
 .btn_primary{
-  background: $color-primary;
+  background: $color-secondary;
   color: #fff;
   &:hover{
-    background: $color-secondary;
+    background: $color-primary;
   }
 }
 .btn_secondary{
-  background: $color-third;
-  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
   &:hover{
-    background: $color-fourth;
+    background: #000;
     color: #fff;
   }
 }
 .btn_third{
-  border: 1px solid $color-third;
-  color: $color-third;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
   &:hover{
-    background: $color-fourth;
-    border: 1px solid $color-fourth;
     color: #fff;
+    background: #000;
+    border: 1px solid #000;
   }
 }
 .btn_white{

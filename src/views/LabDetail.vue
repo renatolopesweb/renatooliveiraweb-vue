@@ -45,13 +45,15 @@ export default {
             background: #fff;
             border-radius: 5px;
             box-shadow: 1px 1px 5px #ccc;
+            padding-bottom: 5px;
             // box-shadow: 0px 0px 75px 7px #ccc, 5px 5px 15px 5px rgba(255, 255, 255, 0.9);
             img{
                 width: 100%;
                 border-radius: 5px 5px 0 0;
             }
             h2{
-                font-size: 1em;
+                font-size: 0.9em;
+                font-weight: normal;
                 margin: 12px 0 12px 0;
             }
             .btn{
