@@ -17,7 +17,7 @@
             <div class="overlay"></div>
             <div class="sidebar">
                 <ul>             
-                    <li><router-link to="/"><i class="material-icons-outline md-account_circle"></i> home</router-link></li>
+                    <li><router-link to="/"><i class="material-icons-outline md-home"></i> home</router-link></li>
                     <li><router-link to="/portfolio"><i class="material-icons-outline md-account_circle"></i> portfolio</router-link></li>
                     <li><router-link to="/sobre"><i class="material-icons-outline md-account_circle"></i> sobre</router-link></li>
                 </ul>
@@ -26,25 +26,29 @@
     </div>
 </template>
 <style lang="scss" scoped>
+
+$color-primary: rgb(106,72,215);
+$color-secondary: rgb(51, 23, 140);
+
 .link_active{
-    background: rgba(255, 255, 255, 0.9);
-    color: rgba(0, 0, 0, 0.8);
+    background: rgb(255, 255, 255);
+    color: $color-primary;
 }
 header{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: 65px;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(106,72,215);
     position: fixed;
     width: 100%;
     z-index: 1;
     h1{
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 1);
         font-size: 0.9em;
         font-weight: normal;
         margin-top: -3px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
     nav{
         ul{
@@ -53,11 +57,12 @@ header{
                 float: left;
                 font-size: 0.7em;
                 text-transform: uppercase;
-                margin-right: 10px;
+                margin-left: -10px;
+                margin-right: 20px;
                 a{
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    border-radius: 3px;
-                    color: rgba(255, 255, 255, 0.4);
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    color: rgba(255, 255, 255, 0.6);
                     padding: 8px 15px;
                     transition: 0.3s;
                     &:hover{
@@ -65,8 +70,8 @@ header{
                         animation-duration: 1.5s;
                         animation-iteration-count: infinite;
                         animation-delay: 1s;
-                        background: rgba(255, 255, 255, 0.9);
-                        color: rgba(0, 0, 0, 0.8);
+                        background: rgb(255, 255, 255);
+                        color: $color-primary;
                     }
                 }
 
@@ -174,7 +179,6 @@ header{
 @media(max-width: 60em){
     header{
         grid-template-columns: 1fr;
-        background:  rgb(21, 0, 24);
         h1{
             padding-left: 60px;
             font-weight: normal;

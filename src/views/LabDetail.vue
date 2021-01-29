@@ -8,8 +8,8 @@
                 <ul>
                     <li v-for="item in article.tags" :key="item">{{item}}</li>
                 </ul>
-                <a class="btn btn_primary" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
-                <a class="btn btn_secondary" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
+                <a class="btn btn_secondary" :href="article.url" target="_blank"><i class="material-icons-outline md-remove_red_eye"></i> Ver projeto</a>
+                <a class="btn btn_third" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
                 </div>
             </article>
         </section>
@@ -44,7 +44,8 @@ export default {
             grid-column-end: 3;
             background: #fff;
             border-radius: 5px;
-            // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(112, 48, 160, 0.8);
+            box-shadow: 1px 1px 5px #ccc;
+            // box-shadow: 0px 0px 75px 7px #ccc, 5px 5px 15px 5px rgba(255, 255, 255, 0.9);
             img{
                 width: 100%;
                 border-radius: 5px 5px 0 0;

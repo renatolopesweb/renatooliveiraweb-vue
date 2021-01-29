@@ -12,7 +12,7 @@
           Desde 2009 trabalho para empresas na parte de web. Destinado ao Desenvolvimento Frontend de aplicações Web; Design de Interface e Gestão de Projetos. Desde 2009 trabalho para empresas na.
         </p>
         <p>
-          Web parte de web. Destinado ao Desenvolvimento Frontend de aplicações Web; Design de Interface e Gestão de Projetos.
+          Casado com a Delma, pai da AnaLu e Cyndi.
         </p>
         <h2>Mídias Sociais:</h2>
         <p class="social">
@@ -21,8 +21,9 @@
       </div>
       <div>
         <i class="material-icons-outline md-account_circle skills"></i>
-        <p>Vue.js - Javascript - CSS3 (Sass) - HTML5</p>
+        <p>Vue.js - jS - CSS3 Sass - HTML5</p>
         <p>XD - Photoshop - Premiere</p>
+        <p>UX & UI</p>
         <p>Wordpress - Google Analytics - SEO - ADS</p>
       </div>
     </section>
@@ -75,20 +76,26 @@ export default {
 section {
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
-  grid-gap: 30px;
+  grid-gap: 15px;
   height: 100vh;
   div{
-    background: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
+    box-shadow: 0px 0px 75px 7px #ccc, 5px 5px 15px 5px rgba(255, 255, 255, 0.9);
     padding: 25px 50px;
     text-align: center;
+  h2 {
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
   }
   img {
     border-radius: 100%;
     width: 150px;
   }
   p {
-    color: #fff;
+    
     font-size: 1em;
     line-height: 25px;
     margin-bottom: 15px;
@@ -97,15 +104,9 @@ section {
     }
   }
 
-  h2 {
-    color: #fff;
-    font-size: 1em;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
+
   .social a {
-    color: #fff;
-    opacity: 1;
+    color: rgba(0, 0, 0, 0.8);
     transition-duration: 0.3s;
     &:hover {
       opacity: 0.3;
@@ -117,7 +118,7 @@ section {
   }
 }
 .skills{
-  color: #fff;
+  color: rgba(0, 0, 0, 0.5);
   font-size: 10em;
 }
 /* MEDIA QUERIES START */
@@ -125,8 +126,9 @@ section {
   section {
     grid-template-columns: 1fr;
     grid-gap: 0px;
-    p{
-      font-size: 1em;
+
+    div{
+      padding: 25px;
     }
   }
 }

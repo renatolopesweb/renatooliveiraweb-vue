@@ -26,8 +26,13 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-$color-main: rgb(29, 0, 34);
-// $color-main: rgb(6,79,70);
+$color-main: rgb(255, 255, 255);
+$color-primary: rgb(106,72,215);
+$color-secondary: rgb(51,23,140);
+$color-third: rgb(255, 191, 63);
+$color-fourth: rgb(166,117,21);
+
+
 html, body{
     background: $color-main;
     margin: 0px;
@@ -43,7 +48,7 @@ html, body{
 /* BOOT END */
 /* TEMPLATE START */
 section{
-    padding: 90px 10px 20px 10px;
+    padding: 80px 20px 20px 20px;
       ul{
         margin: 10px 0 15px;
       }
@@ -61,12 +66,12 @@ section{
 /* BUTTON START */
 .btn {
   border: 0px;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 0.7em;
   outline: 0;
   margin-bottom: 10px;
-  padding: 12px 15px;
+  padding: 12px 20px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
@@ -82,17 +87,26 @@ section{
 }
 
 .btn_primary{
-  background: rgba(0, 0, 0, 0.4);
+  background: $color-primary;
   color: #fff;
   &:hover{
-    background: #000;
+    background: $color-secondary;
   }
 }
 .btn_secondary{
-  background: rgba(0, 0, 0, 0.1);
-  color: #999;
+  background: $color-third;
+  color: rgba(0, 0, 0, 0.6);
   &:hover{
-    background: #000;
+    background: $color-fourth;
+    color: #fff;
+  }
+}
+.btn_third{
+  border: 1px solid $color-third;
+  color: $color-third;
+  &:hover{
+    background: $color-fourth;
+    border: 1px solid $color-fourth;
     color: #fff;
   }
 }
