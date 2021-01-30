@@ -25,6 +25,7 @@
         <p>XD - Photoshop - Premiere</p>
         <p>Wordpress - Google Analytics - SEO - ADS</p>
       </div>
+      <div class="mobile-space-bottom show-mobile"></div>
     </section>
 </template>
 
@@ -71,7 +72,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dog{color: #704734}
 section {
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
@@ -108,8 +108,6 @@ section {
       color: blue;
     }
   }
-
-
   .social a {
     color: rgba(0, 0, 0, 0.8);
     transition-duration: 0.3s;
@@ -128,9 +126,12 @@ section {
 }
 /* MEDIA QUERIES START */
 @media (max-width: 60em) {
+  .mobile-space-bottom{
+    width: 100%;
+    height: 90px;
+  }
   section {
     grid-template-columns: 1fr;
-    margin-bottom: 210px;
     div{
       padding: 15px;
     }

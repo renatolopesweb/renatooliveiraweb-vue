@@ -47,10 +47,11 @@ $color-secondary: rgb(51, 23, 140);
         }
         a{
             // background: red;
+            border-radius: 4px;
             color: #fff;
             display: block;
             font-size: 0.7em;
-            padding: 22px 0;
+            padding: 7px 0;
             text-transform: uppercase;
         }
     }
@@ -143,8 +144,8 @@ header{
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
     .link_active{
-        opacity: 0.4;
-        background: transparent;
+        opacity: 0.3;
+        background: $color-secondary;
     }
     .nav-mobile{
         display: grid;

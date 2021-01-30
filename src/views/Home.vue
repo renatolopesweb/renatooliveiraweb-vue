@@ -40,7 +40,7 @@ section{
   section{
     h2{
       font-size: 2em;
-      margin-top: -30%;
+      margin-top: -40%;
     }
   }
 }
