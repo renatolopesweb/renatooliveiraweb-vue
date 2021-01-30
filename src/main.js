@@ -16,8 +16,8 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-const sidebar = document.querySelector('.sidebar');
-const mainContent = document.querySelector('.overlay');
+// const sidebar = document.querySelector('.sidebar');
+// const mainContent = document.querySelector('.overlay');
 
 function scrollTop(){
     window.scrollTo({
@@ -25,16 +25,21 @@ function scrollTop(){
         behavior: 'smooth',
     });
 }
-document.querySelector('.mobile_menu').onclick = function () {
-    sidebar.classList.toggle('active');
-    mainContent.classList.toggle('ds_block');
-}
-document.querySelector('.sidebar').onclick = function () {
-    sidebar.classList.toggle('active');
-    mainContent.classList.toggle('ds_block');
+
+document.querySelector('.nav-mobile').onclick = function () {
     scrollTop();
 }
-document.querySelector('.overlay').onclick = function () {
-    sidebar.classList.toggle('active');
-    mainContent.classList.toggle('ds_block');
-}
+
+// document.querySelector('.mobile_menu').onclick = function () {
+//     sidebar.classList.toggle('active');
+//     mainContent.classList.toggle('ds_block');
+// }
+// document.querySelector('.nav-mobile').onclick = function () {
+//     sidebar.classList.toggle('active');
+//     mainContent.classList.toggle('ds_block');
+//     scrollTop();
+// }
+// document.querySelector('.overlay').onclick = function () {
+//     sidebar.classList.toggle('active');
+//     mainContent.classList.toggle('ds_block');
+// }

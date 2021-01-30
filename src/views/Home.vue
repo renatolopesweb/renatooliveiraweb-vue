@@ -38,10 +38,10 @@ section{
 }
 @media (max-width: 60em) {
   section{
-    align-content: initial;
+    // align-content: initial;
     h2{
       font-size: 2em;
-      margin-top: 20%;
+      margin-top: -20%;
     }
   }
 }

@@ -27,6 +27,7 @@ export default {
     font-family: 'Roboto', sans-serif;
 }
 $color-main: rgba(230, 230, 230, 0.1);
+// $color-main: #333;
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51,23,140);
 $color-third: rgb(255, 191, 63);
@@ -164,6 +165,9 @@ header{
   display: none;
 }
 @media (max-width: 60em) {
+  section{
+    padding: 20px;
+  }
   .hide_mobile{
     display: none;
   }

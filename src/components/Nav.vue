@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div class="nav">
         <header>
             <div>
                 <h1>renato<span class="style_1">7</span>oliveira</h1>
@@ -12,7 +13,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="mobile_menu show_mobile"><i class="material-icons-outline md-menu"></i></div>
+        <!-- <div class="mobile_menu show_mobile"><i class="material-icons-outline md-menu"></i></div>
         <nav>
             <div class="overlay"></div>
             <div class="sidebar">
@@ -22,13 +23,47 @@
                     <li><router-link to="/sobre"><i class="material-icons md-person_outline"></i> sobre</router-link></li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
+        </div>
+        <div class="nav-mobile">
+            <div class="nav-link"><router-link to="/"><i class="material-icons md-home"></i> home</router-link></div>
+            <div class="nav-link"><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></div>
+            <div class="nav-link"><router-link to="/sobre"><i class="material-icons md-person_outline"></i> sobre</router-link></div>
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
 
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51, 23, 140);
+
+.nav-mobile{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 90px;
+    align-items: center;
+    background: $color-secondary;
+    bottom: 0px;
+    color: #fff;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    .nav-link{
+        i{
+            color: #fff;
+            // font-size: 1.6em;
+            width: 100%;
+        }
+        a{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.7em;
+        }
+    }
+}
+
+
 .style_1{
   color: rgba(255, 255, 255, 0.6);
 }
@@ -41,7 +76,7 @@ header{
     grid-template-columns: 1fr auto;
     grid-template-rows: 65px;
     align-items: center;
-    background: rgb(106,72,215);
+    background: $color-primary;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -81,6 +116,9 @@ header{
         }
     }
 }
+
+
+
 .mobile_menu{
     position: absolute;
     position: fixed;
@@ -183,20 +221,25 @@ header{
 
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
-    header{
-        grid-template-columns: 1fr;
-        h1{
-            padding-left: 60px;
-            font-weight: normal;
-        }
+    .nav{
+        display: none;
     }
-    .sidebar{
-        margin-left: -200px;
-        width: 200px;
-    }
+
+    // header{
+    //     grid-template-columns: 1fr;
+    //     h1{
+    //         padding-left: 60px;
+    //         font-weight: normal;
+    //     }
+    // }
+    // .sidebar{
+    //     margin-left: -200px;
+    //     width: 200px;
+    // }
     .link_active{
-        color: $color-primary!important;
-}
+        opacity: 0.4;
+        background: transparent;
+    }
 }
 /* MEDIA QUERIES END */
 </style>
