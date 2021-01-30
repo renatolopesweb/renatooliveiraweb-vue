@@ -2,7 +2,7 @@
     <section>
         <article>
             <h2>página não encontrada... 😥</h2>
-            <router-link to="/" class="btn btn_primary">← Home</router-link>
+            <router-link to="/" class="btn btn_primary"><i class="material-icons md-home"></i> Home</router-link>
         </article>
     </section>
 </template>
@@ -18,7 +18,7 @@ section{
     h2{        
         font-size: 1.4em;
         font-weight: bolder;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 </style>

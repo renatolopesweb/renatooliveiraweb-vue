@@ -9,7 +9,7 @@
           />
         </figure>
         <p>
-          Desde 2009 trabalho para empresas na parte de web. Destinado ao Desenvolvimento Frontend de aplicações Web; Design de Interface e Gestão de Projetos. Desde 2009 trabalho para empresas na.
+          Desde 2009 trabalho para empresas na parte de web. Destinado ao Frontend de aplicações Web; Design de Interface e Gestão de Projetos.
         </p>
         <p>
           Casado com a Delma, pai da AnaLu e Cyndi.
@@ -20,10 +20,9 @@
         </p>
       </div>
       <div>
-        <i class="material-icons-outline md-account_circle skills"></i>
-        <p>Vue.js - jS - CSS3 Sass - HTML5</p>
+        <i class="material-icons md-fitness_center skills"></i>
+        <p>Vue - Js - CSS3 - HTML5</p>
         <p>XD - Photoshop - Premiere</p>
-        <p>UX & UI</p>
         <p>Wordpress - Google Analytics - SEO - ADS</p>
       </div>
     </section>
@@ -76,12 +75,13 @@ export default {
 section {
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
-  grid-gap: 15px;
+  grid-gap: 20px;
   height: 100vh;
   div{
-    color: rgba(0, 0, 0, 0.9);
+    background: #fff;
     border-radius: 5px;
-    box-shadow: 0px 0px 75px 7px #ccc, 5px 5px 15px 5px rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 1px 5px #ccc;
+    color: rgba(0, 0, 0, 0.9);
     padding: 25px 50px;
     text-align: center;
   h2 {
@@ -93,11 +93,16 @@ section {
   img {
     border-radius: 100%;
     width: 150px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    &:hover{
+      filter: grayscale(0%);
+    }
   }
   p {
-    
     font-size: 1em;
     line-height: 25px;
+    margin-top: 5px;
     margin-bottom: 15px;
     a{
       color: blue;
@@ -118,17 +123,15 @@ section {
   }
 }
 .skills{
-  color: rgba(0, 0, 0, 0.5);
+  color: #000;
   font-size: 10em;
 }
 /* MEDIA QUERIES START */
 @media (max-width: 60em) {
   section {
     grid-template-columns: 1fr;
-    grid-gap: 0px;
-
     div{
-      padding: 25px;
+      padding: 15px;
     }
   }
 }

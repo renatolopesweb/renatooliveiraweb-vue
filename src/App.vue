@@ -26,12 +26,11 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-$color-main: rgb(255, 255, 255);
+$color-main: rgba(230, 230, 230, 0.1);
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51,23,140);
 $color-third: rgb(255, 191, 63);
 $color-fourth: rgb(166,117,21);
-
 
 html, body{
     background: $color-main;
@@ -82,7 +81,7 @@ section{
     animation-delay: 1s;
   }
   i {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -95,7 +94,7 @@ section{
 }
 .btn_secondary{
   background: rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   &:hover{
     background: #000;
     color: #fff;

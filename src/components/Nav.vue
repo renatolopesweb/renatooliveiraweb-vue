@@ -2,7 +2,7 @@
     <div>
         <header>
             <div>
-                <h1>@renato7oliveira</h1>
+                <h1>renato<span class="style_1">7</span>oliveira</h1>
             </div>
             <nav class="hide_mobile">
                 <ul>
@@ -17,9 +17,9 @@
             <div class="overlay"></div>
             <div class="sidebar">
                 <ul>             
-                    <li><router-link to="/"><i class="material-icons-outline md-home"></i> home</router-link></li>
-                    <li><router-link to="/portfolio"><i class="material-icons-outline md-account_circle"></i> portfolio</router-link></li>
-                    <li><router-link to="/sobre"><i class="material-icons-outline md-account_circle"></i> sobre</router-link></li>
+                    <li><router-link to="/"><i class="material-icons md-home"></i> home</router-link></li>
+                    <li><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></li>
+                    <li><router-link to="/sobre"><i class="material-icons md-person_outline"></i> sobre</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -29,7 +29,9 @@
 
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51, 23, 140);
-
+.style_1{
+  color: rgba(255, 255, 255, 0.6);
+}
 .link_active{
     background: rgb(255, 255, 255);
     color: $color-primary;
@@ -66,7 +68,7 @@ header{
                     padding: 8px 15px;
                     transition: 0.3s;
                     &:hover{
-                        animation-name: button_pulse;
+                        animation-name: nav_pulse;
                         animation-duration: 1.5s;
                         animation-iteration-count: infinite;
                         animation-delay: 1s;
@@ -82,7 +84,6 @@ header{
 .mobile_menu{
     position: absolute;
     position: fixed;
-    color: #000;
     cursor: pointer;
     z-index: 1;
     left: 20px;
@@ -113,13 +114,14 @@ header{
     margin-left: 0px;
 }
 .sidebar ul {
-    padding-top: 25px;
+    padding-top: 10px;
     position: relative;
 }
 .sidebar li {
-    margin: 0 0 1px 0px;
+    // border-bottom: 1px solid red;
+    margin: 0 0 20px 0px;
     list-style-type: none;
-    font-size: 0.8em;
+    font-size: 1em;
     background: #fff;
 }
 .sidebar li a, .sidebar ul li a {
@@ -130,10 +132,6 @@ header{
     padding: 20px 0 20px 20px;
     transition: all 0.3s;
     text-transform: uppercase;
-    &:hover{
-        margin-left: 5px;
-        background: #f0f0f0;
-    }
     &:active{
         margin-left: 0px;
     }
@@ -174,6 +172,14 @@ header{
       box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
     }
 }
+  @keyframes nav_pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+    }
+  }
 
 /* MEDIA QUERIES START */
 @media(max-width: 60em){
@@ -188,6 +194,9 @@ header{
         margin-left: -200px;
         width: 200px;
     }
+    .link_active{
+        color: $color-primary!important;
+}
 }
 /* MEDIA QUERIES END */
 </style>
