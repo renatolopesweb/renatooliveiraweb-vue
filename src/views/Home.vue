@@ -3,7 +3,7 @@
       <article>
         <h2>renato<span class="style_1">7</span>oliveira</h2>
             <p>Olá, meu nome é Renato Oliveira, trabalho com desenvolvimento frontend para web e webdesign.</p>
-            <router-link to="/portfolio" class="btn btn_primary"><i class="material-icons-outline md-layers"></i> portfolio</router-link>
+            <router-link to="/portfolio" class="btn btn_primary"><i class="material-icons md-layers"></i> portfolio</router-link>
       </article>
     </section>
 </template>
@@ -41,7 +41,7 @@ section{
     // align-content: initial;
     h2{
       font-size: 2em;
-      margin-top: -20%;
+      margin-top: -30%;
     }
   }
 }

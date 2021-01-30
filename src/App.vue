@@ -36,7 +36,7 @@ $color-fourth: rgb(166,117,21);
 html, body{
     background: $color-main;
     margin: 0px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .fade-view-enter , .fade-view-leave-to{
     opacity: 0;
@@ -49,6 +49,7 @@ html, body{
 /* TEMPLATE START */
 section{
     padding: 90px 20px 20px 20px;
+    margin-bottom: 120px;
       ul{
         margin: 10px 0 15px;
       }
@@ -94,7 +95,7 @@ section{
   }
 }
 .btn_secondary{
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
   &:hover{
     background: #000;
@@ -108,13 +109,6 @@ section{
     color: #fff;
     background: #000;
     border: 1px solid #000;
-  }
-}
-.btn_white{
-  background: rgba(255, 255, 255 , 0.9);
-  color: rgba(0, 0, 0, 0.8);
-  &:hover{
-    background: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -158,20 +152,23 @@ header{
 }
 /* TRANSITIONS END */
 /* MEDIA QUERIES START */
-.hide_mobile{
+.hide-mobile{
   display: block;
 }
-.show_mobile{
+.show-mobile{
   display: none;
 }
 @media (max-width: 60em) {
+  html,body{
+    overflow-x: hidden;
+  }
   section{
     padding: 20px;
   }
-  .hide_mobile{
+  .hide-mobile{
     display: none;
   }
-  .show_mobile{
+  .show-mobile{
     display: block;
   }
 }
