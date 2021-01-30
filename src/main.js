@@ -19,15 +19,11 @@ new Vue({
 // const sidebar = document.querySelector('.sidebar');
 // const mainContent = document.querySelector('.overlay');
 
-function scrollTop(){
+document.querySelector('.nav-mobile').onclick = function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
     });
-}
-
-document.querySelector('.nav-mobile').onclick = function () {
-    scrollTop();
 }
 
 // document.querySelector('.mobile_menu').onclick = function () {

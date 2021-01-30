@@ -109,6 +109,14 @@ section{
     border: 1px solid #000;
   }
 }
+.btn_fourth{
+  background: rgb(203,139,11);
+  color: rgba(255, 255, 255, 1);
+  &:hover{
+      background: rgba(203,139,11, 0.5);
+
+  }
+}
 
 .btn_animate{
     animation-name: button_pulse;

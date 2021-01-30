@@ -21,6 +21,7 @@
         </div>
     </div>
 </template>
+
 <style lang="scss" scoped>
 
 $color-primary: rgb(106,72,215);

@@ -14,18 +14,26 @@
         <p>
           Casado com a Delma, pai da AnaLu e Cyndi.
         </p>
-        <h2>Mídias Sociais:</h2>
+        <p></p>
+        <h2>Redes Sociais:</h2>
         <p class="social">
           <a v-for="item in social" :title="item.title" :key="item.id" :href="item.url" target="_blank"><i :class="item.img"></i></a>
         </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvreM17QyS421n90WYUp9cP0Sl9o8zcNXtvxPdFuw4aAQTaA/viewform?embedded=true" target="_blank" class="btn btn_fourth"><i class="material-icons md-message"></i> fale comigo</a>
       </div>
       <div>
         <i class="material-icons md-fitness_center skills"></i>
         <p>Vue - Js - CSS3 - HTML5</p>
         <p>XD - Photoshop - Premiere</p>
-        <p>Wordpress - Google Analytics - SEO - ADS</p>
+        <p>Wordpress - SEO - ADS</p>
       </div>
       <div class="mobile-space-bottom show-mobile"></div>
+<!-- 
+      <transition name="fade-view" mode="out-in">
+        <div class="form-overlay" v-show="modalShow" @click="(modalShow = false)">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvreM17QyS421n90WYUp9cP0Sl9o8zcNXtvxPdFuw4aAQTaA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </div>
+      </transition> -->
     </section>
 </template>
 
@@ -33,6 +41,8 @@
 export default {
   data(){
     return{
+
+      modalShow: false,
 
       social: [
         {
@@ -87,7 +97,7 @@ section {
   h2 {
     font-size: 1em;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
   }
   img {
@@ -104,9 +114,6 @@ section {
     line-height: 25px;
     margin-top: 5px;
     margin-bottom: 15px;
-    a{
-      color: blue;
-    }
   }
   .social a {
     color: rgba(0, 0, 0, 0.8);
@@ -115,7 +122,8 @@ section {
       opacity: 0.3;
     }
     i{
-        margin-right: 7px;
+        margin-top: -7px;
+        margin-right: 6px;
         font-size: 1.6em;
     }
   }
@@ -124,6 +132,32 @@ section {
   color: #000;
   font-size: 10em;
 }
+
+.form-overlay{
+    display: grid;
+    background: rgba($color: #000000, $alpha: 0.5);
+    height: 100%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.fade-view-enter , .fade-view-leave-to{
+    opacity: 0;
+}
+.fade-view-enter-active , .fade-view-leave-active{
+    transition: opacity 0.3s ease-in-out ;
+}
+
+iframe{
+    background: #fff;
+    width: 600px;
+    max-width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
 /* MEDIA QUERIES START */
 @media (max-width: 60em) {
   .mobile-space-bottom{
@@ -133,7 +167,7 @@ section {
   section {
     grid-template-columns: 1fr;
     div{
-      padding: 15px;
+      padding: 25px 15px;
     }
   }
 }
