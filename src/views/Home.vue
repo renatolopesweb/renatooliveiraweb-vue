@@ -2,7 +2,7 @@
     <section>
       <article>
         <h2>renato<span class="style_1">7</span>oliveira</h2>
-            <p>Olá, meu nome é Renato Oliveira, trabalho com desenvolvimento frontend para web e webdesign.</p>
+            <p>Olá, meu nome é Renato Oliveira, trabalho com desenvolvimento frontend e webdesign.</p>
             <router-link to="/portfolio" class="btn btn_primary"><i class="material-icons md-layers"></i> portfolio</router-link>
       </article>
     </section>
@@ -17,9 +17,9 @@ section{
   display: grid;
   height: 100vh;
   margin: auto;
-  max-width: 630px;
+  width: 90%;
+  max-width: 560px;
   text-align: center;
-  max-width: 100%;
   h2{
     color: rgba(0, 0, 0, 0.6);
     font-weight: lighter;
@@ -38,7 +38,6 @@ section{
 }
 @media (max-width: 60em) {
   section{
-    // align-content: initial;
     h2{
       font-size: 2em;
       margin-top: -30%;

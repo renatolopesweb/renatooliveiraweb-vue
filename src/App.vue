@@ -35,7 +35,6 @@ $color-fourth: rgb(166,117,21);
 
 html, body{
     background: $color-main;
-    margin: 0px;
     transition: 0.3s;
 }
 .fade-view-enter , .fade-view-leave-to{
@@ -49,7 +48,6 @@ html, body{
 /* TEMPLATE START */
 section{
     padding: 90px 20px 20px 20px;
-    margin-bottom: 120px;
       ul{
         margin: 10px 0 15px;
       }

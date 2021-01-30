@@ -130,6 +130,7 @@ section {
 @media (max-width: 60em) {
   section {
     grid-template-columns: 1fr;
+    margin-bottom: 210px;
     div{
       padding: 15px;
     }
