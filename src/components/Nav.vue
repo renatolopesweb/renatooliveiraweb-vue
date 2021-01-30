@@ -47,8 +47,7 @@ $color-secondary: rgb(51, 23, 140);
             width: 100%;
         }
         a{
-            // background: red;
-            border-radius: 4px;
+            border-radius: 5px;
             color: #fff;
             display: block;
             font-size: 0.7em;
@@ -60,7 +59,7 @@ $color-secondary: rgb(51, 23, 140);
 
 
 .style_1{
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 .link_active{
     background: rgb(255, 255, 255);
