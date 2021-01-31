@@ -159,7 +159,7 @@ iframe{
   section {
     grid-template-columns: 1fr;
     div{
-      padding: 25px 15px;
+      padding: 28px 15px;
     }
   }
 }

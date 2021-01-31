@@ -8,7 +8,7 @@
                 <ul>
                     <li v-for="item in article.tags" :key="item">{{item}}</li>
                 </ul>
-                <a class="btn btn_secondary" :href="article.url" target="_blank"><i class="material-icons md-remove_red_eye"></i> Ver projeto</a>
+                <a class="btn btn_secondary" :href="article.url" target="_blank"><i class="material-icons md-launch"></i> Ver projeto</a>
                 <a class="btn btn_third" @click="labScroll()"><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a>
                 </div>
             </article>

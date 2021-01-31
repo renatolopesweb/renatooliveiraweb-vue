@@ -52,9 +52,9 @@ section{
         margin: 10px 0 15px;
       }
       li{
-        border: 1px solid #ccc;
+        border: 1px solid #999;
         border-radius: 3px;
-        color: #999;
+        color: #666;
         display: inline;
         font-size: 0.8em;
         margin-right: 10px;
