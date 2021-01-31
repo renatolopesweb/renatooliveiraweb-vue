@@ -19,12 +19,12 @@ new Vue({
 // const sidebar = document.querySelector('.sidebar');
 // const mainContent = document.querySelector('.overlay');
 
-document.querySelector('.nav-mobile').onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    });
-}
+// document.querySelector('.nav-mobile').onclick = function () {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth',
+//     });
+// }
 
 // document.querySelector('.mobile_menu').onclick = function () {
 //     sidebar.classList.toggle('active');

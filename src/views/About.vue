@@ -70,14 +70,6 @@ export default {
       skills:['vue' , 'javascript' , 'css grid' , '{{sass}}' , 'html' , 'wordpress' , 'XD'  ]
     }
   },
-   methods:{
-        toTop(){
-          window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      }
-    }
 }
 </script>
 

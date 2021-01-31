@@ -51,15 +51,14 @@ $color-secondary: rgb(51, 23, 140);
             color: #fff;
             display: block;
             font-size: 0.7em;
+            outline: none;
             padding: 7px 0;
             text-transform: uppercase;
+            &:focus{
+                outline: none!important;
+            }
         }
     }
-}
-
-
-.style_1{
-  color: rgba(255, 255, 255, 0.7);
 }
 .link_active{
     background: rgb(255, 255, 255);
@@ -80,6 +79,9 @@ header{
         font-weight: normal;
         margin-top: -3px;
         padding-left: 20px;
+        .style_1{
+            color: rgba(255, 255, 255, 0.7);
+        }
     }
     nav{
         ul{
