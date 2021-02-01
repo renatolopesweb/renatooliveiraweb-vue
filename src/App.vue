@@ -110,10 +110,10 @@ section{
   }
 }
 .btn_fourth{
-  background: rgb(203,139,11);
+  background: rgb(255,107,63);
   color: rgba(255, 255, 255, 1);
   &:hover{
-      background: rgba(203,139,11, 0.5);
+      background: rgba(255,107,63, 0.7);
 
   }
 }

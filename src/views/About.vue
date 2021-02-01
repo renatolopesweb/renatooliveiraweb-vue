@@ -28,12 +28,6 @@
         <p>Wordpress - SEO - ADS</p>
       </div>
       <div class="mobile-space-bottom show-mobile"></div>
-<!-- 
-      <transition name="fade-view" mode="out-in">
-        <div class="form-overlay" v-show="modalShow" @click="(modalShow = false)">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvreM17QyS421n90WYUp9cP0Sl9o8zcNXtvxPdFuw4aAQTaA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-        </div>
-      </transition> -->
     </section>
 </template>
 

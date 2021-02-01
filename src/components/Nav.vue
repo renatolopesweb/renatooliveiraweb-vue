@@ -1,5 +1,11 @@
 <template>
     <div>
+    <div class="preload">
+        <div class="content">
+            <img src="../assets/images/preload-renato7oliveira.png" alt="renato7oliveira">
+        </div>
+        <p>Carregando...</p>
+    </div>
         <div class="hide-mobile">
         <header>
             <div>
@@ -22,42 +28,36 @@
     </div>
 </template>
 
+
 <style lang="scss" scoped>
 
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51, 23, 140);
 
-.nav-mobile{
-    display: none;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: 90px;
-    grid-gap: 20px;
-    align-items: center;
-    background: $color-primary;
-    bottom: 0px;
-    color: #fff;
-    padding: 0 20px;
-    position: fixed;
-    text-align: center;
+.preload{
     width: 100%;
-    z-index: 1;
-    .nav-link{
-        i{
-            color: #fff;
-            width: 100%;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    background: rgb(230, 230, 230);
+    // background: rgba(230, 230, 230, 0.1);
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    .content{
+        max-width: 90%;
+        margin: auto;
+        img{
+            max-width: 30px;            
+            margin: auto;
+            animation-iteration-count: infinite;
+            animation: animatePreload 0.4s ease-out alternate infinite;
         }
-        a{
-            border-radius: 5px;
-            color: #fff;
-            display: block;
-            font-size: 0.7em;
-            outline: none;
-            padding: 7px 0;
-            text-transform: uppercase;
-            &:focus{
-                outline: none!important;
-            }
-        }
+    }
+    p{
+        font-size: 0.7em;
+        color: $color-secondary;
     }
 }
 .link_active{
@@ -113,6 +113,40 @@ header{
     }
 }
 
+.nav-mobile{
+    display: none;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 90px;
+    grid-gap: 20px;
+    align-items: center;
+    background: $color-primary;
+    bottom: 0px;
+    color: #fff;
+    padding: 0 20px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    .nav-link{
+        i{
+            color: #fff;
+            width: 100%;
+        }
+        a{
+            border-radius: 5px;
+            color: #fff;
+            display: block;
+            font-size: 0.7em;
+            outline: none;
+            padding: 7px 0;
+            text-transform: uppercase;
+            &:focus{
+                outline: none!important;
+            }
+        }
+    }
+}
+
 @keyframes navOverlay{
     to{
         opacity: 0.5;
@@ -142,6 +176,16 @@ header{
       box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
     }
   }
+
+@keyframes animatePreload{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+
+}
 
 /* MEDIA QUERIES START */
 @media(max-width: 60em){

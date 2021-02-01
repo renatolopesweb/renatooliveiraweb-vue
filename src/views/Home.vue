@@ -13,14 +13,15 @@
   color: rgb(106,72,215);
 }
 section{
-  align-content: center;
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
   height: 100vh;
-  margin: auto;
-  width: 90%;
-  max-width: 560px;
   text-align: center;
-  h2{
+  article{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    h2{
     color: rgba(0, 0, 0, 0.6);
     font-weight: lighter;
     font-size: 3.6em;
@@ -35,9 +36,11 @@ section{
     line-height: 30px;
     margin-bottom: 20px;
   }
+  }
+  
 }
 @media (max-width: 60em) {
-  section{
+  section article{
     h2{
       font-size: 2em;
       margin-top: -40%;
