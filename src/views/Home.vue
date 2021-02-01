@@ -41,6 +41,8 @@ section{
 }
 @media (max-width: 60em) {
   section article{
+    grid-column-start: 1;
+    grid-column-end: 6;
     h2{
       font-size: 2em;
       margin-top: -40%;
