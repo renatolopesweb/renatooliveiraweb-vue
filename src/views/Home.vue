@@ -22,14 +22,14 @@ section{
     grid-column-start: 3;
     grid-column-end: 4;
     h2{
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 1);
     font-weight: lighter;
     font-size: 3.6em;
     margin-bottom: 5px;
     text-transform: uppercase;
   }
   p{
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 1);
     text-shadow: 0px 0px 1px #666;
     font-size: 1.2em;
     font-weight: lighter;
@@ -39,13 +39,13 @@ section{
   }
   
 }
-@media (max-width: 60em) {
+@media (max-width: 64em) {
   section article{
     grid-column-start: 1;
     grid-column-end: 6;
     h2{
       font-size: 2em;
-      margin-top: -40%;
+      margin-top: -100px;
     }
   }
 }

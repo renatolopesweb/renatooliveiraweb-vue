@@ -13,9 +13,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><router-link to="/">home</router-link></li>
-                    <li><router-link to="/portfolio">portfolio</router-link></li>
-                    <li><router-link to="/sobre">sobre</router-link></li>
+                    <li><router-link to="/"><i class="material-icons md-home"></i> home</router-link></li>
+                    <li><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></li>
+                    <li><router-link to="/sobre"><i class="material-icons md-person"></i> sobre</router-link></li>
                 </ul>
             </nav>
         </header>
@@ -41,7 +41,6 @@ $color-secondary: rgb(51, 23, 140);
     align-content: center;
     align-items: center;
     background: rgb(230, 230, 230);
-    // background: rgba(230, 230, 230, 0.1);
     position: absolute;
     z-index: 2;
     text-align: center;
@@ -96,7 +95,7 @@ header{
                     border: 1px solid rgba(255, 255, 255, 0.4);
                     border-radius: 4px;
                     color: rgba(255, 255, 255, 0.6);
-                    padding: 8px 15px;
+                    padding: 8px 12px;
                     transition: 0.3s;
                     &:hover{
                         animation-name: nav_pulse;
@@ -107,7 +106,9 @@ header{
                         color: $color-primary;
                     }
                 }
-
+                i{
+                    font-size: 1em;
+                }
             }
         }
     }
@@ -188,7 +189,7 @@ header{
 }
 
 /* MEDIA QUERIES START */
-@media(max-width: 60em){
+@media(max-width: 64em){
     .link_active{
         opacity: 0.3;
         background: $color-secondary;

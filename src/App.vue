@@ -26,15 +26,12 @@ export default {
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
 }
-$color-main: rgba(230, 230, 230, 0.1);
-// $color-main: #333;
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51,23,140);
 $color-third: rgb(255, 191, 63);
 $color-fourth: rgb(166,117,21);
 
 html, body{
-    background: $color-main;
     transition: 0.3s;
 }
 .fade-view-enter , .fade-view-leave-to{
@@ -49,12 +46,12 @@ html, body{
 section{
     padding: 90px 20px 20px 20px;
       ul{
-        margin: 10px 0 15px;
+        margin: 10px 0 15px 0;
       }
       li{
-        border: 1px solid #999;
+        border: 1px solid #000;
         border-radius: 3px;
-        color: #666;
+        color: #000;
         display: inline;
         font-size: 0.8em;
         margin-right: 10px;
@@ -69,6 +66,7 @@ section{
   cursor: pointer;
   font-size: 0.7em;
   outline: 0;
+  margin-top: 5px;
   margin-bottom: 10px;
   padding: 12px 20px;
   text-align: center;
@@ -164,7 +162,7 @@ header{
 .show-mobile{
   display: none;
 }
-@media (max-width: 60em) {
+@media (max-width: 64em) {
   html,body{
     overflow-x: hidden;
   }

@@ -12,9 +12,8 @@
           Desde 2009 trabalho para empresas na parte de web. Destinado ao Frontend de aplicações Web; Design de Interface e Gestão de Projetos.
         </p>
         <p>
-          Casado com a Delma, pai da AnaLu e Cyndi.
+          Casado com a Delma, pai da AnaLu e da Cyndi.
         </p>
-        <p></p>
         <h2>Redes Sociais:</h2>
         <p class="social">
           <a v-for="item in social" :title="item.title" :key="item.id" :href="item.url" target="_blank"><i :class="item.img"></i></a>
@@ -23,9 +22,15 @@
       </div>
       <div>
         <i class="material-icons md-fitness_center skills"></i>
-        <p>Vue - Js - CSS3 - HTML5</p>
-        <p>XD - Photoshop - Premiere</p>
-        <p>Wordpress - SEO - ADS</p>
+        <ul>
+          <li v-for="item in skillsCode" :key="item">{{item}}</li>
+        </ul>
+        <ul>
+          <li v-for="item in skillsVisual" :key="item">{{item}}</li>
+        </ul>
+        <ul>
+          <li v-for="item in skillsSoft" :key="item">{{item}}</li>
+        </ul>
       </div>
       <div class="mobile-space-bottom show-mobile"></div>
     </section>
@@ -61,7 +66,9 @@ export default {
           url: 'https://facebook.com/renato7oliveira'
         }
       ],
-      skills:['vue' , 'javascript' , 'css grid' , '{{sass}}' , 'html' , 'wordpress' , 'XD'  ]
+      skillsCode: ['JS' , 'CSS' , 'HTML' , 'Vue.js'],
+      skillsVisual: ['Bootstrap' , 'Material Design'],
+      skillsSoft: ['XD' , 'Photoshop' , 'Premiere'],
     }
   },
 }
@@ -77,13 +84,16 @@ section {
     background: #fff;
     border-radius: 5px;
     box-shadow: 1px 1px 5px #ccc;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 1);
     padding: 25px 50px;
     text-align: center;
   h2 {
     font-size: 1em;
     margin-top: 10px;
     margin-bottom: 7px;
+  }
+  ul{
+    margin: 10px 0 18px 0;
   }
   }
   img {
@@ -102,7 +112,7 @@ section {
     margin-bottom: 15px;
   }
   .social a {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 1);
     transition-duration: 0.3s;
     &:hover {
       opacity: 0.3;
@@ -114,6 +124,7 @@ section {
     }
   }
 }
+
 .skills{
   color: #000;
   font-size: 10em;
@@ -145,7 +156,7 @@ iframe{
 }
 
 /* MEDIA QUERIES START */
-@media (max-width: 60em) {
+@media (max-width: 64em) {
   .mobile-space-bottom{
     width: 100%;
     height: 90px;
