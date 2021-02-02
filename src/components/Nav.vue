@@ -2,7 +2,7 @@
     <div>
     <div class="preload">
         <div class="content">
-            <img src="../assets/images/preload-renato7oliveira.png" alt="renato7oliveira">
+            <div class="icon">R</div>
         </div>
         <p>Carregando...</p>
     </div>
@@ -40,16 +40,21 @@ $color-secondary: rgb(51, 23, 140);
     display: grid;
     align-content: center;
     align-items: center;
-    background: rgb(230, 230, 230);
+    background: #fff;
     position: absolute;
     z-index: 2;
     text-align: center;
     .content{
-        max-width: 90%;
+        // width: 150px;
         margin: auto;
-        img{
-            max-width: 30px;            
+        .icon{
+            background: $color-secondary;
+            border-radius: 3px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: normal;
+            padding: 7px 10px;
             margin: auto;
+            text-align: center;            
             animation-iteration-count: infinite;
             animation: animatePreload 0.4s ease-out alternate infinite;
         }
