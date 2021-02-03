@@ -25,6 +25,12 @@
         <ul>
           <li v-for="item in skillsCode" :key="item">{{item}}</li>
         </ul>
+        <ul>
+          <li v-for="item in skillsVisual" :key="item">{{item}}</li>
+        </ul>
+        <ul>
+          <li v-for="item in skillsSoft" :key="item">{{item}}</li>
+        </ul>
       </div>
       <div class="mobile-space-bottom show-mobile"></div>
     </section>
@@ -60,7 +66,7 @@ export default {
           url: 'https://facebook.com/renato7oliveira'
         }
       ],
-      skillsCode: ['JS' , 'CSS' , 'HTML' , 'Vue.js' , 'Bootstrap' , 'Material Design' , 'XD' , 'Photoshop' , 'Premiere'],
+      skillsCode: ['JS' , 'CSS' , 'HTML' , 'Vue.js'],
       skillsVisual: ['Bootstrap' , 'Material Design'],
       skillsSoft: ['XD' , 'Photoshop' , 'Premiere'],
     }
@@ -86,9 +92,8 @@ section {
     margin-top: 10px;
     margin-bottom: 7px;
   }
-  li{
-    float: left;
-    margin-bottom: 10px;
+  ul{
+    margin-bottom: 18px;
   }
 }
   img {
