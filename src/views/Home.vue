@@ -39,7 +39,7 @@ section{
   }
   
 }
-@media (max-width: 64em) {
+@media (max-width: 1024px) {
   section article{
     grid-column-start: 1;
     grid-column-end: 6;

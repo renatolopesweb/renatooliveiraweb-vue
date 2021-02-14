@@ -56,6 +56,11 @@ section{
         font-size: 0.8em;
         margin-right: 10px;
         padding: 5px 12px;
+        transition: 0.3s;
+        &:hover{
+          background: #000;
+          color: #fff;
+        }
       }
 }
 /* TEMPLATE END */
@@ -91,8 +96,8 @@ section{
   }
 }
 .btn_secondary{
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
   &:hover{
     background: #000;
     color: #fff;
@@ -162,7 +167,7 @@ header{
 .show-mobile{
   display: none;
 }
-@media (max-width: 64em) {
+@media (max-width: 1024px) {
   html,body{
     overflow-x: hidden;
   }

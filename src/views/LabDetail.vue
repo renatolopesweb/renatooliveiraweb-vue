@@ -68,7 +68,7 @@ export default {
     padding: 0px 10px;
 }
 /* MEDIA QUERIES START */
-@media (max-width: 64em) {
+@media (max-width: 1024px) {
   section{
     grid-template-columns: 1fr;
   }

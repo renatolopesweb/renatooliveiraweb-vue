@@ -156,7 +156,7 @@ iframe{
 }
 
 /* MEDIA QUERIES START */
-@media (max-width: 64em) {
+@media (max-width: 1024px) {
   .mobile-space-bottom{
     width: 100%;
     height: 90px;

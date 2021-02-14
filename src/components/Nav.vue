@@ -9,7 +9,7 @@
         <div class="hide-mobile">
         <header>
             <div>
-                <h1>renato<span class="style_1">7</span>oliveira</h1>
+                <h1>Renato<span class="style_1">7</span>Oliveira</h1>
             </div>
             <nav>
                 <ul>
@@ -83,8 +83,9 @@ header{
         font-weight: normal;
         margin-top: -3px;
         padding-left: 20px;
+        text-transform: uppercase;
         .style_1{
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.4);
         }
     }
     nav{
