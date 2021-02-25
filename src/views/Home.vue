@@ -2,7 +2,7 @@
     <section>
       <article>
         <h2>renato<span class="style_1">7</span>oliveira</h2>
-            <p>Olá, meu nome é Renato Oliveira, trabalho com desenvolvimento frontend e webdesign.</p>
+            <p>Olá, meu nome é Renato Oliveira, trabalho com desenvolvimento frontend para web.</p>
             <router-link to="/portfolio" class="btn btn_primary"><i class="material-icons md-layers"></i> portfolio</router-link>
       </article>
     </section>

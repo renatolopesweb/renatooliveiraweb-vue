@@ -4,37 +4,35 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const pageTitle = 'renato7oliveira · '
+const pageTitle = 'RENATO7OLIVEIRA · '
 
   const routes = [
 
-
-
   { path: '/', 
   name: 'Home', 
-  meta:{title: pageTitle + 'frontend · webdesign', description: 'renato7oliveira · frontend · webdesign'},
+  meta:{title: pageTitle + 'FRONTEND · WEB', description: 'RENATO7OLIVEIRA · FRONTEND · WEB'},
   component: Home },
   { 
     path: '/sobre', 
     name: 'sobre', 
-    meta:{title: pageTitle + 'sobre'}, 
+    meta:{title: pageTitle + 'SOBRE'}, 
     component: () => import( '../views/About.vue')},
 
     { 
       path: '/portfolio', 
       name: 'Portfolio', 
-      meta:{title: pageTitle + 'portfolio'} , 
+      meta:{title: pageTitle + 'PORTFOLIO'} , 
       component: () => import( '../views/Lab.vue')},
     { 
  
     path: '/portfolio-detalhe', 
     name: 'PortfolioDetalhe', 
-    meta:{title: pageTitle + 'portfolio > detalhe'} , 
+    meta:{title: pageTitle + 'PORTFOLIO > DETALHE'} , 
     component: () => import( '../views/LabDetail.vue')},
   { 
     path: '/*', 
     name: 'NotFound', 
-    meta:{title: pageTitle + 'página não encontrada'} , 
+    meta:{title: pageTitle + 'PÁGINA NÃO ENCONTRADA'} , 
     component: () => import( '../views/NotFound.vue')}
 ]
 

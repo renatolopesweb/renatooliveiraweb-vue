@@ -1,7 +1,7 @@
 <template>
     <section>
         <article>
-            <h2>página não encontrada... 😥</h2>
+            <h2>página não encontrada... 👻</h2>
             <router-link to="/" class="btn btn_primary"><i class="material-icons md-home"></i> Home</router-link>
         </article>
     </section>
