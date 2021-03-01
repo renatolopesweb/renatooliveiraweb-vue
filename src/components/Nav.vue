@@ -114,6 +114,7 @@ header{
                 }
                 i{
                     font-size: 1em;
+                    vertical-align: middle;
                 }
             }
         }

@@ -85,6 +85,7 @@ section{
   }
   i {
     font-size: 1.2em;
+    vertical-align: middle;
   }
 }
 

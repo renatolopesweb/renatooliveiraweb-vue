@@ -60,6 +60,7 @@ export default {
             li i{
               font-size: 0.9em;
               font-weight: bolder;
+              vertical-align: middle;
             }
         }
         
