@@ -21,6 +21,7 @@ section{
   article{
     grid-column-start: 3;
     grid-column-end: 4;
+    box-shadow: 1px 1px 1px #fff;
     h2{
     color: rgba(0, 0, 0, 1);
     font-weight: lighter;

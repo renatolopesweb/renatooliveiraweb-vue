@@ -45,23 +45,14 @@ html, body{
 /* TEMPLATE START */
 section{
     padding: 90px 20px 20px 20px;
-      ul{
-        margin: 10px 0 15px 0;
-      }
-      li{
-        border: 1px solid #000;
-        border-radius: 3px;
-        color: #000;
-        display: inline;
-        font-size: 0.8em;
-        margin-right: 10px;
-        padding: 5px 12px;
-        transition: 0.3s;
-        &:hover{
-          background: #000;
-          color: #fff;
-        }
-      }
+}
+article, aside{
+  box-shadow: 1px 1px 5px #999;
+  background: #fff;
+}
+p{
+  font-size: 1em;
+  line-height: 27px;
 }
 /* TEMPLATE END */
 /* BUTTON START */
@@ -71,12 +62,12 @@ section{
   cursor: pointer;
   font-size: 0.7em;
   outline: 0;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  padding: 12px 20px;
+  margin: 0px auto 20px auto;
+  padding: 16px 20px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
+  width: 90%;
   &:hover{
     animation-name: button_pulse;
     animation-duration: 1.5s;
