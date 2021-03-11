@@ -31,9 +31,8 @@ section{
   }
   p{
     color: rgba(0, 0, 0, 1);
-    text-shadow: 0px 0px 1px #666;
-    font-size: 1.2em;
-    font-weight: lighter;
+    // text-shadow: 0px 0px 1px #666;
+    font-size: 1.1em;
     line-height: 30px;
     margin-bottom: 20px;
   }

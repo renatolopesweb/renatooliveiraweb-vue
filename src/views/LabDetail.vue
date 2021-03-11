@@ -7,7 +7,7 @@
         <h3>Links</h3>
         <ul>
           <li><a :href="article.url" target="_blank"><i class="material-icons md-launch"></i> Ver projeto</a></li>
-          <li><a :href="article.git" target="_blank"><i class="material-icons md-code"></i> Código fonte</a></li>
+          <li><a :href="article.git" target="_blank"><i class="material-icons md-code"></i> Fonte</a></li>
           <li><a @click="labScroll()"><i class="material-icons md-arrow_back_ios"></i> Voltar</a></li>
         </ul>
       </article>

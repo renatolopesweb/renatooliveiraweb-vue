@@ -37,7 +37,7 @@
         <li v-for="item in skillsCode" :key="item">{{ item }}</li>
       </ul>
       <ul>
-        <li v-for="item in skillsVisual" :key="item">{{ item }}</li>
+        <li v-for="item in skillsFw" :key="item">{{ item }}</li>
       </ul>
       <ul>
         <li v-for="item in skillsSoft" :key="item">{{ item }}</li>
@@ -80,8 +80,8 @@ export default {
           url: "https://facebook.com/renato7oliveira",
         },
       ],
-      skillsCode: ["JS", "CSS", "HTML", "Vue.js"],
-      skillsVisual: ["Bootstrap", "Material Design"],
+      skillsCode: ["JS", "CSS", "HTML"],
+      skillsFw: ["Angular", "Vue.js"],
       skillsSoft: ["XD", "Photoshop", "Premiere"],
     };
   },
