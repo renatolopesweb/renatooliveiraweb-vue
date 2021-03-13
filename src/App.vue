@@ -96,8 +96,8 @@ p{
   }
 }
 .btn_third{
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   &:hover{
     color: #fff;
     background: #000;

@@ -107,7 +107,7 @@ section {
       margin-bottom: 7px;
     }
     ul {
-      margin: 10px 0 18px 0;
+      height: 38px;
     }
     li {
       border: 1px solid #000;
@@ -115,6 +115,7 @@ section {
       color: #000;
       display: inline;
       font-size: 0.8em;
+      // float: left;
       margin-right: 10px;
       padding: 5px 12px;
       transition: 0.3s;
@@ -154,33 +155,7 @@ section {
 .skills {
   color: #000;
   font-size: 10em;
-}
-
-.form-overlay {
-  display: grid;
-  background: rgba($color: #000000, $alpha: 0.5);
-  height: 100%;
-  height: 100vh;
-  position: absolute;
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}
-.fade-view-enter,
-.fade-view-leave-to {
-  opacity: 0;
-}
-.fade-view-enter-active,
-.fade-view-leave-active {
-  transition: opacity 0.3s ease-in-out;
-}
-
-iframe {
-  background: #fff;
-  width: 600px;
-  max-width: 80%;
-  height: 100vh;
-  margin: auto;
+  margin-bottom: 10px;
 }
 
 /* MEDIA QUERIES START */

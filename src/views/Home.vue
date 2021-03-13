@@ -47,6 +47,11 @@ section{
       font-size: 2em;
       margin-top: -100px;
     }
+    p{
+    text-shadow: 0px 0px 1px #666;
+    font-size: 1.2em;
+    font-weight: lighter;
+    }
   }
 }
 </style>
