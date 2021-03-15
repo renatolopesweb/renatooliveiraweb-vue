@@ -80,7 +80,7 @@ export default {
           url: "https://facebook.com/renato7oliveira",
         },
       ],
-      skillsCode: ["JS", "CSS", "HTML"],
+      skillsCode: ["JS", "CSS-Grid", "HTML"],
       skillsFw: ["Angular", "Vue.js"],
       skillsSoft: ["XD", "Photoshop", "Premiere"],
     };
