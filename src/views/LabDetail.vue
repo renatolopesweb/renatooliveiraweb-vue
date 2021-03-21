@@ -4,6 +4,7 @@
       <article>
         <h2>{{ article.title }}</h2>
         <p>{{ article.description }}</p>
+        <p>Usei: {{ article.stack }}</p>
         <h3>Links</h3>
         <ul>
           <li><a :href="article.url" target="_blank"><i class="material-icons md-launch"></i> Ver projeto</a></li>
@@ -56,7 +57,6 @@ section {
   article {
     grid-column-start: 1;
     grid-column-end: 3;
-    border-radius: 5px;
     padding: 25px;
     h2 {
       font-size: 1.4em;
@@ -68,9 +68,10 @@ section {
       font-weight: bolder;
       margin: 20px 0 20px 0;
     }
+    p{
+      margin-bottom: 15px;
+    }
     li{
-      // list-style-type: circle;
-      // margin-left: 20px;
       margin-bottom: 10px;
       i{
         font-size: 1.2em;
@@ -91,16 +92,16 @@ section {
     display: grid;
     grid-column-start: 3;
     grid-column-end: 4;
-    border-radius: 5px;
+    border-radius: 15px;
     img {
       width: 100%;
-      border-radius: 5px 5px 0 0;
+      border-radius: 15px 15px 0 0;
       margin-bottom: 20px;
     }
   }
 }
 /* MEDIA QUERIES START */
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   section {
     grid-template-columns: 1fr;
     article, aside{

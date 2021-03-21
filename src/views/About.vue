@@ -96,8 +96,8 @@ section {
   height: 100vh;
   div {
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px #999;
+    border-radius: 15px;
+    box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
     color: rgba(0, 0, 0, 1);
     padding: 25px 50px;
     text-align: center;

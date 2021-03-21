@@ -33,6 +33,7 @@ $color-fourth: rgb(166,117,21);
 
 html, body{
     transition: 0.3s;
+    background: #f0f0f0;
 }
 .fade-view-enter , .fade-view-leave-to{
     opacity: 0;
@@ -46,8 +47,11 @@ html, body{
 section{
     padding: 90px 20px 20px 20px;
 }
+section article{
+  border-radius: 15px;
+}
 article, aside{
-  box-shadow: 1px 1px 5px #999;
+  box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
   background: #fff;
 }
 p{
@@ -96,8 +100,8 @@ p{
   }
 }
 .btn_third{
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.5);
   &:hover{
     color: #fff;
     background: #000;
@@ -159,7 +163,7 @@ header{
 .show-mobile{
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   html,body{
     overflow-x: hidden;
   }

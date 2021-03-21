@@ -45,7 +45,6 @@ $color-secondary: rgb(51, 23, 140);
     z-index: 2;
     text-align: center;
     .content{
-        // width: 150px;
         margin: auto;
         .icon{
             background: $color-secondary;
@@ -146,7 +145,7 @@ header{
             display: block;
             font-size: 0.7em;
             outline: none;
-            padding: 7px 0;
+            padding: 7px 14px;
             text-transform: uppercase;
             &:focus{
                 outline: none!important;
@@ -196,9 +195,9 @@ header{
 }
 
 /* MEDIA QUERIES START */
-@media(max-width: 64em){
+@media(max-width: 800px){
     .link_active{
-        opacity: 0.3;
+        opacity: 0.5;
         background: $color-secondary;
     }
     .nav-mobile{
