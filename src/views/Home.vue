@@ -6,7 +6,7 @@
         { Frontend · Web }
       </p>
       <router-link to="/portfolio" class="btn btn_primary"
-        ><i class="material-icons md-layers"></i> portfolio</router-link
+        ><i class="material-icons md-layers"></i> ver portfolio</router-link
       >
     </article>
   </section>
