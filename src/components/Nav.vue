@@ -197,7 +197,7 @@ header{
 /* MEDIA QUERIES START */
 @media(max-width: 800px){
     .link_active{
-        opacity: 0.5;
+        opacity: 0.2;
         background: $color-secondary;
     }
     .nav-mobile{
