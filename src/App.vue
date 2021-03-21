@@ -33,7 +33,7 @@ $color-fourth: rgb(166,117,21);
 
 html, body{
     transition: 0.3s;
-    background: #f0f0f0;
+    // background: #E1D9E6;
 }
 .fade-view-enter , .fade-view-leave-to{
     opacity: 0;

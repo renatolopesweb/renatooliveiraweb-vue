@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
 .style_1 {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
 }
 $color-secondary: rgb(51, 23, 140);
 section {
@@ -57,34 +57,19 @@ section {
   }
 }
 @media (max-width: 800px) {
-  // section {
-  //   background: #fff;
   // }
   section article {
     grid-column-start: 1;
     grid-column-end: 6;
-    // color: rgba(0, 0, 0, 0.8);
     h2 {
       font-size: 2em;
       margin-top: -100px;
     }
     p {
-      text-shadow: 0px 0px 1px #666;
+      // text-shadow: 0px 0px 1px #666;
       font-size: 1.2em;
-      font-weight: lighter;
+      // font-weight: lighter;
     }
   }
-  // .btn_primary {
-  //   background: $color-secondary;
-  //   color: rgba(255, 255, 255, 0.9);
-  //   &:hover {
-  //     background: transparent;
-  //     border: 1px solid $color-secondary;
-  //     color: $color-secondary;
-  //   }
-  // }
-  // .style_1 {
-  //   color: $color-secondary;
-  // }
 }
 </style>
