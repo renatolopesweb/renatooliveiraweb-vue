@@ -82,7 +82,7 @@ export default {
       ],
       skillsCode: ["JS", "CSS-Grid", "HTML"],
       skillsFw: ["Angular", "Vue.js"],
-      skillsSoft: ["XD", "Photoshop", "Premiere"],
+      skillsSoft: ["XD", "Photoshop"],
     };
   },
 };

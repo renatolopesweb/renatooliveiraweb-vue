@@ -33,7 +33,6 @@ $color-fourth: rgb(166,117,21);
 
 html, body{
     transition: 0.3s;
-    // background: #E1D9E6;
 }
 .fade-view-enter , .fade-view-leave-to{
     opacity: 0;
@@ -149,7 +148,7 @@ p{
         opacity: 0;
     }
 }
-header{
+header, .nav-mobile{
     animation: fadeIn 0.2s ease-out;
 }
 .fadeOut{
@@ -164,9 +163,9 @@ header{
   display: none;
 }
 @media (max-width: 800px) {
-  html,body{
-    overflow-x: hidden;
-  }
+  // html,body{
+  //   overflow-x: hidden;
+  // }
   section{
     padding: 20px;
   }

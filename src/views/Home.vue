@@ -57,18 +57,15 @@ section {
   }
 }
 @media (max-width: 800px) {
-  // }
   section article {
-    grid-column-start: 1;
-    grid-column-end: 6;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      margin-top: -100px;
     h2 {
       font-size: 2em;
-      margin-top: -100px;
     }
     p {
-      // text-shadow: 0px 0px 1px #666;
       font-size: 1.2em;
-      // font-weight: lighter;
     }
   }
 }

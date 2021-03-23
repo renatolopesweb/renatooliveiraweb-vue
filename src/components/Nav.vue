@@ -132,6 +132,7 @@ header{
     padding: 0 20px;
     position: fixed;
     text-align: center;
+    transition: 0.3s;
     width: 100%;
     z-index: 1;
     .nav-link{
@@ -197,8 +198,9 @@ header{
 /* MEDIA QUERIES START */
 @media(max-width: 800px){
     .link_active{
-        opacity: 0.2;
-        background: $color-secondary;
+        opacity: 0.3;
+        background: none;
+        // background: $color-secondary;
     }
     .nav-mobile{
         display: grid;

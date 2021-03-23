@@ -27,7 +27,7 @@ const pageTitle = 'RENATO7OLIVEIRA · '
  
     path: '/portfolio-detalhe', 
     name: 'PortfolioDetalhe', 
-    meta:{title: pageTitle + 'PORTFOLIO > DETALHE'} , 
+    meta:{title: pageTitle + 'PORTFOLIO · DETALHE'} , 
     component: () => import( '../views/LabDetail.vue')},
   { 
     path: '/*', 

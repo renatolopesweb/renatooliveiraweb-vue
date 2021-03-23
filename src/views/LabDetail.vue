@@ -4,11 +4,11 @@
       <article>
         <h2>{{ article.title }}</h2>
         <p>{{ article.description }}</p>
-        <p>Usei: {{ article.stack }}</p>
-        <h3>Links</h3>
+      </article>
+      <article>
+        <h2>Detalhes</h2>
         <ul>
-          <li><a :href="article.url" target="_blank"><i class="material-icons md-launch"></i> Ver projeto</a></li>
-          <li><a @click="labScroll()"><i class="material-icons md-arrow_back_ios"></i> Voltar</a></li>
+          <li v-for="item in article.detail" :key="item">{{item}}</li>
         </ul>
       </article>
       <aside>
@@ -19,12 +19,14 @@
             :alt="article.title"
           />
         </figure>
-        <a class="btn btn_secondary" :href="article.url" target="_blank"
+        <div>
+          <a class="btn btn_secondary" :href="article.url" target="_blank"
           ><i class="material-icons md-launch"></i> Ver projeto</a
         >
         <a class="btn btn_third" @click="labScroll()"
           ><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a
         >
+        </div>
       </aside>
     </section>
   </div>
@@ -55,24 +57,19 @@ section {
   grid-gap: 25px;
   
   article {
-    grid-column-start: 1;
-    grid-column-end: 3;
     padding: 25px;
     h2 {
-      font-size: 1.4em;
-      font-weight: bolder;
-      margin-bottom: 15px;
-    }
-    h3 {
       font-size: 1.2em;
       font-weight: bolder;
-      margin: 20px 0 20px 0;
+      margin-bottom: 15px;
     }
     p{
       margin-bottom: 15px;
     }
     li{
       margin-bottom: 10px;
+      margin-left: 17px;
+      list-style-type:square;
       i{
         font-size: 1.2em;
         vertical-align: bottom;
@@ -87,12 +84,20 @@ section {
         }
       }
     }
+    li:first-child{
+      color: #FF6B3F;
+    }
   }
-  aside {
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 4;
+}
+aside {
     border-radius: 15px;
+    div{
+      display: block;
+      margin: 5px 0 32px 17px;
+      .btn{
+        margin-right: 15px;
+      }
+    }
     img {
       width: 100%;
       border-radius: 15px 15px 0 0;
@@ -100,7 +105,6 @@ section {
       margin-bottom: 20px;
     }
   }
-}
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
   section {
