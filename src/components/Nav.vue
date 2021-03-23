@@ -12,7 +12,7 @@
                 <h1>Renato<span class="style_1">7</span>Oliveira</h1>
             </div>
             <nav>
-                <ul>
+                <ul @click="toTop()">
                     <li><router-link to="/"><i class="material-icons md-home"></i> home</router-link></li>
                     <li><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></li>
                     <li><router-link to="/sobre"><i class="material-icons md-person"></i> sobre</router-link></li>
@@ -20,13 +20,26 @@
             </nav>
         </header>
         </div>
-        <div class="nav-mobile show-mobile">
+        <div class="nav-mobile show-mobile" @click="toTop()">
             <div class="nav-link"><router-link to="/"><i class="material-icons md-home"></i> home</router-link></div>
             <div class="nav-link"><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></div>
             <div class="nav-link"><router-link to="/sobre"><i class="material-icons md-person"></i> sobre</router-link></div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods:{
+        toTop(){
+           window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+        }
+    }
+}
+</script>
 
 
 <style lang="scss" scoped>

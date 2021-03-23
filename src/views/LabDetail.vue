@@ -32,6 +32,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "PortfolioDetalhe",
 
@@ -94,6 +95,10 @@ aside {
     div{
       display: block;
       margin: 5px 0 32px 17px;
+      @media(max-width: 1024px){
+        display: grid;
+        margin: 0px;
+      }
       .btn{
         margin-right: 15px;
       }
@@ -107,6 +112,9 @@ aside {
   }
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
+  .nav-mobile{
+    display: none!important;
+  }
   section {
     grid-template-columns: 1fr;
     article, aside{

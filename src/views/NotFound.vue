@@ -10,11 +10,14 @@
 <style lang="scss" scoped>
 section{
     display: grid;
-    width: 350px;
+    max-width: 350px;
     margin: auto;
     height: 100vh;
     align-content: center;
     text-align: center;
+    article{
+        padding: 50px;
+    }
     h2{        
         font-size: 1.4em;
         font-weight: bolder;
