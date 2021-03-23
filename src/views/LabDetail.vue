@@ -1,17 +1,16 @@
 <template>
-  <div>
     <section>
-      <article>
+      <article class="description">
         <h2>{{ article.title }}</h2>
         <p>{{ article.description }}</p>
       </article>
-      <article>
+      <article class="detail">
         <h2>Detalhes</h2>
         <ul>
           <li v-for="item in article.detail" :key="item">{{item}}</li>
         </ul>
       </article>
-      <aside>
+      <aside class="screenLinks">
         <figure>
           <img
             :src="article.screen"
@@ -29,10 +28,9 @@
         </div>
       </aside>
     </section>
-  </div>
 </template>
-<script>
 
+<script>
 export default {
   name: "PortfolioDetalhe",
 
@@ -56,8 +54,13 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
-  
-  article {
+  grid-template-areas: 
+  "description detail screenLinks";
+}
+.description{grid-area: description;}
+.detail{grid-area: detail;}
+.screenLinks{grid-area: screenLinks;}
+article {
     padding: 25px;
     h2 {
       font-size: 1.2em;
@@ -88,17 +91,16 @@ section {
     li:first-child{
       color: #FF6B3F;
     }
-  }
 }
 aside {
     border-radius: 15px;
     div{
-      display: block;
+      // display: block;
       margin: 5px 0 32px 17px;
-      @media(max-width: 1024px){
-        display: grid;
-        margin: 0px;
-      }
+      // @media(max-width: 1024px){
+      //   display: grid;
+      //   margin: 0px;
+      // }
       .btn{
         margin-right: 15px;
       }
@@ -112,19 +114,18 @@ aside {
   }
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
-  .nav-mobile{
-    display: none!important;
-  }
+
   section {
-    grid-template-columns: 1fr;
-    article, aside{
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-    aside{
-      margin-bottom: 90px;
-    }
+     grid-template-areas: 
+      "screenLinks screenLinks screenLinks"
+      "description description description"
+      "detail      detail      detail";
+      margin-bottom: 95px;
   }
+  // section::before{
+  //   content: "";
+  //   margin-bottom: 500px;
+  // }
 }
 /* MEDIA QUERIES END  */
 </style>
