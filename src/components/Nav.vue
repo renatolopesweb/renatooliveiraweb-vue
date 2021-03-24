@@ -145,7 +145,6 @@ header{
     padding: 0 20px;
     position: fixed;
     text-align: center;
-    transition: 0.3s;
     width: 100%;
     z-index: 1;
     .nav-link{

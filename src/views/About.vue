@@ -10,11 +10,13 @@
       </figure>
       <div>
         <p>
-          Desde 2009 trabalho para empresas na divisão de web. Destinado ao
-          Desenvolvimento Frontend; Design de Interface e Gestão de Projetos
-          Digitais.
+          Entusiasmado em concretizar ideias web desde 2009. Destinado ao frontend, design de interface e gestão de projetos.
         </p>
-        <p>Casado com a Delma, pai da AnaLu e da Cyndi.</p>
+        <p>
+          Felizmente ou não, sua presença em divisões como Marketing,
+          Comunicação e Comercial, não é evitável. <br>
+          Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Entre em <a href="https://forms.gle/xH4TV4iLPEBC3gtq5" target="_blank"> contato</a>.
+        </p>
         <h2>Redes Sociais:</h2>
         <p class="social">
           <a
@@ -31,7 +33,7 @@
     <article>
       <figure><i class="material-icons md-directions_bike"></i></figure>
       <div>
-        <p><strong>Code:</strong> Js, Angular, Vue.js, HTML, Sass, CSS-Grid,.</p>
+        <p><strong>Code:</strong> JS => TS, Angular, Vue.js, HTML, Sass, CSS-Grid.</p>
         <p><strong>Lib:</strong> Bootstrap, Material Design.</p>
         <p><strong>Adobe:</strong> XD, Photoshop.</p>
       </div>
@@ -100,6 +102,9 @@ article {
       margin-top: 5px;
       margin-bottom: 15px;
     }
+    a{
+      color: blue;
+    }
     .social a {
       color: rgba(0, 0, 0, 1);
       transition-duration: 0.3s;
@@ -126,25 +131,27 @@ figure {
   }
 }
 
+
 /* MEDIA QUERIES START */
-@media(min-width: 1500px){
+@media (min-width: 1500px) {
   section {
     height: 100vh;
-}
-article {
-  grid-template-columns: 300px auto;
-}
+  }
+  article {
+    grid-template-columns: 300px auto;
+  }
 }
 @media (max-width: 1024px) {
   section {
     height: 100vh;
-}
+  }
   article {
     grid-template-columns: 1fr;
-    img , figure{
+    img,
+    figure {
       border-radius: 15px 15px 0 0;
     }
-    figure i{
+    figure i {
       padding: 25px;
     }
   }

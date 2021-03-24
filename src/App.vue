@@ -25,6 +25,7 @@ export default {
     text-decoration: none;
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.2s ease-out;
 }
 $color-primary: rgb(106,72,215);
 $color-secondary: rgb(51,23,140);
@@ -148,9 +149,7 @@ p{
         opacity: 0;
     }
 }
-header, .nav-mobile{
-    animation: fadeIn 0.2s ease-out;
-}
+
 .fadeOut{
     animation: fadeOut 0.2s ease-out forwards;
 }
