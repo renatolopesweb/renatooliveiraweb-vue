@@ -112,20 +112,20 @@ aside {
       margin-bottom: 20px;
     }
   }
+
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
 
   section {
      grid-template-areas: 
-      "screenLinks screenLinks screenLinks"
-      "description description description"
-      "detail      detail      detail";
+      "screenLinks    screenLinks   screenLinks"
+      "description    description   description"
+      "detail         detail        detail";
       margin-bottom: 95px;
   }
-  // section::before{
-  //   content: "";
-  //   margin-bottom: 500px;
-  // }
+  aside div{
+    display: block;
+  }
 }
 /* MEDIA QUERIES END  */
 </style>
