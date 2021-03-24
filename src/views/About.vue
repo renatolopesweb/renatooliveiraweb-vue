@@ -13,9 +13,9 @@
           Entusiasmado em concretizar ideias web desde 2009. Destinado ao frontend, design de interface e gestão de projetos.
         </p>
         <p>
-          Felizmente ou não, sua presença em divisões como Marketing,
+          Sua presença em divisões como Marketing,
           Comunicação e Comercial, não é evitável. <br>
-          Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Entre em <a href="https://forms.gle/xH4TV4iLPEBC3gtq5" target="_blank"> contato</a>.
+          Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Fale comigo <a href="https://forms.gle/xH4TV4iLPEBC3gtq5" target="_blank">clicando aqui</a>.
         </p>
         <h2>Redes Sociais:</h2>
         <p class="social">
@@ -33,7 +33,7 @@
     <article>
       <figure><i class="material-icons md-directions_bike"></i></figure>
       <div>
-        <p><strong>Code:</strong> JS => TS, Angular, Vue.js, HTML, Sass, CSS-Grid.</p>
+        <p><strong>Code:</strong> JS, Angular, Vue.js, HTML, Sass, CSS-Grid.</p>
         <p><strong>Lib:</strong> Bootstrap, Material Design.</p>
         <p><strong>Adobe:</strong> XD, Photoshop.</p>
       </div>
