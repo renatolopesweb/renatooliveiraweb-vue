@@ -31,8 +31,9 @@
     <article>
       <figure><i class="material-icons md-directions_bike"></i></figure>
       <div>
-        <p><strong>Frontend:</strong> Angular, Vue.js, HTML, Sass, CSS, Js.</p>
-        <p><strong>Design:</strong> XD, Photoshop.</p>
+        <p><strong>Code:</strong> Js, Angular, Vue.js, HTML, Sass, CSS-Grid,.</p>
+        <p><strong>Lib:</strong> Bootstrap, Material Design.</p>
+        <p><strong>Adobe:</strong> XD, Photoshop.</p>
       </div>
     </article>
     <div class="mobile-space-bottom show-mobile"></div>
@@ -80,7 +81,6 @@ section {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 25px;
-  // height: 100vh;
 }
 article {
   display: grid;
@@ -136,6 +136,9 @@ article {
 }
 }
 @media (max-width: 1024px) {
+  section {
+    height: 100vh;
+}
   article {
     grid-template-columns: 1fr;
     img , figure{
