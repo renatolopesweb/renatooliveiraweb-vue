@@ -47,7 +47,7 @@ html, body{
 section{
     padding: 90px 20px 20px 20px;
 }
-section article{
+article, aside{
   border-radius: 15px;
 }
 article, aside{

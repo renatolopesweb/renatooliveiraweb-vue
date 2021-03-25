@@ -1,6 +1,16 @@
 <template>
   <section>
     <article>
+      <h2>Habilidades</h2>
+      <div v-for="item in skills" :key="item.id" class="bar">
+        <div class="bar_front" :style="{ width: item.cssStyle + '%' }">
+          <span
+            ><strong>{{ item.category }}:</strong> {{ item.content }}</span
+          >
+        </div>
+      </div>
+    </article>
+    <aside>
       <figure>
         <img
           src="../assets/images/renato7oliveira-home.jpg"
@@ -10,12 +20,8 @@
       </figure>
       <div>
         <p>
-          Entusiasmado em concretizar ideias web desde 2009. Destinado ao frontend, design de interface e gestão de projetos.
-        </p>
-        <p>
-          Sua presença em divisões como Marketing,
-          Comunicação e Comercial, não é evitável. <br>
-          Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Fale comigo <a href="https://forms.gle/xH4TV4iLPEBC3gtq5" target="_blank">clicando aqui</a>.
+          Entusiasmado em concretizar ideias web desde 2009. Destinado ao
+          frontend, design de interface e gestão de projetos digitais.
         </p>
         <h2>Redes Sociais:</h2>
         <p class="social">
@@ -29,15 +35,7 @@
           ></a>
         </p>
       </div>
-    </article>
-    <article>
-      <figure><i class="material-icons md-directions_bike"></i></figure>
-      <div>
-        <p><strong>Code:</strong> JS, Angular, Vue.js, HTML, Sass, CSS-Grid.</p>
-        <p><strong>Lib:</strong> Bootstrap, Material Design.</p>
-        <p><strong>Adobe:</strong> XD, Photoshop.</p>
-      </div>
-    </article>
+    </aside>
     <div class="mobile-space-bottom show-mobile"></div>
   </section>
 </template>
@@ -46,6 +44,29 @@
 export default {
   data() {
     return {
+      skills: [
+        {
+          category: "Code",
+          content: "HTML / CSS / Sass",
+          cssStyle: "100",
+        },
+        {
+          category: "PWA",
+          content: "Angular / Vue.js / JS*",
+          cssStyle: "50",
+        },
+        {
+          category: "Lib",
+          content: "Bootstrap / Material Design",
+          cssStyle: "70",
+        },
+        {
+          category: "Adobe",
+          content: "XD / Photoshop",
+          cssStyle: "80",
+        }
+      ],
+
       social: [
         {
           title: "Github",
@@ -81,28 +102,60 @@ export default {
 <style lang="scss" scoped>
 section {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 350px;
   grid-gap: 25px;
+  grid-template-areas: "skills about";
+  height: 100vh;
 }
 article {
-  display: grid;
-  grid-template-columns: 240px auto;
+  grid-area: skills;
+  padding: 25px;
+  h2 {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+}
+
+.bar {
+  width: 100%;
+  border-radius: 5px;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+}
+.bar_front {
+  border-radius: 5px;
+  padding: 9px 14px;
+  background: #ffde3f;
+  color: rgb(30, 28, 17);
+  span {
+    font-size: 0.9em;
+  }
+}
+
+aside {
+  grid-area: about;
   img {
+    border-radius: 15px 15px 0 0;
     width: 100%;
-    border-radius: 15px 0 0 15px;
+    filter: grayscale(1);
+    transition: 0.2s;
+    &:hover {
+      filter: grayscale(0);
+    }
   }
   div {
-    padding: 25px;
+    padding: 10px 20px;
     h2 {
       font-size: 1em;
       margin-top: 10px;
       margin-bottom: 7px;
     }
     p {
-      margin-top: 5px;
+      font-size: 1em;
       margin-bottom: 15px;
     }
-    a{
+    a {
       color: blue;
     }
     .social a {
@@ -119,45 +172,17 @@ article {
     }
   }
 }
-figure {
-  background: #ffde3f;
-  display: grid;
-  place-items: center;
-  border-radius: 15px 0 0 15px;
-  i {
-    font-size: 7em;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-
 /* MEDIA QUERIES START */
-@media (min-width: 1500px) {
-  section {
-    height: 100vh;
-  }
-  article {
-    grid-template-columns: 300px auto;
-  }
-}
 @media (max-width: 1024px) {
   section {
-    height: 100vh;
-  }
-  article {
     grid-template-columns: 1fr;
-    img,
-    figure {
-      border-radius: 15px 15px 0 0;
+    grid-template-areas:
+      "skills skills"
+      "about about";
+    .mobile-space-bottom {
+      width: 100%;
+      height: 90px;
     }
-    figure i {
-      padding: 25px;
-    }
-  }
-  .mobile-space-bottom {
-    width: 100%;
-    height: 90px;
   }
 }
 /* MEDIA QUERIES END  */
