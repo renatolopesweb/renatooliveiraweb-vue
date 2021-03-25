@@ -20,9 +20,10 @@
       </figure>
       <div>
         <p>
-          Entusiasmado em concretizar ideias web desde 2009. Destinado ao
+          Concretiza ideias para web desde 2009.<br> Destinado ao
           frontend, design de interface e gestão de projetos digitais.
         </p>
+        <p>Entre em <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">Contato</a>.</p>
         <h2>Redes Sociais:</h2>
         <p class="social">
           <a
@@ -58,12 +59,12 @@ export default {
         {
           category: "Lib",
           content: "Bootstrap / Material Design",
-          cssStyle: "70",
+          cssStyle: "80",
         },
         {
           category: "Adobe",
           content: "XD / Photoshop",
-          cssStyle: "80",
+          cssStyle: "60",
         }
       ],
 
@@ -102,7 +103,7 @@ export default {
 <style lang="scss" scoped>
 section {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 0.4fr;
   grid-gap: 25px;
   grid-template-areas: "skills about";
   height: 100vh;
@@ -116,12 +117,11 @@ article {
     margin-bottom: 15px;
   }
 }
-
 .bar {
   width: 100%;
   border-radius: 5px;
   background: #f0f0f0;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .bar_front {
   border-radius: 5px;
@@ -132,7 +132,6 @@ article {
     font-size: 0.9em;
   }
 }
-
 aside {
   grid-area: about;
   img {
@@ -177,8 +176,8 @@ aside {
   section {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "skills skills"
-      "about about";
+      "about about"
+      "skills skills";
     .mobile-space-bottom {
       width: 100%;
       height: 90px;
