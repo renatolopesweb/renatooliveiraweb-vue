@@ -3,17 +3,18 @@
     <article>
       <h2>Sobre</h2>
       <p>
-        Entusiasmado em concretizar ideias web desde 2009. Destinado ao
-        frontend, design de interface e gestão de projetos.
+        Desde 2009 trabalho com web para as empresas. Destinado ao
+        desenvolvimento frontend, design para interfaces e gestão de projetos digitais.
       </p>
       <p>
         Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Fale comigo clicando
-        <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">Contato</a
-        >.
+        <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">aqui</a>.
       </p>
       <h3>Habilidades</h3>
       <ul>
-        <li v-for="item in skills" :key="item.id"><strong>{{ item.category }}:</strong> {{ item.content }}</li>
+        <li v-for="item in skills" :key="item.id">
+          <strong>{{ item.category }}:</strong> {{ item.content }}
+        </li>
       </ul>
     </article>
     <aside>
@@ -49,7 +50,7 @@ export default {
       skills: [
         {
           category: "Code",
-          content: "HTML / CSS / Sass / JS",
+          content: "HTML / CSS / Sass / JS / *VS Code",
         },
         {
           category: "PWA",
@@ -60,7 +61,7 @@ export default {
           content: "Bootstrap / Material Design",
         },
         {
-          category: "Adobe",
+          category: "Visual",
           content: "XD / Photoshop",
         },
       ],
@@ -111,24 +112,24 @@ article {
   h2 {
     font-size: 1.2em;
     font-weight: bolder;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
-  h3{
+  h3 {
     font-size: 1em;
     font-weight: bolder;
     margin-top: 15px;
     margin-bottom: 10px;
   }
-  p{
-    margin-bottom: 5px;
+  p {
+    margin-bottom: 12px;
   }
-  a{
+  a {
     color: blue;
   }
-  li{
+  li {
     margin-bottom: 10px;
     margin-left: 18px;
-    list-style-type:square;
+    list-style-type: square;
   }
 }
 .bar {
@@ -159,15 +160,12 @@ aside {
   }
   div {
     padding-left: 15px;
+    padding-bottom: 12px;
     // text-align: center;
     h2 {
       font-size: 0.9em;
       margin-top: 10px;
-      margin-bottom: 3px;
-    }
-    p {
-      font-size: 1em;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
     a {
       color: blue;
@@ -179,9 +177,8 @@ aside {
         opacity: 0.3;
       }
       i {
-        margin-top: -7px;
-        margin-right: 4px;
-        font-size: 1.4em;
+        margin-right: 8px;
+        font-size: 1.5em;
       }
     }
   }
@@ -193,15 +190,16 @@ aside {
     grid-template-areas:
       "skills skills"
       "about about";
-    
-    article{
-      p{
-        margin-bottom: 5px;
+
+    article {
+      p {
+        margin-bottom: 15px;
+        line-height: 25px;
       }
-          }
+    }
     .mobile-space-bottom {
       width: 100%;
-      height: 90px;
+      height: 65px;
     }
   }
 }

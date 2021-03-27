@@ -56,7 +56,7 @@ article, aside{
 }
 p{
   font-size: 1em;
-  line-height: 27px;
+  line-height: 23px;
 }
 /* TEMPLATE END */
 /* BUTTON START */
@@ -162,9 +162,6 @@ p{
   display: none;
 }
 @media (max-width: 800px) {
-  // html,body{
-  //   overflow-x: hidden;
-  // }
   section{
     padding: 20px;
   }
