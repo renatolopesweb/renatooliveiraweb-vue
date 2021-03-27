@@ -1,14 +1,20 @@
 <template>
   <section>
     <article>
-      <h2>Habilidades</h2>
-      <div v-for="item in skills" :key="item.id" class="bar">
-        <div class="bar_front" :style="{ width: item.cssStyle + '%' }">
-          <span
-            ><strong>{{ item.category }}:</strong> {{ item.content }}</span
-          >
-        </div>
-      </div>
+      <h2>Sobre</h2>
+      <p>
+        Entusiasmado em concretizar ideias web desde 2009. Destinado ao
+        frontend, design de interface e gestão de projetos.
+      </p>
+      <p>
+        Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Fale comigo clicando
+        <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">Contato</a
+        >.
+      </p>
+      <h3>Habilidades</h3>
+      <ul>
+        <li v-for="item in skills" :key="item.id"><strong>{{ item.category }}:</strong> {{ item.content }}</li>
+      </ul>
     </article>
     <aside>
       <figure>
@@ -19,11 +25,6 @@
         />
       </figure>
       <div>
-        <p>
-          Concretiza ideias para web desde 2009.<br> Destinado ao
-          frontend, design de interface e gestão de projetos digitais.
-        </p>
-        <p>Entre em <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">Contato</a>.</p>
         <h2>Redes Sociais:</h2>
         <p class="social">
           <a
@@ -48,24 +49,20 @@ export default {
       skills: [
         {
           category: "Code",
-          content: "HTML / CSS / Sass",
-          cssStyle: "100",
+          content: "HTML / CSS / Sass / JS",
         },
         {
           category: "PWA",
-          content: "Angular / Vue.js / JS*",
-          cssStyle: "50",
+          content: "Angular / Vue.js",
         },
         {
           category: "Lib",
           content: "Bootstrap / Material Design",
-          cssStyle: "80",
         },
         {
           category: "Adobe",
           content: "XD / Photoshop",
-          cssStyle: "60",
-        }
+        },
       ],
 
       social: [
@@ -106,15 +103,32 @@ section {
   grid-template-columns: 1fr 0.4fr;
   grid-gap: 25px;
   grid-template-areas: "skills about";
-  height: 100vh;
 }
 article {
   grid-area: skills;
-  padding: 25px;
+  box-shadow: 0px 0px 0px;
+  background: #fff;
   h2 {
     font-size: 1.2em;
     font-weight: bolder;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  h3{
+    font-size: 1em;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  p{
+    margin-bottom: 5px;
+  }
+  a{
+    color: blue;
+  }
+  li{
+    margin-bottom: 10px;
+    margin-left: 18px;
+    list-style-type:square;
   }
 }
 .bar {
@@ -144,11 +158,12 @@ aside {
     }
   }
   div {
-    padding: 10px 20px;
+    padding-left: 15px;
+    // text-align: center;
     h2 {
-      font-size: 1em;
+      font-size: 0.9em;
       margin-top: 10px;
-      margin-bottom: 7px;
+      margin-bottom: 3px;
     }
     p {
       font-size: 1em;
@@ -165,8 +180,8 @@ aside {
       }
       i {
         margin-top: -7px;
-        margin-right: 6px;
-        font-size: 1.6em;
+        margin-right: 4px;
+        font-size: 1.4em;
       }
     }
   }
@@ -176,8 +191,14 @@ aside {
   section {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "about about"
-      "skills skills";
+      "skills skills"
+      "about about";
+    
+    article{
+      p{
+        margin-bottom: 5px;
+      }
+          }
     .mobile-space-bottom {
       width: 100%;
       height: 90px;

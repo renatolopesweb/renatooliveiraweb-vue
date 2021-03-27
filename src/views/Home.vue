@@ -32,12 +32,12 @@ section {
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     h2 {
-      font-size: 2.8em;
+      font-size: 3.4em;
       font-weight: lighter;
       margin-bottom: 5px;
     }
     p {
-      font-size: 1.4em;
+      font-size: 1.8em;
       font-weight: lighter;
       line-height: 35px;
       margin-bottom: 20px;
@@ -63,6 +63,7 @@ section {
       margin-top: -100px;
     h2 {
       font-size: 2em;
+      margin-bottom: 0px;
     }
     p {
       font-size: 1.2em;
