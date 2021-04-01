@@ -19,14 +19,14 @@
 $color-secondary: rgb(51, 23, 140);
 section {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-content: center;
   height: 100vh;
   text-align: center;
   background: $color-secondary;
   article {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 3;
     box-shadow: 0px 0px 0px transparent;
     background: transparent;
     color: rgba(255, 255, 255, 0.8);
@@ -58,8 +58,7 @@ section {
 }
 @media (max-width: 800px) {
   section article {
-      grid-column-start: 1;
-      grid-column-end: 6;
+
       margin-top: -100px;
     h2 {
       font-size: 2em;

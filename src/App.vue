@@ -100,20 +100,18 @@ p{
   }
 }
 .btn_third{
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.5);
   &:hover{
     color: #fff;
     background: #000;
-    border: 1px solid #000;
   }
 }
 .btn_fourth{
   background: rgb(255,107,63);
   color: rgba(255, 255, 255, 1);
   &:hover{
-      background: rgba(255,107,63, 0.7);
-
+      background: #000;
   }
 }
 

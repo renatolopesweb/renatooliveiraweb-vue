@@ -18,7 +18,7 @@
             :alt="article.title"
           />
         </figure>
-        <div>
+        <div class="show-mobile">
           <a class="btn btn_secondary" :href="article.url" target="_blank"
           ><i class="material-icons md-launch"></i> Ver projeto</a
         >
@@ -27,6 +27,14 @@
         >
         </div>
       </aside>
+      <footer class="hide-mobile">
+        <a class="btn btn_third" @click="labScroll()"
+          ><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a
+        >
+        <a class="btn btn_fourth" :href="article.url" target="_blank"
+          ><i class="material-icons md-launch"></i> Ver projeto</a
+        >
+      </footer>
     </section>
 </template>
 
@@ -93,25 +101,36 @@ article {
     }
 }
 aside {
-    border-radius: 15px;
-    div{
-      // display: block;
-      margin: 5px 0 32px 17px;
-      // @media(max-width: 1024px){
-      //   display: grid;
-      //   margin: 0px;
-      // }
+  background: #E9DFF0;
+  div{
+      margin: 27px 0 35px 15px;
       .btn{
         margin-right: 15px;
       }
     }
     img {
       width: 100%;
-      border-radius: 15px 15px 0 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+      border-radius: 15px;
     }
   }
+
+.btn{
+  padding: 30px 40px;
+  border-radius: 10px;
+  // box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
+}
+
+footer{
+  width: 100%;
+  bottom: 10px;
+  // background: #333;
+  padding: 40px 20px;
+  position: fixed;
+  text-align: right;
+  a{
+    margin-right: 20px;
+  }
+}
 
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
@@ -123,8 +142,15 @@ aside {
       "detail         detail        detail";
       margin-bottom: 95px;
   }
-  aside div{
-    display: block;
+  aside{
+    background: #fff;
+    img{
+      border-radius: 15px 15px 0 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  .btn{
+    padding: 16px 20px;
   }
 }
 /* MEDIA QUERIES END  */

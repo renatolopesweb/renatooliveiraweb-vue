@@ -7,7 +7,7 @@
         desenvolvimento frontend, design para interfaces e gestão de projetos digitais.
       </p>
       <p>
-        Casado com a Delma, pai da AnaLu e da D.ª Cyndi. Fale comigo clicando
+        Casado com a Delma, pai da AnaLu e da Cyndi. Fale comigo clicando
         <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">aqui</a>.
       </p>
       <h3>Habilidades</h3>
@@ -50,7 +50,7 @@ export default {
       skills: [
         {
           category: "Code",
-          content: "HTML / CSS / Sass / JS / *VS Code",
+          content: "HTML / CSS / Sass / JS",
         },
         {
           category: "PWA",
@@ -117,7 +117,7 @@ article {
   h3 {
     font-size: 1em;
     font-weight: bolder;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 10px;
   }
   p {
@@ -161,11 +161,10 @@ aside {
   div {
     padding-left: 15px;
     padding-bottom: 12px;
-    // text-align: center;
     h2 {
       font-size: 0.9em;
       margin-top: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 3px;
     }
     a {
       color: blue;
@@ -177,7 +176,7 @@ aside {
         opacity: 0.3;
       }
       i {
-        margin-right: 8px;
+        margin-right: 7px;
         font-size: 1.5em;
       }
     }
