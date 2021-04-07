@@ -135,9 +135,9 @@ header{
     grid-template-rows: 90px;
     grid-gap: 20px;
     align-items: center;
-    background: rgb(230,224,236);
+    background: $color-primary;
     bottom: 0px;
-    color: $color-primary;
+    color: #fff;
     padding: 0 20px;
     position: fixed;
     text-align: center;
@@ -145,12 +145,12 @@ header{
     z-index: 1;
     .nav-link{
         i{
-            color: $color-primary;
+            color: #fff;
             width: 100%;
         }
         a{
             border-radius: 5px;
-            color: $color-primary;
+            color: #fff;
             display: block;
             font-size: 0.7em;
             outline: none;

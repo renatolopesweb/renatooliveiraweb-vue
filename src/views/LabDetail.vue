@@ -20,7 +20,7 @@
         </figure>
         <div class="show-mobile">
           <a class="btn btn_secondary" :href="article.url" target="_blank"
-          ><i class="material-icons md-launch"></i> Ver projeto</a
+          ><i class="material-icons md-remove_red_eye"></i> Ver projeto</a
         >
         <a class="btn btn_third" @click="labScroll()"
           ><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a
@@ -32,7 +32,7 @@
           ><i class="material-icons-outline md-arrow_back_ios"></i> Voltar</a
         >
         <a class="btn btn_fourth" :href="article.url" target="_blank"
-          ><i class="material-icons md-launch"></i> Ver projeto</a
+          ><i class="material-icons md-remove_red_eye"></i> Ver projeto</a
         >
       </footer>
     </section>
