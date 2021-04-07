@@ -116,14 +116,13 @@ aside {
 
 .btn{
   padding: 30px 40px;
-  border-radius: 10px;
-  // box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
+  box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
 }
+
 
 footer{
   width: 100%;
   bottom: 10px;
-  // background: #333;
   padding: 40px 20px;
   position: fixed;
   text-align: right;

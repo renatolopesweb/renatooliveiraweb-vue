@@ -27,7 +27,7 @@ export default {
     font-family: 'Roboto', sans-serif;
     animation: fadeIn 0.2s ease-out;
 }
-$color-primary: rgb(106,72,215);
+$color-primary: #7030A0;
 $color-secondary: rgb(51,23,140);
 $color-third: rgb(255, 191, 63);
 $color-fourth: rgb(166,117,21);
@@ -62,7 +62,7 @@ p{
 /* BUTTON START */
 .btn {
   border: 0px;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 0.7em;
   outline: 0;
@@ -72,12 +72,6 @@ p{
   text-transform: uppercase;
   transition: 0.3s;
   width: 90%;
-  &:hover{
-    animation-name: button_pulse;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-delay: 1s;
-  }
   i {
     font-size: 1.2em;
     vertical-align: middle;
@@ -85,33 +79,35 @@ p{
 }
 
 .btn_primary{
-  background: $color-secondary;
-  color: #fff;
+  background: #fff;
+  color: $color-secondary;
   &:hover{
-    background: $color-primary;
+    color: #220135;
   }
 }
 .btn_secondary{
-  background: $color-secondary;
-  color: rgba(255, 255, 255, 0.7);
+  background: $color-primary;
+  color: #fff;
   &:hover{
-    background: #000;
+    background: #220135;
     color: #fff;
   }
 }
 .btn_third{
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.5);
+  background: #F2ECF6;
+  border: 1px solid $color-primary;
+  color: $color-primary;
   &:hover{
     color: #fff;
-    background: #000;
+    border: 1px solid #220135;
+    background: #220135;
   }
 }
 .btn_fourth{
-  background: rgb(255,107,63);
-  color: rgba(255, 255, 255, 1);
+  background: $color-primary;
+  color: #fff;
   &:hover{
-      background: #000;
+      background: #220135;
   }
 }
 

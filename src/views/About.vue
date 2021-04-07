@@ -1,34 +1,32 @@
 <template>
   <section>
     <article>
-      <h2>Sobre</h2>
-      <p>
-        Desde 2009 trabalho com web para as empresas. Destinado ao
-        desenvolvimento frontend, design para interfaces e gestão de projetos digitais.
-      </p>
-      <p>
-        Casado com a Delma, pai da AnaLu e da Cyndi. Fale comigo clicando
-        <a href="https://forms.gle/g74U2LhoGjhVRCJSA" target="_blank">aqui</a>.
-      </p>
-      <h3>Habilidades</h3>
+      <div class="code">
+      <h2>Code</h2>
+        <ul>
+          <li>JS</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Sass</li>
+        </ul>
+      </div>
+      <div class="pwa">
+      <h2>PWA</h2>
       <ul>
-        <li v-for="item in skills" :key="item.id">
-          <strong>{{ item.category }}:</strong> {{ item.content }}
-        </li>
+        <li>Angular</li>
+        <li>Vue.js</li>
       </ul>
-    </article>
-    <aside>
-      <figure>
-        <img
-          src="../assets/images/renato7oliveira-home.jpg"
-          alt="renato7oliveira"
-          title="renato7oliveira"
-        />
-      </figure>
-      <div>
-        <h2>Redes Sociais:</h2>
-        <p class="social">
-          <a
+      </div>
+      <div class="design">
+      <h2>Design</h2>
+      <ul>
+        <li>XD</li>
+        <li>Photoshop</li>
+      </ul>
+      </div>
+      <div class="social">
+      <h2>Redes Sociais</h2>
+        <a
             v-for="item in social"
             :title="item.title"
             :key="item.id"
@@ -36,9 +34,8 @@
             target="_blank"
             ><i :class="item.img"></i
           ></a>
-        </p>
       </div>
-    </aside>
+    </article>
     <div class="mobile-space-bottom show-mobile"></div>
   </section>
 </template>
@@ -49,21 +46,11 @@ export default {
     return {
       skills: [
         {
-          category: "Code",
-          content: "HTML / CSS / Sass / JS",
+          list: ["HTML" , "CSS"]
         },
         {
-          category: "PWA",
-          content: "Angular / Vue.js",
-        },
-        {
-          category: "Lib",
-          content: "Bootstrap / Material Design",
-        },
-        {
-          category: "Visual",
-          content: "XD / Photoshop",
-        },
+          list: ["Angular" , "Vue.js"]
+        }
       ],
 
       social: [
@@ -101,101 +88,80 @@ export default {
 <style lang="scss" scoped>
 section {
   display: grid;
-  grid-template-columns: 1fr 0.4fr;
-  grid-gap: 25px;
-  grid-template-areas: "skills about";
-}
-article {
-  grid-area: skills;
-  box-shadow: 0px 0px 0px;
-  background: #fff;
-  h2 {
-    font-size: 1.2em;
-    font-weight: bolder;
-    margin-bottom: 10px;
-  }
-  h3 {
-    font-size: 1em;
-    font-weight: bolder;
-    margin-top: 25px;
-    margin-bottom: 10px;
-  }
-  p {
-    margin-bottom: 12px;
-  }
-  a {
-    color: blue;
-  }
-  li {
-    margin-bottom: 10px;
-    margin-left: 18px;
-    list-style-type: square;
-  }
-}
-.bar {
-  width: 100%;
-  border-radius: 5px;
-  background: #f0f0f0;
-  margin-top: 15px;
-}
-.bar_front {
-  border-radius: 5px;
-  padding: 9px 14px;
-  background: #ffde3f;
-  color: rgb(30, 28, 17);
-  span {
-    font-size: 0.9em;
-  }
-}
-aside {
-  grid-area: about;
-  img {
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    filter: grayscale(1);
-    transition: 0.2s;
-    &:hover {
-      filter: grayscale(0);
-    }
-  }
-  div {
-    padding-left: 15px;
-    padding-bottom: 12px;
-    h2 {
-      font-size: 0.9em;
-      margin-top: 10px;
-      margin-bottom: 3px;
-    }
-    a {
-      color: blue;
-    }
-    .social a {
-      color: rgba(0, 0, 0, 1);
-      transition-duration: 0.3s;
-      &:hover {
-        opacity: 0.3;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  article {
+    grid-column-start: 2;
+    box-shadow: 0px 0px 0px;
+    div{
+      text-align: center;
+      margin-bottom: 30px;
+      h2{
+        font-size: 0.9em;
+        margin-bottom: 13px;
       }
-      i {
-        margin-right: 7px;
-        font-size: 1.5em;
+      li{
+        border-radius: 50px;
+        display: inline;
+        font-size: 0.8em;
+        margin: 4px;
+        padding: 10px 25px;
       }
     }
   }
 }
+.code{
+  color: #7030a0;
+  li{
+    border: 1px solid #7030a0;
+  }
+}
+.pwa{
+  color: rgb(149,55,53);
+  li{
+    border: 1px solid rgb(149,55,53);
+  }
+}
+.design{
+  color: #b62e8a;
+  li{
+    border: 1px solid #b62e8a;
+  }
+}
+.social{
+  color: #000;
+  h2{
+    margin-bottom: 4px;
+  }
+  i{
+    font-size: 1.8em;
+    margin-right: 8px;
+    color: #000;
+    transition: 0.3s;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+
+
 /* MEDIA QUERIES START */
-@media (max-width: 1024px) {
+@media (max-width: 400px) {
   section {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "skills skills"
-      "about about";
-
-    article {
-      p {
-        margin-bottom: 15px;
-        line-height: 25px;
+    article{
+      div{
+        clear: both;
+        margin-bottom: 70px;
+          h2{
+            margin-bottom: 2px;
+          }
+      }
+      li{
+        float: left;
       }
     }
+
     .mobile-space-bottom {
       width: 100%;
       height: 65px;

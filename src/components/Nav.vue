@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 
-$color-primary: rgb(106,72,215);
+$color-primary: #7030A0;
 $color-secondary: rgb(51, 23, 140);
 
 .preload{
@@ -76,28 +76,24 @@ $color-secondary: rgb(51, 23, 140);
         color: $color-secondary;
     }
 }
-.link_active{
-    background: rgb(255, 255, 255);
-    color: $color-primary;
-}
 header{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: 65px;
     align-items: center;
-    background: $color-primary;
+    background: #f0edf3;
     position: fixed;
     width: 100%;
     z-index: 1;
     h1{
-        color: rgba(255, 255, 255, 1);
-        font-size: 0.9em;
-        font-weight: normal;
+        color: $color-primary;
+        font-size: 1em;
+        font-weight: bolder;
         margin-top: -3px;
         padding-left: 20px;
         text-transform: uppercase;
         .style_1{
-            color: rgba(255, 255, 255, 0.4);
+            color: #220135;
         }
     }
     nav{
@@ -107,21 +103,17 @@ header{
                 float: left;
                 font-size: 0.7em;
                 text-transform: uppercase;
-                margin-left: -10px;
-                margin-right: 20px;
+                // margin-left: -10px;
+                margin-right: 10px;
                 a{
-                    border: 1px solid rgba(255, 255, 255, 0.4);
-                    border-radius: 4px;
-                    color: rgba(255, 255, 255, 0.6);
-                    padding: 8px 12px;
+                    background: #fff;
+                    border-radius: 50px;
+                    color: $color-primary;
+                    padding: 12px 20px;
                     transition: 0.3s;
                     &:hover{
-                        animation-name: nav_pulse;
-                        animation-duration: 1.5s;
-                        animation-iteration-count: infinite;
-                        animation-delay: 1s;
-                        background: rgb(255, 255, 255);
-                        color: $color-primary;
+                        color: #220135;
+                        box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
                     }
                 }
                 i{
@@ -132,6 +124,10 @@ header{
         }
     }
 }
+.link_active{
+    color: #220135;
+    box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
+}
 
 .nav-mobile{
     display: none;
@@ -139,9 +135,9 @@ header{
     grid-template-rows: 90px;
     grid-gap: 20px;
     align-items: center;
-    background: $color-primary;
+    background: rgb(230,224,236);
     bottom: 0px;
-    color: #fff;
+    color: $color-primary;
     padding: 0 20px;
     position: fixed;
     text-align: center;
@@ -149,12 +145,12 @@ header{
     z-index: 1;
     .nav-link{
         i{
-            color: #fff;
+            color: $color-primary;
             width: 100%;
         }
         a{
             border-radius: 5px;
-            color: #fff;
+            color: $color-primary;
             display: block;
             font-size: 0.7em;
             outline: none;
@@ -166,36 +162,6 @@ header{
         }
     }
 }
-
-@keyframes navOverlay{
-    to{
-        opacity: 0.5;
-    }
-}
-@keyframes navOverlayOf{
-    from{
-        opacity: 0.5;
-    }
-    to{
-        opacity: 0;
-    }
-}
-@keyframes nav_click {
-    0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
-}
-  @keyframes nav_pulse {
-    0% {
-      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.9);
-    }
-    100% {
-      box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-    }
-  }
 
 @keyframes animatePreload{
     0%{
@@ -210,9 +176,9 @@ header{
 /* MEDIA QUERIES START */
 @media(max-width: 800px){
     .link_active{
-        opacity: 0.3;
+        opacity: 0.4;
         background: none;
-        // background: $color-secondary;
+        // background: rgba(0, 0, 0, 0.2);
     }
     .nav-mobile{
         display: grid;
