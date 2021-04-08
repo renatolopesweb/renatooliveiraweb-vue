@@ -44,8 +44,8 @@ export default {
 
 <style lang="scss" scoped>
 
-$color-primary: #7030A0;
-$color-secondary: rgb(51, 23, 140);
+$color-primary: #6a48d7;
+$color-secondary: #37266b;
 
 .preload{
     width: 100%;
@@ -125,7 +125,7 @@ header{
     }
 }
 .link_active{
-    color: #220135;
+    color: #37266b;
     box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
 }
 

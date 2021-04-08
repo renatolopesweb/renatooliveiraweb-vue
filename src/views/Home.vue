@@ -1,9 +1,9 @@
 <template>
   <section>
     <article>
-      <h2>Renato<span class="style_1">7</span>Oliveira</h2>
+      <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
-        Olá! Trabalho com desenvolvimento frontend para web, design de interface e gestão de projetos 
+        Olá! Trabalho com desenvolvimento frontend, design de interface e gestão de projetos 
         digitais.</p>
       <router-link to="/portfolio" class="btn btn_primary"
         ><i class="material-icons md-layers"></i> ver portfolio</router-link
@@ -13,8 +13,10 @@
 </template>
 
 <style lang="scss" scoped>
+$color-primary: #6a48d7;
+$color-secondary: #37266b;
 .style_1 {
-  color: #220135;
+  color: $color-secondary;
 }
 section {
   display: grid;
@@ -30,14 +32,13 @@ section {
     color: rgba(255, 255, 255, 0.8);
     margin-top: -65px;
     h2 {
-      color: #7030a0;
+      color: $color-primary;
       font-size: 3.4em;
       font-weight: bolder;
       margin-bottom: 5px;
-      text-transform: uppercase;
     }
     p {
-      color: #7030a0;
+      color: #6a48d7;
       font-size: 1.1em;
       line-height: 30px;
       margin-bottom: 25px;
@@ -46,12 +47,17 @@ section {
 }
 .btn {
   box-shadow: 5px 1px 30px rgba(112, 48, 160, 0.3);
-  color: #7030a0;
+  color: #6a48d7;
   margin-top: 20px!important;
   padding: 18px 24px;
+  i{
+    color: $color-primary!important;
+  }
   &:hover {
     box-shadow: 5px 1px 50px rgba(112, 48, 160, 0.5);
-    color: #220135;
+  }
+  &:active{
+    background: #F0EDF3;
   }
 }
 

@@ -79,6 +79,11 @@ export default {
           img: "fa fa-facebook",
           url: "https://facebook.com/renato7oliveira",
         },
+        {
+          title: "E-mail",
+          img: "fa fa-envelope",
+          url: "https://forms.gle/mdYVxaBnc1mziQ8KA",
+        },
       ],
     };
   },
@@ -134,8 +139,8 @@ section {
     margin-bottom: 4px;
   }
   i{
-    font-size: 1.8em;
-    margin-right: 8px;
+    font-size: 1.6em;
+    margin-right: 7px;
     color: #000;
     transition: 0.3s;
     &:hover{

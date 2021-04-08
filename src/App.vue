@@ -51,7 +51,7 @@ article, aside{
   border-radius: 15px;
 }
 article, aside{
-  box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
+  // box-shadow: 5px 1px 30px rgba(112, 48, 160 , 0.3);
   background: #fff;
 }
 p{
@@ -61,21 +61,25 @@ p{
 /* TEMPLATE END */
 /* BUTTON START */
 .btn {
-  border: 0px;
   border-radius: 50px;
   cursor: pointer;
   font-size: 0.7em;
+  height: 50px;
+  padding: 15px 20px;
   outline: 0;
-  margin: 0px auto 20px auto;
-  padding: 16px 20px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.3s;
-  width: 90%;
   i {
     font-size: 1.2em;
     vertical-align: middle;
   }
+  // &:hover{
+  //   animation-name: button_pulse;
+  //   animation-duration: 1.5s;
+  //   animation-iteration-count: infinite;
+  //   animation-delay: 1s;
+  // }
 }
 
 .btn_primary{
@@ -85,14 +89,7 @@ p{
     color: #220135;
   }
 }
-.btn_secondary{
-  background: $color-primary;
-  color: #fff;
-  &:hover{
-    background: #220135;
-    color: #fff;
-  }
-}
+
 .btn_third{
   background: #F2ECF6;
   border: 1px solid $color-primary;
