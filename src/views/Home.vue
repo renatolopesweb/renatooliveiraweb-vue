@@ -4,7 +4,7 @@
       <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
         Olá! Trabalho com desenvolvimento frontend, design de interface e gestão de projetos 
-        digitais.</p>
+        web.</p>
       <router-link to="/portfolio" class="btn btn_primary"
         ><i class="material-icons md-layers"></i> ver portfolio</router-link
       >

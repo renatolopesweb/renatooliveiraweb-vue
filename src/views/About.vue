@@ -1,32 +1,15 @@
 <template>
   <section>
     <article>
-      <div class="code">
-      <h2>Code</h2>
-        <ul>
-          <li>JS</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Sass</li>
-        </ul>
-      </div>
-      <div class="pwa">
-      <h2>PWA</h2>
-      <ul>
-        <li>Angular</li>
-        <li>Vue.js</li>
-      </ul>
-      </div>
-      <div class="design">
-      <h2>Design</h2>
-      <ul>
-        <li>XD</li>
-        <li>Photoshop</li>
-      </ul>
-      </div>
-      <div class="social">
-      <h2>Redes Sociais</h2>
-        <a
+      <div class="about-text">
+        <h2>Sobre</h2>
+        <p>
+          Trabalho na web desde 2009, minha paixão é ver projetos digitais
+          ajudando humanos, por isso direciono minhas pesquisas no
+          desenvolvimento web, principalmente o universo do frontend e design.
+        </p>
+        <p class="social">
+          <a
             v-for="item in social"
             :title="item.title"
             :key="item.id"
@@ -34,6 +17,58 @@
             target="_blank"
             ><i :class="item.img"></i
           ></a>
+        </p>
+      </div>
+      <div class="about-image">
+        <div class="content">
+          <img
+            src="../assets/images/renato7oliveira-about.jpg"
+            alt="renato7oliveira"
+            title="renato7oliveira"
+          />
+        </div>
+      </div>
+      <div class="skills-text">
+        <h2>Habilidades</h2>
+        <ul>
+          <li v-for="item in skills" :key="item.id">
+            <strong>{{ item.category }}:</strong> {{ item.content }}
+          </li>
+        </ul>
+      </div>
+      <div class="skills-image">
+        <i class="material-icons-round md-school"></i>
+      </div>
+      <div class="sky-text">
+        <h2>Este site</h2>
+        <ul>
+          <li v-for="item in sky" :key="item.id">
+            <strong>{{ item.category }}:</strong> {{ item.content }}
+          </li>
+        </ul>
+      </div>
+      <div class="sky-image">
+        <i class="material-icons-outline md-cloud_done"></i>
+      </div>
+      <div class="hearth-text">
+        <h2>Amor</h2>
+        <ul>
+          <li v-for="item in hearth" :key="item.id">{{ item.content }}</li>
+        </ul>
+      </div>
+      <div class="hearth-image">
+        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+      </div>
+      <div class="mesage-text">
+        <h2>Contato</h2>
+        <p>
+          <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
+            >Enviar Mensagem</a
+          >
+        </p>
+      </div>
+      <div class="mesage-image">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
       </div>
     </article>
     <div class="mobile-space-bottom show-mobile"></div>
@@ -44,15 +79,6 @@
 export default {
   data() {
     return {
-      skills: [
-        {
-          list: ["HTML" , "CSS"]
-        },
-        {
-          list: ["Angular" , "Vue.js"]
-        }
-      ],
-
       social: [
         {
           title: "Github",
@@ -80,9 +106,56 @@ export default {
           url: "https://facebook.com/renato7oliveira",
         },
         {
-          title: "E-mail",
+          title: "Enviar Mensagem",
           img: "fa fa-envelope",
           url: "https://forms.gle/mdYVxaBnc1mziQ8KA",
+        },
+      ],
+
+      skills: [
+        {
+          category: "Code",
+          content: "JS / HTML / CSS-Grid / Bootstrap",
+        },
+        {
+          category: "PWA",
+          content: "Angular / Vue.js",
+        },
+        {
+          category: "Visual",
+          content: "XD / Photoshop / Premiere",
+        },
+        {
+          category: "Mkt",
+          content: "Wordpress / ADS",
+        },
+      ],
+
+      sky: [
+        {
+          category: "Deploy",
+          content: "Github",
+        },
+        {
+          category: "Host",
+          content: "Netlify",
+        },
+        {
+          category: "Stack",
+          content: "Vue.js / CSS-Grid",
+        },
+        {
+          category: "Google Speed",
+          content: "Desktop: 99 / Mobile: 89",
+        },
+      ],
+
+      hearth: [
+        {
+          content: "Ana Luiza, Delma, Cyndi",
+        },
+        {
+          content: "Beatles, MPB, Rock",
         },
       ],
     };
@@ -91,85 +164,148 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color-primary: #6a48d7;
+$color-secondary: #37266b;
+
 section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 200px 0;
   article {
-    grid-column-start: 2;
-    box-shadow: 0px 0px 0px;
-    div{
-      text-align: center;
-      margin-bottom: 30px;
-      h2{
-        font-size: 0.9em;
-        margin-bottom: 13px;
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 115px;
+    grid-template-areas:
+      "about-text about-image"
+      "skills-image skills-text"
+      "sky-text sky-image"
+      "music-image music-text"
+      "hearth-image hearth-text"
+      "mesage-text mesage-image";
+
+    color: $color-primary;
+
+    align-items: center;
+    div {
+      h2 {
+        font-size: 1.5em;
       }
-      li{
-        border-radius: 50px;
-        display: inline;
-        font-size: 0.8em;
-        margin: 4px;
-        padding: 10px 25px;
+      li {
+        font-size: 1.2em;
+        font-weight: 500;
+        list-style-type: square;
+        margin-top: 15px;
+        margin-left: 18px;
+      }
+      p {
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 37px;
+      }
+      a {
+        color: red;
+        text-decoration: underline;
+      }
+      i {
+        font-size: 15em;
       }
     }
   }
-}
-.code{
-  color: #7030a0;
-  li{
-    border: 1px solid #7030a0;
+  .about-text {
+    grid-area: about-text;
   }
-}
-.pwa{
-  color: rgb(149,55,53);
-  li{
-    border: 1px solid rgb(149,55,53);
+  .about-image {
+    grid-area: about-image;
+
+    img {
+      max-width: 300px;
+      border-radius: 500px;
+      filter: opacity(0.4) grayscale(1)
+        drop-shadow(-40px -40px 0px $color-primary);
+      transition: 0.3s;
+      &:hover {
+        filter: opacity(1) grayscale(0) drop-shadow(0px 0px 0px);
+        transform: scale(1.1);
+      }
+    }
   }
-}
-.design{
-  color: #b62e8a;
-  li{
-    border: 1px solid #b62e8a;
-  }
-}
-.social{
-  color: #000;
-  h2{
-    margin-bottom: 4px;
-  }
-  i{
-    font-size: 1.6em;
-    margin-right: 7px;
-    color: #000;
-    transition: 0.3s;
-    &:hover{
+  .social a {
+    color: $color-primary;
+    transition-duration: 0.3s;
+    &:hover {
       opacity: 0.5;
     }
+    i {
+      margin-right: 8px;
+      margin-top: 9px;
+      font-size: 1.5em;
+    }
+  }
+  .skills-image {
+    grid-area: skills-image;
+    text-align: center;
+  }
+  .skills-text {
+    grid-area: skills-text;
+  }
+  .sky-text {
+    grid-area: sky-text;
+  }
+  .sky-image {
+    grid-area: sky-image;
+  }
+  .music-text {
+    grid-area: music-text;
+  }
+  .music-image {
+    grid-area: music-image;
+  }
+  .hearth-text {
+    grid-area: hearth-text;
+  }
+  .hearth-image {
+    grid-area: hearth-image;
+  }
+  .mesage-text {
+    grid-area: mesage-text;
+    p {
+      margin-top: 5px;
+    }
+  }
+  .mesage-image {
+    grid-area: mesage-image;
   }
 }
-
 
 /* MEDIA QUERIES START */
 @media (max-width: 400px) {
   section {
     grid-template-columns: 1fr;
-    article{
-      div{
-        clear: both;
-        margin-bottom: 70px;
-          h2{
-            margin-bottom: 2px;
-          }
-      }
-      li{
-        float: left;
-      }
-    }
+    padding-top: 75px;
 
-    .mobile-space-bottom {
-      width: 100%;
-      height: 65px;
+    article {
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      grid-template-areas:
+        "about-image"
+        "about-text"
+        "skills-image"
+        "skills-text"
+        "sky-image"
+        "sky-text"
+        "music-image"
+        "music-text"
+        "hearth-image"
+        "hearth-text"
+        "mesage-image"
+        "mesage-text";
+      div {
+        li {
+          list-style-type: none;
+        }
+      }
     }
   }
 }
