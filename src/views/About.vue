@@ -4,9 +4,9 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Trabalho na web desde 2009, minha paixão é ver projetos digitais
-          ajudando humanos, por isso direciono minhas pesquisas no
-          desenvolvimento web, principalmente o universo do frontend e design.
+          Trabalho na web desde 2009 e minha paixão é ver os 
+          projetos em produção. Direciono minhas pesquisas no
+          desenvolvimento frontend e design.
         </p>
         <p class="social">
           <a
@@ -24,7 +24,6 @@
           <img
             src="../assets/images/renato7oliveira-about.jpg"
             alt="renato7oliveira"
-            title="renato7oliveira"
           />
         </div>
       </div>
@@ -115,15 +114,15 @@ export default {
       skills: [
         {
           category: "Code",
-          content: "JS / HTML / CSS-Grid / Bootstrap",
+          content: "JS / HTML / CSS / Bootstrap",
         },
         {
           category: "PWA",
           content: "Angular / Vue.js",
         },
         {
-          category: "Visual",
-          content: "XD / Photoshop / Premiere",
+          category: "Design",
+          content: "XD / Photoshop",
         },
         {
           category: "Mkt",
@@ -145,8 +144,8 @@ export default {
           content: "Vue.js / CSS-Grid",
         },
         {
-          category: "Google Speed",
-          content: "Desktop: 99 / Mobile: 89",
+          category: "PageSpeed",
+          content: "Desk: 99 / Mobile: 89",
         },
       ],
 
@@ -221,12 +220,11 @@ section {
     img {
       max-width: 300px;
       border-radius: 500px;
-      filter: opacity(0.4) grayscale(1)
+      filter: opacity(0.2) grayscale(1)
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
-        filter: opacity(1) grayscale(0) drop-shadow(0px 0px 0px);
-        transform: scale(1.1);
+        filter: opacity(1) grayscale(0) drop-shadow(40px 40px 0px);
       }
     }
   }
@@ -304,10 +302,18 @@ section {
       div {
         li {
           list-style-type: none;
+          margin-left: 0px;
         }
       }
+
+        .about-image {
+    img {
+      max-width: 200px;
     }
   }
+    
+  }
+}
 }
 /* MEDIA QUERIES END  */
 </style>
