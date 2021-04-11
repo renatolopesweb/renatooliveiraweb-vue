@@ -141,7 +141,7 @@ export default {
         },
         {
           category: "Stack",
-          content: "Vue.js / CSS-Grid",
+          content: "Vue.js / Material Icons",
         },
         {
           category: "PageSpeed",
