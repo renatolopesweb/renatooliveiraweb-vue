@@ -4,9 +4,7 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Estou na web desde 2009 ajudando as empresas materializarem
-          seus projetos digitais. Minha responsabilidade é voltada a experiência
-          final do usuário como um todo.
+          Estou na web desde 2009 ajudando as empresas e pessoas materializarem seus projetos digitais. 
         </p>
         <p class="social">
           <a
