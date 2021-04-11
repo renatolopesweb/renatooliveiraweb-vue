@@ -4,9 +4,9 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Estou na web desde 2009, ajudando empresas materializarem
-          seus projetos. Minha responsabilidade é voltada a experiência
-          dos usuário, estética e performance.
+          Estou na web desde 2009 ajudando as empresas materializarem
+          seus projetos digitais. Minha responsabilidade é voltada a experiência
+          final do usuário como um todo.
         </p>
         <p class="social">
           <a
@@ -224,7 +224,7 @@ section {
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
-        filter: opacity(1) grayscale(0) drop-shadow(0px 0px 0px);
+        filter: opacity(1) grayscale(1) drop-shadow(0px 0px 0px);
       }
     }
   }
@@ -232,7 +232,10 @@ section {
     color: $color-primary;
     transition-duration: 0.3s;
     &:hover {
-      opacity: 0.5;
+      color: #37dd6f;
+    }
+    &:active{
+      color: #68EE95;
     }
     i {
       margin-right: 8px;
