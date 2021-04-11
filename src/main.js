@@ -16,10 +16,6 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-window.addEventListener("load", function() {
-  document.querySelector(".preload").style.display = "none";
-});
-
 // const sidebar = document.querySelector('.sidebar');
 // const mainContent = document.querySelector('.overlay');
 

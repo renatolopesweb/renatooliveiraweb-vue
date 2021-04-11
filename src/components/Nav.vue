@@ -1,11 +1,5 @@
 <template>
     <div>
-    <div class="preload">
-        <div class="content">
-            <div class="icon">R</div>
-        </div>
-        <p>Carregando...</p>
-    </div>
         <div class="hide-mobile">
         <header>
             <div>
@@ -41,41 +35,11 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 
 $color-primary: #6a48d7;
 $color-secondary: #37266b;
 
-.preload{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    align-content: center;
-    align-items: center;
-    background: #fff;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    .content{
-        margin: auto;
-        .icon{
-            background: $color-secondary;
-            border-radius: 3px;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: normal;
-            padding: 7px 10px;
-            margin: auto;
-            text-align: center;            
-            animation-iteration-count: infinite;
-            animation: animatePreload 0.4s ease-out alternate infinite;
-        }
-    }
-    p{
-        font-size: 0.7em;
-        color: $color-secondary;
-    }
-}
 header{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -161,16 +125,6 @@ header{
             }
         }
     }
-}
-
-@keyframes animatePreload{
-    0%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-10px);
-    }
-
 }
 
 /* MEDIA QUERIES START */

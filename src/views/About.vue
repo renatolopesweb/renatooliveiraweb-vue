@@ -4,9 +4,9 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Trabalho na web desde 2009 e minha paixão é ver os 
-          projetos em produção. Direciono minhas pesquisas no
-          desenvolvimento frontend e design.
+          Estou na web desde 2009, ajudando empresas materializarem
+          seus projetos. Minha responsabilidade é voltada a experiência
+          dos usuário, estética e performance.
         </p>
         <p class="social">
           <a
@@ -151,10 +151,10 @@ export default {
 
       hearth: [
         {
-          content: "Ana Luiza, Delma, Cyndi",
+          content: "Ana Luiza / Delma / Cyndi",
         },
         {
-          content: "Beatles, MPB, Rock",
+          content: "Beatles /  MPB / Rock",
         },
       ],
     };
@@ -220,11 +220,11 @@ section {
     img {
       max-width: 300px;
       border-radius: 500px;
-      filter: opacity(0.2) grayscale(1)
+      filter: opacity(0.1) grayscale(1)
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
-        filter: opacity(1) grayscale(0) drop-shadow(40px 40px 0px);
+        filter: opacity(1) grayscale(0) drop-shadow(0px 0px 0px);
       }
     }
   }
@@ -277,7 +277,7 @@ section {
 }
 
 /* MEDIA QUERIES START */
-@media (max-width: 400px) {
+@media (max-width: 860px) {
   section {
     grid-template-columns: 1fr;
     padding-top: 75px;
@@ -306,14 +306,13 @@ section {
         }
       }
 
-        .about-image {
-    img {
-      max-width: 200px;
+      .about-image {
+        img {
+          max-width: 200px;
+        }
+      }
     }
   }
-    
-  }
-}
 }
 /* MEDIA QUERIES END  */
 </style>
