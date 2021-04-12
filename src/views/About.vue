@@ -4,9 +4,7 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Profissional com mais de 10 anos de experiência na área de web atuando
-          (intensamente) em desenvolvimento frontend e gerenciamento de canais
-          institucionais.
+          Construindo na web desde 2009. Destinado ao desenvolvimento frontend e design.
         </p>
         <p class="social">
           <a
@@ -145,7 +143,7 @@ export default {
         },
         {
           category: "PageSpeed",
-          content: "Desk: 99 / Mobile: 89",
+          content: "Desk: 99 / Mobile: 91",
         },
       ],
 
