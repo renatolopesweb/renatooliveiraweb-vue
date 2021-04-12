@@ -4,7 +4,9 @@
       <div class="about-text">
         <h2>Sobre</h2>
         <p>
-          Estou na web desde 2009 ajudando as empresas e pessoas materializarem seus projetos digitais. 
+          Profissional com mais de 10 anos de experiência na área de web atuando
+          (intensamente) em desenvolvimento frontend e gerenciamento de canais
+          institucionais.
         </p>
         <p class="social">
           <a
@@ -232,8 +234,8 @@ section {
     &:hover {
       color: #37dd6f;
     }
-    &:active{
-      color: #68EE95;
+    &:active {
+      color: #68ee95;
     }
     i {
       margin-right: 8px;
@@ -309,7 +311,7 @@ section {
 
       .about-image {
         img {
-          max-width: 200px;
+          max-width: 220px;
         }
       }
     }

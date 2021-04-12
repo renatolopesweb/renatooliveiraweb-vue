@@ -89,40 +89,6 @@ p{
     color: #220135;
   }
 }
-
-.btn_third{
-  background: #F2ECF6;
-  border: 1px solid $color-primary;
-  color: $color-primary;
-  &:hover{
-    color: #fff;
-    border: 1px solid #220135;
-    background: #220135;
-  }
-}
-.btn_fourth{
-  background: $color-primary;
-  color: #fff;
-  &:hover{
-      background: #220135;
-  }
-}
-
-.btn_animate{
-    animation-name: button_pulse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-/* BUTTON END */
-@keyframes button_pulse {
-    0% {
-      box-shadow: 0 0 0 0px rgba(100, 100, 100, 0.9);
-    }
-    100% {
-      box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
-    }
-  }
-/* BUTTON END */
 /* TRANSITIONS START */
 @keyframes fadeIn {
     0% {
@@ -131,18 +97,6 @@ p{
     100% {
         opacity: 1;
     }
-}
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.fadeOut{
-    animation: fadeOut 0.2s ease-out forwards;
 }
 /* TRANSITIONS END */
 /* MEDIA QUERIES START */
