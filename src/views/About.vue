@@ -265,7 +265,7 @@ section {
       text-align: center;
       grid-template-columns: 1fr;
       grid-column: 1 / 6;
-      grid-row-gap: 25px;
+      grid-row-gap: 45px;
       grid-template-areas:
         "about-image"
         "about-text"
@@ -280,6 +280,14 @@ section {
       div {
         li {
           list-style-type: none;
+        }
+        h2{
+          margin-top: -35px;
+        }
+      }
+      .about-text{
+        h2{
+          margin-top: -5px;
         }
       }
       .about-image {
