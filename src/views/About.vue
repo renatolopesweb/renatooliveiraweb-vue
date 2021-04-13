@@ -8,6 +8,16 @@
             <strong>{{ item.category }}:</strong> {{ item.content }}
           </li>
         </ul>
+        <p class="social">
+          <a
+            v-for="item in social"
+            :title="item.title"
+            :key="item.id"
+            :href="item.url"
+            target="_blank"
+            ><i :class="item.img"></i
+          ></a>
+        </p>
       </div>
       <div class="about-image">
         <div class="content">
@@ -119,10 +129,6 @@ export default {
           content: "Netlify",
         },
         {
-          category: "Stack",
-          content: "Vue.js / Material Icons",
-        },
-        {
           category: "PageSpeed",
           content: "Desk: 99 / Mobile: 91",
         },
@@ -161,7 +167,6 @@ section {
       "mesage-image mesage-text";
 
     color: $color-primary;
-
     align-items: center;
     div {
       h2 {
@@ -197,7 +202,7 @@ section {
     img {
       max-width: 300px;
       border-radius: 500px;
-      filter: opacity(0.1) grayscale(1)
+      filter: opacity(0.2) grayscale(1)
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
@@ -222,7 +227,6 @@ section {
   }
   .skills-image {
     grid-area: skills-image;
-    text-align: center;
   }
   .skills-text {
     grid-area: skills-text;
@@ -255,22 +259,23 @@ section {
     grid-area: mesage-image;
   }
 }
+.mobile-space-bottom {
+  height: 50px;
+}
 
 /* MEDIA QUERIES START */
 @media (max-width: 860px) {
   section {
-    grid-template-columns: 1fr;
-    padding-top: 75px;
+    // grid-template-columns: 1fr;
+    padding: 75px 20px;
 
     article {
       text-align: center;
-      grid-template-columns: 1fr;
+      // grid-template-columns: 1fr;
       grid-gap: 15px;
       grid-template-areas:
         "about-image"
         "about-text"
-        "skills-image"
-        "skills-text"
         "sky-image"
         "sky-text"
         "music-image"
@@ -282,10 +287,8 @@ section {
       div {
         li {
           list-style-type: none;
-          margin-left: 0px;
         }
       }
-
       .about-image {
         img {
           max-width: 220px;

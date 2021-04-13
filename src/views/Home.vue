@@ -4,7 +4,7 @@
       <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
         Construindo na web desde 2009. Destinado ao desenvolvimento frontend, design e gestão.</p>
-      <router-link to="/portfolio" class="btn btn_primary"
+      <router-link to="/portfolio" class="btn btn_secondary"
         ><i class="material-icons md-layers"></i> ver portfolio</router-link
       >
     </article>
@@ -21,8 +21,9 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-content: center;
-  background: #f0edf3;
+  // background: #f0edf3;
   height: 100vh;
+  padding: 20px;
   text-align: center;
   article {
     grid-column-start: 2;
@@ -42,21 +43,6 @@ section {
       line-height: 30px;
       margin-bottom: 25px;
     }
-  }
-}
-.btn {
-  box-shadow: 5px 1px 30px rgba(112, 48, 160, 0.3);
-  color: #6a48d7;
-  margin-top: 20px!important;
-  padding: 18px 24px;
-  i{
-    color: $color-primary!important;
-  }
-  &:hover {
-    box-shadow: 5px 1px 50px rgba(112, 48, 160, 0.5);
-  }
-  &:active{
-    background: #F0EDF3;
   }
 }
 
