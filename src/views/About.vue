@@ -59,7 +59,6 @@
         <i class="fa fa-envelope" aria-hidden="true"></i>
       </div>
     </article>
-    <div class="mobile-space-bottom show-mobile"></div>
   </section>
 </template>
 
@@ -155,11 +154,12 @@ section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 200px 0;
+  padding: 75px 25px 150px 25px;
   article {
-    grid-column: 2 / 5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 115px;
+    grid-column: 2 / 5;
+    grid-gap: 50px;
     grid-template-areas:
       "about-text about-image"
       "sky-image sky-text"
@@ -221,7 +221,7 @@ section {
     }
     i {
       margin-right: 8px;
-      margin-top: 9px;
+      margin-top: 17px;
       font-size: 1.5em;
     }
   }
@@ -251,28 +251,21 @@ section {
   }
   .mesage-text {
     grid-area: mesage-text;
-    p {
-      margin-top: 5px;
-    }
   }
   .mesage-image {
     grid-area: mesage-image;
   }
 }
-.mobile-space-bottom {
-  height: 50px;
-}
 
 /* MEDIA QUERIES START */
-@media (max-width: 860px) {
+@media (max-width: 800px) {
   section {
-    // grid-template-columns: 1fr;
-    padding: 75px 20px;
-
+    padding: 75px 25px 150px 25px;
     article {
       text-align: center;
-      // grid-template-columns: 1fr;
-      grid-gap: 15px;
+      grid-template-columns: 1fr;
+      grid-column: 1 / 6;
+      grid-row-gap: 25px;
       grid-template-areas:
         "about-image"
         "about-text"

@@ -55,12 +55,6 @@ html, body{
     font-size: 1.2em;
     vertical-align: middle;
   }
-  // &:hover{
-  //   animation-name: button_pulse;
-  //   animation-duration: 1.5s;
-  //   animation-iteration-count: infinite;
-  //   animation-delay: 1s;
-  // }
 }
 .btn_secondary {
   background: $color-primary;

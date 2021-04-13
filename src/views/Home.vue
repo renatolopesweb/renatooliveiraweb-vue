@@ -3,7 +3,9 @@
     <article>
       <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
-        Construindo na web desde 2009. Destinado ao desenvolvimento frontend, design e gestão.</p>
+        Trabalhando com web desde 2009. Destinado ao desenvolvimento frontend e design de
+        interface.
+      </p>
       <router-link to="/portfolio" class="btn btn_secondary"
         ><i class="material-icons md-layers"></i> ver portfolio</router-link
       >
@@ -21,7 +23,6 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-content: center;
-  // background: #f0edf3;
   height: 100vh;
   padding: 20px;
   text-align: center;
@@ -30,7 +31,6 @@ section {
     box-shadow: 0px 0px 0px transparent;
     background: transparent;
     color: rgba(255, 255, 255, 0.8);
-    margin-top: -65px;
     h2 {
       color: $color-primary;
       font-size: 3.4em;
@@ -49,8 +49,8 @@ section {
 @media (max-width: 800px) {
   section {
     grid-template-columns: 1fr;
-    background: #fff;
     article {
+      margin-top: -40px;
       h2 {
         font-size: 1.6em;
       }
