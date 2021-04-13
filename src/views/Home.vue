@@ -3,7 +3,7 @@
     <article>
       <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
-        Olá! Trabalho com desenvolvimento frontend, design de interface e gestão de projetos web.</p>
+        Construindo na web desde 2009. Destinado ao desenvolvimento frontend, design e gestão.</p>
       <router-link to="/portfolio" class="btn btn_primary"
         ><i class="material-icons md-layers"></i> ver portfolio</router-link
       >

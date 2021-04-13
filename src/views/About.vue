@@ -3,19 +3,11 @@
     <article>
       <div class="about-text">
         <h2>Sobre</h2>
-        <p>
-          Construindo na web desde 2009. Destinado ao desenvolvimento frontend e design.
-        </p>
-        <p class="social">
-          <a
-            v-for="item in social"
-            :title="item.title"
-            :key="item.id"
-            :href="item.url"
-            target="_blank"
-            ><i :class="item.img"></i
-          ></a>
-        </p>
+        <ul>
+          <li v-for="item in skills" :key="item.id">
+            <strong>{{ item.category }}:</strong> {{ item.content }}
+          </li>
+        </ul>
       </div>
       <div class="about-image">
         <div class="content">
@@ -24,17 +16,6 @@
             alt="renato7oliveira"
           />
         </div>
-      </div>
-      <div class="skills-text">
-        <h2>Habilidades</h2>
-        <ul>
-          <li v-for="item in skills" :key="item.id">
-            <strong>{{ item.category }}:</strong> {{ item.content }}
-          </li>
-        </ul>
-      </div>
-      <div class="skills-image">
-        <i class="material-icons-round md-school"></i>
       </div>
       <div class="sky-text">
         <h2>Este site</h2>
@@ -175,11 +156,9 @@ section {
     grid-gap: 115px;
     grid-template-areas:
       "about-text about-image"
-      "skills-image skills-text"
-      "sky-text sky-image"
-      "music-image music-text"
-      "hearth-image hearth-text"
-      "mesage-text mesage-image";
+      "sky-image sky-text"
+      "hearth-text hearth-image"
+      "mesage-image mesage-text";
 
     color: $color-primary;
 
