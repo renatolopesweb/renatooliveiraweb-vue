@@ -46,7 +46,7 @@ section {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 520px) {
   section {
     grid-template-columns: 1fr;
     article {

@@ -33,6 +33,8 @@
           <li v-for="item in sky" :key="item.id">
             <strong>{{ item.category }}:</strong> {{ item.content }}
           </li>
+          <li><strong>Mobile Friendly:</strong> <a href="https://search.google.com/test/mobile-friendly?id=CP_X64pdfFsku6HnaNz7fw" target="_blank">Testar</a> </li>
+          <li><strong>Google PageSpeed:</strong> <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.renato7oliveira.com.br&tab=mobile" target="_blank">Testar</a> </li>
         </ul>
       </div>
       <div class="sky-image">
@@ -121,16 +123,8 @@ export default {
       sky: [
         {
           category: "Deploy",
-          content: "Github",
-        },
-        {
-          category: "Host",
-          content: "Netlify",
-        },
-        {
-          category: "PageSpeed",
-          content: "Desk: 99 / Mobile: 91",
-        },
+          content: "Github / Netlify",
+        }
       ],
 
       hearth: [
@@ -154,7 +148,7 @@ section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 200px 0;
-  padding: 75px 25px 150px 25px;
+  padding: 150px 25px 150px 25px;
   article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -207,6 +201,7 @@ section {
       transition: 0.3s;
       &:hover {
         filter: opacity(1) grayscale(1) drop-shadow(0px 0px 0px);
+        cursor: none;
       }
     }
   }
@@ -260,7 +255,7 @@ section {
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
   section {
-    padding: 75px 25px 150px 25px;
+    padding-top: 75px;
     article {
       text-align: center;
       grid-template-columns: 1fr;
