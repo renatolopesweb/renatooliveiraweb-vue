@@ -40,7 +40,7 @@ const pageTitle = 'RENATO7OLIVEIRA · '
 
 const router = new VueRouter({
   linkExactActiveClass: 'link_active',
-  mode: 'history',
+  // mode: 'history',
   routes
 });
 
