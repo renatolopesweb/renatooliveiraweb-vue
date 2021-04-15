@@ -32,7 +32,7 @@ section {
     grid-column-start: 2;
     box-shadow: 0px 0px 0px transparent;
     background: transparent;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     h2 {
       font-size: 3.4em;
       font-weight: bolder;
@@ -51,7 +51,7 @@ section {
   color: $color-primary;
   &:hover {
     background: $color-secondary;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
   }
   &:active{
     background: rgba(0, 0, 0, 0.7);
