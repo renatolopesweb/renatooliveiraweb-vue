@@ -45,12 +45,12 @@ header{
     grid-template-columns: 1fr auto;
     grid-template-rows: 65px;
     align-items: center;
-    background: #f0edf3;
+    background: rgb(96,65,196);
     position: fixed;
     width: 100%;
     z-index: 1;
     h1{
-        color: $color-primary;
+        color: #fff;
         font-size: 1em;
         font-weight: bolder;
         margin-top: -3px;
@@ -99,7 +99,7 @@ header{
     grid-template-rows: 90px;
     grid-gap: 20px;
     align-items: center;
-    background: $color-primary;
+    background: rgb(96,65,196);
     bottom: 0px;
     color: #fff;
     padding: 0 20px;

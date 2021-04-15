@@ -3,12 +3,8 @@
     <article>
       <div class="about-text">
         <h2>Sobre</h2>
-        <ul>
-          <li v-for="item in skills" :key="item.id">
-            <strong>{{ item.category }}:</strong> {{ item.content }}
-          </li>
-        </ul>
-        <p class="social">
+        <p>Sou casado com a Delma e pai da Ana Luiza e da "Cyndi". Tenho paixão por música, em especial Beatles, MPB e Rock.</p>
+      <p class="social">
           <a
             v-for="item in social"
             :title="item.title"
@@ -27,27 +23,16 @@
           />
         </div>
       </div>
-      <div class="sky-text">
-        <h2>Este site</h2>
+      <div class="skills-text">
+        <h2>Habilidades</h2>
         <ul>
-          <li v-for="item in sky" :key="item.id">
+          <li v-for="item in skills" :key="item.id">
             <strong>{{ item.category }}:</strong> {{ item.content }}
           </li>
-          <li><strong>Mobile Friendly:</strong> <a href="https://search.google.com/test/mobile-friendly?id=CP_X64pdfFsku6HnaNz7fw" target="_blank">Testar</a> </li>
-          <li><strong>Google PageSpeed:</strong> <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.renato7oliveira.com.br&tab=mobile" target="_blank">Testar</a> </li>
         </ul>
       </div>
-      <div class="sky-image">
-        <i class="material-icons-outline md-cloud_done"></i>
-      </div>
-      <div class="hearth-text">
-        <h2>Amor</h2>
-        <ul>
-          <li v-for="item in hearth" :key="item.id">{{ item.content }}</li>
-        </ul>
-      </div>
-      <div class="hearth-image">
-        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+      <div class="skills-image">
+        <i class="material-icons md-school"></i>
       </div>
       <div class="mesage-text">
         <h2>Contato</h2>
@@ -118,23 +103,8 @@ export default {
           category: "Mkt",
           content: "Wordpress / ADS",
         },
-      ],
+      ]
 
-      sky: [
-        {
-          category: "Deploy",
-          content: "Github / Netlify",
-        }
-      ],
-
-      hearth: [
-        {
-          content: "Ana Luiza / Delma / Cyndi",
-        },
-        {
-          content: "Beatles /  MPB / Rock",
-        },
-      ],
     };
   },
 };
@@ -147,18 +117,17 @@ $color-secondary: #37266b;
 section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 200px 0;
-  padding: 150px 25px 150px 25px;
+  padding: 200px 25px 150px 25px;
   article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: 2 / 5;
-    grid-gap: 50px;
+    grid-column-gap: 50px;
+    grid-row-gap: 150px;
     grid-template-areas:
       "about-text about-image"
-      "sky-image sky-text"
-      "hearth-text hearth-image"
-      "mesage-image mesage-text";
+      "skills-image skills-text"
+      "mesage-text mesage-image";
 
     color: $color-primary;
     align-items: center;
@@ -196,7 +165,7 @@ section {
     img {
       max-width: 300px;
       border-radius: 500px;
-      filter: opacity(0.2) grayscale(1)
+      filter: opacity(0.1) grayscale(1)
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
@@ -216,21 +185,15 @@ section {
     }
     i {
       margin-right: 8px;
-      margin-top: 17px;
+      margin-top: 5px;
       font-size: 1.5em;
     }
   }
-  .skills-image {
-    grid-area: skills-image;
+  .about-image {
+    grid-area: about-image;
   }
-  .skills-text {
-    grid-area: skills-text;
-  }
-  .sky-text {
-    grid-area: sky-text;
-  }
-  .sky-image {
-    grid-area: sky-image;
+  .about-text {
+    grid-area: about-text;
   }
   .music-text {
     grid-area: music-text;
@@ -238,11 +201,11 @@ section {
   .music-image {
     grid-area: music-image;
   }
-  .hearth-text {
-    grid-area: hearth-text;
+  .skills-text {
+    grid-area: skills-text;
   }
-  .hearth-image {
-    grid-area: hearth-image;
+  .skills-image {
+    grid-area: skills-image;
   }
   .mesage-text {
     grid-area: mesage-text;
@@ -264,12 +227,8 @@ section {
       grid-template-areas:
         "about-image"
         "about-text"
-        "sky-image"
-        "sky-text"
-        "music-image"
-        "music-text"
-        "hearth-image"
-        "hearth-text"
+        "skills-image"
+        "skills-text"
         "mesage-image"
         "mesage-text";
       div {
@@ -277,12 +236,12 @@ section {
           list-style-type: none;
         }
         h2{
-          margin-top: -35px;
+          margin-top: -45px;
         }
       }
       .about-text{
         h2{
-          margin-top: -5px;
+          margin-top: -20px;
         }
       }
       .about-image {

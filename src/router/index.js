@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+
+
 const pageTitle = 'RENATO7OLIVEIRA · '
 
   const routes = [
@@ -38,6 +40,7 @@ const pageTitle = 'RENATO7OLIVEIRA · '
 
 const router = new VueRouter({
   linkExactActiveClass: 'link_active',
+  mode: 'history',
   routes
 });
 
