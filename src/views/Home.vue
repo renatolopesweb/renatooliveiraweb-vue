@@ -3,8 +3,7 @@
     <article>
       <h2>RENATO<span class="style_1">7</span>OLIVEIRA</h2>
       <p>
-        Trabalho com web desde 2009 e me dedico ao desenvolvimento frontend e design de
-        interface.
+        Trabalho com web desde 2009 e me dedico ao desenvolvimento frontend e marketing digital.
       </p>
       <router-link to="/portfolio" class="btn btn_secondary"
         ><i class="material-icons md-layers"></i> portfolio</router-link

@@ -3,7 +3,7 @@
     <article>
       <div class="about-text">
         <h2>Sobre</h2>
-        <p>Sou casado com a Delma e pai da Ana Luiza e da "Cyndi". Tenho paixão por música, em especial Beatles, MPB e Rock.</p>
+        <p>Sou casado com a Delma, pai da Ana Luiza e da "Cyndi". Apaixonado por música, em especial Beatles, MPB e Rock.</p>
       <p class="social">
           <a
             v-for="item in social"
@@ -165,11 +165,11 @@ section {
     img {
       max-width: 300px;
       border-radius: 500px;
-      filter: opacity(0.1) grayscale(1)
+      filter: opacity(0.2) grayscale(1)
         drop-shadow(-40px -40px 0px $color-primary);
       transition: 0.3s;
       &:hover {
-        filter: opacity(1) grayscale(1) drop-shadow(0px 0px 0px);
+        filter: opacity(0.8) grayscale(1) drop-shadow(0px 0px 0px);
         cursor: none;
       }
     }
