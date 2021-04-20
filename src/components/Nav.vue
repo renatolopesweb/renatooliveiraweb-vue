@@ -1,142 +1,145 @@
 <template>
-    <div>
-        <div class="hide-mobile">
-        <header>
-            <div>
-                <h1>Renato<span class="style_1">7</span>Oliveira</h1>
-            </div>
-            <nav>
-                <ul @click="toTop()">
-                    <li><router-link to="/"><i class="material-icons md-home"></i> home</router-link></li>
-                    <li><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></li>
-                    <li><router-link to="/sobre"><i class="material-icons md-person"></i> sobre</router-link></li>
-                </ul>
-            </nav>
-        </header>
-        </div>
-        <div class="nav-mobile show-mobile" @click="toTop()">
-            <div class="nav-link"><router-link to="/"><i class="material-icons md-home"></i> home</router-link></div>
-            <div class="nav-link"><router-link to="/portfolio"><i class="material-icons md-layers"></i> portfolio</router-link></div>
-            <div class="nav-link"><router-link to="/sobre"><i class="material-icons md-person"></i> sobre</router-link></div>
-        </div>
+  <nav>
+    <div class="nav-desk show-desk">
+      <ul @click="toTop()">
+        <li>
+          <router-link to="/"
+            ><i class="material-icons md-home"></i
+          ></router-link>
+        </li>
+        <li>
+          <router-link to="/sobre"
+            ><i class="material-icons md-person"></i
+          ></router-link>
+        </li>
+      </ul>
     </div>
+    <div class="nav-mobile show-mobile" @click="toTop()">
+      <div class="nav-link">
+        <router-link to="/"
+          ><i class="material-icons md-home"></i> home</router-link
+        >
+      </div>
+      <div class="nav-link">
+        <router-link to="/sobre"
+          ><i class="material-icons md-person"></i> sobre</router-link
+        >
+      </div>
+      <div class="nav-link">
+        <router-link to="/portfolio"
+          ><i class="material-icons md-layers"></i> contato</router-link
+        >
+      </div>
+    </div>
+  </nav>
 </template>
-
 <script>
 export default {
-    methods:{
-        toTop(){
-           window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-        }
-    }
-}
+  methods: {
+    toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
-$color-primary: #6a48d7;
+$color-primary: #630094;
 $color-secondary: #37266b;
 
-header{
+nav {
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 65px;
     align-items: center;
-    background: rgb(96,65,196);
+    right: 0px;
+    position: absolute;
     position: fixed;
-    width: 100%;
-    z-index: 1;
-    h1{
-        color: #fff;
-        font-size: 1em;
-        font-weight: bolder;
-        margin-top: -3px;
-        padding-left: 20px;
-        text-transform: uppercase;
-        .style_1{
-            color: #220135;
-        }
-    }
-    nav{
-        ul{
-            li{
-                cursor: pointer;
-                float: left;
-                font-size: 0.7em;
-                text-transform: uppercase;
-                // margin-left: -10px;
-                margin-right: 10px;
-                a{
-                    background: #fff;
-                    border-radius: 50px;
-                    color: $color-primary;
-                    padding: 12px 20px;
-                    transition: 0.3s;
-                    &:hover{
-                        color: #220135;
-                        box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
-                    }
-                }
-                i{
-                    font-size: 1em;
-                    vertical-align: middle;
-                }
-            }
-        }
-    }
+    height: 100vh;
 }
-.link_active{
-    color: #37266b;
-    box-shadow: 5px 1px 50px rgba(112, 48, 160 , 0.3);
+.nav-desk {
+  display: grid;
+  align-items: center;
+  ul {
+    li {
+      border-radius: 500px;
+      box-shadow: 1px 1px 10px #666;
+      margin-top: 35px;
+      margin-right: 30px;
+      cursor: pointer;
+      a {
+        background: #f0f0f0;
+        border: 1px solid #eee;
+        border-radius: 500px;
+        color: #ccc;
+        padding: 18px 10px;
+        transition: 0.3s;
+        &:hover {
+          background: #f7f7f7;
+          color: $color-primary;
+        }
+      }
+      i {
+        font-size: 2em;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+}
+.link_active {
+  color: $color-primary!important;
+  background: #f7f7f7!important;
 }
 
-.nav-mobile{
-    display: none;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: 90px;
-    grid-gap: 20px;
-    align-items: center;
-    background: rgb(96,65,196);
-    bottom: 0px;
-    color: #fff;
-    padding: 0 20px;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-    .nav-link{
-        i{
-            color: #fff;
-            width: 100%;
-        }
-        a{
-            border-radius: 5px;
-            color: #fff;
-            display: block;
-            font-size: 0.7em;
-            outline: none;
-            padding: 7px 14px;
-            text-transform: uppercase;
-            &:focus{
-                outline: none!important;
-            }
-        }
+.nav-mobile {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90px;
+  grid-gap: 20px;
+  align-items: center;
+  background: $color-primary;
+  box-shadow: -20px -20px 60px #af9cbe, -20px -20px 60px #edd4ff;
+  bottom: 0px;
+  color: #fff;
+  padding: 0 20px;
+  position: absolute;
+  position: fixed;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  .nav-link {
+    i {
+      color: #fff;
+      width: 100%;
     }
+    a {
+      border-radius: 5px;
+      color: #fff;
+      display: block;
+      font-size: 0.7em;
+      outline: none;
+      padding: 7px 14px;
+      text-transform: uppercase;
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
 }
 
 /* MEDIA QUERIES START */
-@media(max-width: 800px){
-    .link_active{
-        opacity: 0.4;
-        background: none;
-        // background: rgba(0, 0, 0, 0.2);
-    }
-    .nav-mobile{
-        display: grid;
-    }
+@media (max-width: 800px) {
+  .link_active {
+    opacity: 0.4;
+    background: rgba(255, 255, 255, 0.2)!important;
+    color: #fff!important;
+  }
+  .nav-mobile {
+    display: grid;
+  }
 }
 /* MEDIA QUERIES END */
 </style>

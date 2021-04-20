@@ -1,52 +1,45 @@
 <template>
-  <section>
-    <article>
-      <div class="about-text">
-        <h2>Sobre</h2>
-        <p>Sou casado com a Delma, pai da Ana Luiza e da "Cyndi". Apaixonado por música, em especial Beatles, MPB e Rock.</p>
+  <div class="about">
+    <div class="about-text">
+      <h2>Sobre</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim purus,
+        commodo non cursus sed, sagittis volutpat sapien. Fusce volutpat
+        tristique nisi at consequat. Mauris ut ligula diam. Aliquam nec nisl
+        quis est ultricies ultricies sed eu nunc. Nulla ultrices tempor nisl.
+        Curabitur quis felis non risus elementum vehicula.
+      </p>
       <p class="social">
-          <a
-            v-for="item in social"
-            :title="item.title"
-            :key="item.id"
-            :href="item.url"
-            target="_blank"
-            ><i :class="item.img"></i
-          ></a>
-        </p>
+        <a
+          v-for="item in social"
+          :title="item.title"
+          :key="item.id"
+          :href="item.url"
+          target="_blank"
+          ><i :class="item.img"></i
+        ></a>
+      </p>
+    </div>
+    <div class="about-image">
+      <div class="content">
+        <img
+          src="../assets/images/renato7oliveira-about.jpg"
+          alt="renato7oliveira"
+        />
       </div>
-      <div class="about-image">
-        <div class="content">
-          <img
-            src="../assets/images/renato7oliveira-about.jpg"
-            alt="renato7oliveira"
-          />
-        </div>
-      </div>
-      <div class="skills-text">
-        <h2>Habilidades</h2>
-        <ul>
-          <li v-for="item in skills" :key="item.id">
-            <strong>{{ item.category }}:</strong> {{ item.content }}
-          </li>
-        </ul>
-      </div>
-      <div class="skills-image">
-        <i class="material-icons md-school"></i>
-      </div>
-      <div class="mesage-text">
-        <h2>Contato</h2>
-        <p>
-          <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
-            >Enviar Mensagem</a
-          >
-        </p>
-      </div>
-      <div class="mesage-image">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </div>
-    </article>
-  </section>
+    </div>
+    <div class="skills-text">
+      <h2>Habilidades</h2>
+      <ul>
+        <li v-for="item in skills" :key="item.id">
+          <strong>{{ item.category }}:</strong> {{ item.content }}
+        </li>
+      </ul>
+    </div>
+    <div class="skills-image">
+      <i class="material-icons md-school"></i>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -103,154 +96,113 @@ export default {
           category: "Mkt",
           content: "Wordpress / ADS",
         },
-      ]
-
+      ],
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #6a48d7;
+$color-primary: #630094;
 $color-secondary: #37266b;
 
-section {
+.about {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 200px 25px 150px 25px;
-  article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column: 2 / 5;
-    grid-column-gap: 50px;
-    grid-row-gap: 150px;
-    grid-template-areas:
-      "about-text about-image"
-      "skills-image skills-text"
-      "mesage-text mesage-image";
-
-    color: $color-primary;
-    align-items: center;
-    div {
-      h2 {
-        font-size: 1.5em;
-      }
-      li {
-        font-size: 1.2em;
-        font-weight: 500;
-        list-style-type: square;
-        margin-top: 15px;
-        margin-left: 18px;
-      }
-      p {
-        font-size: 1.2em;
-        font-weight: 500;
-        line-height: 37px;
-      }
-      a {
-        color: red;
-        text-decoration: underline;
-      }
-      i {
-        font-size: 15em;
-      }
-    }
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 25px;
+  grid-template-areas:
+    "about-text        about-text     about-image"
+    "skills-image      skills-text    skills-text";
+  align-items: center;
+  color: $color-primary;
+  padding-top: 15vh;
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
   }
-  .about-text {
-    grid-area: about-text;
+  li {
+    font-size: 1em;
+    font-weight: 500;
+    list-style-type: square;
+    margin-top: 15px;
+    margin-left: 18px;
   }
-  .about-image {
-    grid-area: about-image;
-
-    img {
-      max-width: 300px;
-      border-radius: 500px;
-      filter: opacity(0.2) grayscale(1)
-        drop-shadow(-40px -40px 0px $color-primary);
-      transition: 0.3s;
-      &:hover {
-        filter: opacity(0.8) grayscale(1) drop-shadow(0px 0px 0px);
-        cursor: none;
-      }
-    }
+  p {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 32px;
   }
-  .social a {
-    color: $color-primary;
-    transition-duration: 0.3s;
-    &:hover {
-      color: #37dd6f;
-    }
-    &:active {
-      color: #68ee95;
-    }
-    i {
-      margin-right: 8px;
-      margin-top: 5px;
-      font-size: 1.5em;
-    }
-  }
-  .about-image {
-    grid-area: about-image;
-  }
-  .about-text {
-    grid-area: about-text;
-  }
-  .music-text {
-    grid-area: music-text;
-  }
-  .music-image {
-    grid-area: music-image;
-  }
-  .skills-text {
-    grid-area: skills-text;
-  }
-  .skills-image {
-    grid-area: skills-image;
-  }
-  .mesage-text {
-    grid-area: mesage-text;
-  }
-  .mesage-image {
-    grid-area: mesage-image;
+  i {
+    font-size: 15em;
   }
 }
+.about-text {
+  grid-area: about-text;
+}
+.about-image {
+  grid-area: about-image;
+  text-align: right;
 
-/* MEDIA QUERIES START */
+  img {
+    max-width: 200px;
+    border-radius: 500px;
+    filter: opacity(0.2) grayscale(1)
+      drop-shadow(-40px -40px 0px $color-primary);
+    transition: 0.3s;
+    &:hover {
+      filter: opacity(0.8) grayscale(1) drop-shadow(0px 0px 0px);
+      cursor: none;
+    }
+  }
+}
+.social a {
+  transition-duration: 0.3s;
+  &:hover {
+    color: #37dd6f;
+  }
+  &:active {
+    color: #68ee95;
+  }
+  i {
+    margin-right: 8px;
+    margin-top: 5px;
+    font-size: 1.5em;
+  }
+}
+.about-image {
+  grid-area: about-image;
+}
+.about-text {
+  grid-area: about-text;
+}
+.skills-text {
+  grid-area: skills-text;
+}
+.skills-image {
+  grid-area: skills-image;
+}
+
+/* MEDIAQUERIES */
 @media (max-width: 800px) {
-  section {
-    padding-top: 75px;
-    article {
+    .about {
       text-align: center;
       grid-template-columns: 1fr;
-      grid-column: 1 / 6;
-      grid-row-gap: 45px;
       grid-template-areas:
         "about-image"
         "about-text"
         "skills-image"
-        "skills-text"
-        "mesage-image"
-        "mesage-text";
-      div {
-        li {
+        "skills-text";
+      padding: 25px;
+      ul{
+        padding-bottom: 150px;
+      }
+      li {
           list-style-type: none;
         }
-        h2{
-          margin-top: -45px;
-        }
-      }
-      .about-text{
-        h2{
-          margin-top: -20px;
-        }
-      }
-      .about-image {
-        img {
-          max-width: 220px;
-        }
-      }
     }
-  }
+    .about-image {
+      text-align: center;
+      margin-top: 625px;
+    }
 }
-/* MEDIA QUERIES END  */
 </style>
