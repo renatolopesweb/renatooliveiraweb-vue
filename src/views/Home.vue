@@ -62,7 +62,7 @@ $color-secondary: #37266b;
 div {
   text-align: center;
   h2::after {
-    content: "Veja alguns experimentos";
+    content: "Clique nos experimentos";
     font-size: 0.8em;
   }
 
@@ -80,17 +80,20 @@ div {
       font-weight: normal;
     }
     p::after{
-      content: 'Veja alguns experimentos';
+      content: 'Clique nos experimentos';
       font-weight: bold;
 
     }
   }
   li {
+    a{
+      color: $color-primary;
+    }
     padding: 5px;
     margin-top: 7px;
     transition: 0.2s;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
     @media (max-width: 800px) {
       &:hover {

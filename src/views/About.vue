@@ -3,11 +3,11 @@
     <div class="about-text">
       <h2>Sobre</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim purus,
-        commodo non cursus sed, sagittis volutpat sapien. Fusce volutpat
-        tristique nisi at consequat. Mauris ut ligula diam. Aliquam nec nisl
-        quis est ultricies ultricies sed eu nunc. Nulla ultrices tempor nisl.
-        Curabitur quis felis non risus elementum vehicula.
+        Meu interesse com web é transformar ideias em realidade acompanhado
+        de boa experiência ao cliente. Desde 2009 trabalho para
+        empresas nas divisões de web, normalmente dedicado ao frontend, design e
+        gestão de mídias digitais. Sou casado com a Delma, pai da AnaLu e da
+        “Cyndi”.
       </p>
       <p class="social">
         <a
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="skills-text">
-      <h2>Habilidades</h2>
+      <h2>Conhecimento</h2>
       <ul>
         <li v-for="item in skills" :key="item.id">
           <strong>{{ item.category }}:</strong> {{ item.content }}
@@ -37,7 +37,7 @@
       </ul>
     </div>
     <div class="skills-image">
-      <i class="material-icons md-school"></i>
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
     </div>
   </div>
 </template>
@@ -73,7 +73,7 @@ export default {
           url: "https://facebook.com/renato7oliveira",
         },
         {
-          title: "Enviar Mensagem",
+          title: "Mensagem",
           img: "fa fa-envelope",
           url: "https://forms.gle/mdYVxaBnc1mziQ8KA",
         },
@@ -82,7 +82,7 @@ export default {
       skills: [
         {
           category: "Code",
-          content: "JS / HTML / CSS / Bootstrap",
+          content: "JS / HTML / CSS:Sass",
         },
         {
           category: "PWA",
@@ -93,8 +93,8 @@ export default {
           content: "XD / Photoshop",
         },
         {
-          category: "Mkt",
-          content: "Wordpress / ADS",
+          category: "Extra",
+          content: "Github / Wordpress",
         },
       ],
     };
@@ -133,7 +133,7 @@ $color-secondary: #37266b;
     line-height: 32px;
   }
   i {
-    font-size: 15em;
+    font-size: 13em;
   }
 }
 .about-text {
@@ -159,10 +159,7 @@ $color-secondary: #37266b;
   transition-duration: 0.3s;
   color: $color-primary;
   &:hover {
-    color: #37dd6f;
-  }
-  &:active {
-    color: #68ee95;
+    opacity: 0.2;
   }
   i {
     margin-right: 8px;
@@ -185,25 +182,25 @@ $color-secondary: #37266b;
 
 /* MEDIAQUERIES */
 @media (max-width: 800px) {
-    .about {
-      text-align: center;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "about-image"
-        "about-text"
-        "skills-image"
-        "skills-text";
-      padding: 25px;
-      ul{
-        padding-bottom: 125px;
-      }
-      li {
-          list-style-type: none;
-        }
+  .about {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about-image"
+      "about-text"
+      "skills-image"
+      "skills-text";
+    padding: 25px;
+    ul {
+      padding-bottom: 125px;
     }
-    .about-image {
-      text-align: center;
-      margin-top: 625px;
+    li {
+      list-style-type: none;
     }
+  }
+  .about-image {
+    text-align: center;
+    margin-top: 600px;
+  }
 }
 </style>

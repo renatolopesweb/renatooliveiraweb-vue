@@ -4,12 +4,12 @@
       <ul @click="toTop()">
         <li>
           <router-link to="/"
-            ><i class="material-icons md-home"></i
+            ><i class="fa fa-home" aria-hidden="true" title="Home"></i
           ></router-link>
         </li>
         <li>
           <router-link to="/sobre"
-            ><i class="material-icons md-person"></i
+            ><i class="fa fa-user" aria-hidden="true" title="Sobre"></i
           ></router-link>
         </li>
       </ul>
@@ -17,17 +17,17 @@
     <div class="nav-mobile show-mobile" @click="toTop()">
       <div class="nav-link">
         <router-link to="/"
-          ><i class="material-icons md-home"></i> home</router-link
+          ><i class="fa fa-home" aria-hidden="true"></i>home</router-link
         >
       </div>
       <div class="nav-link">
         <router-link to="/sobre"
-          ><i class="material-icons md-person"></i> sobre</router-link
+          ><i class="fa fa-user" aria-hidden="true"></i>sobre</router-link
         >
       </div>
       <div class="nav-link">
         <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
-          ><i class="material-icons md-layers"></i> contato</a
+          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</a
         >
       </div>
     </div>
@@ -51,12 +51,12 @@ $color-primary: #630094;
 $color-secondary: #37266b;
 
 nav {
-    display: grid;
-    align-items: center;
-    right: 0px;
-    position: absolute;
-    position: fixed;
-    height: 100vh;
+  display: grid;
+  align-items: center;
+  right: 0px;
+  position: absolute;
+  position: fixed;
+  height: 100vh;
 }
 .nav-desk {
   display: grid;
@@ -64,24 +64,24 @@ nav {
   ul {
     li {
       border-radius: 500px;
-      box-shadow: 1px 1px 10px #666;
-      margin-top: 35px;
+      border: 1px solid #f0f0f0;
+      box-shadow: 1px 2px 3px #999;
+      margin-top: 15px;
       margin-right: 30px;
-      cursor: pointer;
+      padding: 12px;
+      text-align: center;
       a {
-        background: #f0f0f0;
+        background: transparent;
         border: 1px solid #eee;
         border-radius: 500px;
-        color: #ccc;
-        padding: 18px 10px;
+        color: $color-primary;
         transition: 0.3s;
         &:hover {
-          background: #f7f7f7;
-          color: $color-primary;
+          opacity: 0.2;
         }
       }
       i {
-        font-size: 2em;
+        font-size: 1.6em;
         vertical-align: middle;
         text-align: center;
       }
@@ -89,8 +89,7 @@ nav {
   }
 }
 .link_active {
-  color: $color-primary!important;
-  background: #f7f7f7!important;
+  opacity: 0.2!important;
 }
 
 .nav-mobile {
@@ -109,13 +108,9 @@ nav {
   width: 100%;
   z-index: 1;
   .nav-link {
-    i {
-      color: #fff;
-      width: 100%;
-    }
     a {
       border-radius: 5px;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.9);
       display: block;
       font-size: 0.7em;
       outline: none;
@@ -125,6 +120,12 @@ nav {
         outline: none !important;
       }
     }
+    i {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 2em;
+      margin-bottom: 5px;
+      width: 100%;
+    }
   }
 }
 
@@ -132,8 +133,8 @@ nav {
 @media (max-width: 800px) {
   .link_active {
     opacity: 0.4;
-    background: rgba(255, 255, 255, 0.2)!important;
-    color: #fff!important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #fff !important;
   }
   .nav-mobile {
     display: grid;
