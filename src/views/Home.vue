@@ -99,4 +99,9 @@ div {
     }
   }
 }
+@media(max-width: 800px){
+  div{
+    margin-top: -90px;
+  }
+}
 </style>

@@ -26,8 +26,8 @@
         >
       </div>
       <div class="nav-link">
-        <router-link to="/portfolio"
-          ><i class="material-icons md-layers"></i> contato</router-link
+        <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
+          ><i class="material-icons md-layers"></i> contato</a
         >
       </div>
     </div>
@@ -100,9 +100,7 @@ nav {
   grid-gap: 20px;
   align-items: center;
   background: $color-primary;
-  box-shadow: -20px -20px 60px #af9cbe, -20px -20px 60px #edd4ff;
   bottom: 0px;
-  color: #fff;
   padding: 0 20px;
   position: absolute;
   position: fixed;

@@ -157,6 +157,7 @@ $color-secondary: #37266b;
 }
 .social a {
   transition-duration: 0.3s;
+  color: $color-primary;
   &:hover {
     color: #37dd6f;
   }
@@ -194,7 +195,7 @@ $color-secondary: #37266b;
         "skills-text";
       padding: 25px;
       ul{
-        padding-bottom: 150px;
+        padding-bottom: 125px;
       }
       li {
           list-style-type: none;
