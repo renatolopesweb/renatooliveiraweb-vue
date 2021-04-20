@@ -64,32 +64,6 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 /* BOOT END */
-/* BUTTON START */
-.btn {
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 0.7em;
-  height: 50px;
-  padding: 15px 20px;
-  outline: 0;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.3s;
-  i {
-    font-size: 1.2em;
-    vertical-align: middle;
-  }
-}
-.btn_secondary {
-  background: $color-primary;
-  color: #fff;
-  &:hover {
-    background: #37dd6f;
-  }
-  &:active {
-    background: #68ee95;
-  }
-}
 /* TRANSITIONS START */
 @keyframes fadeIn {
   0% {

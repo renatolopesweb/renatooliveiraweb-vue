@@ -1,40 +1,46 @@
 <template>
-    <section>
-        <article>
-            <h2>página não encontrada... 👻</h2>
-            <router-link to="/" class="btn btn_secondary"><i class="material-icons md-home"></i> Home</router-link>
-        </article>
-    </section>
+  <div>
+    <h2>página não encontrada...</h2>
+    <router-link to="/"
+      ><div class="ghost" title="Arraste-me pra Home!!!">👻</div>
+    </router-link>
+    
+  </div>
 </template>
 
 <style lang="scss" scoped>
-$color-primary: #6a48d7;
-section{
-    display: grid;
-    max-width: 450px;
-    margin: auto;
-    height: 100vh;
-    align-content: center;
+  div{
     text-align: center;
-    article{
-        padding: 50px;
-        .btn_secondary {
-        background: $color-primary;
-        color: #fff;
+    h2{
+      font-size: 1.4em;
+    }
+    .bt{
+      border-radius: 500px;
+      border: 1px solid #f0f0f0;
+      box-shadow: 1px 2px 3px #999;
+      margin-top: 15px;
+      padding: 12px;
+      transition: 0.3s;
+    }
+      i{
+        font-size: 1.6em;
         &:hover {
-          background: #37dd6f;
-        }
-        &:active{
-          background: #68EE95;
+          opacity: 0.7;
         }
       }
-    }
-    h2{        
-        font-size: 1.4em;
-        font-weight: bolder;
-        margin-bottom: 15px;
-    }
-    
-}
+  }
 
+  .ghost{
+    font-size: 2em;
+    animation: ghost 0.5s ease-in-out alternate infinite;
+      &:hover{
+      animation-play-state: paused;
+  }
+  }
+
+  @keyframes ghost{
+    to{
+        transform: translateY(40px);
+    }
+}
 </style>

@@ -3,8 +3,8 @@
     <div class="about-text">
       <h2>Sobre</h2>
       <p>
-        Meu interesse com web é transformar ideias em realidade acompanhado
-        de boa experiência ao cliente. Desde 2009 trabalho para
+        Meu interesse com web é transformar ideia em realidade acompanhado
+        de boa experiência ao usuário. Desde 2009 trabalho para
         empresas nas divisões de web, normalmente dedicado ao frontend, design e
         gestão de mídias digitais. Sou casado com a Delma, pai da AnaLu e da
         “Cyndi”.
@@ -151,7 +151,6 @@ $color-secondary: #37266b;
     transition: 0.3s;
     &:hover {
       filter: opacity(0.8) grayscale(1) drop-shadow(0px 0px 0px);
-      cursor: none;
     }
   }
 }
