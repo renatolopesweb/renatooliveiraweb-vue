@@ -26,8 +26,8 @@
         >
       </div>
       <div class="nav-link">
-        <router-link to="/contato"
-          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</router-link
+        <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank" 
+          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</a
         >
       </div>
     </div>
@@ -35,12 +35,6 @@
 </template>
 <script>
 export default {
-
-  data(){
-        return{
-            modalShow: false,
-        }
-    },
 
   methods: {
     toTop() {
@@ -138,37 +132,10 @@ nav {
   }
 }
 
-.form-overlay{
-    display: grid;
-    background: rgba($color: $color-primary, $alpha: 0.9);
-    height: 100%;
-    height: 100vh;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-}
-.fade-view-enter , .fade-view-leave-to{
-    opacity: 0;
-}
-.fade-view-enter-active , .fade-view-leave-active{
-    transition: opacity 0.3s ease-in-out ;
-}
-
-iframe{
-    background: #fff;
-    width: 600px;
-    max-width: 75%;
-    height: 100vh;
-    margin: auto;
-}
-
 /* MEDIA QUERIES START */
 @media (max-width: 800px) {
   .link_active {
-    background: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.5) !important;
     color: #fff !important;
   }
   .nav-mobile {

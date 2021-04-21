@@ -20,13 +20,6 @@ const pageTitle = 'RENATO7OLIVEIRA · '
     meta:{title: pageTitle + 'SOBRE'}, 
     component: () => import( '../views/About.vue')},
 
-    { 
- 
-      path: '/contato', 
-      name: 'contato', 
-      meta:{title: pageTitle + '· CONTATO'} , 
-      component: () => import( '../views/Contact.vue')},
-
   { 
     path: '/*', 
     name: 'NotFound', 
