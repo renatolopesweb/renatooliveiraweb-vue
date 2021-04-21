@@ -1,14 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <section>
-      <article>
-        <transition name="fade-view" mode="out-in">
-          <router-view />
-        </transition>
-      </article>
-      <Nav />
-    </section>
+    <Nav />
+    <transition name="fade-view" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -40,21 +36,10 @@ $color-secondary: #37266b;
 
 html,
 body {
-  background: #FBFAFC;
-  // background: #eae0f1;
-  // background: rgba(99, 0, 148, 0.1);
+  background: #fbfafc;
   transition: 0.3s;
 }
-section {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-content: center;
-  height: 100vh;
-  article {
-    grid-column-start: 2;
-    grid-column-end: 5;
-  }
-}
+
 .fade-view-enter,
 .fade-view-leave-to {
   opacity: 0;
@@ -81,17 +66,9 @@ section {
 .show-mobile {
   display: none;
 }
-
-
 @media (max-width: 800px) {
-  section {
-    grid-template-columns: 1fr;
-    article{
-      grid-column: 1 / 3;
-    }
-  }
   .show-desk {
-    display: none!important;
+    display: none !important;
   }
   .show-mobile {
     display: grid;

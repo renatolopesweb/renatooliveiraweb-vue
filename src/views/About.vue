@@ -1,4 +1,6 @@
 <template>
+<section>
+      <article>
   <div class="about">
     <div class="about-text">
       <h2>Sobre</h2>
@@ -40,6 +42,8 @@
       <i class="fa fa-graduation-cap" aria-hidden="true"></i>
     </div>
   </div>
+  </article>
+</section>
 </template>
 
 <script>
@@ -94,7 +98,7 @@ export default {
         },
         {
           category: "Extra",
-          content: "Github / Wordpress",
+          content: "Github / Gulp Compress",
         },
       ],
     };
@@ -105,6 +109,17 @@ export default {
 <style lang="scss" scoped>
 $color-primary: #630094;
 $color-secondary: #37266b;
+
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
+  height: 100vh;
+  article {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+}
 
 .about {
   display: grid;
@@ -150,6 +165,7 @@ $color-secondary: #37266b;
       drop-shadow(-40px -40px 0px $color-primary);
     transition: 0.3s;
     &:hover {
+      cursor: none;
       filter: opacity(0.8) grayscale(1) drop-shadow(0px 0px 0px);
     }
   }
@@ -181,6 +197,11 @@ $color-secondary: #37266b;
 
 /* MEDIAQUERIES */
 @media (max-width: 800px) {
+
+section {
+    grid-template-columns: 1fr;
+  }
+
   .about {
     text-align: center;
     grid-template-columns: 1fr;

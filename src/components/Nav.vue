@@ -26,13 +26,10 @@
         >
       </div>
       <div class="nav-link">
-        <a @click="(modalShow = true, modalFrame())" 
-          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</a
+        <router-link to="/contato"
+          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</router-link
         >
       </div>
-    </div>
-    <div class="form-overlay" v-show="modalShow" @click="(modalShow = false)">
-      <iframe frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </div>
   </nav>
 </template>
@@ -52,9 +49,6 @@ export default {
         behavior: "smooth",
       });
     },
-    modalFrame(){
-      document.querySelector('iframe').src = "https://forms.gle/mdYVxaBnc1mziQ8KA";
-    }
   },
 };
 </script>
@@ -70,6 +64,7 @@ nav {
   position: absolute;
   position: fixed;
   height: 100vh;
+  z-index: 1;
 }
 .nav-desk {
   display: grid;

@@ -21,16 +21,12 @@ const pageTitle = 'RENATO7OLIVEIRA · '
     component: () => import( '../views/About.vue')},
 
     { 
-      path: '/portfolio', 
-      name: 'Portfolio', 
-      meta:{title: pageTitle + 'PORTFOLIO'} , 
-      component: () => import( '../views/Lab.vue')},
-    { 
  
-    path: '/portfolio-detalhe', 
-    name: 'PortfolioDetalhe', 
-    meta:{title: pageTitle + 'PORTFOLIO · DETALHE'} , 
-    component: () => import( '../views/LabDetail.vue')},
+      path: '/contato', 
+      name: 'contato', 
+      meta:{title: pageTitle + '· CONTATO'} , 
+      component: () => import( '../views/Contact.vue')},
+
   { 
     path: '/*', 
     name: 'NotFound', 
