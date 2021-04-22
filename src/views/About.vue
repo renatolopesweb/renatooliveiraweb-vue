@@ -3,7 +3,6 @@
       <article>
   <div class="about">
     <div class="about-text">
-      <h2>Sobre</h2>
       <p>
         Meu interesse com web é transformar ideia em realidade acompanhado
         de boa experiência ao usuário. Desde 2009 trabalho para
@@ -89,11 +88,11 @@ export default {
           content: "JS / HTML / CSS:Sass",
         },
         {
-          category: "PWA",
+          category: "SPA",
           content: "Angular / Vue.js",
         },
         {
-          category: "Design",
+          category: "Visual",
           content: "XD / Photoshop",
         },
         {

@@ -72,7 +72,7 @@ section {
 @media(max-width: 800px){
   section{
     grid-template-columns: 1fr;
-    padding-bottom: 120px;
+    padding-bottom: 115px;
   }
 }
 .home-description{
@@ -120,6 +120,10 @@ article {
   height: 125px;
   padding-left: 25px;
   padding-right: 25px;
+  transition: 0.3s;
+  &:active{
+    background: rgba($color: $color-primary, $alpha: 0.1);
+  }
   a {
     color: $color-primary;
   }
@@ -130,6 +134,7 @@ article {
     font-size: 0.8em;
     margin-top: 5px;
     text-align: right;
+    color: rgba($color: $color-primary, $alpha: 0.6);
   }
 }
 
