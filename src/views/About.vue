@@ -202,7 +202,7 @@ section {
   }
 
   .about {
-    text-align: center;
+    text-align: justify;
     grid-template-columns: 1fr;
     grid-template-areas:
       "about-image"
@@ -213,9 +213,9 @@ section {
     ul {
       padding-bottom: 125px;
     }
-    li {
-      list-style-type: none;
-    }
+    // li {
+    //   list-style-type: none;
+    // }
   }
   .about-image {
     text-align: center;

@@ -85,12 +85,12 @@ section {
 @media(max-width: 800px){
   .home-description{
     padding: 25px;
-    text-align: center;
+    // text-align: center;
     h2{
       font-size: 2em;
     }
     h3{
-      color: #666;
+      color: #999;
       font-size: 1.6em;
     }
     p{
