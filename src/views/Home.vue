@@ -49,7 +49,7 @@ export default {
         {
           title: "Street Fighter Tributo",
           description: `Projeto interativo feito com Adobe Edge`,
-          stack: "Edge Animate, Photoshop",
+          stack: "Edge Animate",
           url: "https://renato7oliveira.github.io/street-fighter-audio-project",
           screen: require("../assets/images/portfolio-street-fighter.jpg"),
         },
@@ -85,7 +85,7 @@ section {
 @media(max-width: 800px){
   .home-description{
     padding: 25px;
-    // text-align: center;
+    text-align: center;
     h2{
       font-size: 2em;
     }
@@ -121,9 +121,6 @@ article {
   padding-left: 25px;
   padding-right: 25px;
   transition: 0.3s;
-  &:active{
-    background: rgba($color: $color-primary, $alpha: 0.1);
-  }
   a {
     color: $color-primary;
   }

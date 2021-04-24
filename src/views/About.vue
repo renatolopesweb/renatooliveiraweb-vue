@@ -4,7 +4,7 @@
   <div class="about">
     <div class="about-text">
       <p>
-        Meu interesse com web é transformar ideia em realidade acompanhado
+        Meu interesse com web é concretizar ideias, acompanhado
         de boa experiência ao usuário. Desde 2009 trabalho para
         empresas nas divisões de web, normalmente dedicado ao frontend, design e
         gestão de mídias digitais. Sou casado com a Delma, pai da AnaLu e da
@@ -210,12 +210,13 @@ section {
       "skills-image"
       "skills-text";
     padding: 25px;
+    text-align: center;
     ul {
       padding-bottom: 125px;
     }
-    // li {
-    //   list-style-type: none;
-    // }
+    li {
+      list-style-type: none;
+    }
   }
   .about-image {
     text-align: center;
