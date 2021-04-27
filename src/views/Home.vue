@@ -25,8 +25,8 @@
         <i class="fa fa-space-shuttle" aria-hidden="true"></i>
         <!-- <i class="fa fa-rocket" aria-hidden="true"></i> -->
       </figure>
-      <button @click="sky()" class="shuttle-bt show-d"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
-      <button @click="reset()" class="shuttle-reset show-d"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+      <button @click="sky()" class="shuttle-bt"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
+      <button @click="reset()" class="shuttle-reset"><i class="fa fa-refresh" aria-hidden="true"></i></button>
     </article>
   </section>
 </template>
@@ -138,7 +138,7 @@ section {
   }
 }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
   section {
     padding-bottom: 680px;
     grid-template-columns: 1fr;
@@ -176,11 +176,11 @@ section {
 }
 
 .about-animate{
-  // text-align: center;
+  text-align: center;
   position: relative;
 .shuttle{
   i{
-    font-size: 30em;
+    font-size: 28em;
     transition: $t-def;
     color: #ccc;
     transform: rotate(-40deg);;
@@ -189,12 +189,14 @@ section {
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
   }
-  @media(max-width: 800px){
-    i{
-      color: $color-primary;
-      font-size: 15em;
-    }
-  }
+  // @media(min-width: 1500px){i{font-size: 30em;}}
+  @media(max-width: 1420px){i{font-size: 25em;}}
+  @media(max-width: 1340px){i{font-size: 23em;}}
+  @media(max-width: 1300px){i{font-size: 20em;}}
+  @media(max-width: 1220px){i{font-size: 19em;}}
+  // @media(min-width: 1500px){i{font-size: 30em;}}
+
+
   }
 }
 
@@ -221,7 +223,7 @@ button{
   border: 1px solid #941c05;
   background: #ff2800; 
   position: absolute;
-  left: 400px;
+  // left: 480px;
   top: 60%;
   box-shadow:0 5px 0 #a81e04;
   &:hover{

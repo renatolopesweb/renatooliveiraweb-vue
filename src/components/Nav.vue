@@ -49,8 +49,8 @@ $t-def: 0.3s;
 ul {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: 12vh;
   grid-gap: 20px;
+  height: 100px;
   align-items: center;
   background: #eee;
   box-shadow: -1px -1px 3px #999;
@@ -91,18 +91,26 @@ ul {
 }
 @media(max-width: 800px){
   ul{
-    grid-template-rows: 15vh;
     grid-gap: 10px;
     background: #000;
+    box-shadow: -1px -1px 3px #000;
       li {
-        a, i {
+        i{
           color: rgba(255, 255, 255, 0.8);
+        }
+        a{
+          color: rgba(255, 255, 255, 0.8);
+          &:hover{
+            background: #222;
+            box-shadow: 1px 1px 3px #111;
+          }
         }
     }
   }
   .link_active {
     box-shadow: 1px 1px 3px #111!important;
     background: #222!important;
+    opacity: 0.7!important;
 }
 }
 
