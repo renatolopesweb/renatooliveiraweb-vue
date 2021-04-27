@@ -35,7 +35,6 @@ html,
 body {
   background: #fff;
   transition: 0.3s;
-  text-shadow: 1px 1px 3px #f0f0f0;
 }
 
 section {

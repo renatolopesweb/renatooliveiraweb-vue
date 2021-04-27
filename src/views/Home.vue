@@ -134,12 +134,13 @@ section {
     line-height: 30px;
     margin-bottom: 7px;
     margin-top: 7px;
-    
+    text-shadow: 1px 1px 3px #f0f0f0;
   }
 }
 
   @media (max-width: 800px) {
   section {
+    padding-bottom: 680px;
     grid-template-columns: 1fr;
     grid-template-areas:
     "anim"

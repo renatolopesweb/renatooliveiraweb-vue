@@ -36,6 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color-primary: #151515;
 $t-def: 0.3s;
 
 
@@ -90,8 +91,19 @@ ul {
 }
 @media(max-width: 800px){
   ul{
-    grid-template-rows: 12vh;
+    grid-template-rows: 15vh;
+    grid-gap: 10px;
+    background: #000;
+      li {
+        a, i {
+          color: rgba(255, 255, 255, 0.8);
+        }
+    }
   }
+  .link_active {
+    box-shadow: 1px 1px 3px #111!important;
+    background: #222!important;
+}
 }
 
 </style>
