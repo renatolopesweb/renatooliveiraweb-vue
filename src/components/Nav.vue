@@ -1,41 +1,26 @@
 <template>
   <nav>
-    <div class="nav-desk show-desk">
-      <ul @click="toTop()">
-        <li>
-          <router-link to="/"
-            ><i class="fa fa-home" aria-hidden="true" title="Home"></i
-          ></router-link>
-        </li>
-        <li>
-          <router-link to="/sobre"
-            ><i class="fa fa-user" aria-hidden="true" title="Sobre"></i
-          ></router-link>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-mobile show-mobile" @click="toTop()">
-      <div class="nav-link">
+    <ul>
+      <li @click="toTop()">
         <router-link to="/"
           ><i class="fa fa-home" aria-hidden="true"></i>home</router-link
         >
-      </div>
-      <div class="nav-link">
-        <router-link to="/sobre"
-          ><i class="fa fa-user" aria-hidden="true"></i>sobre</router-link
+      </li>
+      <li @click="(toTop(), navOverflow())">
+        <router-link to="/trabalhos"
+          ><i class="fa fa-coffee" aria-hidden="true"></i>trabalhos</router-link
         >
-      </div>
-      <div class="nav-link">
+      </li>
+      <li class="show-m">
         <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank" 
           ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</a
         >
-      </div>
-    </div>
+      </li>
+    </ul>
   </nav>
 </template>
 <script>
 export default {
-
   methods: {
     toTop() {
       window.scrollTo({
@@ -43,105 +28,70 @@ export default {
         behavior: "smooth",
       });
     },
+    navOverflow() {
+      document.querySelector('html').style.overflowY = "auto";
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #630094;
-$color-secondary: #37266b;
+$t-def: 0.3s;
 
-nav {
-  display: grid;
-  align-items: center;
-  right: 0px;
-  position: absolute;
-  position: fixed;
-  height: 100vh;
-  z-index: 1;
-}
-.nav-desk {
-  display: grid;
-  align-items: center;
-  ul {
-    li {
-      border-radius: 500px;
-      border: 1px solid #f0f0f0;
-      box-shadow: 1px 2px 3px #999;
-      margin-top: 15px;
-      margin-right: 30px;
-      padding: 12px;
-      text-align: center;
-      a {
-        background: transparent;
-        border: 1px solid #eee;
-        border-radius: 500px;
-        color: $color-primary;
-        transition: 0.3s;
-        &:hover {
-          opacity: 0.2;
-        }
-      }
-      i {
-        font-size: 1.6em;
-        vertical-align: middle;
-        text-align: center;
-      }
-    }
-  }
-}
+
 .link_active {
-  opacity: 0.2!important;
+  box-shadow: 1px 1px 3px #999;
+  background: #fff;
+  opacity: 0.5;
 }
 
-.nav-mobile {
-  display: none;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 90px;
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 12vh;
   grid-gap: 20px;
   align-items: center;
-  background: $color-primary;
+  background: #eee;
+  box-shadow: -1px -1px 3px #999;
   bottom: 0px;
-  padding: 0 20px;
+  padding-left: 20px;
   position: absolute;
   position: fixed;
   left: 0px;
   text-align: center;
   width: 100%;
   z-index: 1;
-  .nav-link {
+  li {
     a {
-      border-radius: 5px;
-      color: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;      
+      color: rgba(0, 0, 0, 0.9);
       cursor: pointer;
       display: block;
       font-size: 0.7em;
       outline: none;
       padding: 7px 14px;
       text-transform: uppercase;
-      transition: 0.3s;
+      transition: $t-def;
+      &:hover{
+        box-shadow: 1px 1px 3px #999;
+        background: #fff;
+      }
       &:focus {
         outline: none !important;
       }
     }
     i {
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(0, 0, 0, 0.9);
       font-size: 2em;
       margin-bottom: 5px;
       width: 100%;
     }
   }
 }
-
-/* MEDIA QUERIES START */
-@media (max-width: 800px) {
-  .link_active {
-    background: rgba(255, 255, 255, 0.5) !important;
-    color: #fff !important;
-  }
-  .nav-mobile {
-    display: grid;
+@media(max-width: 800px){
+  ul{
+    grid-template-rows: 12vh;
   }
 }
-/* MEDIA QUERIES END */
+
 </style>

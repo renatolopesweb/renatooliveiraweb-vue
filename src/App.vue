@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Header />
-    <Nav />
+    <!-- <Header /> -->
     <transition name="fade-view" mode="out-in">
       <router-view />
     </transition>
+    <Nav />
   </div>
 </template>
 
 <script>
-import Header from "../src/components/Header";
+// import Header from "../src/components/Header";
 import Nav from "../src/components/Nav";
 export default {
   components: {
-    Header,
-    Nav,
+    // Header,
+    Nav
   },
 };
 </script>
@@ -31,13 +31,17 @@ export default {
   animation: fadeIn 0.2s ease-out;
 }
 
-$color-primary: #630094;
-$color-secondary: #37266b;
-
 html,
 body {
-  background: #fbfafc;
+  background: #fff;
   transition: 0.3s;
+  text-shadow: 1px 1px 3px #f0f0f0;
+}
+
+section {
+  // height: 85vh;
+  display: grid;
+  padding: 20px;
 }
 
 .fade-view-enter,
@@ -60,17 +64,17 @@ body {
 }
 /* TRANSITIONS END */
 /* MEDIA QUERIES START */
-.show-desk {
+.show-d {
   display: grid;
 }
-.show-mobile {
+.show-m {
   display: none;
 }
 @media (max-width: 800px) {
-  .show-desk {
+  .show-d {
     display: none !important;
   }
-  .show-mobile {
+  .show-m {
     display: grid;
   }
 }

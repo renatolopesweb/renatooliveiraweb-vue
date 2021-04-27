@@ -1,198 +1,302 @@
 <template>
-    <div>
-    <div class="home-description">
-      <h2></h2>
-      <h3></h3>
-      <p></p>
-      </div>
   <section>
-    <article v-for="(item, article) in articles" :key="article">
-      <a :href="item.url" target="_blank" :title="item.description">
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.stack }}</p>
-      </a>
+    <article class="about-description">
+      <h1>RENATO7OLIVEIRA</h1>
+      <h2>FRONTEND · WEB</h2>
+      <p>
+        Desde 2009 trabalho para empresas nas divisões
+        de web, normalmente dedicado ao frontend, design e gestão de mídias
+        digitais. Sou casado com a Delma, pai da AnaLu e da “Cyndi”.
+      </p>
+      <h3>Contato</h3>
+      <p class="social">
+        <a
+          v-for="item in social"
+          :title="item.title"
+          :key="item.id"
+          :href="item.url"
+          target="_blank"
+          ><i :class="item.img"></i
+        ></a>
+      </p>
+    </article>
+    <article class="about-animate">
+      <figure class="shuttle">
+        <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+        <!-- <i class="fa fa-rocket" aria-hidden="true"></i> -->
+      </figure>
+      <button @click="sky()" class="shuttle-bt show-d"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
+      <button @click="reset()" class="shuttle-reset show-d"><i class="fa fa-refresh" aria-hidden="true"></i></button>
     </article>
   </section>
-  
-  </div>
 </template>
 
 <script>
+
 export default {
-  name: "Lab",
   data() {
     return {
-      articles: [
+      social: [
         {
-          title: "Breaking Bad Tributo",
-          description: `Página motivacional a testar o Glide.js, um plugin leve (23k) para slider`,
-          stack: "Glide.js",
-          url:
-            "https://renato7oliveira.github.io/portfolio/Breaking_Bad_Tributo/src/",
-          screen: require("../assets/images/portfolio-breaking-bad-tributo.jpg"),
+          title: "Github",
+          img: "fa fa-github",
+          url: "https://github.com/renato7oliveira",
         },
         {
-          title: "Smooth Scroll simplificado",
-          description: `2 linhas para um efeito que pode te ajudar`,
-          stack: "CSS2, HTML",
-          url: "https://renato7oliveira.github.io/portfolio/Scroll_Smooth/src/",
-          screen: require("../assets/images/portfolio-scroll-behavior.jpg"),
+          title: "Linkedin",
+          img: "fa fa-linkedin",
+          url: "https://www.linkedin.com/in/renato7oliveira",
         },
         {
-          title: "Beatles Tributo",
-          description: `Página motivacional a testar animações com CSS3`,
-          stack: "CSS3 Animation",
-          url:
-            "https://renato7oliveira.github.io/portfolio/Beatles_Tributo/src/",
-          screen: require("../assets/images/portfolio-beatles.jpg"),
+          title: "Instagram",
+          img: "fa fa-instagram",
+          url: "https://www.instagram.com/renato7oliveira",
         },
         {
-          title: "Street Fighter Tributo",
-          description: `Projeto interativo feito com Adobe Edge`,
-          stack: "Edge Animate",
-          url: "https://renato7oliveira.github.io/street-fighter-audio-project",
-          screen: require("../assets/images/portfolio-street-fighter.jpg"),
+          title: "Twitter",
+          img: "fa fa-twitter",
+          url: "https://twitter.com/renato7oliveira",
+        },
+        {
+          title: "Facebook",
+          img: "fa fa-facebook",
+          url: "https://facebook.com/renato7oliveira",
+        },
+        {
+          title: "Mensagem",
+          img: "fa fa-paper-plane",
+          url: "https://forms.gle/mdYVxaBnc1mziQ8KA",
         },
       ],
     };
   },
+  methods:{
+    sky(){
+      document.querySelector('.shuttle').classList.add('shuttle-active');
+      document.querySelector('body').style.overflow = "hidden";
+      document.querySelector('.shuttle-bt').style.display = "none";
+      
+      setTimeout(function(){ 
+        document.querySelector('.shuttle-reset').style.display = "block";
+        document.querySelector('.shuttle-reset').classList.add('shuttle-reset-active');
+       }, 3000);
+
+    },
+    reset(){
+      document.querySelector('.shuttle').classList.remove('shuttle-active');
+      document.querySelector('.shuttle-bt').style.display = "block";
+      document.querySelector('.shuttle-reset').style.display = "none";
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #630094;
-$color-secondary: #37266b;
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+
+
+$color-primary: #151515;
+$t-def: 0.3s;
 
 section {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 25px;
-  padding: 0 25px;
-}
-@media(max-width: 800px){
-  section{
-    grid-template-columns: 1fr;
-    padding-bottom: 115px;
-  }
-}
-.home-description{
-  font-size: 0.7em;
-  padding: 90px 25px 25px 25px;
-  h2::after {
-    content: "Clique nos experimentos";
-  }
-}
-@media(max-width: 800px){
-  .home-description{
-    padding: 25px;
-    text-align: center;
-    h2{
-      font-size: 2em;
-    }
-    h3{
-      color: #999;
-      font-size: 1.6em;
-    }
-    p{
-      color: #000;
-      font-size: 1.3em;
-      margin-top: 15px;
-    }
-    h2::after {
-    content: "RENATO7OLIVEIRA";
-  }
-  h3::after{
-      content: 'FRONTEND · WEB';
-    }
-    p::after{
-      content: 'Clique nos experimentos';
-      font-weight: bold;
-    }
-  }
-}
-
-article {
-  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  grid-gap: 20px;
   align-items: center;
-  align-content: center;
-  background: #fff;
-  border: 1px solid rgba($color: $color-primary, $alpha: 0.2);
-  height: 125px;
-  padding-left: 25px;
-  padding-right: 25px;
-  transition: 0.3s;
-  a {
+  height: 85vh;
+  grid-template-areas:
+  "desc anim"
+  ;
+  
+
+  h1,  h2{
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+  h1{
     color: $color-primary;
   }
-  h2 {
-    font-size: 1em;
+  h2{
+    color: #999;
+    margin-top: -23px;
   }
-  p {
-    font-size: 0.8em;
-    margin-top: 5px;
-    text-align: right;
-    color: rgba($color: $color-primary, $alpha: 0.6);
+  h3{
+    color: $color-primary;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: -2px;
+  }
+  p{
+    color: $color-primary;
+    font-size: 1.1em;
+    line-height: 30px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    
   }
 }
 
-// ANIMATE HOVER
-article {
+  @media (max-width: 800px) {
+  section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "anim"
+    "desc"
+  ;
+  h1, h2{
+    font-size: 1.6em;
+  }
+    h2{
+    margin-top: -10px;
+  }
+  }
+}
+
+.about-description{
+  grid-area: desc;
+}
+.about-animate{
+  grid-area: anim;
+}
+.social{
+  a{
+      margin-right: 7px;
+      color: $color-primary;
+      transition: $t-def;
+      &:hover{
+        color: #999;
+      }
+  }
+  i{
+    font-size: 1.6em;
+  }
+}
+
+.about-animate{
+  // text-align: center;
   position: relative;
-}
-@media(max-width: 800px){
-  article{
-    position: unset;
+.shuttle{
+  i{
+    font-size: 30em;
+    transition: $t-def;
+    color: #ccc;
+    transform: rotate(-40deg);;
+    // background: -webkit-linear-gradient($color-primary, #000);
+    // background-image: linear-gradient(to bottom left, $color-primary, #000);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
+  @media(max-width: 800px){
+    i{
+      color: $color-primary;
+      font-size: 15em;
+    }
+  }
   }
 }
-article::before,
-article::after {
-  content: "";
-  display: block;
-  box-sizing: border-box;
+
+.shuttle-active i{
+    animation-name: shuttle;
+    animation-duration: 3s;
+    // animation-iteration-count: 1;
+    // animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+button{
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.6em;
+  outline: 0;
+  padding: 20px 26px;
+  text-transform: uppercase;
+  transition: .1s;
+}
+
+.shuttle-bt {
+  border: 1px solid #941c05;
+  background: #ff2800; 
   position: absolute;
-  // z-index: 5;
-  pointer-events: none;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  border: 1px solid rgba($color: $color-primary, $alpha: 1);
+  left: 400px;
+  top: 60%;
+  box-shadow:0 5px 0 #a81e04;
+  &:hover{
+    background:#d32606;
+  }
+  &:active{
+    box-shadow:none;
+    top:61%;
+  }
+}
+@media (max-width: 800px) {
+  .shuttle-bt {
+    left: 170px;
+  }
 }
 
-article::before {
-  border-left: none;
-  border-bottom: none;
-  left: 0;
-  top: 0;
-  transition: width 0.5s linear 1.5s, height 0.5s linear 1s, opacity 0.1s 2s;
+.shuttle-reset{
+  display: none;
+  border: 1px solid #04546f;
+  background: #06799F;
+  position: absolute;
+  left: 300px;
+  top: 30%;
+  box-shadow:0 5px 0 #045e7c;
+  &:hover{
+    background:#077093;
+  }
+  &:active{
+    box-shadow:none;
+    top:31%;
+  }
+}
+@media (max-width: 800px) {
+  .shuttle-reset {
+    left: 140px;
+  }
 }
 
-article::after {
-  border-top: none;
-  border-right: none;
-  right: 0;
-  bottom: 0;
-  transition: width 0.5s linear 0.5s, height 0.5s linear, opacity 0.1s 1s;
+.shuttle-reset-active{
+    animation-name: reset;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-article:hover::before,
-article:hover::after {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-@media(max-width: 800px){
-  article:hover::before,
-article:hover::after {
-  opacity: 0;
-}
+@keyframes shuttle{
+
+  50%{
+    color: $color-primary;
+        transform: 
+    rotate(-40deg)
+
+  }
+  100%{
+
+      color: $color-primary;
+        transform: 
+        rotate(-40deg)
+        translateY(10px)
+        translateX(250%)
+        scale(1.8)
+        ;
+  }
 }
 
-article:hover::before {
-  transition: width 0.5s linear, height 0.5s linear 0.5s, opacity 0.1s;
+@keyframes reset {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    transform: 
+      rotate(360deg)
+    ;
+    opacity: 1;
+  }
 }
-article:hover::after {
-  transition: width 0.5s linear 1s, height 0.5s linear 1.5s, opacity 0.1s 1s;
-}
+
 </style>
 
 

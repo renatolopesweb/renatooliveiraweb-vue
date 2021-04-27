@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fontsource/bowlby-one": "^4.2.2",
     "@material-icons/font": "^1.0.4",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
