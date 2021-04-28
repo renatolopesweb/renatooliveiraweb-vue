@@ -99,7 +99,8 @@ ul {
 }
 @media(max-width: 800px){
   ul{
-    grid-gap: 9px;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 9px;
     background: #000;
     box-shadow: 0px -0px 0px #000;
     padding-left: 0px;
