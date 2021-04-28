@@ -147,7 +147,7 @@ section {
     "desc"
   ;
   h1, h2{
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
     h2{
     margin-top: -10px;
@@ -183,20 +183,17 @@ section {
     font-size: 28em;
     transition: $t-def;
     color: #ccc;
-    transform: rotate(-40deg);;
+    // transform: rotate(-40deg);;
     // background: -webkit-linear-gradient($color-primary, #000);
     // background-image: linear-gradient(to bottom left, $color-primary, #000);
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
   }
-  // @media(min-width: 1500px){i{font-size: 30em;}}
   @media(max-width: 1420px){i{font-size: 25em;}}
   @media(max-width: 1340px){i{font-size: 23em;}}
   @media(max-width: 1300px){i{font-size: 20em;}}
   @media(max-width: 1220px){i{font-size: 19em;}}
-  // @media(min-width: 1500px){i{font-size: 30em;}}
-
-
+  @media(max-width: 800px){i{font-size: 13em;}}
   }
 }
 
@@ -204,7 +201,7 @@ section {
     animation-name: shuttle;
     animation-duration: 3s;
     // animation-iteration-count: 1;
-    // animation-delay: 0.5s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -223,20 +220,15 @@ button{
   border: 1px solid #941c05;
   background: #ff2800; 
   position: absolute;
-  // left: 480px;
-  top: 60%;
+  left: 0px;
+  top: 150px;
   box-shadow:0 5px 0 #a81e04;
   &:hover{
     background:#d32606;
   }
   &:active{
     box-shadow:none;
-    top:61%;
-  }
-}
-@media (max-width: 800px) {
-  .shuttle-bt {
-    left: 170px;
+    top: 155px;
   }
 }
 
@@ -258,7 +250,7 @@ button{
 }
 @media (max-width: 800px) {
   .shuttle-reset {
-    left: 140px;
+    left: 100px;
   }
 }
 
@@ -270,20 +262,31 @@ button{
 
 @keyframes shuttle{
 
-  50%{
+  25%{
+    transform: 
+      rotate(-40deg);
+    }
+  49%{
     color: $color-primary;
-        transform: 
-    rotate(-40deg)
+    transform: 
+      rotate(-40deg);
+    }
+
+  50%{
+
+      transform: 
+        rotate(-40deg)
+    ;
 
   }
   100%{
 
       color: $color-primary;
         transform: 
-        rotate(-40deg)
-        translateY(10px)
-        translateX(250%)
-        scale(1.8)
+          rotate(-40deg)
+          translateY(10px)
+          translateX(250%)
+          scale(1.8)
         ;
   }
 }
