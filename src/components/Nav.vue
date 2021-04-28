@@ -42,8 +42,6 @@ $t-def: 0.3s;
 
 .link_active {
   box-shadow: 1px 1px 3px #999;
-  background: #fff;
-  opacity: 0.5;
 }
 
 ul {
@@ -52,7 +50,7 @@ ul {
   grid-gap: 20px;
   height: 100px;
   align-items: center;
-  background: #eee;
+  background: #fff;
   box-shadow: -1px -1px 3px #999;
   bottom: 0px;
   padding-left: 20px;
@@ -75,7 +73,6 @@ ul {
       transition: $t-def;
       &:hover{
         box-shadow: 1px 1px 3px #999;
-        background: #fff;
       }
       &:focus {
         outline: none !important;
@@ -103,6 +100,7 @@ ul {
           &:hover{
             background: #222;
             box-shadow: 1px 1px 3px #111;
+            opacity: 0.7;
           }
         }
     }

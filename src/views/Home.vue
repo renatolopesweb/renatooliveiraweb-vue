@@ -9,7 +9,7 @@
         digitais. Sou casado com a Delma, pai da AnaLu e da “Cyndi”.
       </p>
       <h3>Contato</h3>
-      <p class="social">
+      <p class="social"> 
         <a
           v-for="item in social"
           :title="item.title"
@@ -93,10 +93,6 @@ export default {
 
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
-
-
-
 $color-primary: #151515;
 $t-def: 0.3s;
 
@@ -111,7 +107,7 @@ section {
   
 
   h1,  h2{
-    font-family: 'Bowlby One SC', cursive;
+    font-family: "Bowlby One";
     font-size: 4em;
     letter-spacing: 2px;
   }
