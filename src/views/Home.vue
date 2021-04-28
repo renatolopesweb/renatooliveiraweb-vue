@@ -143,14 +143,20 @@ section {
     "desc"
   ;
   h1, h2{
-    font-size: 1.4em;
+    font-size: 1.7em;
   }
     h2{
     margin-top: -10px;
   }
   }
 }
-
+  @media (max-width: 800px) {
+  section {
+    h1, h2{
+    font-size: 1.4em;
+  }
+  }
+  }
 .about-description{
   grid-area: desc;
 }
