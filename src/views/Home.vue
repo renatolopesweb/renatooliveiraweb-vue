@@ -25,8 +25,8 @@
         <i class="fa fa-space-shuttle" aria-hidden="true"></i>
         <!-- <i class="fa fa-rocket" aria-hidden="true"></i> -->
       </figure>
-      <button @click="sky()" class="shuttle-bt"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
-      <button @click="reset()" class="shuttle-reset"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+      <button @click="sky()" class="shuttle-bt show-d"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
+      <button @click="reset()" class="shuttle-reset show-d"><i class="fa fa-refresh" aria-hidden="true"></i></button>
     </article>
   </section>
 </template>
