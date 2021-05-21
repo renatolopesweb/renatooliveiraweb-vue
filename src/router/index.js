@@ -14,8 +14,15 @@ const pageTitle = 'RENATO7OLIVEIRA · '
   name: 'Home', 
   meta:{title: pageTitle + 'FRONTEND · WEB', description: 'RENATO7OLIVEIRA · FRONTEND · WEB'},
   component: Home },
+
   { 
-    path: '/trabalhos', 
+    path: '/about', 
+    name: 'about', 
+    meta:{title: pageTitle + 'SOBRE'}, 
+    component: () => import( '../views/About.vue')},
+
+  { 
+    path: '/lab', 
     name: 'trabalhos', 
     meta:{title: pageTitle + 'TRABALHOS'}, 
     component: () => import( '../views/Lab.vue')},

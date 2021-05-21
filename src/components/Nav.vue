@@ -1,23 +1,47 @@
 <template>
-  <nav>
-    <ul>
-      <li @click="toTop()">
+<div>
+  <aside class="show-d">
+    <div class="brand">
+      <h1>RENATO7OLIVEIRA <br><span>frontend web</span></h1>   
+    </div>
+    <nav>
+      <ul>
+        <li @click="toTop()">
+          <router-link to="/"
+            ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
+          >
+        </li>
+        <li @click="toTop()">
+          <router-link to="/about"
+            ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
+          >
+        </li>
+        <li @click="toTop()">
+          <router-link to="/lab"
+            ><i class="fa fa-coffee" aria-hidden="true"></i>Trabalhos</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="nav-mobile show-m" @click="toTop()">
+      <div class="nav-link">
         <router-link to="/"
           ><i class="fa fa-home" aria-hidden="true"></i>home</router-link
         >
-      </li>
-      <li @click="(toTop(), navOverflow())">
-        <router-link to="/trabalhos"
-          ><i class="fa fa-coffee" aria-hidden="true"></i>trabalhos</router-link
+      </div>
+      <div class="nav-link">
+        <router-link to="/about"
+          ><i class="fa fa-user" aria-hidden="true"></i>sobre</router-link
         >
-      </li>
-      <li class="show-m">
-        <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank" 
-          ><i class="fa fa-paper-plane" aria-hidden="true"></i>mensagem</a
+      </div>
+      <div class="nav-link">
+        <router-link to="/lab"
+          ><i class="fa fa-user" aria-hidden="true"></i>Trabalhos</router-link
         >
-      </li>
-    </ul>
-  </nav>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -28,103 +52,111 @@ export default {
         behavior: "smooth",
       });
     },
-    navOverflow() {
-      document.querySelector('html').style.overflowY = "auto";
-    }
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #151515;
+$color-primary: #8c52ff;
 $t-def: 0.3s;
 
-
 .link_active {
-  background: transparent;
-  box-shadow: 1px 1px 3px #fff;
-  opacity: 0.7;
-    &:hover{
-      box-shadow: 1px 1px 3px #fff;
+  color: rgba($color: #000000, $alpha: 0.5);
+  &:hover {
     cursor: auto;
   }
 }
+@media(max-width: 800px){
+  .link_active {
+    background: rgba($color: #000000, $alpha: 0.2);
+    opacity: 0.7;
+  }
+}
 
-ul {
+aside {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 20px;
-  height: 100px;
+  grid-template-rows: 150px auto;
+  // box-shadow: 1px 9px 9px #999;
+  box-shadow:  20px 20px 60px #E9E9E9,
+             -20px -20px 60px #ffffff;
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+}
+nav{
+  li{
+    border-bottom: 2px solid #f0f0f0;
+    i{
+      font-size: 1.4em;
+      width: 50px;
+      text-align: center;
+    }
+    a{
+      display: block;
+      color: rgba($color: #000000, $alpha: 1);
+      font-size: 0.8em;
+      font-weight: bolder;
+      padding: 20px 5px;
+      transition: $t-def;
+      &:hover{
+        color: rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+  }
+}
+.brand{
+  display: grid;
   align-items: center;
-  background: #fff;
-  box-shadow: -1px -1px 3px #b2b2b2;
+  background: $color-primary;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+  h1{
+    font-size: 1.1em;
+  }
+  span{
+    font-weight: lighter!important;
+    font-size: 0.9em;
+  }
+}
+
+
+.nav-mobile {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90px;
+  grid-gap: 20px;
+  align-items: center;
+  background: $color-primary;
   bottom: 0px;
-  padding-left: 20px;
+  padding: 0 20px;
   position: absolute;
   position: fixed;
   left: 0px;
   text-align: center;
   width: 100%;
   z-index: 1;
-  li {
+  .nav-link {
     a {
-      background: #f7f7f7;
       border-radius: 5px;
-      box-shadow: 1px 1px 3px #999; 
-      color: rgba(0, 0, 0, 0.9);
+      color: rgba(255, 255, 255, 0.9);
       cursor: pointer;
       display: block;
       font-size: 0.7em;
       outline: none;
       padding: 7px 14px;
       text-transform: uppercase;
-      transition: $t-def;
-      &:hover{
-        box-shadow: 1px 1px 1px #ccc;
-      }
-      &:active{
-        box-shadow: 0px 0px 0px #fff;
-      }
+      transition: 0.3s;
       &:focus {
         outline: none !important;
       }
     }
     i {
-      color: rgba(0, 0, 0, 0.9);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 2em;
       margin-bottom: 5px;
       width: 100%;
     }
   }
-}
-@media(max-width: 800px){
-  ul{
-    grid-template-columns: repeat(3, 1fr);
-    // grid-gap: 9px;
-    background: #000;
-    box-shadow: 0px -0px 0px #000;
-    padding-left: 0px;
-      li {
-        i{
-          color: rgba(255, 255, 255, 0.8);
-        }
-        a{
-          background: transparent;
-          box-shadow: 0px 0px 0px #000;
-          color: rgba(255, 255, 255, 0.8);
-          &:hover{
-            background: transparent;
-            box-shadow: 0px 0px 0px #000;
-            opacity: 0.3;
-          }
-        }
-    }
-  }
-  .link_active {
-    box-shadow: 1px 1px 3px #111!important;
-    background: transparent!important;
-    opacity: 0.3!important;
-}
 }
 
 </style>

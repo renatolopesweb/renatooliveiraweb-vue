@@ -1,19 +1,17 @@
 <template>
   <div id="app">
-    <!-- <Header /> -->
+    <Nav />
     <transition name="fade-view" mode="out-in">
       <router-view />
     </transition>
-    <Nav />
   </div>
 </template>
 
 <script>
-// import Header from "../src/components/Header";
+
 import Nav from "../src/components/Nav";
 export default {
   components: {
-    // Header,
     Nav
   },
 };
@@ -34,13 +32,27 @@ export default {
 html,
 body {
   background: #fff;
+  color: #000;
   transition: 0.3s;
 }
 
-section {
-  // height: 85vh;
+section{
   display: grid;
+  grid-template-columns: 340px auto;
+  height: 100vh;
+}
+article {
+  grid-column-start: 2;
+  padding: 40px 40px 40px 0;
+}
+@media(max-width: 800px){
+  section{
+    grid-template-columns: auto;
+  }
+ article{
+  grid-column-start: 1;
   padding: 20px;
+ } 
 }
 
 .fade-view-enter,

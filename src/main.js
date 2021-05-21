@@ -3,13 +3,13 @@ import App from './App.vue'
 import router from './router'
 import fontRoboto from '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css'
 import fontawesome from '../node_modules/font-awesome/css/font-awesome.min.css'
-import fontBowlby from '../node_modules/@fontsource/bowlby-one'
+// import fontBowlby from '../node_modules/@fontsource/bowlby-one'
 
 Vue.config.productionTip = false
 
 fontRoboto;
 fontawesome;
-fontBowlby;
+// fontBowlby;
 
 new Vue({
   router,
