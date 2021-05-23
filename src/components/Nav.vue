@@ -24,20 +24,20 @@
       </ul>
     </nav>
   </aside>
-  <div class="nav-mobile show-m" @click="toTop()">
-      <div class="nav-link">
+  <div class="nav-mobile show-m">
+      <div class="nav-link"  @click="toTop()">
         <router-link to="/"
           ><i class="fa fa-home" aria-hidden="true"></i>home</router-link
         >
       </div>
-      <div class="nav-link">
+      <div class="nav-link"  @click="toTop()">
         <router-link to="/about"
           ><i class="fa fa-user" aria-hidden="true"></i>sobre</router-link
         >
       </div>
-      <div class="nav-link">
+      <div class="nav-link"  @click="toTop()">
         <router-link to="/lab"
-          ><i class="fa fa-user" aria-hidden="true"></i>Trabalhos</router-link
+          ><i class="fa fa-coffee" aria-hidden="true"></i>Trabalhos</router-link
         >
       </div>
     </div>
