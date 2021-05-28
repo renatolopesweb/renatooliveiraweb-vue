@@ -76,9 +76,9 @@ $t-def: 0.3s;
 aside {
   display: grid;
   grid-template-rows: 150px auto;
-  // box-shadow: 1px 9px 9px #999;
-  box-shadow:  20px 20px 60px #E9E9E9,
-             -20px -20px 60px #ffffff;
+  box-shadow: 1px 9px 19px rgba($color: $color-primary, $alpha: 0.5);
+  // box-shadow:  20px 20px 60px #E9E9E9,
+  //            -20px -20px 60px #ffffff;
   position: fixed;
   height: 100vh;
   width: 300px;
