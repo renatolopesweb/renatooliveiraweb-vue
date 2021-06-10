@@ -38,7 +38,7 @@ body {
 
 section{
   display: grid;
-  grid-template-columns: 340px auto;
+  grid-template-columns: 370px auto;
   height: 100vh;
 }
 article {

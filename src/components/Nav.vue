@@ -75,8 +75,9 @@ $t-def: 0.3s;
 
 aside {
   display: grid;
-  grid-template-rows: 150px auto;
-  box-shadow: 1px 9px 19px rgba($color: #000000, $alpha: 0.2);
+  grid-template-rows: 180px auto;
+  background: rgba($color: $color-primary, $alpha: 0.1);
+  // box-shadow: 1px 9px 19px rgba($color: #000000, $alpha: 0.2);
   // box-shadow:  20px 20px 60px #E9E9E9,
   //            -20px -20px 60px #ffffff;
   position: fixed;
@@ -85,7 +86,7 @@ aside {
 }
 nav{
   li{
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
     i{
       font-size: 1.4em;
       width: 50px;
@@ -97,7 +98,6 @@ nav{
       font-size: 0.8em;
       font-weight: bolder;
       padding: 20px 5px;
-      text-transform: uppercase;
       transition: $t-def;
       &:hover{
         color: rgba($color: #000000, $alpha: 0.5);
