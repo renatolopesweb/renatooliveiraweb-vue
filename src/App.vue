@@ -13,8 +13,8 @@ import Nav from "../src/components/Nav";
 export default {
   components: {
     Nav
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss">
@@ -32,28 +32,27 @@ export default {
 html,
 body {
   background: #fff;
-  color: #000;
+  color: #444;
   transition: 0.3s;
 }
 
 section{
   display: grid;
-  grid-template-columns: 370px auto;
-  height: 100vh;
 }
-article {
-  grid-column-start: 2;
-  padding: 40px 40px 40px 0;
-}
-@media(max-width: 800px){
-  section{
-    grid-template-columns: auto;
-  }
- article{
-  grid-column-start: 1;
-  padding: 20px;
- } 
-}
+
+// article {
+//   grid-column-start: 2;
+//   padding: 40px 40px 40px 0;
+// }
+// @media(max-width: 800px){
+//   section{
+//     grid-template-columns: auto;
+//   }
+//  article{
+//   grid-column-start: 1;
+//   padding: 20px;
+//  } 
+// }
 
 .fade-view-enter,
 .fade-view-leave-to {
