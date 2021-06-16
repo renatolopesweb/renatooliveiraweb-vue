@@ -81,8 +81,10 @@ $t-def: 0.3s;
 }
 @media (max-width: 800px) {
   .link_active {
-    background: rgba($color: #000000, $alpha: 0.2);
+    // background: rgba($color: #000000, $alpha: 0.2);
+    background: rgba($color: #fff, $alpha: 1);
     opacity: 0.7;
+    border: 1px solid rgba($color: #222, $alpha: 0.3)!important;
   }
 }
 .nav-ico {
@@ -149,11 +151,13 @@ nav {
 
 .nav-mobile {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 90px;
+  grid-template-rows: 80px;
   grid-gap: 20px;
   align-items: center;
-  background: $color-primary;
+  // background: $color-primary;
+  background: #fff;
   bottom: 0px;
+  border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
   padding: 0 20px;
   position: absolute;
   position: fixed;
@@ -164,7 +168,9 @@ nav {
   .nav-link {
     a {
       border-radius: 5px;
-      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid transparent;
+      // color: rgba(255, 255, 255, 0.9);
+      color: #222;
       cursor: pointer;
       display: block;
       font-size: 0.7em;
@@ -177,7 +183,8 @@ nav {
       }
     }
     i {
-      color: rgba(255, 255, 255, 0.9);
+      // color: rgba(255, 255, 255, 0.9);
+      color: #222;
       font-size: 2em;
       margin-bottom: 5px;
       width: 100%;
