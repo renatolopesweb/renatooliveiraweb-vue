@@ -151,14 +151,15 @@ nav {
 
 .nav-mobile {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px;
+  // grid-template-rows: 60px;
   grid-gap: 20px;
   align-items: center;
   // background: $color-primary;
   background: #fff;
   bottom: 0px;
-  box-shadow: 0px 8px 15px rgba($color: #000000, $alpha: 1);
-  // border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
+  // box-shadow: 0px 8px 15px rgba($color: #000000, $alpha: 1);
+  // border-top: 1px solid rgba($color: #999, $alpha: 1);
+  border-top: 1px solid #e1e1e1;
   padding: 0 20px;
   position: absolute;
   position: fixed;
