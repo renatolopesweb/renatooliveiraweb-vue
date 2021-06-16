@@ -159,7 +159,7 @@ nav {
   bottom: 0px;
   // box-shadow: 0px 8px 15px rgba($color: #000000, $alpha: 1);
   // border-top: 1px solid rgba($color: #999, $alpha: 1);
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
   padding: 0 20px;
   position: absolute;
   position: fixed;
@@ -175,7 +175,7 @@ nav {
       color: #222;
       cursor: pointer;
       display: block;
-      font-size: 0.7em;
+      font-size: 0.6em;
       outline: none;
       padding: 7px 14px;
       text-transform: uppercase;
