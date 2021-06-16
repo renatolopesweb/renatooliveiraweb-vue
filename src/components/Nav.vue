@@ -11,11 +11,11 @@
               ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
             >
           </li>
-          <li @click="toTop(), overlay()">
+          <!-- <li @click="toTop(), overlay()">
             <router-link to="/about"
               ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
             >
-          </li>
+          </li> -->
           <li @click="toTop(), overlay()">
             <router-link to="/lab"
               ><i class="fa fa-fighter-jet" aria-hidden="true"></i
@@ -29,18 +29,18 @@
     <div class="nav-mobile show-m">
       <div class="nav-link" @click="toTop()">
         <router-link to="/"
-          ><i class="fa fa-home" aria-hidden="true"></i>home</router-link
-        >
-      </div>
-      <div class="nav-link" @click="toTop()">
-        <router-link to="/about"
-          ><i class="fa fa-user" aria-hidden="true"></i>sobre</router-link
+          ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
         >
       </div>
       <div class="nav-link" @click="toTop()">
         <router-link to="/lab"
           ><i class="fa fa-fighter-jet" aria-hidden="true"></i
           >Trabalhos</router-link
+        >
+      </div>
+      <div class="nav-link">
+        <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
+          ><i class="fa fa-paper-plane" aria-hidden="true"></i>Mensagem</a
         >
       </div>
     </div>

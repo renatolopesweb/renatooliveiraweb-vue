@@ -37,10 +37,10 @@ section{
     height: 100vh;
     padding: 60px;
     transition: $t-def;
-    &:hover{
-      background: rgba($color: #f0f0f0, $alpha: 0.6);
-    }
   }
+article:nth-child(2) {
+  background: rgba($color: #f0f0f0, $alpha: 0.6);
+}
 }
 
 @media(max-width: 800px){
