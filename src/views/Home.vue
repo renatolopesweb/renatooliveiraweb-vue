@@ -33,9 +33,9 @@ $t-def: 0.3s;
 section{
   grid-template-columns: repeat(3, 1fr);
   article{
-    align-self: flex-start;
-    height: 100vh;
-    padding: 60px;
+    display: grid;
+    align-content: center;
+    padding: 0 60px;
     transition: $t-def;
   }
 article:nth-child(2) {

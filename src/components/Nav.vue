@@ -82,9 +82,9 @@ $t-def: 0.3s;
 @media (max-width: 800px) {
   .link_active {
     // background: rgba($color: #000000, $alpha: 0.2);
-    background: rgba($color: #fff, $alpha: 1);
-    opacity: 0.7;
-    border: 1px solid rgba($color: #222, $alpha: 0.3)!important;
+    // background: rgba($color: #fff, $alpha: 1);
+    opacity: 0.5;
+    // border: 1px solid rgba($color: #222, $alpha: 0.3)!important;
   }
 }
 .nav-ico {
@@ -151,13 +151,14 @@ nav {
 
 .nav-mobile {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px;
+  grid-template-rows: 70px;
   grid-gap: 20px;
   align-items: center;
   // background: $color-primary;
   background: #fff;
   bottom: 0px;
-  border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
+  box-shadow: 0px 8px 15px rgba($color: #000000, $alpha: 1);
+  // border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
   padding: 0 20px;
   position: absolute;
   position: fixed;
@@ -168,7 +169,7 @@ nav {
   .nav-link {
     a {
       border-radius: 5px;
-      border: 1px solid transparent;
+      // border: 1px solid transparent;
       // color: rgba(255, 255, 255, 0.9);
       color: #222;
       cursor: pointer;
