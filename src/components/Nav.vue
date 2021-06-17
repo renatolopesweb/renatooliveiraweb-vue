@@ -179,7 +179,7 @@ nav {
       outline: none;
       padding: 7px 14px;
       text-transform: uppercase;
-      transition: 0.3s;
+      transition: $t-def;
       &:focus {
         outline: none !important;
       }
