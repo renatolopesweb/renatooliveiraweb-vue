@@ -90,8 +90,8 @@ $t-def: 0.3s;
 .nav-ico {
   cursor: pointer;
   position: fixed;
-  left: 20px;
-  top: 17px;
+  left: 25px;
+  top: 25px;
 }
 .overlay {
   width: 100%;
@@ -124,7 +124,7 @@ aside {
 }
 nav {
   ul {
-    margin-top: 50px;
+    margin-top: 63px;
   }
   li {
     // border-bottom: 1px solid rgba($color: #333, $alpha: 0.1);
