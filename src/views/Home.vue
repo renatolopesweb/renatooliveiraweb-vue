@@ -212,6 +212,9 @@ footer {
       margin: 0px;
       article {
         grid-template-rows: 155px 200px;
+        h2, a, p{
+          font-weight: normal;
+        }
       }
     }
   }
