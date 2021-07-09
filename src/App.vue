@@ -64,7 +64,8 @@ section {
 /* DESIGN */
 .card {
   border-radius: 2px;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  // border: 1px solid rgba($color: #ccc, $alpha: 0.4);
+  box-shadow: 20px 20px 60px #eee, -20px -20px 60px #ffffff;
   // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
   // box-shadow: 1px 25px 40px rgba($color: #666, $alpha: 0.1);
   transition: $t-def;

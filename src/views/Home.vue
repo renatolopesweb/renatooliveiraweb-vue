@@ -49,7 +49,7 @@
         <div class="description" @click="toTop()">
           <router-link to="/about">
             <h2>Sobre</h2>
-            <p>Meu resumo sobre carreira profissional e motivações de atuar na web</p>
+            <p>Um resumo sobre minha carreira profissional e momento atual</p>
           </router-link>
         </div>
       </article>
@@ -163,22 +163,6 @@ header {
     }
   }
 }
-main {
-  text-align: center;
-  h3 {
-    color: rgba($color: #000000, $alpha: 0.5);
-    font-weight: lighter;
-    font-size: 2.6em;
-    margin-top: 50px;
-    text-transform: uppercase;
-  }
-  li {
-    color: rgba($color: #000000, $alpha: 0.6);
-    font-weight: lighter;
-    font-size: 1.6em;
-    margin-bottom: 7px;
-  }
-}
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -186,9 +170,9 @@ footer {
   margin: 0 65px 65px 65px;
   article {
     display: grid;
-    grid-template-rows: repeat(2, 175px);
-    a {
-      color: rgba($color: #000000, $alpha: 0.6);
+    grid-template-rows: 175px auto;
+    h2, a {
+      color: rgba($color: #000000, $alpha: 0.5);
       &:hover{
         text-decoration: none;
       }
