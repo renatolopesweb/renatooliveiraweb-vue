@@ -11,15 +11,15 @@
               ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
             >
           </li>
-          <!-- <li @click="toTop(), overlay()">
+          <li @click="toTop(), overlay()">
             <router-link to="/about"
               ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
             >
-          </li> -->
+          </li>
           <li @click="toTop(), overlay()">
             <router-link to="/lab"
-              ><i class="fa fa-fighter-jet" aria-hidden="true"></i
-              >Trabalhos</router-link
+              ><i class="fa fa-flask" aria-hidden="true"></i
+              >Experimentos</router-link
             >
           </li>
         </ul>
@@ -33,14 +33,14 @@
         >
       </div>
       <div class="nav-link" @click="toTop()">
-        <router-link to="/lab"
-          ><i class="fa fa-fighter-jet" aria-hidden="true"></i
-          >Trabalhos</router-link
+        <router-link to="/about"
+          ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
         >
       </div>
-      <div class="nav-link">
-        <a href="https://forms.gle/mdYVxaBnc1mziQ8KA" target="_blank"
-          ><i class="fa fa-paper-plane" aria-hidden="true"></i>Mensagem</a
+      <div class="nav-link" @click="toTop()">
+        <router-link to="/lab"
+          ><i class="fa fa-flask" aria-hidden="true"></i
+          >Experimentos</router-link
         >
       </div>
     </div>
@@ -53,18 +53,17 @@ export default {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
-        
       });
     },
     nav() {
-      document.querySelector('aside').classList.toggle('nav-active');
-      document.querySelector('.overlay').classList.toggle('nav-block');
-      document.querySelector('body').style.overflow = 'hidden';
+      document.querySelector("aside").classList.toggle("nav-active");
+      document.querySelector(".overlay").classList.toggle("nav-block");
+      document.querySelector("body").style.overflow = "hidden";
     },
     overlay() {
-      document.querySelector('aside').classList.remove('nav-active');
-      document.querySelector('.overlay').classList.remove('nav-block');
-      document.querySelector('body').style.overflow = 'visible';
+      document.querySelector("aside").classList.remove("nav-active");
+      document.querySelector(".overlay").classList.remove("nav-block");
+      document.querySelector("body").style.overflow = "visible";
     },
   },
 };
@@ -75,29 +74,30 @@ $color-primary: #8c52ff;
 $t-def: 0.3s;
 
 .link_active {
+  font-weight: bold;
   &:hover {
     cursor: auto;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .link_active {
-    // background: rgba($color: #000000, $alpha: 0.2);
-    // background: rgba($color: #fff, $alpha: 1);
+    font-weight: normal;
     opacity: 0.5;
-    // border: 1px solid rgba($color: #222, $alpha: 0.3)!important;
   }
 }
 .nav-ico {
   cursor: pointer;
   position: fixed;
-  left: 25px;
-  top: 25px;
+  left: 20px;
+  top: 20px;
 }
 .overlay {
   width: 100%;
   height: 100vh;
   background: rgba($color: #000000, $alpha: 0.5);
   position: fixed;
+  left: 0px;
+  top: 0px;
   z-index: 1;
   display: none;
   transition: $t-def;
@@ -106,20 +106,18 @@ aside {
   display: grid;
   grid-template-rows: 180px auto;
   background: #fff;
-  // box-shadow: 1px 9px 19px rgba($color: #000000, $alpha: 0.2);
-  // box-shadow:  20px 20px 60px #E9E9E9,
-  //            -20px -20px 60px #ffffff;
   position: fixed;
   height: 100vh;
   width: 270px;
   margin-left: -270px;
+  top: 0px;
   transition: $t-def;
   z-index: 2;
 }
-.nav-active{
+.nav-active {
   margin-left: 0px;
 }
-.nav-block{
+.nav-block {
   display: block;
 }
 nav {
@@ -127,8 +125,6 @@ nav {
     margin-top: 63px;
   }
   li {
-    // border-bottom: 1px solid rgba($color: #333, $alpha: 0.1);
-    // margin-bottom: 1px;
     i {
       font-size: 1.4em;
       width: 50px;
@@ -138,12 +134,12 @@ nav {
       display: block;
       color: rgba($color: #000000, $alpha: 0.9);
       font-size: 0.8em;
-      font-weight: bolder;
       padding: 20px 5px;
+      text-transform: uppercase;
       transition: $t-def;
       &:hover {
         background: #f0f0f0;
-        // color: rgba($color: #000000, $alpha: 0.5);
+        text-decoration: none;
       }
     }
   }
@@ -151,14 +147,10 @@ nav {
 
 .nav-mobile {
   grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: 60px;
   grid-gap: 20px;
   align-items: center;
-  // background: $color-primary;
   background: #fff;
   bottom: 0px;
-  // box-shadow: 0px 8px 15px rgba($color: #000000, $alpha: 1);
-  // border-top: 1px solid rgba($color: #999, $alpha: 1);
   border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
   padding: 0 20px;
   position: absolute;
@@ -170,8 +162,6 @@ nav {
   .nav-link {
     a {
       border-radius: 5px;
-      // border: 1px solid transparent;
-      // color: rgba(255, 255, 255, 0.9);
       color: #222;
       cursor: pointer;
       display: block;
@@ -180,12 +170,14 @@ nav {
       padding: 7px 14px;
       text-transform: uppercase;
       transition: $t-def;
+      &:hover{
+        text-decoration: none;
+      }
       &:focus {
         outline: none !important;
       }
     }
     i {
-      // color: rgba(255, 255, 255, 0.9);
       color: #222;
       font-size: 2em;
       margin-bottom: 5px;

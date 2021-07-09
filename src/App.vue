@@ -8,13 +8,12 @@
 </template>
 
 <script>
-
 import Nav from "../src/components/Nav";
 export default {
   components: {
-    Nav
-  }
-}
+    Nav,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -25,9 +24,13 @@ export default {
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   animation: fadeIn 0.2s ease-out;
 }
+
+$color-primary: #9e51ff;
+$t-def: 0.3s;
 
 html,
 body {
@@ -35,24 +38,19 @@ body {
   color: #444;
   transition: 0.3s;
 }
-
-section{
-  display: grid;
+a {
+  color: $color-primary;
+  font-size: 1.1em;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-// article {
-//   grid-column-start: 2;
-//   padding: 40px 40px 40px 0;
-// }
-// @media(max-width: 800px){
-//   section{
-//     grid-template-columns: auto;
-//   }
-//  article{
-//   grid-column-start: 1;
-//   padding: 20px;
-//  } 
-// }
+header,
+main,
+section {
+  display: grid;
+}
 
 .fade-view-enter,
 .fade-view-leave-to {
@@ -62,6 +60,23 @@ section{
 .fade-view-leave-active {
   transition: opacity 0.3s ease-in-out;
 }
+
+/* DESIGN */
+.card {
+  border-radius: 2px;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  // box-shadow: 1px 25px 40px rgba($color: #666, $alpha: 0.1);
+  transition: $t-def;
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &:active {
+    transform: translateY(5px);
+  }
+}
+/* DESIGN */
+
 /* BOOT END */
 /* TRANSITIONS START */
 @keyframes fadeIn {
@@ -80,7 +95,7 @@ section{
 .show-m {
   display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .show-d {
     display: none !important;
   }
