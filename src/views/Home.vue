@@ -166,12 +166,20 @@ header {
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 65px;
-  margin: 0 65px 65px 65px;
+  grid-gap: 50px;
+  align-items: center;
+  background: rgba($color: #f0f0f0, $alpha: 0.5);
+  height: 100vh;
+  padding: 50px;
+  // margin: 0 65px 65px 65px;
   article {
     display: grid;
     grid-template-rows: 175px auto;
-    h2, a {
+    background: #fff;
+    h2{
+      color: rgba($color: #000000, $alpha: 0.4);
+    }
+    a {
       color: rgba($color: #000000, $alpha: 0.5);
       &:hover{
         text-decoration: none;
@@ -204,17 +212,14 @@ footer {
     }
   }
 }
-
   @media (max-width: 1024px) {
     footer {
       grid-template-columns: 1fr;
-      padding-bottom: 100px;
-      margin: 0px;
+      background: #fff;
+      height: auto;
+      padding: 0 0 125px 0;
       article {
         grid-template-rows: 155px 200px;
-        h2, a, p{
-          font-weight: normal;
-        }
       }
     }
   }

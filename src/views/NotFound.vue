@@ -11,9 +11,6 @@
 </template>
 
 <style lang="scss" scoped>
-$color-primary: #8c52ff;
-$t-def: 0.3s;
-
 article {
   display: grid;
   align-items: center;
