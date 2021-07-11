@@ -52,7 +52,6 @@ export default {
     toTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
       });
     },
     nav() {
@@ -86,10 +85,19 @@ $t-def: 0.3s;
   }
 }
 .nav-ico {
+  border-radius: 700px;
   cursor: pointer;
+  padding: 7px 12px;
   position: fixed;
-  left: 20px;
-  top: 20px;
+  left: 13px;
+  top: 13px;
+  transition: $t-def;
+  i{
+    border-radius: 500px;
+  }
+  &:active {
+    background: #f0f0f0;
+  }
 }
 .overlay {
   width: 100%;
@@ -170,7 +178,7 @@ nav {
       padding: 7px 14px;
       text-transform: uppercase;
       transition: $t-def;
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
       &:focus {

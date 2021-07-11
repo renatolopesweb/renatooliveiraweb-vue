@@ -7,7 +7,12 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://www.renato7oliveira.com.br/</loc>
+  <loc>https://www.renato7oliveira.com.br</loc>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>https://www.renato7oliveira.com.br/#/about</loc>
   <changefreq>weekly</changefreq>
 </url>
 
@@ -15,5 +20,6 @@
   <loc>https://www.renato7oliveira.com.br/#/lab</loc>
   <changefreq>weekly</changefreq>
 </url>
+
 
 </urlset>
