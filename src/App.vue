@@ -41,7 +41,6 @@ body {
 }
 a {
   color: $color-primary;
-  font-size: 1.1em;
   &:hover {
     text-decoration: underline;
   }

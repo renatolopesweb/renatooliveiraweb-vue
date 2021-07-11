@@ -185,6 +185,7 @@ footer {
       }
     }
   }
+  
   .screen {
     background: $color-primary;
     text-align: center;
@@ -219,6 +220,10 @@ footer {
     padding: 0 0 125px 0;
     article {
       grid-template-rows: 155px 200px;
+      a{
+        font-weight: lighter;
+        font-size: 1.2em;
+      }
     }
   }
 }
