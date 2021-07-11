@@ -223,6 +223,7 @@ footer {
       a{
         font-weight: lighter;
         font-size: 1.2em;
+        color: rgba($color: #000000, $alpha: 0.9);
       }
     }
   }
