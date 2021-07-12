@@ -65,19 +65,17 @@ section {
 .card {
   border-radius: 2px;
   // border: 1px solid rgba($color: #ccc, $alpha: 0.3);
-  box-shadow: 0 2px 2px 0     rgb(0 0 0 / 25%), 
-              0 3px 1px -2px  rgb(0 0 0 / 5%),
-              0 1px 5px 0     rgb(0 0 0 / 5%);
-  // box-shadow: 20px 20px 60px #eee, -20px -20px 60px #ffffff;
-  // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 3px 1px -2px rgb(0 0 0 / 5%),
+  //   0 1px 5px 0 rgb(0 0 0 / 5%);
+  box-shadow: 20px 20px 60px #eee, -20px -20px 60px #ffffff;
   // box-shadow: 1px 25px 40px rgba($color: #666, $alpha: 0.1);
   transition: $t-def;
-  &:hover {
-    transform: translateY(-5px);
-  }
-  &:active {
-    transform: translateY(5px);
-  }
+  // &:hover {
+  //   transform: translateY(-5px);
+  // }
+  // &:active {
+  //   transform: translateY(5px);
+  // }
 }
 @media (max-width: 1024px) {
   .card {
@@ -89,7 +87,7 @@ section {
 
 .btn {
   border: 0px;
-  border-radius: 500px;
+  border-radius: 2px;
   border: 1px solid $color-primary;
   line-height: 40px;
   cursor: pointer;
@@ -100,10 +98,10 @@ section {
   transition: $t-def;
   &:hover {
     text-decoration: none;
-    animation-name: button_pulse;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -114,14 +112,6 @@ section {
 .btn-second {
   background: #fff;
   color: $color-primary;
-}
-@keyframes button_pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
 }
 
 /* DESIGN */

@@ -55,7 +55,7 @@
           <a href="#skills" @click="skills = true">
             <h2>Habilidades</h2>
             <p>
-              Saiba o que venho usando nesses últimos anos (conteúdo
+              Saiba o que venho usando ultimamente (conteúdo
               delicado!)💀☠️👻
             </p>
           </a>
@@ -188,6 +188,7 @@ footer {
   
   .screen {
     background: $color-primary;
+    border-radius: 2px 2px 0 0;
     text-align: center;
     align-items: center;
     display: grid;
