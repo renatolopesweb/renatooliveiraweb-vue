@@ -67,7 +67,7 @@ section {
   // border: 1px solid rgba($color: #ccc, $alpha: 0.3);
   // box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 3px 1px -2px rgb(0 0 0 / 5%),
   //   0 1px 5px 0 rgb(0 0 0 / 5%);
-  box-shadow: 20px 20px 60px #eee, -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #ccc, -20px -20px 60px #ffffff;
   // box-shadow: 1px 25px 40px rgba($color: #666, $alpha: 0.1);
   transition: $t-def;
   // &:hover {
@@ -87,7 +87,7 @@ section {
 
 .btn {
   border: 0px;
-  border-radius: 2px;
+  border-radius: 500px;
   border: 1px solid $color-primary;
   line-height: 40px;
   cursor: pointer;
