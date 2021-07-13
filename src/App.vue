@@ -97,7 +97,6 @@ section {
   text-transform: uppercase;
   transition: $t-def;
   &:hover {
-    text-decoration: none;
     background: $color-primary;
     border: 1px solid $color-primary;
     color: #fff;
