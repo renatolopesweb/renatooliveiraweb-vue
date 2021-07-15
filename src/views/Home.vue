@@ -23,19 +23,6 @@
     <footer>
       <article class="card">
         <div class="screen">
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </div>
-        <div class="description" @click="toTop()">
-          <router-link to="/about">
-            <h2>Sobre</h2>
-            <p>
-              Um resumo sobre minha carreira profissional e o que venho fazendo
-            </p>
-          </router-link>
-        </div>
-      </article>
-      <article class="card">
-        <div class="screen">
           <i class="fa fa-flask" aria-hidden="true"></i>
         </div>
         <div class="description" @click="toTop()">
@@ -43,6 +30,19 @@
             <h2>Experimentos</h2>
             <p>
               Feitos por mim a caráter de pesquisa, desenvolvimento e diversão
+            </p>
+          </router-link>
+        </div>
+      </article>
+      <article class="card">
+        <div class="screen">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="description" @click="toTop()">
+          <router-link to="/about">
+            <h2>Sobre</h2>
+            <p>
+              Um resumo sobre minha carreira profissional e o que venho fazendo
             </p>
           </router-link>
         </div>
