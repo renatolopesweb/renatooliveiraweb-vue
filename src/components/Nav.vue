@@ -95,19 +95,14 @@ $t-def: 0.3s;
   i{
     border-radius: 500px;
   }
-  &:hover{
+  &:active{
     animation-name: button_pulse;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-  &:active {
-    background: #f0f0f0;
+    animation-duration: 0.5s;
   }
 }
 @keyframes button_pulse {
   0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
   }
   100% {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
