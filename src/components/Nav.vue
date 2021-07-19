@@ -55,14 +55,12 @@ export default {
       });
     },
     nav() {
-      document.querySelector("aside").classList.toggle("nav-active");
-      document.querySelector(".overlay").classList.toggle("nav-block");
-      document.querySelector("body").style.overflow = "hidden";
+      document.querySelector("aside").classList.add("nav-active");
+      document.querySelector(".overlay").classList.add("nav-block");
     },
     overlayOff() {
       document.querySelector("aside").classList.remove("nav-active");
       document.querySelector(".overlay").classList.remove("nav-block");
-      document.querySelector("body").style.overflow = "visible";
     },
   },
 };
@@ -93,8 +91,9 @@ $t-def: 0.3s;
   left: 13px;
   top: 13px;
   transition: $t-def;
+  z-index: 1;
   i{
-    border-radius: 500px;
+    border-radius: 700px;
   }
   &:active{
     animation-name: button_pulse;
@@ -158,6 +157,9 @@ nav {
       }
     }
   }
+}
+.add-overflow{
+  overflow: hidden;
 }
 
 .nav-mobile {
