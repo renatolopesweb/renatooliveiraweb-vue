@@ -187,11 +187,12 @@ footer {
   }
   
   .screen {
+    display: grid;
+    align-items: center;
     background: $color-primary;
     border-radius: 2px 2px 0 0;
     text-align: center;
-    align-items: center;
-    display: grid;
+    transition: $t-def;
     i {
       color: #fff;
       font-size: 6em;
@@ -200,6 +201,9 @@ footer {
       i {
         font-size: 4em;
       }
+    }
+    &:hover{
+      background: #581AA6;
     }
   }
   .description {
@@ -236,7 +240,7 @@ footer {
 }
 @media (max-width: 1024px) {
   .skills {
-    height: 160vh;
+    height: 180vh;
   }
 }
 </style>

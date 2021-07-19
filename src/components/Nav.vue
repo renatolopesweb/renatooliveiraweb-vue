@@ -1,22 +1,22 @@
 <template>
   <div>
-    <aside class="show-d">
-      <div class="nav-ico" @click="nav()">
+      <div class="nav-ico show-d" @click="nav()">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </div>
+    <aside class="show-d">
       <nav>
         <ul>
-          <li @click="toTop(), overlay()">
+          <li @click="toTop(), overlayOff()">
             <router-link to="/"
               ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
             >
           </li>
-          <li @click="toTop(), overlay()">
+          <li @click="toTop(), overlayOff()">
             <router-link to="/about"
               ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
             >
           </li>
-          <li @click="toTop(), overlay()">
+          <li @click="toTop(), overlayOff()">
             <router-link to="/lab"
               ><i class="fa fa-flask" aria-hidden="true"></i
               >Experimentos</router-link
@@ -25,7 +25,6 @@
         </ul>
       </nav>
     </aside>
-    <div class="overlay" @click="overlay()"></div>
     <div class="nav-mobile show-m">
       <div class="nav-link" @click="toTop()">
         <router-link to="/"
@@ -44,6 +43,7 @@
         >
       </div>
     </div>
+    <div class="overlay" @click="overlayOff()"></div>
   </div>
 </template>
 <script>
@@ -59,7 +59,7 @@ export default {
       document.querySelector(".overlay").classList.toggle("nav-block");
       document.querySelector("body").style.overflow = "hidden";
     },
-    overlay() {
+    overlayOff() {
       document.querySelector("aside").classList.remove("nav-active");
       document.querySelector(".overlay").classList.remove("nav-block");
       document.querySelector("body").style.overflow = "visible";
@@ -73,6 +73,7 @@ $color-primary: #8c52ff;
 $t-def: 0.3s;
 
 .link_active {
+  color: $color-primary;
   font-weight: bold;
   &:hover {
     cursor: auto;
@@ -138,9 +139,6 @@ aside {
   display: block;
 }
 nav {
-  ul {
-    margin-top: 63px;
-  }
   li {
     i {
       font-size: 1.4em;
