@@ -9,11 +9,9 @@
   },
   "dependencies": {
     "@fontsource/bowlby-one": "^4.2.2",
-    "@material-icons/font": "^1.0.4",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
     "roboto-fontface": "^0.10.0",
-    "segoe-fonts": "^1.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
