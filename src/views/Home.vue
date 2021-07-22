@@ -29,7 +29,7 @@
           <router-link to="/lab">
             <h2>Experimentos</h2>
             <p>
-              Feitos por mim a caráter de pesquisa, desenvolvimento e diversão
+              Pesquisa, desenvolvimento e diversão
             </p>
           </router-link>
         </div>
@@ -42,7 +42,7 @@
           <router-link to="/about">
             <h2>Sobre</h2>
             <p>
-              Um resumo sobre minha carreira profissional e o que venho fazendo
+              Resumo sobre minha carreira profissional
             </p>
           </router-link>
         </div>
@@ -55,8 +55,7 @@
           <a href="#skills" @click="skills = true">
             <h2>Habilidades</h2>
             <p>
-              Saiba o que venho usando ultimamente (conteúdo
-              delicado!)💀☠️👻
+              Que venho aprimorando ultimamente 💀
             </p>
           </a>
         </div>
@@ -180,6 +179,7 @@ footer {
     }
     a {
       color: rgba($color: #000000, $alpha: 0.5);
+      font-size: 1.1em;
       &:hover {
         text-decoration: none;
       }
@@ -234,15 +234,15 @@ footer {
   }
 }
 
-.skills {
-  height: 100vh;
-  padding: 50px;
-}
-@media (max-width: 1024px) {
-  .skills {
-    height: 180vh;
-  }
-}
+// .skills {
+//   height: 100vh;
+//   padding: 50px;
+// }
+// @media (max-width: 1024px) {
+//   .skills {
+//     height: 180vh;
+//   }
+// }
 </style>
 
 
