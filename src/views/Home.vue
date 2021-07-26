@@ -15,52 +15,11 @@
           <p>
             10+ anos que trabalho para empresas nas divisões de web, normalmente
             dedicado ao frontend e design de interface.
-            <router-link to="/about">Saiba mais</router-link>
+            <router-link to="/about"><span @click="toTop()"> Saiba mais</span></router-link>
           </p>
         </div>
       </article>
     </header>
-    <!-- <footer>
-      <article class="card">
-        <div class="screen">
-          <i class="fa fa-flask" aria-hidden="true"></i>
-        </div>
-        <div class="description" @click="toTop()">
-          <router-link to="/lab">
-            <h2>Experimentos</h2>
-            <p>
-              Pesquisa, desenvolvimento e diversão
-            </p>
-          </router-link>
-        </div>
-      </article>
-      <article class="card">
-        <div class="screen">
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </div>
-        <div class="description" @click="toTop()">
-          <router-link to="/about">
-            <h2>Sobre</h2>
-            <p>
-              Resumo sobre minha carreira profissional
-            </p>
-          </router-link>
-        </div>
-      </article>
-      <article class="card">
-        <div class="screen">
-          <i class="fa fa-bicycle" aria-hidden="true"></i>
-        </div>
-        <div class="description">
-          <a href="#skills" @click="skills = true">
-            <h2>Habilidades</h2>
-            <p>
-              Que venho aprimorando ultimamente 💀
-            </p>
-          </a>
-        </div>
-      </article>
-    </footer> -->
     <div id="skills">
       <Skills />
     </div>
@@ -135,7 +94,6 @@ header {
 @media (max-width: 1024px) {
   header {
     grid-template-columns: 1fr;
-    height: 100vh;
     align-items: center;
     article {
       grid-column: 4 / 5;
