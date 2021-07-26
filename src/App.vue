@@ -96,7 +96,7 @@ section {
 
 .btn {
   border: 0px;
-  border-radius: 500px;
+  border-radius: 2px;
   border: 1px solid $color-primary;
   line-height: 40px;
   cursor: pointer;
