@@ -20,9 +20,7 @@
         </div>
       </article>
     </header>
-    <div id="skills">
       <Skills />
-    </div>
   </section>
 </template>
 

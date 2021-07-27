@@ -25,6 +25,13 @@ const routes = [
   },
 
   {
+    path: '/skills',
+    name: 'skills',
+    meta: { title: pageTitle + 'SOBRE' },
+    component: () => import('../views/About.vue')
+  },
+
+  {
     path: '/lab',
     name: 'experimentos',
     meta: { title: pageTitle + 'EXPERIMENTOS' },
@@ -36,13 +43,6 @@ const routes = [
     name: 'PortfolioDetalhe',
     meta: { title: pageTitle + 'EXPERIMENTO EM DETALHE' },
     component: () => import('../views/LabDetail.vue')
-  },
-
-  {
-    path: '/skills',
-    name: 'skills',
-    meta: { title: pageTitle + 'FRONTEND · WEB', description: 'RENATO7OLIVEIRA · FRONTEND · WEB' },
-    component: Home
   },
 
   {
