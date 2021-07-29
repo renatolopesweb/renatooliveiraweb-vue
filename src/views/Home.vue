@@ -14,7 +14,7 @@
         <div>
           <p>
             10+ anos que trabalho para empresas nas divisões de web, normalmente
-            dedicado ao frontend e design de interface.
+            dedicado ao front-end e design de interface.
             <router-link to="/about"><span @click="toTop()"> Saiba mais</span></router-link>
           </p>
         </div>
