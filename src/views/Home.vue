@@ -13,8 +13,8 @@
         <h2>WEBDESIGNER</h2>
         <div>
           <p>
-            10+ anos que trabalho para empresas nas divisões de web, normalmente
-            dedicado ao front-end e design de interface.
+            10+ anos que trabalho para empresas nas divisões de web dedicado ao
+            front-end e design de interface.
             <router-link to="/about"
               ><span @click="toTop()"> Saiba mais</span></router-link
             >
