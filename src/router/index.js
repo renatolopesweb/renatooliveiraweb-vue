@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: { title: pageTitle + 'FRONTEND · WEB', description: 'RENATO7OLIVEIRA · FRONTEND · WEB' },
+    meta: { title: pageTitle + 'WEBDESIGNER', description: 'RENATO7OLIVEIRA · WEBDESIGNER' },
     component: Home
   },
 
@@ -36,13 +36,6 @@ const routes = [
     name: 'experimentos',
     meta: { title: pageTitle + 'EXPERIMENTOS' },
     component: () => import('../views/Lab.vue')
-  },
-
-  {
-    path: '/labDetail',
-    name: 'PortfolioDetalhe',
-    meta: { title: pageTitle + 'EXPERIMENTO EM DETALHE' },
-    component: () => import('../views/LabDetail.vue')
   },
 
   {

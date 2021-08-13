@@ -16,12 +16,6 @@
               ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
             >
           </li>
-          <li @click="toTop(), overlayOff()">
-            <router-link to="/lab"
-              ><i class="fa fa-flask" aria-hidden="true"></i
-              >Experimentos</router-link
-            >
-          </li>
         </ul>
       </nav>
     </aside>
@@ -64,6 +58,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style lang="scss" scoped>
@@ -77,6 +72,7 @@ $t-def: 0.3s;
     cursor: auto;
   }
 }
+
 @media (max-width: 1024px) {
   .link_active {
     font-weight: normal;
@@ -84,9 +80,10 @@ $t-def: 0.3s;
   }
 }
 .nav-ico {
-  border-radius: 700px;
+  background: #fff;
+  border-radius: 100%;
   cursor: pointer;
-  padding: 7px 12px;
+  padding: 10px 12px;
   position: fixed;
   left: 13px;
   top: 13px;

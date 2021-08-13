@@ -10,28 +10,31 @@
           />
         </figure>
         <h1>RENATO7OLIVEIRA</h1>
-        <h2>FRONTEND · WEB</h2>
+        <h2>WEBDESIGNER</h2>
         <div>
           <p>
             10+ anos que trabalho para empresas nas divisões de web, normalmente
             dedicado ao front-end e design de interface.
-            <router-link to="/about"><span @click="toTop()"> Saiba mais</span></router-link>
+            <router-link to="/about"
+              ><span @click="toTop()"> Saiba mais</span></router-link
+            >
           </p>
         </div>
       </article>
     </header>
-      <Skills />
+    <div class="show-d">
+      <Experiments />
+    </div>
   </section>
 </template>
 
 <script>
-import Skills from "../components/Skills.vue";
+import Experiments from "../components/Experiments.vue";
 
 export default {
   components: {
-    Skills,
+    Experiments,
   },
-
 
   methods: {
     toTop() {
@@ -56,7 +59,7 @@ header {
   align-items: center;
   article {
     grid-column: 2 / 5;
-    margin-top: -120px;
+    // margin-top: -120px;
     text-align: center;
   }
   img {
