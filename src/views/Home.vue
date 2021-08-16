@@ -11,7 +11,7 @@
         </figure>
         <h1>RENATO7OLIVEIRA</h1>
         <h2>WEBDESIGNER</h2>
-        <div>
+        <main>
           <p>
             10+ anos que trabalho para empresas nas divisões de web dedicado ao
             front-end e design de interface.
@@ -19,7 +19,7 @@
               ><span @click="toTop()"> Saiba mais</span></router-link
             >
           </p>
-        </div>
+        </main>
       </article>
     </header>
     <div class="show-d">
@@ -82,7 +82,7 @@ header {
     color: rgba($color: #000000, $alpha: 0.2);
     font-size: 3.7em;
   }
-  div {
+  main {
     margin: auto;
     max-width: 75%;
   }
