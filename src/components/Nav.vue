@@ -16,6 +16,11 @@
               ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
             >
           </li>
+          <li @click="toTop(), overlayOff()">
+            <router-link to="/lab"
+              ><i class="fa fa-flask" aria-hidden="true"></i>Experimentos</router-link
+            >
+          </li>
         </ul>
       </nav>
     </aside>

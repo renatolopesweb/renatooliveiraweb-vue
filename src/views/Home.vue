@@ -22,7 +22,7 @@
         </main>
       </article>
     </header>
-    <div class="show-d">
+    <div class="show-m">
       <Experiments />
     </div>
   </section>
