@@ -1,41 +1,49 @@
 <template>
   <section>
     <header>
-      <article>
-        <figure>
-          <img
-            src="../assets/images/renato7oliveira-about.gif"
-            alt="renato7oliveira"
-            title="renato7oliveira"
-          />
-        </figure>
+      <figure>
+        <img
+          src="../assets/images/renato7oliveira-about.gif"
+          alt="renato7oliveira"
+          title="renato7oliveira"
+        />
+      </figure>
+      <div>
         <h1>RENATO7OLIVEIRA</h1>
         <h2>WEBDESIGNER</h2>
-        <main>
-          <p>
-            10+ anos que trabalho para empresas nas divisões de web dedicado ao
-            front-end e design de interface.
-            <router-link to="/about"
-              ><span @click="toTop()"> Saiba mais</span></router-link
-            >
-          </p>
-        </main>
-      </article>
+      </div>
     </header>
-    <div class="show-m">
-      <Experiments />
-    </div>
+    <article>
+      <h2>
+          10+ anos que trabalho para empresas nas divisões de web, dedicado
+          principalmente no front-end e UX/UI.
+      </h2>
+      <p>
+        Iniciei minha carreira polipolar em pequenas agências e também já ocupei
+        cargos voltados para gestão de projetos digitais como Portais Web,
+        Intranets, Redes Sociais e afins.
+      </p>
+      <p>
+        Moro em São Paulo, sou casado com a Delma, pai da Ana Luiza e da
+        "Cyndi".
+      </p>
+      <h2>Contato</h2>
+      <ul>
+        <li v-for="item in social" :key="item.id">
+          <a :href="item.url" target="_blank" title="Abrirá em nova aba"
+            ><i :class="item.img" aria-hidden="true"></i>{{ item.title }}</a
+          >
+        </li>
+      </ul>
+    </article>
   </section>
 </template>
 
 <script>
-import Experiments from "../components/Experiments.vue";
+import Bungee from "@fontsource/bungee-shade";
+Bungee;
 
 export default {
-  components: {
-    Experiments,
-  },
-
   methods: {
     toTop() {
       window.scrollTo({
@@ -43,83 +51,148 @@ export default {
       });
     },
   },
+
+  data() {
+    return {
+      social: [
+        {
+          title: "linkedin.com/in/renato7oliveira",
+          img: "fab fa-linkedin",
+          url: "https://www.linkedin.com/in/renato7oliveira",
+        },
+        {
+          title: "github.com/renato7oliveira",
+          img: "fab fa-github",
+          url: "https://github.com/renato7oliveira",
+        },
+        {
+          title: "instagram.com/renato7oliveira",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renato7oliveira",
+        },
+        {
+          title: "facebook.com/renato7oliveira",
+          img: "fab fa-facebook",
+          url: "https://facebook.com/renato7oliveira",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-
-
-
 <style lang="scss" scoped>
-$color-primary: #9e51ff;
+$font: "Bungee Shade", cursive;
+$bg-light: rgba(
+  $color: #f0f0f0,
+  $alpha: 0.5,
+);
+$color-primary: #8c52ff;
 $t-def: 0.3s;
 
 header {
-  grid-template-columns: repeat(5, 1fr);
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px auto;
+  // background: #f0f0f0;
+  background-image: linear-gradient(to bottom left, #fff, #f0f0f0);
   align-items: center;
-  article {
-    grid-column: 2 / 5;
-    // margin-top: -120px;
-    text-align: center;
-  }
+  height: 50vh;
   img {
     background: $color-primary;
-    max-width: 150px;
-    border-radius: 500px;
+    border-radius: 100%;
+    margin: 0 25px;
   }
   h1,
   h2 {
-    font-family: "Bowlby One";
+    font-size: 4.2em;
+    font-family: $font;
     font-weight: bold;
-    letter-spacing: 4px;
-    line-height: 1.2em;
+    line-height: 65px;
   }
   h1 {
-    color: $color-primary;
-    font-size: 3.7em;
+    color: #220d3b;
   }
   h2 {
-    color: rgba($color: #000000, $alpha: 0.2);
-    font-size: 3.7em;
-  }
-  main {
-    margin: auto;
-    max-width: 75%;
-  }
-  p {
-    color: rgba($color: #000000, $alpha: 0.7);
-    line-height: 1.6;
-    font-size: 1.1em;
+    color: $color-primary;
   }
 }
-@media (max-width: 1024px) {
-  header {
-    grid-template-columns: 1fr;
-    align-items: center;
-    article {
-      grid-column: 4 / 5;
-      h1 {
-        font-size: 1.6em;
+
+article {
+  p {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-bottom: 25px;
+  }
+  li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    a {
+      color: $color-primary;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 350px) {
+      li,
+      a {
+        font-size: 0.9em;
       }
-      h2 {
-        font-size: 1.4em;
-      }
+    }
+    i {
+      font-size: 1.2em;
+      margin-right: 5px;
+      text-align: center;
+      width: 25px;
     }
   }
 }
-@media (max-width: 350px) {
+
+@media (max-width: 1024px) {
   header {
-    article {
-      h1 {
-        font-size: 1.4em;
-      }
-      h2 {
-        font-size: 1.2em;
-      }
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 100vh;
+    align-content: center;
+  }
+  article {
+    padding: 25px;
+  }
+}
+@media (max-width: 1220px) {
+  header {
+    h1,
+    h2 {
+      font-size: 3em;
+      line-height: 50px;
+    }
+  }
+}
+@media (max-width: 820px) {
+  header {
+    h1,
+    h2 {
+      font-size: 3.6em;
+      line-height: 55px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  header {
+    h1,
+    h2 {
+      font-size: 3em;
+      line-height: 50px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  header {
+    h1,
+    h2 {
+      font-size: 1.5em;
+      line-height: 35px;
     }
   }
 }
 </style>
-
-
-

@@ -4,10 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-
-
 const pageTitle = 'RENATO7OLIVEIRA · '
-
 const routes = [
 
   {
@@ -18,24 +15,17 @@ const routes = [
   },
 
   {
-    path: '/about',
-    name: 'about',
-    meta: { title: pageTitle + 'SOBRE' },
-    component: () => import('../views/About.vue')
+    path: '/frontend',
+    name: 'frontend',
+    meta: { title: pageTitle + 'FRONTEND' },
+    component: () => import('../views/Frontend.vue')
   },
 
   {
-    path: '/skills',
-    name: 'skills',
-    meta: { title: pageTitle + 'SOBRE' },
-    component: () => import('../views/About.vue')
-  },
-
-  {
-    path: '/lab',
-    name: 'experimentos',
-    meta: { title: pageTitle + 'EXPERIMENTOS' },
-    component: () => import('../views/Lab.vue')
+    path: '/design',
+    name: 'design',
+    meta: { title: pageTitle + 'DESIGN' },
+    component: () => import('../views/Design.vue')
   },
 
   {

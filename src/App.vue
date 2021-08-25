@@ -1,10 +1,14 @@
 <template>
-  <div id="app">
-    <Nav />
-    <transition name="fade-view" mode="out-in">
-      <router-view />
-    </transition>
-  </div>
+  <main id="app">
+    <section>
+      <transition name="fade-view" mode="out-in">
+        <router-view />
+      </transition>
+    </section>
+    <aside>
+      <Nav />
+    </aside>
+  </main>
 </template>
 
 <script>
@@ -14,10 +18,13 @@ export default {
     Nav,
   },
 };
-
 </script>
 
 <style lang="scss">
+$color-light: #111;
+$color-primary: #8c52ff;
+$t-def: 0.2s;
+
 /* BOOT START */
 * {
   padding: 0px;
@@ -26,73 +33,104 @@ export default {
   text-decoration: none;
   list-style-type: none;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   animation: fadeIn 0.2s ease-out;
+  transition: $t-def;
 }
-
-$color-primary: #9e51ff;
-$t-def: 0.3s;
 
 html,
 body {
-  background: #fff;
-  color: #444;
-  transition: 0.3s;
+  color: $color-light;
+  font-family: "Roboto Condensed";
+  transition: 0.2s;
+}
+
+// ::-webkit-scrollbar {
+//     width: 17px;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: #c0c0c0;
+// }
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+// }
+
+p {
+  font-size: 1.2em;
+  line-height: 30px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 a {
-  color: $color-primary;
   &:hover {
-    text-decoration: underline;
-  }
-}
-
-header,
-main,
-section {
-  display: grid;
-}
-
-.fade-view-enter,
-.fade-view-leave-to {
-  opacity: 0;
-}
-.fade-view-enter-active,
-.fade-view-leave-active {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.btn {
-  border: 0px;
-  border-radius: 2px;
-  border: 1px solid $color-primary;
-  line-height: 40px;
-  cursor: pointer;
-  font-size: 0.7em;
-  padding: 10px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: $t-def;
-  &:hover {
-    background: $color-primary;
-    border: 1px solid $color-primary;
-    color: #fff;
     text-decoration: none;
   }
 }
+article {
+  margin: 25px;
+  li {
+    font-size: 1.3em;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  article {
+    margin: 0px;
+  }
+}
+#app {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+section {
+  grid-column: 1 / 6;
+}
+aside {
+  grid-column: 6 / 7;
+}
 
+
+.btn {
+  border: 0px;
+  border-radius: 3px;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 0.6em;
+  margin-right: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: $t-def;
+  i {
+    font-size: 0.9em;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
 .btn-primary {
-  background: $color-primary;
-  color: #fff;
+  // background: #fff;
+  border: 1px solid #111;
+  color: #111;
+  &:hover {
+    background: #111;
+    color: #fff;
+  }
 }
-.btn-second {
+.btn-light {
   background: #fff;
-  color: $color-primary;
+  border: 1px solid $color-light;
+  color: $color-light;
+  &:hover {
+    background: $color-light;
+    color: #fff;
+  }
 }
 
-/* DESIGN */
-
-/* BOOT END */
 /* TRANSITIONS START */
 @keyframes fadeIn {
   0% {
@@ -116,6 +154,10 @@ section {
   }
   .show-m {
     display: grid;
+  }
+  section {
+    grid-column: 1 / -1;
+    padding-bottom: 35px;
   }
 }
 /* MEDIA QUERIES END  */

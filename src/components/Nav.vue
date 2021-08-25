@@ -1,50 +1,27 @@
 <template>
-  <div>
-      <div class="nav-ico show-d" @click="nav()">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </div>
-    <aside class="show-d">
-      <nav>
-        <ul>
-          <li @click="toTop(), overlayOff()">
-            <router-link to="/"
-              ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
-            >
-          </li>
-          <li @click="toTop(), overlayOff()">
-            <router-link to="/about"
-              ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
-            >
-          </li>
-          <li @click="toTop(), overlayOff()">
-            <router-link to="/lab"
-              ><i class="fa fa-flask" aria-hidden="true"></i>Experimentos</router-link
-            >
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <div class="nav-mobile show-m">
-      <div class="nav-link" @click="toTop()">
-        <router-link to="/"
-          ><i class="fa fa-home" aria-hidden="true"></i>Home</router-link
-        >
-      </div>
-      <div class="nav-link" @click="toTop()">
-        <router-link to="/about"
-          ><i class="fa fa-user" aria-hidden="true"></i>Sobre</router-link
-        >
-      </div>
-      <div class="nav-link" @click="toTop()">
-        <router-link to="/lab"
-          ><i class="fa fa-flask" aria-hidden="true"></i
-          >Experimentos</router-link
-        >
-      </div>
-    </div>
-    <div class="overlay" @click="overlayOff()"></div>
-  </div>
+  <main>
+    <nav>
+      <ul>
+        <li @click="toTop()">
+          <router-link to="/"
+            ><i class="fas fa-house-user"></i>Sobre</router-link
+          >
+        </li>
+        <li @click="toTop()">
+          <router-link to="/frontend"
+            ><i class="fas fa-code"></i>Frontend</router-link
+          >
+        </li>
+        <li @click="toTop()">
+          <router-link to="/design"
+            ><i class="fas fa-palette"></i>Design</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+  </main>
 </template>
+
 <script>
 export default {
   methods: {
@@ -53,155 +30,106 @@ export default {
         top: 0,
       });
     },
-    nav() {
-      document.querySelector("aside").classList.add("nav-active");
-      document.querySelector(".overlay").classList.add("nav-block");
-    },
-    overlayOff() {
-      document.querySelector("aside").classList.remove("nav-active");
-      document.querySelector(".overlay").classList.remove("nav-block");
-    },
   },
 };
-
 </script>
 
 <style lang="scss" scoped>
+$bg-light: rgba(
+  $color: #f0f0f0,
+  $alpha: 0.5,
+);
 $color-primary: #8c52ff;
-$t-def: 0.3s;
+$t-def: 0.2s;
 
 .link_active {
-  color: $color-primary;
-  font-weight: bold;
-  &:hover {
-    cursor: auto;
-  }
+  background: $bg-light;
+  // border-left: 5px solid #000;
 }
 
 @media (max-width: 1024px) {
   .link_active {
+    background: transparent;
     font-weight: normal;
-    opacity: 0.5;
+    opacity: 0.4;
+    // border-left: 0px !important;
   }
 }
-.nav-ico {
-  background: #fff;
-  border-radius: 100%;
-  cursor: pointer;
-  padding: 10px 12px;
-  position: fixed;
-  left: 13px;
-  top: 13px;
-  transition: $t-def;
-  z-index: 1;
-  i{
-    border-radius: 700px;
-  }
-  &:active{
-    animation-name: button_pulse;
-    animation-duration: 0.5s;
-  }
+
+li {
+  text-transform: uppercase;
 }
-@keyframes button_pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
-}
-.overlay {
-  width: 100%;
-  height: 100vh;
-  background: rgba($color: #000000, $alpha: 0.5);
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-  display: none;
-  transition: $t-def;
-}
-aside {
-  display: grid;
-  grid-template-rows: 180px auto;
-  background: #fff;
-  position: fixed;
-  height: 100vh;
-  width: 270px;
-  margin-left: -270px;
-  top: 0px;
-  transition: $t-def;
-  z-index: 2;
-}
-.nav-active {
-  margin-left: 0px;
-}
-.nav-block {
-  display: block;
-}
+
 nav {
+  height: 100vh;
+  min-height: 100%;
+  background: #fafafa;
+  border: 1px solid rgba($color: #ccc, $alpha: 0.5);
+  // box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
+  position: fixed;
+  width: 100%;
   li {
     i {
-      font-size: 1.4em;
       width: 50px;
       text-align: center;
     }
     a {
       display: block;
-      color: rgba($color: #000000, $alpha: 0.9);
-      font-size: 0.8em;
+      border-left: 5px solid transparent;
+      color: #111;
+      font-size: 0.9em;
       padding: 20px 5px;
-      text-transform: uppercase;
       transition: $t-def;
       &:hover {
-        background: #f0f0f0;
+        background: $bg-light;
+        // border-left: 5px solid #000;
         text-decoration: none;
       }
     }
   }
-}
-.add-overflow{
-  overflow: hidden;
 }
 
-.nav-mobile {
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  align-items: center;
-  background: #fff;
-  bottom: 0px;
-  border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
-  padding: 0 20px;
-  position: absolute;
-  position: fixed;
-  left: 0px;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-  .nav-link {
-    a {
-      border-radius: 5px;
-      color: #222;
-      cursor: pointer;
-      display: block;
-      font-size: 0.6em;
-      outline: none;
-      padding: 7px 14px;
-      text-transform: uppercase;
-      transition: $t-def;
-      &:hover {
-        text-decoration: none;
-      }
-      &:focus {
-        outline: none !important;
-      }
-    }
-    i {
-      color: #222;
-      font-size: 2em;
-      margin-bottom: 5px;
+@media (max-width: 1024px) {
+  nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      background: #fff;
+      bottom: 0px;
+      border-top: 1px solid rgba($color: #ccc, $alpha: 0.5);
+      position: absolute;
+      position: fixed;
+      left: 0px;
+      text-align: center;
       width: 100%;
+      z-index: 1;
+
+      i {
+        color: #222;
+        font-size: 1em;
+        margin-bottom: 3px;
+        width: 100%;
+      }
+
+      a {
+        border-left: 0px;
+        color: #222;
+        cursor: pointer;
+        display: block;
+        font-size: 0.6em;
+        font-weight: bolder;
+        outline: none;
+        padding: 7px 14px;
+        text-transform: uppercase;
+        transition: $t-def;
+        &:hover {
+        background: #fff;
+        text-decoration: none;
+        }
+      }
     }
   }
 }
+
 </style>

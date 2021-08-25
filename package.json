@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@fontsource/bowlby-one": "^4.2.2",
+    "@fontsource/bungee-shade": "^4.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
     "roboto-fontface": "^0.10.0",
