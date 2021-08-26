@@ -15,6 +15,13 @@ const routes = [
   },
 
   {
+    path: '/lab',
+    name: 'lab',
+    meta: { title: pageTitle + 'EXPERIMENTOS' },
+    component: () => import('../views/Lab.vue')
+  },
+
+  {
     path: '/frontend',
     name: 'frontend',
     meta: { title: pageTitle + 'FRONTEND' },

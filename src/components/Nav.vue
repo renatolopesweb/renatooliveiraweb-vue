@@ -39,7 +39,6 @@ $bg-light: rgba(
   $color: #f0f0f0,
   $alpha: 0.5,
 );
-$color-primary: #8c52ff;
 $t-def: 0.2s;
 
 .link_active {
@@ -63,7 +62,7 @@ li {
 nav {
   height: 100vh;
   min-height: 100%;
-  background: #fafafa;
+  background: #fff;
   border: 1px solid rgba($color: #ccc, $alpha: 0.5);
   // box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
   position: fixed;
@@ -106,7 +105,7 @@ nav {
       z-index: 1;
 
       i {
-        color: #222;
+        // color: #222;
         font-size: 1em;
         margin-bottom: 3px;
         width: 100%;
@@ -114,7 +113,7 @@ nav {
 
       a {
         border-left: 0px;
-        color: #222;
+        // color: #222;
         cursor: pointer;
         display: block;
         font-size: 0.6em;

@@ -15,12 +15,12 @@
     </header>
     <article>
       <h2>
-          10+ anos que trabalho para empresas nas divisões de web, dedicado
-          principalmente no front-end e UX/UI.
+        10+ anos que trabalho para empresas nas divisões de web, dedicado
+        principalmente no front-end e UX/UI.
       </h2>
       <p>
-        Iniciei minha carreira polipolar em pequenas agências e também já ocupei
-        cargos voltados para gestão de projetos digitais como Portais Web,
+        Iniciei carreira em pequenas agências com clientes de todos os portes, também já ocupei
+        cargos voltado para gestão de projetos digitais como Portais Web,
         Intranets, Redes Sociais e afins.
       </p>
       <p>
@@ -40,8 +40,9 @@
 </template>
 
 <script>
-import Bungee from "@fontsource/bungee-shade";
-Bungee;
+import fontBowlby from "@fontsource/bowlby-one";
+
+fontBowlby;
 
 export default {
   methods: {
@@ -82,50 +83,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$font: "Bungee Shade", cursive;
+$font: "Bowlby One", cursive;
 $bg-light: rgba(
   $color: #f0f0f0,
   $alpha: 0.5,
 );
-$color-primary: #8c52ff;
+$color-primary: #1d0f87;
 $t-def: 0.3s;
 
 header {
   display: grid;
-  grid-template-columns: 200px auto;
-  // background: #f0f0f0;
-  background-image: linear-gradient(to bottom left, #fff, #f0f0f0);
+  grid-template-columns: 215px auto;
+  background: $color-primary;
+  // background-image: url('https://revistaazul.voeazul.com.br/wp-content/uploads/2020/10/destaque_montanhas_capixabas.jpg');
+  // background-image: linear-gradient(to bottom left, #4a2a97, #512DA8);
   align-items: center;
   height: 50vh;
   img {
-    background: $color-primary;
+    background: #fafafa;
     border-radius: 100%;
-    margin: 0 25px;
+    margin: 0 50px;
   }
   h1,
   h2 {
-    font-size: 4.2em;
-    font-family: $font;
-    font-weight: bold;
-    line-height: 65px;
+    color: #fff;
+    // font-family: $font;
+    line-height: 50px;
   }
   h1 {
-    color: #220d3b;
+    font-size: 3em;
+    // font-weight: normal;
   }
   h2 {
-    color: $color-primary;
+    font-weight: lighter;
+    font-size: 2.6em;
   }
 }
 
 article {
+  margin: 50px;
   p {
-    margin-bottom: 20px;
+    color: #666;
+    line-height: 25px;
+    margin: 22px 0;
   }
   ul {
     margin-bottom: 25px;
   }
   li {
-    font-size: 1.1em;
+    // font-size: 1.1em;
     margin-bottom: 10px;
     a {
       color: $color-primary;
@@ -133,17 +139,9 @@ article {
     a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 350px) {
-      li,
-      a {
-        font-size: 0.9em;
-      }
-    }
     i {
-      font-size: 1.2em;
-      margin-right: 5px;
-      text-align: center;
-      width: 25px;
+      font-size: 1.1em;
+      margin-right: 10px;
     }
   }
 }
@@ -156,41 +154,16 @@ article {
     align-content: center;
   }
   article {
+    margin: 0px;
     padding: 25px;
   }
 }
-@media (max-width: 1220px) {
+
+@media (max-width: 450px) {
   header {
     h1,
     h2 {
-      font-size: 3em;
-      line-height: 50px;
-    }
-  }
-}
-@media (max-width: 820px) {
-  header {
-    h1,
-    h2 {
-      font-size: 3.6em;
-      line-height: 55px;
-    }
-  }
-}
-@media (max-width: 700px) {
-  header {
-    h1,
-    h2 {
-      font-size: 3em;
-      line-height: 50px;
-    }
-  }
-}
-@media (max-width: 600px) {
-  header {
-    h1,
-    h2 {
-      font-size: 1.5em;
+      font-size: 1.8em;
       line-height: 35px;
     }
   }

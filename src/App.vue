@@ -21,8 +21,8 @@ export default {
 </script>
 
 <style lang="scss">
-$color-light: #111;
-$color-primary: #8c52ff;
+$color-light: rgba(0,0,0,0.87);
+$color-primary: #512da8;
 $t-def: 0.2s;
 
 /* BOOT START */
@@ -39,6 +39,7 @@ $t-def: 0.2s;
 
 html,
 body {
+  background: #fafafa;
   color: $color-light;
   font-family: "Roboto Condensed";
   transition: 0.2s;
@@ -54,15 +55,14 @@ body {
 //     background: #f1f1f1;
 // }
 
-p {
-  font-size: 1.2em;
-  line-height: 30px;
-  font-weight: 300;
-}
 h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: normal;
   margin-bottom: 10px;
+}
+p {
+  font-weight: 400;
+  line-height: 25px;
 }
 a {
   &:hover {
@@ -71,11 +71,11 @@ a {
 }
 article {
   margin: 25px;
-  li {
-    font-size: 1.3em;
-    line-height: 30px;
-    margin-bottom: 10px;
-  }
+  // li {
+  //   font-size: 1.3em;
+  //   line-height: 30px;
+  //   margin-bottom: 10px;
+  // }
 }
 @media (max-width: 1024px) {
   article {
@@ -92,7 +92,6 @@ section {
 aside {
   grid-column: 6 / 7;
 }
-
 
 .btn {
   border: 0px;
