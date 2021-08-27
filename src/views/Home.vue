@@ -88,14 +88,19 @@ $bg-light: rgba(
   $color: #f0f0f0,
   $alpha: 0.5,
 );
-$color-primary: #1d0f87;
+$color-primary: #4A148C;
 $t-def: 0.3s;
 
 header {
   display: grid;
   grid-template-columns: 215px auto;
   background: $color-primary;
-  // background-image: url('https://revistaazul.voeazul.com.br/wp-content/uploads/2020/10/destaque_montanhas_capixabas.jpg');
+  // background-image: url('../assets/images/home-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: center;
   // background-image: linear-gradient(to bottom left, #4a2a97, #512DA8);
   align-items: center;
   height: 50vh;
@@ -116,7 +121,7 @@ header {
   }
   h2 {
     font-weight: lighter;
-    font-size: 2.6em;
+    font-size: 2.4em;
   }
 }
 
@@ -149,6 +154,7 @@ article {
 @media (max-width: 1024px) {
   header {
     grid-template-columns: 1fr;
+    background-position: right;
     text-align: center;
     height: 100vh;
     align-content: center;
