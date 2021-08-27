@@ -42,8 +42,8 @@ html,
 body {
   background: #fafafa;
   color: $color-light;
-  font-family: "Roboto Condensed";
-  transition: 0.2s;
+  font-family: "Roboto" , sans-serif;
+  overflow-y:scroll;
 }
 
 h2 {

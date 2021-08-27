@@ -58,10 +58,10 @@ li {
 }
 
 nav {
-  height: 100vh;
-  min-height: 100%;
   background: #fff;
   border: 1px solid $border-def;
+  height: 100vh;
+  min-height: 100%;
   // box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
   position: fixed;
   width: 100%;
@@ -103,7 +103,7 @@ nav {
       z-index: 1;
 
       i {
-        font-size: 1.3em;
+        font-size: 1.5em;
         margin-bottom: 3px;
         width: 100%;
       }

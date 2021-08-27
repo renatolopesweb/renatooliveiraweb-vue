@@ -35,16 +35,22 @@
           >
         </li>
       </ul>
+      <!-- <h2>Experimentos</h2>
+      <Experiments /> -->
     </article>
   </section>
 </template>
 
 <script>
 import fontBowlby from "@fontsource/bowlby-one";
+// import Experiments from "../components/NavExperiments.vue";  
 
 fontBowlby;
 
 export default {
+  components: {
+    // Experiments,
+  },
   methods: {
     toTop() {
       window.scrollTo({
@@ -149,6 +155,10 @@ article {
       margin-right: 10px;
     }
   }
+}
+
+.grid-lab {
+  margin: 0px;
 }
 
 @media (max-width: 1024px) {
