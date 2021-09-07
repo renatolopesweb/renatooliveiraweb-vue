@@ -21,9 +21,13 @@ export default {
 </script>
 
 <style lang="scss">
-$color-light: rgba(0,0,0,0.87);
+$color-light: rgba(0, 0, 0, 0.87);
+$color-primary: #4a148c;
 $radius-def: 2px;
-$border-def: rgba($color: #ccc, $alpha: 0.5);
+$border-def: rgba(
+  $color: #ccc,
+  $alpha: 0.5,
+);
 $t-def: 0.2s;
 
 /* BOOT START */
@@ -42,14 +46,19 @@ html,
 body {
   background: #fafafa;
   color: $color-light;
-  font-family: "Roboto" , sans-serif;
-  overflow-y:scroll;
+  font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
+}
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto;
+  }
 }
 
 h2 {
   font-size: 1.2em;
   font-weight: normal;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 }
 p {
   font-weight: 400;
@@ -79,25 +88,34 @@ article {
     border: 1px solid $border-def;
     border-radius: $radius-def;
     background: #fff;
+    cursor: pointer;
     margin: 0px;
     transition: $t-def;
     &:hover {
-      cursor: pointer;
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.01);
     }
     &:active {
       transform: translateY(5px);
     }
     div {
-      padding: 1rem 1.5rem;
+      padding: 1rem;
       h2 {
         color: #262626;
-        // font-size: 1.2em;
+        // margin-bottom: 5px;
+        font-size: 1em;
       }
       p {
         color: #a6a6a6;
         font-weight: 400;
         line-height: 25px;
+      }
+      a {
+        border-top: 1px solid $border-def;
+        color: blue;
+        display: block;
+        font-weight: 400;
+        text-transform: uppercase;
+        width: 100%;
       }
     }
     img {
@@ -120,8 +138,8 @@ article {
       border-left: 0px;
       border-right: 0px;
       img {
-      border-radius: 0px;
-    }
+        border-radius: 0px;
+      }
     }
   }
 }
@@ -141,12 +159,12 @@ aside {
 
 .btn {
   border: 0px;
-  border-radius: 3px;
-  line-height: 40px;
+  // border-radius: 3px;
+  line-height: 50px;
   cursor: pointer;
-  font-size: 0.6em;
-  margin-right: 10px;
-  padding: 10px 15px;
+  font-size: 0.8em;
+  // margin-right: 10px;
+  // padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
   transition: $t-def;
@@ -158,23 +176,81 @@ aside {
   }
 }
 .btn-primary {
-  // background: #fff;
-  border: 1px solid #111;
-  color: #111;
+  border: 1px solid $color-primary;
+  background: $color-primary;
+  color: #fff;
   &:hover {
-    background: #111;
-    color: #fff;
+    background: rgba($color: $color-primary, $alpha: 0.9);
+    border: 1px solid $color-primary;
   }
 }
-.btn-light {
+.btn-secondary {
   background: #fff;
-  border: 1px solid $color-light;
-  color: $color-light;
+  border: 1px solid $color-primary;
+  color: $color-primary;
   &:hover {
-    background: $color-light;
-    color: #fff;
+    background: rgba($color: $color-primary, $alpha: 0.1);
+    border: 1px solid rgba($color: $color-primary, $alpha: 0.1);
   }
 }
+
+// MODAL
+.modal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  // align-items: center;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #fafafa;
+  position: fixed;
+  z-index: 1;
+  .modal-block {
+    grid-column: 3 / 6;
+    padding-top: 20px;
+    margin: 10px 0;
+    img {
+      width: 100%;
+    }
+    .modal-info {
+      padding: 15px 0;
+      h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #333;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+  }
+  .modal-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    grid-template-columns: 1fr;
+    .modal-block {
+      padding: 0;
+      margin: 0;
+      .modal-info {
+        padding: 15px;
+      }
+      .modal-buttons{
+        grid-template-columns: 1fr;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+// MODAL
 
 /* TRANSITIONS START */
 @keyframes fadeIn {

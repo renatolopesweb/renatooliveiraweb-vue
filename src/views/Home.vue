@@ -10,18 +10,16 @@
       </figure>
       <div>
         <h1>RENATO7OLIVEIRA</h1>
-        <h2>WEBDESIGNER</h2>
+        <h2>FRONTEND · UX & UI</h2>
       </div>
     </header>
     <article>
       <h2>
-        10+ anos que trabalho para empresas nas divisões de web, dedicado
-        principalmente no front-end e UX/UI.
+        10+ anos trabalhando em divisões web, normalmente dedicado ao front-end e UX/UI.
       </h2>
       <p>
-        Iniciei carreira em pequenas agências com clientes de todos os portes, também já ocupei
-        cargos voltado para gestão de projetos digitais como Portais Web,
-        Intranets, Redes Sociais e afins.
+        Iniciei em agências com clientes de todos os portes, também já ocupei
+        cargos voltado para gestão de projetos web.
       </p>
       <p>
         Moro em São Paulo, sou casado com a Delma, pai da Ana Luiza e da
@@ -35,17 +33,13 @@
           >
         </li>
       </ul>
-      <!-- <h2>Experimentos</h2>
-      <Experiments /> -->
     </article>
   </section>
 </template>
 
 <script>
-import fontBowlby from "@fontsource/bowlby-one";
 // import Experiments from "../components/NavExperiments.vue";  
 
-fontBowlby;
 
 export default {
   components: {
@@ -127,7 +121,7 @@ header {
   }
   h2 {
     font-weight: lighter;
-    font-size: 2.4em;
+    font-size: 2.1em;
   }
 }
 
@@ -137,6 +131,9 @@ article {
     color: #666;
     line-height: 25px;
     margin: 22px 0;
+  }
+  h2{
+    margin-bottom: 10px;
   }
   ul {
     margin-bottom: 25px;

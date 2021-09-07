@@ -9,12 +9,12 @@
         </li>
         <li @click="toTop()">
           <router-link to="/frontend"
-            ><i class="fas fa-code"></i>Frontend</router-link
+            ><i class="fas fa-code"></i>HTML + CSS</router-link
           >
         </li>
         <li @click="toTop()">
           <router-link to="/design"
-            ><i class="fas fa-palette"></i>Design</router-link
+            ><i class="fab fa-sketch"></i>Design</router-link
           >
         </li>
       </ul>

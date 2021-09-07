@@ -9,35 +9,49 @@ const routes = [
 
   {
     path: '/',
-    name: 'Home',
+    // name: 'Home',
     meta: { title: pageTitle + 'WEBDESIGNER', description: 'RENATO7OLIVEIRA · WEBDESIGNER' },
     component: Home
   },
 
   {
-    path: '/lab',
-    name: 'lab',
-    meta: { title: pageTitle + 'EXPERIMENTOS' },
-    component: () => import('../views/Lab.vue')
+    path: '/skills',
+    // name: 'lab',
+    meta: { title: pageTitle + 'HABILIDADES' },
+    component: () => import('../views/Skills.vue')
   },
 
   {
     path: '/frontend',
-    name: 'frontend',
+    // name: 'frontend',
     meta: { title: pageTitle + 'FRONTEND' },
     component: () => import('../views/Frontend.vue')
   },
 
   {
+    path: '/frontend-detalhe',
+    name: 'FrontendDetail',
+    meta: { title: pageTitle + 'FRONTEND · DETALHE' },
+    component: () => import('../views/FrontendDetail.vue')
+  },
+
+  {
     path: '/design',
-    name: 'design',
+    // name: 'design',
     meta: { title: pageTitle + 'DESIGN' },
     component: () => import('../views/Design.vue')
   },
 
   {
+    path: '/video',
+    // name: 'design',
+    meta: { title: pageTitle + 'VIDEO' },
+    component: () => import('../views/Video.vue')
+  },
+
+  {
     path: '/*',
-    name: 'NotFound',
+    // name: 'NotFound',
     meta: { title: pageTitle + 'PÁGINA NÃO ENCONTRADA' },
     component: () => import('../views/NotFound.vue')
   }
