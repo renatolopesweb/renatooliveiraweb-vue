@@ -10,7 +10,7 @@
       </figure>
       <div>
         <h1>RENATO7OLIVEIRA</h1>
-        <h2>FRONTEND · UX & UI</h2>
+        <h2>WEBDESIGNER</h2>
       </div>
     </header>
     <article>
