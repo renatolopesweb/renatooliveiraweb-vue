@@ -55,6 +55,17 @@ body {
   }
 }
 
+#app {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+section {
+  grid-column: 1 / 6;
+}
+aside {
+  grid-column: 6 / 7;
+}
+
 h2 {
   font-size: 1.2em;
   font-weight: normal;
@@ -79,7 +90,7 @@ article {
 }
 
 /* GRIDS LAB */
-.grid-lab {
+.grid-default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
@@ -105,7 +116,7 @@ article {
         font-size: 1em;
       }
       p {
-        color: #a6a6a6;
+        color: rgba($color: $color-primary, $alpha: 0.6);
         font-weight: 400;
         line-height: 25px;
       }
@@ -128,7 +139,7 @@ article {
 
 /* MEDIA QUERIES START */
 @media (max-width: 1024px) {
-  .grid-lab {
+  .grid-default {
     grid-template-columns: 1fr;
     grid-gap: 15px;
     margin: 0px;
@@ -146,20 +157,9 @@ article {
 /* MEDIA QUERIES END  */
 /* GRIDS LAB */
 
-#app {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-section {
-  grid-column: 1 / 6;
-}
-aside {
-  grid-column: 6 / 7;
-}
-
 .btn {
   border: 0px;
-  // border-radius: 3px;
+  border-radius: $radius-def;
   line-height: 50px;
   cursor: pointer;
   font-size: 0.8em;
@@ -213,6 +213,7 @@ aside {
     margin: 10px 0;
     img {
       width: 100%;
+      border-radius: $radius-def;
     }
     .modal-info {
       padding: 15px 0;

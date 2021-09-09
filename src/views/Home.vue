@@ -15,7 +15,8 @@
     </header>
     <article>
       <h2>
-        10+ anos trabalhando em divisões web, normalmente dedicado ao front-end e UX/UI.
+        10+ anos trabalhando em divisões web, normalmente dedicado ao front-end
+        e UX/UI.
       </h2>
       <p>
         Iniciei em agências com clientes de todos os portes, também já ocupei
@@ -33,24 +34,29 @@
           >
         </li>
       </ul>
+      <h2>Feedback para este site</h2>
+      <div class="grid-default">
+        <article v-for="(item, article) in feedback" :key="article">
+          <a :href="item.url" target="_blank" :title="item.alt">
+            <div class="icon">
+              <i :class="item.img" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h2>{{ item.title }}</h2>
+            </div>
+          </a>
+        </article>
+      </div>
     </article>
   </section>
 </template>
 
 <script>
-// import Experiments from "../components/NavExperiments.vue";  
-
+// import Experiments from "../components/NavExperiments.vue";
 
 export default {
   components: {
     // Experiments,
-  },
-  methods: {
-    toTop() {
-      window.scrollTo({
-        top: 0,
-      });
-    },
   },
 
   data() {
@@ -77,6 +83,26 @@ export default {
           url: "https://facebook.com/renato7oliveira",
         },
       ],
+      feedback: [
+        {
+          title: "Mobile Friendly Test",
+          img: "fas fa-gamepad",
+          url: "https://bit.ly/3nbj8x7",
+          alt: "Este site é otimizado para mobile?",
+        },
+        {
+          title: "Google Speed Test",
+          img: "fas fa-tachometer-alt",
+          url: "https://bit.ly/2YBTLKT",
+          alt: "Velocidade deste site!",
+        },
+        {
+          title: "Enviar Mensagem",
+          img: "far fa-paper-plane",
+          url: "https://bit.ly/3BRW6iY",
+          alt: "Me envie uma mensagem!",
+        },
+      ],
     };
   },
 };
@@ -88,7 +114,7 @@ $bg-light: rgba(
   $color: #f0f0f0,
   $alpha: 0.5,
 );
-$color-primary: #4A148C;
+$color-primary: #4a148c;
 $t-def: 0.3s;
 
 header {
@@ -121,7 +147,7 @@ header {
   }
   h2 {
     font-weight: lighter;
-    font-size: 2.1em;
+    font-size: 2.3em;
   }
 }
 
@@ -132,7 +158,7 @@ article {
     line-height: 25px;
     margin: 22px 0;
   }
-  h2{
+  h2 {
     margin-bottom: 10px;
   }
   ul {
@@ -154,8 +180,35 @@ article {
   }
 }
 
-.grid-lab {
+.grid-default {
+  grid-template-columns: repeat(3, 12rem);
   margin: 0px;
+  article {
+    align-items: center;
+    margin: 0px;
+    grid-gap: 0px;
+    .icon {
+      display: grid;
+      background: #f2f2f2;
+      align-items: center;
+      height: 11rem;
+      text-align: center;
+      width: 100%;
+      &:hover {
+        background: #eee;
+        color: #333;
+      }
+      i {
+        color: $color-primary;
+        font-size: 3.6em;
+      }
+    }
+    h2 {
+      color: $color-primary;
+      font-weight: bold;
+      margin: 0px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -169,6 +222,20 @@ article {
   article {
     margin: 0px;
     padding: 25px;
+  }
+  .grid-default {
+    grid-template-columns: 1fr;
+    article {
+      border: 1px solid rgba($color: #ccc, $alpha: 0.5);
+      div{
+        height: 0;
+        padding: 15px 0 10px 0;
+      }
+      .icon{
+        height: 12rem;
+      }
+      
+    }
   }
 }
 

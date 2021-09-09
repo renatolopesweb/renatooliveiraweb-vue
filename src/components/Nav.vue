@@ -9,7 +9,7 @@
         </li>
         <li @click="toTop()">
           <router-link to="/frontend"
-            ><i class="fas fa-code"></i>HTML + CSS</router-link
+            ><i class="fas fa-code"></i>Frontend</router-link
           >
         </li>
         <li @click="toTop()">
@@ -88,6 +88,8 @@ nav {
 
 @media (max-width: 1024px) {
   nav {
+    background: transparent;
+    border: 0;
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
