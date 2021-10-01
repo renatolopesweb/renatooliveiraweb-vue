@@ -34,8 +34,19 @@
           >
         </li>
       </ul>
-      <h2>juju</h2>
-      <p>lolo</p>
+      <h2>Feedback para este site</h2>
+      <div class="grid-default">
+        <article v-for="(item, article) in feedback" :key="article">
+          <a :href="item.url" target="_blank" :title="item.alt">
+            <div class="icon">
+              <i :class="item.img" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h2>{{ item.title }}</h2>
+            </div>
+          </a>
+        </article>
+      </div>
     </article>
   </section>
 </template>
@@ -76,7 +87,7 @@ export default {
         {
           title: "Mobile Friendly Test",
           img: "fas fa-gamepad",
-          url: "https://bit.ly/3nbj8x7",
+          url: "https://bit.ly/3oqz2UY",
           alt: "Este site é otimizado para mobile?",
         },
         {
@@ -155,6 +166,38 @@ section {
   }
 }
 
+.grid-default {
+  grid-template-columns: repeat(3, 12rem);
+  margin: 0px;
+  article {
+    align-items: center;
+    margin: 0px;
+    grid-gap: 0px;
+    .icon {
+      display: grid;
+      background: #f2f2f2;
+      align-items: center;
+      height: 8rem;
+      text-align: center;
+      width: 100%;
+      &:hover {
+        background: #eee;
+        color: #333;
+      }
+      i {
+        color: $color-primary;
+        font-size: 3em;
+      }
+    }
+    h2 {
+      color: $color-primary;
+      font-size: 0.8em;
+      font-weight: normal;
+      margin: 10px 0px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   section {
     margin: 0px;
@@ -170,6 +213,25 @@ section {
     article {
       font-size: 1em;
       padding: 0 25px;
+    }
+  }
+  .grid-default {
+    grid-template-columns: 1fr;
+    article {
+      margin: 0;
+      padding: 0;
+      border: 1px solid rgba($color: #ccc, $alpha: 0.5);
+      div{
+        height: 0;
+        padding: 0px 0 30px 0;
+      }
+      .icon {
+        font-size: 1em;
+      }
+      h2{
+        font-size: 1.1em;
+        padding-left: 10px;
+      }
     }
   }
 }
