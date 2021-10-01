@@ -35,21 +35,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$bg-light: rgba($color: #f0f0f0, $alpha: 0.5,);
 $border-def: rgba($color: #ccc, $alpha: 0.5);
+
+$box-shadow-def: 0 1px 7px 0 rgb(0 0 0 / 10%), 
+                 0 1px 1px 0 rgb(0 0 0 / 14%),
+                 0 2px 1px -1px rgb(0 0 0 / 0%);
+
+$bg-white: #fff;
+
 $t-def: 0.2s;
 
+$nav-hover: rgba($color: #ccc, $alpha: 0.2);
+
 .link_active {
-  background: $bg-light;
-  // border-left: 5px solid #000;
+  background: $nav-hover;
 }
 
 @media (max-width: 1024px) {
   .link_active {
-    background: transparent;
-    font-weight: normal;
-    opacity: 0.4;
-    // border-left: 0px !important;
+    background: $bg-white !important;
+    // opacity: 0.4;
   }
 }
 
@@ -58,29 +63,36 @@ li {
 }
 
 nav {
-  background: #fff;
-  border: 1px solid $border-def;
+  background: $bg-white;
+  box-shadow: $box-shadow-def;
   height: 100vh;
   min-height: 100%;
-  // box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
   position: fixed;
   width: 100%;
   li {
+      border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
     i {
-      width: 50px;
+      font-size: 1.2em;
       text-align: center;
+      width: 50px;
     }
     a {
       display: block;
       border-left: 5px solid transparent;
-      color: rgba(0,0,0,0.87);
+      color: rgba($color: #000, $alpha: 0.9);
       font-size: 0.9em;
-      padding: 20px 5px;
+      padding: 40px 5px;
       transition: $t-def;
       &:hover {
-        background: $bg-light;
+        background: $nav-hover;
         // border-left: 5px solid #000;
         text-decoration: none;
+      }
+    }
+    @media(min-width: 1800px){
+      a{
+        font-size: 1.4em;
+        padding: 50px 20px;
       }
     }
   }
@@ -89,20 +101,23 @@ nav {
 @media (max-width: 1024px) {
   nav {
     background: transparent;
-    border: 0;
+    box-shadow: 0px 0px 0px;
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: center;
-      background: #fff;
+      background: $bg-white;
       bottom: 0px;
-      border-top: 1px solid $border-def;
+      box-shadow: $box-shadow-def;
       position: absolute;
       position: fixed;
       left: 0px;
       text-align: center;
       width: 100%;
       z-index: 1;
+      li{
+        box-shadow: 0px 0px 0px;
+      }
 
       i {
         font-size: 1.5em;
@@ -112,16 +127,16 @@ nav {
 
       a {
         border-left: 0px;
+        color: #222;
         cursor: pointer;
         display: block;
         font-size: 0.6em;
-        font-weight: bolder;
         outline: none;
         padding: 14px;
         text-transform: uppercase;
         transition: $t-def;
         &:hover {
-        background: #fff;
+        background: none;
         text-decoration: none;
         }
       }

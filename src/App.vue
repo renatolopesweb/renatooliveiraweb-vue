@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-$color-light: rgba(0, 0, 0, 0.87);
+$color-light: rgba(0, 0, 0, 0.95);
 $color-primary: #4a148c;
 $radius-def: 2px;
 $border-def: rgba(
@@ -57,13 +57,13 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 section {
-  grid-column: 1 / 6;
+  grid-column: 1 / 7;
 }
 aside {
-  grid-column: 6 / 7;
+  grid-column: 7 / 9;
 }
 
 h2 {
@@ -99,7 +99,7 @@ article {
     border: 1px solid $border-def;
     border-radius: $radius-def;
     background: #fff;
-    cursor: pointer;
+    cursor: zoom-in;
     margin: 0px;
     transition: $t-def;
     &:hover {
@@ -109,15 +109,16 @@ article {
       transform: translateY(5px);
     }
     div {
-      padding: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.8em;
       h2 {
         color: #262626;
         // margin-bottom: 5px;
-        font-size: 1em;
       }
       p {
         color: rgba($color: $color-primary, $alpha: 0.6);
-        font-weight: 400;
+        // font-size: 0.9em;
+        // font-weight: 400;
         line-height: 25px;
       }
       a {
@@ -151,6 +152,9 @@ article {
       img {
         border-radius: 0px;
       }
+      &:hover {
+      transform: translateY(-5px) scale(1);
+    }
     }
   }
 }
@@ -241,10 +245,13 @@ article {
     .modal-block {
       padding: 0;
       margin: 0;
+      img {
+        border-radius: 0px;
+      }
       .modal-info {
         padding: 15px;
       }
-      .modal-buttons{
+      .modal-buttons {
         grid-template-columns: 1fr;
         margin: 0 15px;
       }

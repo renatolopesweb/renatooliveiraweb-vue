@@ -6,21 +6,21 @@
           src="../assets/images/renato7oliveira-about.gif"
           alt="renato7oliveira"
           title="renato7oliveira"
+          class="show-m"
         />
       </figure>
-      <div>
-        <h1>RENATO7OLIVEIRA</h1>
-        <h2>WEBDESIGNER</h2>
-      </div>
+      <h1>RENATO<span>7</span>OLIVEIRA</h1>
+      <h2>
+        10+ anos de experiência com desenvolvimento web, ênfase nas camadas de
+         front-end e UX/UI.
+      </h2>
     </header>
     <article>
-      <h2>
-        10+ anos trabalhando em divisões web, normalmente dedicado ao front-end
-        e UX/UI.
-      </h2>
       <p>
-        Iniciei em agências com clientes de todos os portes, também já ocupei
-        cargos voltado para gestão de projetos web.
+        Iniciei minha carreira profissional em startups de Marketing e
+        Tecnologia, atendendo desde clientes pequenos a multinacionais, também
+        já tive oportunidade de ocupar cargo voltado para gestão de projetos
+        web.
       </p>
       <p>
         Moro em São Paulo, sou casado com a Delma, pai da Ana Luiza e da
@@ -34,19 +34,8 @@
           >
         </li>
       </ul>
-      <h2>Feedback para este site</h2>
-      <div class="grid-default">
-        <article v-for="(item, article) in feedback" :key="article">
-          <a :href="item.url" target="_blank" :title="item.alt">
-            <div class="icon">
-              <i :class="item.img" aria-hidden="true"></i>
-            </div>
-            <div>
-              <h2>{{ item.title }}</h2>
-            </div>
-          </a>
-        </article>
-      </div>
+      <h2>juju</h2>
+      <p>lolo</p>
     </article>
   </section>
 </template>
@@ -117,134 +106,109 @@ $bg-light: rgba(
 $color-primary: #4a148c;
 $t-def: 0.3s;
 
-header {
-  display: grid;
-  grid-template-columns: 215px auto;
-  background: $color-primary;
-  // background-image: url('../assets/images/home-bg.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // background-position: center;
-  // background-image: linear-gradient(to bottom left, #4a2a97, #512DA8);
-  align-items: center;
-  height: 50vh;
-  img {
-    background: #fafafa;
-    border-radius: 100%;
-    margin: 0 50px;
-  }
+section {
+  margin: 75px;
   h1,
   h2 {
-    color: #fff;
-    // font-family: $font;
-    line-height: 50px;
+    font-weight: 900;
   }
   h1 {
-    font-size: 3em;
-    // font-weight: normal;
+    font-size: 5em;
   }
   h2 {
-    font-weight: lighter;
-    font-size: 2.3em;
+    font-size: 1.8em;
+    margin-bottom: 30px;
   }
-}
+  span {
+    color: $color-primary;
+  }
 
-article {
-  margin: 50px;
-  p {
-    color: #666;
-    line-height: 25px;
-    margin: 22px 0;
-  }
-  h2 {
-    margin-bottom: 10px;
-  }
-  ul {
-    margin-bottom: 25px;
-  }
-  li {
-    // font-size: 1.1em;
-    margin-bottom: 10px;
-    a {
-      color: $color-primary;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    i {
-      font-size: 1.1em;
-      margin-right: 10px;
-    }
-  }
-}
-
-.grid-default {
-  grid-template-columns: repeat(3, 12rem);
-  margin: 0px;
   article {
-    align-items: center;
     margin: 0px;
-    grid-gap: 0px;
-    .icon {
-      display: grid;
-      background: #f2f2f2;
-      align-items: center;
-      height: 11rem;
-      text-align: center;
-      width: 100%;
-      &:hover {
-        background: #eee;
-        color: #333;
-      }
-      i {
-        color: $color-primary;
-        font-size: 3.6em;
-      }
+    font-size: 1.2em;
+    p {
+      line-height: 25px;
+      margin: 15px 0;
     }
     h2 {
-      color: $color-primary;
-      font-weight: bold;
-      margin: 0px;
+      font-size: 1.2em;
+      font-weight: 900;
+      margin: 20px 0 15px 0;
+    }
+    ul {
+      margin-bottom: 25px;
+    }
+    li {
+      // font-size: 1.2em;
+      margin-bottom: 10px;
+      a {
+        color: $color-primary;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      i {
+        font-size: 1.1em;
+        margin-right: 10px;
+      }
     }
   }
 }
 
 @media (max-width: 1024px) {
-  header {
-    grid-template-columns: 1fr;
-    background-position: right;
-    text-align: center;
-    height: 100vh;
-    align-content: center;
-  }
-  article {
+  section {
     margin: 0px;
-    padding: 25px;
-  }
-  .grid-default {
-    grid-template-columns: 1fr;
+    header {
+      text-align: center;
+      padding: 0 25px;
+      img {
+        background: $color-primary;
+        border-radius: 100%;
+        margin: 25px auto;
+      }
+    }
     article {
-      border: 1px solid rgba($color: #ccc, $alpha: 0.5);
-      div{
-        height: 0;
-        padding: 15px 0 10px 0;
-      }
-      .icon{
-        height: 12rem;
-      }
-      
+      font-size: 1em;
+      padding: 0 25px;
     }
   }
 }
 
+
+
 @media (max-width: 450px) {
   header {
-    h1,
-    h2 {
+    h1 {
       font-size: 1.8em;
-      line-height: 35px;
+    }
+    h2 {
+      font-size: 1.3em;
+      line-height: 30px;
+    }
+  }
+}
+@media (min-width: 451px) and (max-width: 800px) {
+  header {
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  header {
+    h1 {
+      font-size: 1em;
+    }
+    h2 {
+      font-size: 1em;
+      line-height: 25px;
+    }
+    img{
+      max-width: 100px;
     }
   }
 }
