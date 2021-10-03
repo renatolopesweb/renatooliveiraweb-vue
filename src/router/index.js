@@ -15,24 +15,10 @@ const routes = [
   },
 
   {
-    path: '/skills',
-    // name: 'lab',
-    meta: { title: pageTitle + 'HABILIDADES' },
-    component: () => import('../views/Skills.vue')
-  },
-
-  {
     path: '/frontend',
     // name: 'frontend',
     meta: { title: pageTitle + 'FRONTEND' },
     component: () => import('../views/Frontend.vue')
-  },
-
-  {
-    path: '/frontend-detalhe',
-    name: 'FrontendDetail',
-    meta: { title: pageTitle + 'FRONTEND · DETALHE' },
-    component: () => import('../views/FrontendDetail.vue')
   },
 
   {

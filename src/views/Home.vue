@@ -52,13 +52,8 @@
 </template>
 
 <script>
-// import Experiments from "../components/NavExperiments.vue";
 
 export default {
-  components: {
-    // Experiments,
-  },
-
   data() {
     return {
       social: [
@@ -85,16 +80,16 @@ export default {
       ],
       feedback: [
         {
-          title: "Mobile Friendly Test",
+          title: "É amigável?",
           img: "fas fa-gamepad",
           url: "https://bit.ly/3oqz2UY",
-          alt: "Este site é otimizado para mobile?",
+          alt: "Google Mobile Friendly",
         },
         {
-          title: "Google Speed Test",
+          title: "É rápido?",
           img: "fas fa-tachometer-alt",
           url: "https://bit.ly/2YBTLKT",
-          alt: "Velocidade deste site!",
+          alt: "Google Speed Test",
         },
         {
           title: "Enviar Mensagem",
@@ -109,12 +104,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$font: "Bowlby One", cursive;
 $bg-light: rgba(
   $color: #f0f0f0,
   $alpha: 0.5,
 );
-$color-primary: #4a148c;
+$color-primary: #003385;
 $t-def: 0.3s;
 
 section {
@@ -131,7 +125,7 @@ section {
     margin-bottom: 30px;
   }
   span {
-    color: $color-primary;
+    font-size: 1.1em;
   }
 
   article {
@@ -185,12 +179,12 @@ section {
         color: #333;
       }
       i {
-        color: $color-primary;
-        font-size: 3em;
+        color: rgba(0, 0, 0, 0.95);
+        font-size: 3.8em;
       }
     }
     h2 {
-      color: $color-primary;
+      color: rgba(0, 0, 0, 0.95);
       font-size: 0.8em;
       font-weight: normal;
       margin: 10px 0px;
@@ -226,7 +220,8 @@ section {
         padding: 0px 0 30px 0;
       }
       .icon {
-        font-size: 1em;
+        font-size: 1.6em;
+        padding-top: 10px;
       }
       h2{
         font-size: 1.1em;

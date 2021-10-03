@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 $color-light: rgba(0, 0, 0, 0.95);
-$color-primary: #4a148c;
+$color-primary: #003385;
 $radius-def: 2px;
 $border-def: rgba(
   $color: #ccc,

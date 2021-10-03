@@ -35,17 +35,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-def: rgba($color: #ccc, $alpha: 0.5);
+$border-def: rgba(
+  $color: #ccc,
+  $alpha: 0.5,
+);
 
-$box-shadow-def: 0 1px 7px 0 rgb(0 0 0 / 10%), 
-                 0 1px 1px 0 rgb(0 0 0 / 14%),
-                 0 2px 1px -1px rgb(0 0 0 / 0%);
+$box-shadow-def: 0 1px 7px 0 rgb(0 0 0 / 10%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+  0 2px 1px -1px rgb(0 0 0 / 0%);
 
 $bg-white: #fff;
-
+$color-primary: #4a148c;
 $t-def: 0.2s;
 
-$nav-hover: rgba($color: #ccc, $alpha: 0.2);
+$nav-hover: rgba(
+  $color: #ccc,
+  $alpha: 0.2,
+);
 
 .link_active {
   background: $nav-hover;
@@ -58,19 +63,21 @@ $nav-hover: rgba($color: #ccc, $alpha: 0.2);
   }
 }
 
-li {
-  text-transform: uppercase;
-}
-
 nav {
-  background: $bg-white;
+  // background: url("https://lorempixel.com/600/900/abstract/");
+  // background-position: center;
+  background-color: #fff;
   box-shadow: $box-shadow-def;
+  // background-size: cover;
+  // box-shadow: $box-shadow-def;
   height: 100vh;
   min-height: 100%;
   position: fixed;
   width: 100%;
   li {
-      border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
+    // background: rgba($color: #000, $alpha: 0.6);
+    border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
+    text-transform: uppercase;
     i {
       font-size: 1.2em;
       text-align: center;
@@ -89,8 +96,8 @@ nav {
         text-decoration: none;
       }
     }
-    @media(min-width: 1800px){
-      a{
+    @media (min-width: 1800px) {
+      a {
         font-size: 1.4em;
         padding: 50px 20px;
       }
@@ -100,7 +107,7 @@ nav {
 
 @media (max-width: 1024px) {
   nav {
-    background: transparent;
+    background: transparent !important;
     box-shadow: 0px 0px 0px;
     ul {
       display: grid;
@@ -115,8 +122,9 @@ nav {
       text-align: center;
       width: 100%;
       z-index: 1;
-      li{
+      li {
         box-shadow: 0px 0px 0px;
+        background: #fff;
       }
 
       i {
@@ -132,16 +140,15 @@ nav {
         display: block;
         font-size: 0.6em;
         outline: none;
-        padding: 14px;
+        padding: 10px;
         text-transform: uppercase;
         transition: $t-def;
         &:hover {
-        background: none;
-        text-decoration: none;
+          background: none;
+          text-decoration: none;
         }
       }
     }
   }
 }
-
 </style>
