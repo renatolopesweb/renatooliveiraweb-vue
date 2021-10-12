@@ -1,25 +1,28 @@
 <template>
-  <main>
-    <nav>
-      <ul>
-        <li @click="toTop()">
-          <router-link to="/"
-            ><i class="fas fa-house-user"></i>Sobre</router-link
-          >
-        </li>
-        <li @click="toTop()">
-          <router-link to="/frontend"
-            ><i class="fas fa-code"></i>Frontend</router-link
-          >
-        </li>
-        <li @click="toTop()">
-          <router-link to="/design"
-            ><i class="fab fa-sketch"></i>Design</router-link
-          >
-        </li>
-      </ul>
-    </nav>
-  </main>
+  <nav>
+    <ul>
+      <li @click="toTop()">
+        <router-link to="/" class="nav"
+          ><i class="fas fa-home"></i>Home</router-link
+        >
+      </li>
+      <li @click="toTop()">
+        <router-link to="/sobre" class="nav"
+          ><i class="fas fa-running"></i>Sobre</router-link
+        >
+      </li>
+      <li @click="toTop()">
+        <router-link to="/projetos" class="nav"
+          ><i class="fas fa-gamepad"></i>Projetos</router-link
+        >
+      </li>
+      <li @click="toTop()">
+        <router-link to="/contato" class="nav"
+          ><i class="fas fa-share-alt"></i>Contato</router-link
+        >
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -32,120 +35,93 @@ export default {
     },
   },
 };
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("nav");
+  header.classList.toggle("header-mini", window.scrollY > 75);
+});
 </script>
 
 <style lang="scss" scoped>
-$border-def: rgba(
-  $color: #ccc,
+// $bg-light: rgba($color: #f0f0f0, $alpha: 0.5,);
+$background-hover: rgba(
+  $color: #000,
   $alpha: 0.5,
 );
-
-$box-shadow-def: 0 1px 7px 0 rgb(0 0 0 / 10%), 0 1px 1px 0 rgb(0 0 0 / 14%),
-  0 2px 1px -1px rgb(0 0 0 / 0%);
-
-$bg-white: #fff;
-$color-primary: #4a148c;
+$border-def: #ccc;
+$color-primary: #141e55;
 $t-def: 0.2s;
 
-$nav-hover: rgba(
-  $color: #ccc,
-  $alpha: 0.2,
-);
-
 .link_active {
-  background: $nav-hover;
+  background: $background-hover;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .link_active {
-    background: $bg-white !important;
-    // opacity: 0.4;
+    background: transparent;
+    opacity: 0.4;
   }
 }
 
 nav {
-  // background: url("https://lorempixel.com/600/900/abstract/");
-  // background-position: center;
-  background-color: #fff;
-  box-shadow: $box-shadow-def;
-  // background-size: cover;
-  // box-shadow: $box-shadow-def;
-  height: 100vh;
-  min-height: 100%;
-  position: fixed;
-  width: 100%;
-  li {
-    // background: rgba($color: #000, $alpha: 0.6);
-    border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
-    text-transform: uppercase;
-    i {
-      font-size: 1.2em;
-      text-align: center;
-      width: 50px;
-    }
-    a {
-      display: block;
-      border-left: 5px solid transparent;
-      color: rgba($color: #000, $alpha: 0.9);
-      font-size: 0.9em;
-      padding: 40px 5px;
-      transition: $t-def;
-      &:hover {
-        background: $nav-hover;
-        // border-left: 5px solid #000;
-        text-decoration: none;
-      }
-    }
-    @media (min-width: 1800px) {
-      a {
-        font-size: 1.4em;
-        padding: 50px 20px;
-      }
-    }
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 150px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2 / 7;
+}
+li {
+  text-align: center;
+  a {
+    display: grid;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+  }
+  i {
+    font-size: 3em;
+    width: 100%;
+  }
+  &:hover {
+    background: $background-hover;
   }
 }
 
-@media (max-width: 1024px) {
-  nav {
-    background: transparent !important;
-    box-shadow: 0px 0px 0px;
-    ul {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: center;
-      background: $bg-white;
-      bottom: 0px;
-      box-shadow: $box-shadow-def;
-      position: absolute;
-      position: fixed;
-      left: 0px;
-      text-align: center;
-      width: 100%;
-      z-index: 1;
-      li {
-        box-shadow: 0px 0px 0px;
-        background: #fff;
-      }
+.header-mini {
+  height: 80px;
+}
 
+@media (max-width: 600px) {
+  nav {
+    background: $color-primary;
+    border: 0;
+    bottom: 0px;
+    height: 80px;
+    position: absolute;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    ul {
+      grid-column: 1 / -1;
+      align-items: center;
       i {
-        font-size: 1.5em;
+        font-size: 1.7em;
         margin-bottom: 3px;
-        width: 100%;
       }
 
       a {
-        border-left: 0px;
-        color: #222;
         cursor: pointer;
         display: block;
         font-size: 0.6em;
-        outline: none;
-        padding: 10px;
+        padding: 25px 0;
         text-transform: uppercase;
-        transition: $t-def;
         &:hover {
-          background: none;
-          text-decoration: none;
+          background: transparent;
         }
       }
     }

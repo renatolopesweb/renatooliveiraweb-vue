@@ -1,14 +1,14 @@
 <template>
-  <main id="app">
-    <section>
+  <div id="app">
+    <header>
+      <Nav />
+    </header>
+    <main>
       <transition name="fade-view" mode="out-in">
         <router-view />
       </transition>
-    </section>
-    <aside>
-      <Nav />
-    </aside>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -21,8 +21,8 @@ export default {
 </script>
 
 <style lang="scss">
-$color-light: rgba(0, 0, 0, 0.95);
-$color-primary: #003385;
+$color-light: rgba(0, 0, 0, 0.87);
+$color-primary: #141e55;
 $radius-def: 2px;
 $border-def: rgba(
   $color: #ccc,
@@ -41,161 +41,68 @@ $t-def: 0.2s;
   animation: fadeIn 0.2s ease-out;
   transition: $t-def;
 }
-
+html {
+  overflow-y: scroll;
+}
 html,
 body {
   background: #fafafa;
-  color: $color-light;
-  font-family: "Roboto", sans-serif;
-  overflow-y: scroll;
-}
-@media (max-width: 1024px) {
-  body {
-    overflow-y: auto;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #app {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-}
-section {
-  grid-column: 1 / 7;
-}
-aside {
-  grid-column: 7 / 9;
+  grid-template-rows: 200px auto;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-h2 {
-  font-size: 1.2em;
-  font-weight: normal;
-  // margin-bottom: 10px;
-}
-p {
-  font-weight: 400;
-  line-height: 25px;
-}
-a {
-  &:hover {
-    text-decoration: none;
-  }
-}
-article {
-  margin: 25px;
-}
-@media (max-width: 1024px) {
-  article {
-    margin: 0px;
-  }
+header {
+  grid-row-start: 1;
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
+  background: $color-primary;
+  position: fixed;
+  width: 100%;
 }
 
-/* GRIDS LAB */
-.grid-default {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 25px;
-  margin: 25px;
-  article {
-    border: 1px solid $border-def;
-    border-radius: $radius-def;
-    background: #fff;
-    cursor: zoom-in;
-    margin: 0px;
-    transition: $t-def;
-    &:hover {
-      transform: translateY(-5px) scale(1.01);
-    }
-    &:active {
-      transform: translateY(5px);
-    }
-    div {
-      padding: 0.5rem 1rem;
-      font-size: 0.8em;
-      h2 {
-        color: #262626;
-        // margin-bottom: 5px;
-      }
-      p {
-        color: rgba($color: $color-primary, $alpha: 0.6);
-        // font-size: 0.9em;
-        // font-weight: 400;
-        line-height: 25px;
-      }
-      a {
-        border-top: 1px solid $border-def;
-        color: blue;
-        display: block;
-        font-weight: 400;
-        text-transform: uppercase;
-        width: 100%;
-      }
-    }
-    img {
-      width: 100%;
-      border-radius: $radius-def $radius-def 0 0;
-      border-bottom: 1px solid $border-def;
-    }
-  }
+main {
+  grid-row-start: 2;
+  grid-column: 2 / 7;
 }
 
-/* MEDIA QUERIES START */
-@media (max-width: 1024px) {
-  .grid-default {
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-    margin: 0px;
-    article {
-      margin-bottom: 2rem;
-      border-radius: 0px;
-      border-left: 0px;
-      border-right: 0px;
-      img {
-        border-radius: 0px;
-      }
-      &:hover {
-      transform: translateY(-5px) scale(1);
-    }
-    }
-  }
-}
-/* MEDIA QUERIES END  */
-/* GRIDS LAB */
+// BTN
 
 .btn {
+  // display: grid;
+  // align-content: center;
+  // align-items: center;
   border: 0px;
   border-radius: $radius-def;
-  line-height: 50px;
+  // height: 55px;
   cursor: pointer;
   font-size: 0.8em;
   // margin-right: 10px;
-  // padding: 10px 15px;
+  padding: 7px 14px;
   text-align: center;
   text-transform: uppercase;
   transition: $t-def;
   i {
-    font-size: 0.9em;
-  }
-  &:hover {
-    text-decoration: none;
+    vertical-align: middle;
   }
 }
 .btn-primary {
   border: 1px solid $color-primary;
-  background: $color-primary;
-  color: #fff;
+  color: $color-primary;
   &:hover {
-    background: rgba($color: $color-primary, $alpha: 0.9);
-    border: 1px solid $color-primary;
+    background: $color-primary;
+    color: #fff;
   }
 }
 .btn-secondary {
-  background: #fff;
+  background: $color-primary;
   border: 1px solid $color-primary;
-  color: $color-primary;
-  &:hover {
-    background: rgba($color: $color-primary, $alpha: 0.1);
-    border: 1px solid rgba($color: $color-primary, $alpha: 0.1);
-  }
+  color: #fff;
 }
 
 // MODAL
@@ -260,6 +167,18 @@ article {
 }
 // MODAL
 
+@media (max-width: 600px) {
+  #app {
+    grid-template-rows: 0 auto;
+    grid-template-columns: 1fr;
+  }
+  main {
+    grid-column: 1 / -1;
+    padding-bottom: 15vh;
+  }
+}
+// MODAL
+
 /* TRANSITIONS START */
 @keyframes fadeIn {
   0% {
@@ -277,16 +196,12 @@ article {
 .show-m {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .show-d {
     display: none !important;
   }
   .show-m {
     display: grid;
-  }
-  section {
-    grid-column: 1 / -1;
-    padding-bottom: 35px;
   }
 }
 /* MEDIA QUERIES END  */

@@ -15,24 +15,24 @@ const routes = [
   },
 
   {
-    path: '/frontend',
+    path: '/sobre',
+    // name: 'lab',
+    meta: { title: pageTitle + 'SOBRE' },
+    component: () => import('../views/About.vue')
+  },
+
+  {
+    path: '/projetos',
     // name: 'frontend',
-    meta: { title: pageTitle + 'FRONTEND' },
-    component: () => import('../views/Frontend.vue')
+    meta: { title: pageTitle + 'PROJETOS' },
+    component: () => import('../views/Projects.vue')
   },
 
   {
-    path: '/design',
-    // name: 'design',
-    meta: { title: pageTitle + 'DESIGN' },
-    component: () => import('../views/Design.vue')
-  },
-
-  {
-    path: '/video',
-    // name: 'design',
-    meta: { title: pageTitle + 'VIDEO' },
-    component: () => import('../views/Video.vue')
+    path: '/contato',
+    name: 'Contact',
+    meta: { title: pageTitle + 'CONTATO' },
+    component: () => import('../views/Contact.vue')
   },
 
   {

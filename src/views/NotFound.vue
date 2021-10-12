@@ -1,28 +1,18 @@
 <template>
-  <section>
-    <article>
-      <router-link to="/"
-        >
-        <h2>Página não encontrada</h2>
-        <div class="ghost" title="Arraste-me pra Home!!!">👻</div>
-      </router-link>
-    </article>
-  </section>
+  <article>
+    <router-link to="/">
+      <h2>Página não encontrada</h2>
+      <div class="ghost" title="Arraste-me pra Home!!!">👻</div>
+    </router-link>
+  </article>
 </template>
 
 <style lang="scss" scoped>
 article {
-  display: grid;
-  align-items: center;
-  height: 100vh;
-  vertical-align: top;
-  margin: auto;
+  margin-top: 100px;
   text-align: center;
-  a:hover{
-    text-decoration: none;
-  }
-  h2{
-    font-size: 1.2em;
+  a{
+    color: #000;
   }
 }
 
