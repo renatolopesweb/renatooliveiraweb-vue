@@ -38,7 +38,7 @@ h1 {
   margin-bottom: -10px;
 }
 h2 {
-  color: rgba($color: #999, $alpha: 0.7);
+  color: #999;
   font-size: 3.5vw;
   // font-size: 3em;
 }

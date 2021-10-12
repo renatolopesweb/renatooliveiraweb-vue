@@ -58,8 +58,8 @@ $t-def: 0.2s;
 
 @media (max-width: 600px) {
   .link_active {
-    background: transparent;
-    opacity: 0.4;
+    background: none;
+    opacity: 0.3;
   }
 }
 
@@ -110,7 +110,7 @@ li {
       grid-column: 1 / -1;
       align-items: center;
       i {
-        font-size: 1.7em;
+        font-size: 1.9em;
         margin-bottom: 3px;
       }
 

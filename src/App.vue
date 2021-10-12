@@ -74,16 +74,11 @@ main {
 // BTN
 
 .btn {
-  // display: grid;
-  // align-content: center;
-  // align-items: center;
   border: 0px;
   border-radius: $radius-def;
-  // height: 55px;
   cursor: pointer;
   font-size: 0.8em;
-  // margin-right: 10px;
-  padding: 7px 14px;
+  padding: 14px;
   text-align: center;
   text-transform: uppercase;
   transition: $t-def;
@@ -92,6 +87,7 @@ main {
   }
 }
 .btn-primary {
+  background: #fff;
   border: 1px solid $color-primary;
   color: $color-primary;
   &:hover {
@@ -143,6 +139,9 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    .btn{
+      // padding: 14px;
+    }
   }
 }
 
