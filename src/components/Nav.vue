@@ -2,22 +2,22 @@
   <nav>
     <ul>
       <li @click="toTop()">
-        <router-link to="/" class="nav"
+        <router-link to="/"
           ><i class="fas fa-home"></i>Home</router-link
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/sobre" class="nav"
+        <router-link to="/sobre"
           ><i class="fas fa-running"></i>Sobre</router-link
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/projetos" class="nav"
+        <router-link to="/projetos"
           ><i class="fas fa-gamepad"></i>Projetos</router-link
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/contato" class="nav"
+        <router-link to="/contato"
           ><i class="fas fa-share-alt"></i>Contato</router-link
         >
       </li>
@@ -31,6 +31,7 @@ export default {
     toTop() {
       window.scrollTo({
         top: 0,
+        behavior: 'smooth'
       });
     },
   },
@@ -89,6 +90,11 @@ li {
   &:hover {
     background: $background-hover;
   }
+  @media (max-width: 600px) {
+  &:hover {
+    background: none;
+  }
+}
 }
 
 .header-mini {

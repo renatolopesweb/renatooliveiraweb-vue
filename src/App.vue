@@ -53,14 +53,13 @@ body {
 
 #app {
   display: grid;
-  grid-template-rows: 200px auto;
+  grid-template-rows: 180px auto;
   grid-template-columns: repeat(7, 1fr);
 }
 
 header {
   grid-row-start: 1;
   grid-column: 1 / -1;
-  margin-bottom: 25px;
   background: $color-primary;
   position: fixed;
   width: 100%;
@@ -164,7 +163,32 @@ main {
     }
   }
 }
-// MODAL
+
+// HOVER
+
+.hover {
+  display: inline-block;
+  position: relative;
+  color: $color-primary;
+}
+
+.hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-primary;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 @media (max-width: 600px) {
   #app {
