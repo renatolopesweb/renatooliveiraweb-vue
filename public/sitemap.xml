@@ -12,12 +12,17 @@
 </url>
 
 <url>
-  <loc>https://www.renato7oliveira.com.br/#/about</loc>
+  <loc>https://www.renato7oliveira.com.br/#/sobre</loc>
   <changefreq>weekly</changefreq>
 </url>
 
 <url>
-  <loc>https://www.renato7oliveira.com.br/#/lab</loc>
+  <loc>https://www.renato7oliveira.com.br/#/projetos</loc>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>https://www.renato7oliveira.com.br/#/contato</loc>
   <changefreq>weekly</changefreq>
 </url>
 
