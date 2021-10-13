@@ -46,7 +46,7 @@ html {
 }
 html,
 body {
-  background: #fafafa;
+  // background: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -82,6 +82,7 @@ main {
   text-transform: uppercase;
   transition: $t-def;
   i {
+    font-size: 0.9em;
     vertical-align: middle;
   }
 }
@@ -138,9 +139,6 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    .btn{
-      // padding: 14px;
-    }
   }
 }
 
@@ -190,7 +188,7 @@ main {
   transform-origin: bottom left;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #app {
     grid-template-rows: 0 auto;
     grid-template-columns: 1fr;
@@ -219,7 +217,7 @@ main {
 .show-m {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .show-d {
     display: none !important;
   }

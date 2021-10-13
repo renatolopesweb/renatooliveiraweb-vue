@@ -17,20 +17,20 @@
         <router-link to="/sobre"
           ><i class="fas fa-running" @click="toTop()"></i
         ></router-link>
-        <p>Veja a minha experiência e aspirações</p>
+        <p>Veja a minha experiência</p>
       </div>
       <div>
         <router-link to="/projetos"
           ><i class="fas fa-gamepad" @click="toTop()"></i
         ></router-link>
-        <p>Confira alguns projetos de P&D</p>
+        <p>Confira alguns projetos pessoais</p>
       </div>
       <div>
         <router-link to="/contato"
           ><i class="fas fa-share-alt" @click="toTop()"></i
         ></router-link>
         <i class=""></i>
-        <p>Entre em contato pelas Redes Sociais</p>
+        <p>Entre em contato pelas Redes</p>
       </div>
     </section>
   </section>
@@ -72,12 +72,10 @@ h2 {
 h1 {
   color: $color-primary;
   font-size: 4.5vw;
-  // margin-bottom: -10px;
 }
 h2 {
   color: #999;
-  font-size: 3.5vw;
-  // font-size: 3em;
+  font-size: 4vw;
 }
 
 // GRID
@@ -98,7 +96,7 @@ h2 {
     p {
       color: $color-primary;
       font-size: 1.3em;
-      margin: 25px;
+      margin: 0 25px;
     }
     &:hover {
       background: rgba($color: $color-primary, $alpha: 0.1);
@@ -112,7 +110,7 @@ h2 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   article {
     height: calc(100vh - 80px);
     text-align: center;

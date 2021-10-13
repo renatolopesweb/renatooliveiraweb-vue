@@ -98,7 +98,7 @@ li {
 }
 
 .header-mini {
-  height: 80px;
+  height: 90px;
 }
 
 @media (max-width: 600px) {
@@ -114,15 +114,15 @@ li {
     z-index: 2;
     ul {
       grid-column: 1 / -1;
-      align-items: center;
+      // align-items: center;
       i {
-        font-size: 1.9em;
-        margin-bottom: 3px;
+        font-size: 2.3em;
+        margin-bottom: 5px;
       }
 
       a {
         cursor: pointer;
-        display: block;
+        // display: block;
         font-size: 0.6em;
         padding: 25px 0;
         text-transform: uppercase;
