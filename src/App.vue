@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 $color-light: rgba(0, 0, 0, 0.87);
-$color-primary: #141e55;
+$color-primary: #43627F;
 $radius-def: 2px;
 $border-def: rgba(
   $color: #ccc,
@@ -43,17 +43,18 @@ $t-def: 0.2s;
 }
 html {
   overflow-y: scroll;
+  background: rgba($color: $color-primary, $alpha: 0.05);
 }
 html,
 body {
-  // background: #fafafa;
+  color: rgb(33,49,63);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #app {
   display: grid;
-  grid-template-rows: 180px auto;
+  grid-template-rows: 175px auto;
   grid-template-columns: repeat(7, 1fr);
 }
 
@@ -63,11 +64,19 @@ header {
   background: $color-primary;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 main {
   grid-row-start: 2;
-  grid-column: 2 / 7;
+  grid-column: 1 / 8;
+  margin: 0 25px;
+}
+
+@media(max-width: 700px){
+  main{
+    margin: 0;
+  }
 }
 
 // BTN
@@ -101,93 +110,6 @@ main {
   color: #fff;
 }
 
-// MODAL
-.modal {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  // align-items: center;
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  right: 0;
-  background: #fafafa;
-  position: fixed;
-  z-index: 1;
-  .modal-block {
-    grid-column: 3 / 6;
-    padding-top: 20px;
-    margin: 10px 0;
-    img {
-      width: 100%;
-      border-radius: $radius-def;
-    }
-    .modal-info {
-      padding: 15px 0;
-      h2 {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-      }
-      p {
-        color: #333;
-        font-weight: 400;
-        line-height: 25px;
-      }
-    }
-  }
-  .modal-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .modal {
-    grid-template-columns: 1fr;
-    .modal-block {
-      padding: 0;
-      margin: 0;
-      img {
-        border-radius: 0px;
-      }
-      .modal-info {
-        padding: 15px;
-      }
-      .modal-buttons {
-        grid-template-columns: 1fr;
-        margin: 0 15px;
-      }
-    }
-  }
-}
-
-// HOVER
-
-.hover {
-  display: inline-block;
-  position: relative;
-  color: $color-primary;
-}
-
-.hover:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: $color-primary;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 @media (max-width: 700px) {
   #app {
     grid-template-rows: 0 auto;
@@ -198,7 +120,6 @@ main {
     padding-bottom: 15vh;
   }
 }
-// MODAL
 
 /* TRANSITIONS START */
 @keyframes fadeIn {

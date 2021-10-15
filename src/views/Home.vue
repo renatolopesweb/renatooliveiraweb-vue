@@ -3,7 +3,7 @@
     <article>
       <figure class="show-m">
         <img
-          src="../assets/images/renato7oliveira-about.gif"
+          src="../assets/images/renato7oliveira-about.jpg"
           alt="renato7oliveira"
           title="renato7oliveira"
         />
@@ -50,17 +50,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #141e55;
+$color-primary: #43627F;
 
 article {
   display: grid;
   align-items: center;
   align-content: center;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 175px);
+  text-align: center;
   img {
     background: $color-primary;
     border-radius: 100%;
-    margin: auto;
+    margin: 0 auto 10px auto;
+    max-width: 150px;
+    filter: saturate(7%);
   }
 }
 h1,
@@ -68,14 +71,13 @@ h2 {
   font-weight: 900;
   letter-spacing: 1.5px;
   font-family: "Bowlby One", cursive;
+  font-size: 5vw;
 }
 h1 {
   color: $color-primary;
-  font-size: 4.5vw;
 }
 h2 {
   color: #999;
-  font-size: 4vw;
 }
 
 // GRID
@@ -83,10 +85,13 @@ h2 {
 .home-grid-nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh - 80px);
+  grid-gap: 25px;
+  height: calc(94vh - 75px);
+  padding-bottom: 25px;
   div {
     display: flex;
     align-items: center;
+    border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
     color: $color-primary;
     padding: 25px;
     i {
@@ -111,16 +116,26 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  h1 {
+    font-size: 6vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
   article {
     height: calc(100vh - 80px);
-    text-align: center;
-    h1 {
-      margin: 0;
-    }
   }
   .home-grid-nav {
     grid-template-columns: 1fr;
     height: calc(100vh + 80px);
+    div {
+      i {
+        font-size: 4em;
+      }
+      p {
+        margin: 0 15px;
+      }
+    }
   }
 }
 </style>

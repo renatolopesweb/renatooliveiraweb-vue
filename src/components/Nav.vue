@@ -49,15 +49,13 @@ $background-hover: rgba(
   $color: #000,
   $alpha: 0.5,
 );
-$border-def: #ccc;
-$color-primary: #141e55;
-$t-def: 0.2s;
+$color-primary: #43627F;
 
 .link_active {
   background: $background-hover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .link_active {
     background: none;
     opacity: 0.3;
@@ -101,12 +99,12 @@ li {
   height: 90px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   nav {
     background: $color-primary;
     border: 0;
     bottom: 0px;
-    height: 80px;
+    height: 90px;
     position: absolute;
     position: fixed;
     left: 0px;
