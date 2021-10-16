@@ -12,7 +12,7 @@ article {
   margin-top: 100px;
   text-align: center;
   a{
-    color: #000;
+    color: rgb(33,49,63);
   }
 }
 

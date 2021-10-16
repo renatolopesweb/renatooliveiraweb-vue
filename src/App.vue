@@ -79,6 +79,34 @@ main {
   }
 }
 
+// HOVER
+
+.hover {
+  // display: inline-block;
+  position: relative;
+  color: $color-primary;
+}
+
+.hover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-primary;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// HOVER
+
 // BTN
 
 .btn {
