@@ -86,8 +86,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px;
-  height: calc(94vh - 75px);
-  padding-bottom: 25px;
+  height: calc(90.5vh - 75px);
   div {
     display: flex;
     align-items: center;
@@ -116,19 +115,15 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  h1 {
-    font-size: 6vw;
-  }
-  h2 {
-    font-size: 5vw;
-  }
   article {
     height: calc(100vh - 80px);
   }
   .home-grid-nav {
     grid-template-columns: 1fr;
     height: calc(100vh + 80px);
+    margin: 25px;
     div {
+      padding: 10px;
       i {
         font-size: 4em;
       }

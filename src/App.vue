@@ -70,7 +70,7 @@ header {
 main {
   grid-row-start: 2;
   grid-column: 1 / 8;
-  margin: 0 25px;
+  margin: 0 25px 25px 25px;
 }
 
 @media(max-width: 700px){
