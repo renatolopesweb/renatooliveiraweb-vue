@@ -43,6 +43,7 @@ $t-def: 0.2s;
 }
 html {
   overflow-y: scroll;
+  // background: #000;
   background: rgba($color: $color-primary, $alpha: 0.05);
 }
 html,

@@ -114,7 +114,7 @@ li {
       grid-column: 1 / -1;
       // align-items: center;
       i {
-        font-size: 2.3em;
+        font-size: 2.8em;
         margin-bottom: 5px;
       }
 
