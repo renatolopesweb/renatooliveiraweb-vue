@@ -14,23 +14,20 @@
 
     <section class="home-grid-nav">
       <div>
-        <router-link to="/sobre"
-          ><i class="fas fa-running" @click="toTop()"></i
-        ></router-link>
-        <p>Veja a minha experiência</p>
+        <span>
+          <router-link to="/sobre"
+            ><i class="fas fa-running" @click="toTop()"></i
+          ></router-link>
+          <p>Veja a minha experiência</p>
+        </span>
       </div>
       <div>
-        <router-link to="/projetos"
-          ><i class="fas fa-gamepad" @click="toTop()"></i
-        ></router-link>
-        <p>Confira alguns projetos pessoais</p>
-      </div>
-      <div>
-        <router-link to="/contato"
-          ><i class="fas fa-share-alt" @click="toTop()"></i
-        ></router-link>
-        <i class=""></i>
-        <p>Entre em contato pelas Redes</p>
+        <span>
+          <router-link to="/projetos"
+            ><i class="fas fa-gamepad" @click="toTop()"></i
+          ></router-link>
+          <p>Confira alguns projetos</p>
+        </span>
       </div>
     </section>
   </section>
@@ -50,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #43627F;
+@import "../assets/css/_variables.scss";
 
 article {
   display: grid;
@@ -77,7 +74,7 @@ h1 {
   color: $color-primary;
 }
 h2 {
-  color: #999;
+  color: rgba($color: $color-primary, $alpha: 0.5);
 }
 
 // GRID
@@ -88,11 +85,13 @@ h2 {
   grid-gap: 25px;
   height: calc(90.5vh - 75px);
   div {
-    display: flex;
+    display: grid;
+    align-content: center;
     align-items: center;
     border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
     color: $color-primary;
     padding: 25px;
+    text-align: center;
     i {
       color: $color-primary;
       font-size: 6em;
@@ -106,6 +105,9 @@ h2 {
       background: rgba($color: $color-primary, $alpha: 0.1);
       i {
         transform: scale(1.2);
+        &:hover{
+          transform: scale(1.4);
+        }
         &:active {
           transform: scale(1);
         }

@@ -8,11 +8,13 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/css/_variables.scss";
+
 article {
   margin-top: 100px;
   text-align: center;
   a{
-    color: rgb(33,49,63);
+    color: $color-primary;
   }
 }
 

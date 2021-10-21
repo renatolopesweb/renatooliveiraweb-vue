@@ -18,11 +18,14 @@ export default {
     Nav,
   },
 };
+
+
+
 </script>
 
 <style lang="scss">
+@import "assets/css/_variables.scss";
 $color-light: rgba(0, 0, 0, 0.87);
-$color-primary: #43627F;
 $radius-def: 2px;
 $border-def: rgba(
   $color: #ccc,
@@ -37,7 +40,7 @@ $t-def: 0.2s;
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   animation: fadeIn 0.2s ease-out;
   transition: $t-def;
 }
@@ -48,7 +51,9 @@ html {
 }
 html,
 body {
-  color: rgb(33,49,63);
+  // color: rgb(33,49,63);
+  color: $color-primary;
+  // color: rgb(67,98,127);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -62,7 +67,7 @@ body {
 header {
   grid-row-start: 1;
   grid-column: 1 / -1;
-  background: $color-primary;
+  // background: $color-primary;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -114,29 +119,32 @@ main {
   border: 0px;
   border-radius: $radius-def;
   cursor: pointer;
-  font-size: 0.8em;
-  padding: 14px;
+  font-size: 0.9em;
+  font-weight: bolder;
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
   transition: $t-def;
   i {
     font-size: 0.9em;
-    vertical-align: middle;
   }
 }
 .btn-primary {
-  background: #fff;
-  border: 1px solid $color-primary;
-  color: $color-primary;
-  &:hover {
-    background: $color-primary;
-    color: #fff;
-  }
-}
-.btn-secondary {
   background: $color-primary;
   border: 1px solid $color-primary;
   color: #fff;
+  &:hover{
+    background: rgba($color: $color-primary, $alpha: 0.8);
+  }
+}
+.btn-secondary {
+  // background: #fff;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  &:hover {
+    background: rgba($color: $color-primary, $alpha: 0.8);
+    color: #fff;
+  }
 }
 
 @media (max-width: 700px) {

@@ -16,11 +16,11 @@
           ><i class="fas fa-gamepad"></i>Projetos</router-link
         >
       </li>
-      <li @click="toTop()">
+      <!-- <li @click="toTop()">
         <router-link to="/contato"
           ><i class="fas fa-share-alt"></i>Contato</router-link
         >
-      </li>
+      </li> -->
     </ul>
   </nav>
 </template>
@@ -44,13 +44,8 @@ window.addEventListener("scroll", () => {
 </script>
 
 <style lang="scss" scoped>
-// $bg-light: rgba($color: #f0f0f0, $alpha: 0.5,);
-$background-hover: rgba(
-  $color: #000,
-  $alpha: 0.5,
-);
-$color-primary: #43627F;
-
+@import "../assets/css/_variables.scss";
+$background-hover: rgba($color: #000,$alpha: 0.5,);
 .link_active {
   background: $background-hover;
 }
@@ -66,11 +61,12 @@ nav {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   height: 150px;
+  background: $color-primary;
 }
 
 ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column: 2 / 7;
 }
 li {
@@ -88,7 +84,7 @@ li {
   &:hover {
     background: $background-hover;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
   &:hover {
     background: none;
   }
