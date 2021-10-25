@@ -18,7 +18,7 @@
           <router-link to="/sobre"
             ><i class="fas fa-running" @click="toTop()"></i
           ></router-link>
-          <p>Veja a minha experiência</p>
+          <p>Veja a minha história</p>
         </span>
       </div>
       <div>
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import fontBowlby from '../../node_modules/@fontsource/bowlby-one';
+fontBowlby
 export default {
   methods: {
     toTop() {
@@ -59,7 +61,7 @@ article {
     background: $color-primary;
     border-radius: 100%;
     margin: 0 auto 10px auto;
-    max-width: 150px;
+    max-width: 125px;
     filter: saturate(7%);
   }
 }
@@ -117,6 +119,10 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  h1,
+h2 {
+  font-size: 7vw;
+}
   article {
     height: calc(100vh - 80px);
   }
