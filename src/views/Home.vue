@@ -128,10 +128,10 @@ h2 {
   }
   .home-grid-nav {
     grid-template-columns: 1fr;
+    grid-gap: 15px;
     height: calc(100vh + 80px);
-    margin: 25px;
+    margin: 15px 15px 40px 15px;
     div {
-      padding: 10px;
       i {
         font-size: 4em;
       }
