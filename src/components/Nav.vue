@@ -130,6 +130,7 @@ li {
         text-transform: uppercase;
         &:hover {
           background: transparent;
+          opacity: 0.9;
           // color: #000;
         }
       }

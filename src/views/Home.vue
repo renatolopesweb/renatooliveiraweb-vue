@@ -130,10 +130,10 @@ p{
 
 @media (max-width: 700px) {
   h1{
-  font-size: 10vw;
+  font-size: 11vw;
 }
 p{
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
 }
   article {
