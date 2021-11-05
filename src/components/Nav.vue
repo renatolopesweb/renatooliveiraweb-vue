@@ -48,8 +48,7 @@ window.addEventListener("scroll", () => {
 }
 @media (max-width: 700px) {
   .link_active {
-    background: none;
-    opacity: 0.9;
+    opacity: 0.4;
   }
 }
 
@@ -57,11 +56,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   background: $color-primary;
-  // box-shadow: $box-shadow;
-  // border-bottom: $border-gray;
-  // border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
   height: 125px;
-  // box-shadow: $box-shadow;
 }
 
 ul {
@@ -75,13 +70,11 @@ li {
   a {
     display: grid;
     align-items: center;
-    // align-content: center;
     color: rgba($color: #fff, $alpha: 0.8);
     font-weight: 500;
     font-size: 0.8em;
     height: 100%;
     padding: 0 15px;
-    // transition: 0s !important;
     &:hover {
       background: rgba($color: #000, $alpha: 0.5);
       color: rgba($color: #fff, $alpha: 0.8);
@@ -91,7 +84,7 @@ li {
     font-size: 2.6em;
     width: 100%;
   }
-
+ 
   @media (max-width: 700px) {
     &:hover {
       background: none;
@@ -124,14 +117,10 @@ li {
 
       a {
         cursor: pointer;
-        // display: block;
         font-size: 0.6em;
-        // padding: 25px 0;
         text-transform: uppercase;
         &:hover {
           background: transparent;
-          opacity: 0.9;
-          // color: #000;
         }
       }
     }
