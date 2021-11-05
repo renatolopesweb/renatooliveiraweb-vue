@@ -1,15 +1,10 @@
 <template>
   <section>
     <article>
-      <figure class="show-m">
-        <img
-          src="../assets/images/renato7oliveira-about.jpg"
-          alt="renato7oliveira"
-          title="renato7oliveira"
-        />
-      </figure>
-      <h1>RENATO7OLIVEIRA</h1>
-      <h2>WEBDESIGNER</h2>
+      <div>
+        <h1>RENATO7OLIVEIRA</h1>
+      <p>A Front-End Web Developer passionate about creating interactive applications  and experiences on the web.</p>
+      </div>
     </article>
 
     <section class="home-grid-nav">
@@ -51,8 +46,15 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/css/_variables.scss";
 
+// section{
+//   display: grid;
+  
+// }
+
 article {
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  // height: 100vh;
   align-items: center;
   align-content: center;
   height: calc(100vh - 175px);
@@ -64,12 +66,15 @@ article {
     max-width: 125px;
     filter: saturate(7%);
   }
+  div{
+    grid-column: 3 / 4;
+  }
 }
 h1,
 h2 {
   font-weight: 900;
-  letter-spacing: 1.5px;
-  font-family: "Bowlby One", cursive;
+  letter-spacing: -3px;
+  // font-family: "Bowlby One", cursive;
   font-size: 5vw;
 }
 h1 {
@@ -78,6 +83,10 @@ h1 {
 h2 {
   color: rgba($color: $color-primary, $alpha: 0.5);
 }
+p{
+  color: $color-default;
+  font-size: 1.5vw;
+}
 
 // GRID
 
@@ -85,12 +94,13 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px;
-  height: calc(90.5vh - 75px);
+  height: calc(92.5vh - 75px);
+  margin-top: 25px;
   div {
     display: grid;
     align-content: center;
     align-items: center;
-    border: 1px solid rgba($color: $color-primary, $alpha: 0.3);
+    border: $border-gray;
     color: $color-primary;
     padding: 25px;
     text-align: center;
@@ -104,7 +114,7 @@ h2 {
       margin: 0 25px;
     }
     &:hover {
-      background: rgba($color: $color-primary, $alpha: 0.1);
+      background: #fff;
       i {
         transform: scale(1.2);
         &:hover{
@@ -119,18 +129,22 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  h1,
-h2 {
-  font-size: 7vw;
+  h1{
+  font-size: 10vw;
+}
+p{
+  font-size: 4vw;
+  font-weight: 700;
 }
   article {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
   }
   .home-grid-nav {
     grid-template-columns: 1fr;
     grid-gap: 15px;
     height: calc(100vh + 80px);
-    margin: 15px 15px 40px 15px;
+    margin: 0px;
+    // margin: 15px 0px 0px 15px;
     div {
       i {
         font-size: 4em;

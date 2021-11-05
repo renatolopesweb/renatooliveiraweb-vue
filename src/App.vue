@@ -46,28 +46,25 @@ $t-def: 0.2s;
 }
 html {
   overflow-y: scroll;
-  // background: #000;
-  background: rgba($color: $color-primary, $alpha: 0.05);
+  // background: rgba($color: $color-primary, $alpha: 0.09);
+  background: #fafafa;
 }
 html,
 body {
-  // color: rgb(33,49,63);
-  color: $color-primary;
-  // color: rgb(67,98,127);
+  color: $color-default;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #app {
   display: grid;
-  grid-template-rows: 175px auto;
+  grid-template-rows: 125px auto;
   grid-template-columns: repeat(7, 1fr);
 }
 
 header {
   grid-row-start: 1;
   grid-column: 1 / -1;
-  // background: $color-primary;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -76,7 +73,7 @@ header {
 main {
   grid-row-start: 2;
   grid-column: 1 / 8;
-  margin: 0 25px 25px 25px;
+  margin: 25px;
 }
 
 @media(max-width: 700px){
@@ -119,9 +116,9 @@ main {
   border: 0px;
   border-radius: $radius-def;
   cursor: pointer;
-  font-size: 0.9em;
-  font-weight: bolder;
-  padding: 20px;
+  font-size: 0.8em;
+  // font-weight: bolder;
+  padding: 17px;
   text-align: center;
   text-transform: uppercase;
   transition: $t-def;
@@ -130,19 +127,26 @@ main {
   }
 }
 .btn-primary {
-  background: $color-primary;
-  border: 1px solid $color-primary;
+  background: $color-default;
+  border: 1px solid $color-default;
   color: #fff;
   &:hover{
-    background: rgba($color: $color-primary, $alpha: 0.8);
+    background: rgba($color: $color-default, $alpha: 0.9);
+  }
+  &:active{
+    background: $color-default;
   }
 }
 .btn-secondary {
   // background: #fff;
-  border: 1px solid $color-primary;
-  color: $color-primary;
+  border: 1px solid $color-default;
+  color: $color-default;
   &:hover {
-    background: rgba($color: $color-primary, $alpha: 0.8);
+    background: rgba($color: $color-default, $alpha: 0.9);
+    color: #fff;
+  }
+  &:active{
+    background: $color-default;
     color: #fff;
   }
 }
