@@ -44,22 +44,21 @@ window.addEventListener("scroll", () => {
 <style lang="scss" scoped>
 @import "../assets/css/_variables.scss";
 .link_active {
-  color: $color-primary;
+  color: rgba($color: #fff, $alpha: 0.2);
 }
 @media (max-width: 700px) {
   .link_active {
-    // background: none;
-    // color: rgba($color: #999, $alpha: 0.5)!important;
-    opacity: 0.5;
+    background: none;
+    opacity: 0.9;
   }
 }
 
 nav {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background: #fff;
+  grid-template-columns: repeat(9, 1fr);
+  background: $color-primary;
   // box-shadow: $box-shadow;
-  border-bottom: $border-gray;
+  // border-bottom: $border-gray;
   // border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.5);
   height: 125px;
   // box-shadow: $box-shadow;
@@ -68,8 +67,7 @@ nav {
 ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column: 4 / 5;
-  grid-gap: 100px;
+  grid-column: 4 / 7;
 }
 li {
   text-align: center;
@@ -78,13 +76,15 @@ li {
     display: grid;
     align-items: center;
     // align-content: center;
-    color: rgba($color: #999, $alpha: 0.4);
+    color: rgba($color: #fff, $alpha: 0.8);
     font-weight: 500;
     font-size: 0.8em;
     height: 100%;
-    transition: 0s !important;
+    padding: 0 15px;
+    // transition: 0s !important;
     &:hover {
-      color: $color-primary;
+      background: rgba($color: #000, $alpha: 0.5);
+      color: rgba($color: #fff, $alpha: 0.8);
     }
   }
   i {
@@ -108,8 +108,6 @@ li {
     display: grid;
     align-content: center;
     bottom: 0px;
-    border-top: $border-gray;
-    // box-shadow: $box-shadow;
     height: 70px;
     left: 0px;
     position: absolute;
@@ -125,7 +123,6 @@ li {
       }
 
       a {
-        color: $color-primary;
         cursor: pointer;
         // display: block;
         font-size: 0.6em;
@@ -133,6 +130,7 @@ li {
         text-transform: uppercase;
         &:hover {
           background: transparent;
+          // color: #000;
         }
       }
     }

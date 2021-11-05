@@ -18,9 +18,6 @@ export default {
     Nav,
   },
 };
-
-
-
 </script>
 
 <style lang="scss">
@@ -76,8 +73,8 @@ main {
   margin: 25px;
 }
 
-@media(max-width: 700px){
-  main{
+@media (max-width: 700px) {
+  main {
     margin: 0;
   }
 }
@@ -91,7 +88,7 @@ main {
 }
 
 .hover:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -127,28 +124,26 @@ main {
   }
 }
 .btn-primary {
-  background: $color-default;
-  border: 1px solid $color-default;
+  background: #111;
+  border: 1px solid #111;
   color: #fff;
-  &:hover{
-    background: rgba($color: $color-default, $alpha: 0.9);
+  &:hover {
+    background: rgba($color: #111, $alpha: 0.9);
   }
-  &:active{
-    background: $color-default;
-  }
+  // &:active {
+  //   background: rgba($color: #111, $alpha: 0.9);
+  // }
 }
 .btn-secondary {
   // background: #fff;
-  border: 1px solid $color-default;
-  color: $color-default;
+  border: 1px solid #111;
+  color: #111;
   &:hover {
-    background: rgba($color: $color-default, $alpha: 0.9);
-    color: #fff;
+    background: rgba($color: #ccc, $alpha: 0.2);
   }
-  &:active{
-    background: $color-default;
-    color: #fff;
-  }
+  // &:active {
+  //   background: rgba($color: #111, $alpha: 0.1);
+  // }
 }
 
 @media (max-width: 700px) {

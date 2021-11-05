@@ -133,7 +133,7 @@ p{
   font-size: 10vw;
 }
 p{
-  font-size: 4vw;
+  font-size: 1em;
   font-weight: 700;
 }
   article {
