@@ -2,23 +2,18 @@
   <nav>
     <ul>
       <li @click="toTop()">
-        <router-link to="/"><i class="fas fa-home"></i>Home</router-link>
+        <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
-      <li @click="toTop()">
+      <!-- <li @click="toTop()">
         <router-link to="/sobre"
           ><i class="fas fa-running"></i>Sobre</router-link
         >
-      </li>
+      </li> -->
       <li @click="toTop()">
         <router-link to="/projetos"
           ><i class="fas fa-gamepad"></i>Projetos</router-link
         >
       </li>
-      <!-- <li @click="toTop()">
-        <router-link to="/contato"
-          ><i class="fas fa-share-alt"></i>Contato</router-link
-        >
-      </li> -->
     </ul>
   </nav>
 </template>
@@ -44,24 +39,29 @@ window.addEventListener("scroll", () => {
 <style lang="scss" scoped>
 @import "../assets/css/_variables.scss";
 .link_active {
-  color: rgba($color: #fff, $alpha: 0.2);
+  color: rgba($color: $color-primary, $alpha: 0.4);
+  &:hover {
+    cursor: auto;
+  }
 }
 @media (max-width: 700px) {
   .link_active {
-    opacity: 0.4;
+    background: none;
+    opacity: 0.9;
   }
 }
 
 nav {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  background: $color-primary;
+  border-bottom: $border-default;
+  background: #fff;
   height: 125px;
 }
 
 ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column: 4 / 7;
 }
 li {
@@ -70,21 +70,19 @@ li {
   a {
     display: grid;
     align-items: center;
-    color: rgba($color: #fff, $alpha: 0.8);
+    color: $color-primary;
     font-weight: 500;
     font-size: 0.8em;
     height: 100%;
     padding: 0 15px;
-    &:hover {
-      background: rgba($color: #000, $alpha: 0.5);
-      color: rgba($color: #fff, $alpha: 0.8);
-    }
   }
   i {
     font-size: 2.6em;
     width: 100%;
   }
- 
+  &:hover {
+    background: rgba($color: $color-primary, $alpha: 0.07);
+  }
   @media (max-width: 700px) {
     &:hover {
       background: none;

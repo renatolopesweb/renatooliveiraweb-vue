@@ -2,157 +2,169 @@
   <section>
     <article>
       <div>
-        <h1>RENATO7OLIVEIRA</h1>
-      <p>A Front-End Web Developer passionate about creating interactive applications  and experiences on the web.</p>
+        <h1>RENATO<span>7</span>OLIVEIRA</h1>
+        <p>FRONTEND / UX & UI</p>
       </div>
     </article>
 
-    <section class="home-grid-nav">
+    <div class="about">
       <div>
-        <span>
-          <router-link to="/sobre"
-            ><i class="fas fa-running" @click="toTop()"></i
-          ></router-link>
-          <p>Veja a minha história</p>
-        </span>
+        <figure>
+          <img
+            src="../assets/images/renato7oliveira-about.jpg"
+            alt="renato7oliveira"
+            title="renato7oliveira"
+            class="about-photo-class"
+          />
+        </figure>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
+          distinctio optio explicabo velit laborum! Temporibus, ab recusandae
+          optio repellat in maiores quaerat unde a, voluptates saepe impedit
+          ducimus veritatis dolorum!
+        </p>
       </div>
       <div>
-        <span>
-          <router-link to="/projetos"
-            ><i class="fas fa-gamepad" @click="toTop()"></i
-          ></router-link>
-          <p>Confira alguns projetos</p>
-        </span>
+        <figure>
+          <i class="fas fa-mug-hot"></i>
+        </figure>
+        <h2>Code</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+          nesciunt laudantium reprehenderit
+        </p>
+        <ul>
+          <li>Tec A</li>
+          <li>Tec A</li>
+          <li>Tec A</li>
+          <li>Tec A</li>
+        </ul>
       </div>
-    </section>
+      <div>
+        <figure>
+          <i class="far fa-eye"></i>
+        </figure>
+        <h2>Design</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+          nesciunt laudantium reprehenderit
+        </p>
+        <ul>
+          <li>Tec A</li>
+          <li>Tec A</li>
+          <li>Tec A</li>
+          <li>Tec A</li>
+        </ul>
+      </div>
+    </div>
   </section>
 </template>
-
-<script>
-import fontBowlby from '../../node_modules/@fontsource/bowlby-one';
-fontBowlby
-export default {
-  methods: {
-    toTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 @import "../assets/css/_variables.scss";
 
-// section{
-//   display: grid;
-  
-// }
-
 article {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  // height: 100vh;
   align-items: center;
   align-content: center;
-  height: calc(100vh - 175px);
+  height: calc(100vh - 125px);
   text-align: center;
-  img {
-    background: $color-primary;
-    border-radius: 100%;
-    margin: 0 auto 10px auto;
-    max-width: 125px;
-    filter: saturate(7%);
-  }
-  div{
+  div {
     grid-column: 3 / 4;
   }
-}
-h1,
-h2 {
-  font-weight: 900;
-  letter-spacing: -3px;
-  // font-family: "Bowlby One", cursive;
-  font-size: 5vw;
-}
-h1 {
-  color: $color-primary;
-}
-h2 {
-  color: rgba($color: $color-primary, $alpha: 0.5);
-}
-p{
-  color: $color-default;
-  font-size: 1.5vw;
-}
-
-// GRID
-
-.home-grid-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
-  height: calc(92.5vh - 75px);
-  margin-top: 25px;
-  div {
-    display: grid;
-    align-content: center;
-    align-items: center;
-    border: $border-gray;
+  span {
+    font-size: 5.4vw;
+  }
+  h1 {
     color: $color-primary;
-    padding: 25px;
-    text-align: center;
+    font-size: 5vw;
+    font-weight: 900;
+    letter-spacing: -3px;
+  }
+  p {
+    color: $color-default;
+    color: $color-primary;
+    font-size: 3.5vw;
+    font-weight: 300;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid rgba($color: $color-primary, $alpha: 0.1);
+  height: calc(100vh - 68px);
+  // align-items: center;
+  // align-content: center;
+  // text-align: center;
+
+  div {
+    color: $color-primary;
+    padding: 40px 20px;
+    figure {
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      border-radius: 100%;
+    }
     i {
-      color: $color-primary;
       font-size: 6em;
+      // height: 125px;
     }
     p {
-      color: $color-primary;
-      font-size: 1.3em;
-      margin: 0 25px;
+      font-size: 1.2em;
+      line-height: 30px;
+      margin: 15px 0;
     }
-    &:hover {
-      background: #fff;
-      i {
-        transform: scale(1.2);
-        &:hover{
-          transform: scale(1.4);
-        }
-        &:active {
-          transform: scale(1);
-        }
-      }
+    h2 {
+      font-size: 2.2em;
+      font-weight: lighter;
+      margin-top: 25px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    li {
+      font-size: 1.2em;
+      list-style-type: circle;
+      margin-left: 20px;
     }
   }
+}
+.about div:nth-child(2) {
+  border-left: $border-default;
+  border-right: $border-default;
 }
 
 @media (max-width: 700px) {
-  h1{
-  font-size: 11vw;
-}
-p{
-  font-size: 1.2em;
-  font-weight: 700;
-}
   article {
     height: calc(100vh - 70px);
-  }
-  .home-grid-nav {
-    grid-template-columns: 1fr;
-    grid-gap: 15px;
-    height: calc(100vh + 80px);
-    margin: 0px;
-    // margin: 15px 0px 0px 15px;
-    div {
-      i {
-        font-size: 4em;
-      }
-      p {
-        margin: 0 15px;
-      }
+    h1 {
+      font-size: 10vw;
     }
+    span {
+      font-size: 10.5vw;
+    }
+    p {
+      font-size: 6.5vw;
+      font-weight: 500;
+    }
+  }
+  .about {
+    grid-template-columns: 1fr;
+    border-top: 0;
+    height: auto;
+  }
+  .about div:nth-child(2) {
+    border-left: 0;
+    border-right: 0;
+  }
+  .about div:nth-child(3) {
+    padding-bottom: 100px;
+}
+  .about div{
+    border-top: $border-default;
   }
 }
 </style>

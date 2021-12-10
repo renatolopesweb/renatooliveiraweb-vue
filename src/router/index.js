@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     // name: 'Home',
-    meta: { title: pageTitle + 'WEBDESIGNER', description: 'RENATO7OLIVEIRA · WEBDESIGNER' },
+    meta: { title: pageTitle + 'FRONTEND / UX & UI', description: 'RENATO7OLIVEIRA · FRONTEND / UX & UI' },
     component: Home
   },
 

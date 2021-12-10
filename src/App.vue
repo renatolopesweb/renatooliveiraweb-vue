@@ -43,8 +43,8 @@ $t-def: 0.2s;
 }
 html {
   overflow-y: scroll;
-  // background: rgba($color: $color-primary, $alpha: 0.09);
-  background: #fafafa;
+  background: rgba($color: $color-primary, $alpha: 0.04);
+  // background: #000;
 }
 html,
 body {
@@ -70,13 +70,7 @@ header {
 main {
   grid-row-start: 2;
   grid-column: 1 / 8;
-  margin: 25px;
-}
-
-@media (max-width: 700px) {
-  main {
-    margin: 0;
-  }
+  // margin: 25px;
 }
 
 // HOVER
@@ -124,11 +118,11 @@ main {
   }
 }
 .btn-primary {
-  background: #111;
-  border: 1px solid #111;
+  background: $color-primary;
+  border: 2px solid $color-primary;
   color: #fff;
   &:hover {
-    background: rgba($color: #111, $alpha: 0.9);
+    background: rgba($color: $color-primary, $alpha: 0.9);
   }
   // &:active {
   //   background: rgba($color: #111, $alpha: 0.9);
@@ -136,10 +130,11 @@ main {
 }
 .btn-secondary {
   // background: #fff;
-  border: 1px solid #111;
-  color: #111;
+  border: 2px solid rgba($color: $color-primary, $alpha: 0.3);
+  color: rgba($color: $color-primary, $alpha: 0.8);
   &:hover {
-    background: rgba($color: #ccc, $alpha: 0.2);
+    background: rgba($color: $color-primary, $alpha: 0.1);
+    border: 2px solid rgba($color: $color-primary, $alpha: 0.1);
   }
   // &:active {
   //   background: rgba($color: #111, $alpha: 0.1);
@@ -153,7 +148,6 @@ main {
   }
   main {
     grid-column: 1 / -1;
-    padding-bottom: 15vh;
   }
 }
 
