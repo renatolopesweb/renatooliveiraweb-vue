@@ -1,170 +1,178 @@
 <template>
   <section>
-    <article>
-      <div>
-        <h1>RENATO<span>7</span>OLIVEIRA</h1>
-        <p>FRONTEND / UX & UI</p>
-      </div>
-    </article>
-
-    <div class="about">
-      <div>
-        <figure>
-          <img
-            src="../assets/images/renato7oliveira-about.jpg"
-            alt="renato7oliveira"
-            title="renato7oliveira"
-            class="about-photo-class"
-          />
-        </figure>
+    <section class="section-hello">
+      <article>
+        <h2>
+          Olá,<br />
+          Sou o <span>Renato</span><br />
+          Web Designer
+        </h2>
+        <!-- <p>
+          <a href="" class="btn btn-primary"
+            ><i class="fas fa-gamepad"></i> Projetos</a
+          >
+        </p> -->
+      </article>
+      <figure>
+        <img
+          src="../assets/images/renato-oliveira-web.jpg"
+          alt="Renato Oliveira Web"
+          title="Renato Oliveira Web"
+        />
+      </figure>
+    </section>
+    <section class="section-about">
+      <article>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
-          distinctio optio explicabo velit laborum! Temporibus, ab recusandae
-          optio repellat in maiores quaerat unde a, voluptates saepe impedit
-          ducimus veritatis dolorum!
+          Meu nome é Renato Oliveira, sou de São Paulo/SP, casado com a Delma,
+          pai da Ana Luiza e da "Cyndi". Adepto ao café, água e
+           <a href="">fotos</a>.
         </p>
-      </div>
-      <div>
-        <figure>
-          <i class="fas fa-mug-hot"></i>
-        </figure>
-        <h2>Code</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-          nesciunt laudantium reprehenderit
+          +10 anos que trabalho na web com desenvolvimento frontend e
+          gerenciamento de projetos digitais. Já fiz parte de equipes de TI,
+          Comunicação & Marketing. Minha formação é Comunicação Web pela UNIP.
         </p>
-        <ul>
-          <li>Tec A</li>
-          <li>Tec A</li>
-          <li>Tec A</li>
-          <li>Tec A</li>
-        </ul>
-      </div>
-      <div>
-        <figure>
-          <i class="far fa-eye"></i>
-        </figure>
-        <h2>Design</h2>
+        <h2>Contato</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-          nesciunt laudantium reprehenderit
+          Me encontre nessas redes:
+          <span v-for="item in social" :key="item.id">
+            <a :href="item.url" target="_blank" :title="item.title"
+              ><i :class="item.img" aria-hidden="true"></i
+            ></a>
+          </span>
         </p>
-        <ul>
-          <li>Tec A</li>
-          <li>Tec A</li>
-          <li>Tec A</li>
-          <li>Tec A</li>
-        </ul>
-      </div>
-    </div>
+      </article>
+    </section>
   </section>
 </template>
 
-<style lang="scss" scoped>
-@import "../assets/css/_variables.scss";
+<script>
+export default {
+  data() {
+    return {
+      social: [
+        {
+          title: "Linkedin",
+          img: "fab fa-linkedin",
+          url: "https://www.linkedin.com/in/renato7oliveira",
+        },
+        {
+          title: "Github",
+          img: "fab fa-github",
+          url: "https://github.com/renato7oliveira",
+        },
+        {
+          title: "Instagram",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renato7oliveira",
+        },
+      ],
+    };
+  },
+};
+</script>
 
-article {
+<style lang="scss" scoped>
+.section-hello {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  align-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "description figure";
+  // grid-gap: 50px;
   height: calc(100vh - 125px);
-  text-align: center;
-  div {
-    grid-column: 3 / 4;
+  align-items: center;
+  article {
+    grid-area: description;
+    h2 {
+      font-size: 3em;
+      font-weight: 900;
+      // line-height: 12vh;
+      span {
+        color: var(--color-primary);
+      }
+    }
   }
-  span {
-    font-size: 5.4vw;
+  figure {
+    grid-area: figure;
+    img {
+      filter: grayscale(1);
+      border: 50px double #f0f0f0;
+      border-radius: 100%;
+      transition: var(--default-transition);
+      width: 100%;
+      &:hover {
+        cursor: none;
+        filter: grayscale(0);
+      }
+    }
   }
-  h1 {
-    color: $color-primary;
-    font-size: 5vw;
-    font-weight: 900;
-    letter-spacing: -3px;
+}
+.section-about {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  align-items: center;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 1.2em;
+  height: calc(100vh - 50px);
+  left: 0;
+  position: absolute;
+  article {
+    grid-column: 2 / 2;
   }
   p {
-    color: $color-default;
-    color: $color-primary;
-    font-size: 3.5vw;
-    font-weight: 300;
+    margin-bottom: 40px;
   }
-}
-
-.about {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 2px solid rgba($color: $color-primary, $alpha: 0.1);
-  height: calc(100vh - 68px);
-  // align-items: center;
-  // align-content: center;
-  // text-align: center;
-
-  div {
-    color: $color-primary;
-    padding: 40px 20px;
-    figure {
-      text-align: center;
-    }
-    img {
-      width: 150px;
-      border-radius: 100%;
-    }
-    i {
-      font-size: 6em;
-      // height: 125px;
-    }
-    p {
-      font-size: 1.2em;
-      line-height: 30px;
-      margin: 15px 0;
-    }
-    h2 {
-      font-size: 2.2em;
-      font-weight: lighter;
-      margin-top: 25px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-    li {
-      font-size: 1.2em;
-      list-style-type: circle;
-      margin-left: 20px;
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  i {
+    font-size: 1.4em;
+    margin: 0 5px;
+    &:hover{
+      opacity: 0.5;
     }
   }
 }
-.about div:nth-child(2) {
-  border-left: $border-default;
-  border-right: $border-default;
+@media (max-width: 1100px) {
+  .section-hello {
+    padding: 0 25px;
+  }
+  .section-about {
+    padding: 50px;
+  }
 }
 
 @media (max-width: 700px) {
-  article {
-    height: calc(100vh - 70px);
-    h1 {
-      font-size: 10vw;
-    }
-    span {
-      font-size: 10.5vw;
-    }
-    p {
-      font-size: 6.5vw;
-      font-weight: 500;
-    }
-  }
-  .about {
+  .section-hello {
     grid-template-columns: 1fr;
-    border-top: 0;
+    grid-template-areas:
+      "figure"
+      "description";
+    // grid-gap: 50px;
+    align-content: center;
+    // height: calc(100vh - 150px);
+    height: 100vh;
+    text-align: center;
+    article {
+      h2 {
+        font-size: 2em;
+        // line-height: 6vh;
+      margin-bottom: 50px;
+      }
+    }
+    figure {
+      img {
+        border: 25px double #f0f0f0;
+        width: 75%;
+      }
+    }
+  }
+  .section-about {
+    grid-template-columns: 1fr;
     height: auto;
-  }
-  .about div:nth-child(2) {
-    border-left: 0;
-    border-right: 0;
-  }
-  .about div:nth-child(3) {
-    padding-bottom: 100px;
-}
-  .about div{
-    border-top: $border-default;
+    padding: 25px;
   }
 }
 </style>

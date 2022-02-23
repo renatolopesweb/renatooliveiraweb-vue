@@ -4,13 +4,13 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const pageTitle = 'RENATO7OLIVEIRA · '
+const pageTitle = 'RENATO OLIVEIRA WEB · '
 const routes = [
 
   {
     path: '/',
     // name: 'Home',
-    meta: { title: pageTitle + 'FRONTEND / UX & UI', description: 'RENATO7OLIVEIRA · FRONTEND / UX & UI' },
+    meta: { title: pageTitle + 'FRONTEND / UX & UI', description: 'RENATO OLIVEIRA WEB · FRONTEND / UX & UI' },
     component: Home
   },
 
@@ -22,17 +22,10 @@ const routes = [
   },
 
   {
-    path: '/projetos',
+    path: '/links',
     // name: 'frontend',
-    meta: { title: pageTitle + 'PROJETOS' },
-    component: () => import('../views/Projects.vue')
-  },
-
-  {
-    path: '/contato',
-    name: 'Contact',
-    meta: { title: pageTitle + 'CONTATO' },
-    component: () => import('../views/Contact.vue')
+    meta: { title: pageTitle + 'LINKS' },
+    component: () => import('../views/Links.vue')
   },
 
   {

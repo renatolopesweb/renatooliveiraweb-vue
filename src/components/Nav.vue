@@ -4,14 +4,14 @@
       <li @click="toTop()">
         <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
-      <!-- <li @click="toTop()">
+      <li @click="toTop()">
         <router-link to="/sobre"
           ><i class="fas fa-running"></i>Sobre</router-link
         >
-      </li> -->
+      </li>
       <li @click="toTop()">
-        <router-link to="/projetos"
-          ><i class="fas fa-gamepad"></i>Projetos</router-link
+        <router-link to="/links"
+          ><i class="fas fa-gamepad"></i>Links</router-link
         >
       </li>
     </ul>
@@ -37,53 +37,53 @@ window.addEventListener("scroll", () => {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/_variables.scss";
 .link_active {
-  color: rgba($color: $color-primary, $alpha: 0.4);
+  color: var(--color-black);
   &:hover {
     cursor: auto;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .link_active {
     background: none;
-    opacity: 0.9;
+    opacity: 0.4;
   }
 }
 
 nav {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  border-bottom: $border-default;
   background: #fff;
-  height: 125px;
+  height: 100px;
 }
 
 ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column: 4 / 7;
+  display: flex;
 }
 li {
-  text-align: center;
   text-transform: uppercase;
   a {
     display: grid;
     align-items: center;
-    color: $color-primary;
-    font-weight: 500;
+    color: var(--color-primary);
     font-size: 0.8em;
+    font-weight: 700;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 25px;
+    &:hover {
+      background: rgba($color: #f0f0f0, $alpha: 0.7);
+    }
+    &:active {
+      background: #f0f0f0;
+      color: var(--color-black);
+    }
   }
   i {
+    display: none;
     font-size: 2.6em;
     width: 100%;
   }
-  &:hover {
-    background: rgba($color: $color-primary, $alpha: 0.07);
-  }
-  @media (max-width: 700px) {
+
+  @media (max-width: 800px) {
     &:hover {
       background: none;
     }
@@ -91,31 +91,36 @@ li {
 }
 
 .header-mini {
-  height: 70px;
+  height: 50px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   nav {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-content: center;
     bottom: 0px;
-    height: 70px;
+    height: 50px;
     left: 0px;
     position: absolute;
     position: fixed;
+    text-align: center;
     width: 100%;
     z-index: 2;
     ul {
-      grid-column: 1 / -1;
-      grid-gap: 0;
+      grid-column: 2;
+      grid-gap: 25px;
       i {
-        font-size: 2.6em;
+        display: block;
+        font-size: 1.8em;
         margin-bottom: 5px;
       }
 
       a {
+        color: var(--color-black);
         cursor: pointer;
         font-size: 0.6em;
+        padding: 0 15px;
         text-transform: uppercase;
         &:hover {
           background: transparent;
