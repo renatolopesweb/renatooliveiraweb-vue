@@ -26,7 +26,7 @@
         <p>
           Meu nome é Renato Oliveira, sou de São Paulo/SP, casado com a Delma,
           pai da Ana Luiza e da "Cyndi". Adepto ao café, água e
-           <a href="">fotos</a>.
+           <a href="https://www.flickr.com/people/195006687@N08/" target="_blank">fotos</a>.
         </p>
         <p>
           +10 anos que trabalho na web com desenvolvimento frontend e
