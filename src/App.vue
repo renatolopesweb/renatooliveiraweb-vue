@@ -31,7 +31,7 @@ export default {
   // COLORS
   --color-primary: #125db8;
   --color-primary: #5D5AA7;
-  --color-black: #111;
+  --color-black: #151526;
   // PROPERTIES
   --default-border-radius: 3px;
   --default-transition: 0.3s;
