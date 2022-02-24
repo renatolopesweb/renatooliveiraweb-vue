@@ -16,7 +16,7 @@
       <figure>
         <img
           src="../assets/images/renato-oliveira-web.jpg"
-          alt="Renato Oliveira Web"
+          alt="Renato Oliveira"
           title="Renato Oliveira Web"
         />
       </figure>
