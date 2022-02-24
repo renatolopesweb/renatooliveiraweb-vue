@@ -13,13 +13,13 @@
           >
         </p> -->
       </article>
-      <figure>
+      <!-- <figure>
         <img
           src="../assets/images/renato-oliveira-web.jpg"
           alt="Renato Oliveira Web"
           title="Renato Oliveira Web"
         />
-      </figure>
+      </figure> -->
     </section>
     <section class="section-about">
       <article>
