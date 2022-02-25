@@ -13,13 +13,13 @@
           >
         </p> -->
       </article>
-      <div>
+      <!-- <figure>
         <img
           src="../assets/images/renato-oliveira-web.jpg"
           alt="Renato Oliveira Web"
           title="Renato Oliveira Web"
         />
-      </div>
+      </figure> -->
     </section>
     <section class="section-about">
       <article>
@@ -92,7 +92,7 @@ export default {
       }
     }
   }
-  div {
+  figure {
     grid-area: figure;
     img {
       filter: grayscale(1);
@@ -162,7 +162,7 @@ export default {
       margin-bottom: 50px;
       }
     }
-    div {
+    figure {
       img {
         border: 25px double #f0f0f0;
         width: 75%;
