@@ -12,6 +12,11 @@
             ><i class="fas fa-gamepad"></i> Projetos</a
           >
         </p> -->
+        <span v-for="item in social" :key="item.id">
+          <a :href="item.url" target="_blank" :title="item.title"
+            ><i :class="item.img" aria-hidden="true"></i
+          ></a>
+        </span>
       </article>
       <figure>
         <img
@@ -24,24 +29,58 @@
     <section class="section-about">
       <article>
         <p>
-          Meu nome é Renato Oliveira, sou de São Paulo/SP, casado com a Delma,
-          pai da Ana Luiza e da "Cyndi". Adepto ao café, água e
-           <a href="https://www.flickr.com/people/195006687@N08/" target="_blank">fotos</a>.
+          Meu nome é Renato Oliveira, sou de São Paulo, casado com a Delma,
+          pai da Ana Luiza e da "Cyndi". +10 anos que trabalho na web com
+          desenvolvimento frontend e gerenciamento de projetos digitais.
         </p>
-        <p>
-          +10 anos que trabalho na web com desenvolvimento frontend e
-          gerenciamento de projetos digitais. Já fiz parte de equipes de TI,
-          Comunicação & Marketing. Minha formação é Comunicação Web pela UNIP.
-        </p>
-        <h2>Contato</h2>
-        <p>
-          Me encontre nessas redes:
-          <span v-for="item in social" :key="item.id">
-            <a :href="item.url" target="_blank" :title="item.title"
-              ><i :class="item.img" aria-hidden="true"></i
-            ></a>
-          </span>
-        </p>
+        <h2>Habilidades</h2>
+        <div class="skills">
+          <div>
+            <h2><i class="fas fa-code" aria-hidden="true"></i> Code</h2>
+            <ul>
+              <li>javaScript</li>
+              <li>typeScript</li>
+              <li>HTML5</li>
+              <li>Sass / CSS</li>
+            </ul>
+          </div>
+          <div>
+            <h2><i class="fas fa-tools" aria-hidden="true"></i> Framework</h2>
+            <ul>
+              <li>Angular</li>
+              <li>Electron</li>
+              <li>Ionic</li>
+              <li>Vue</li>
+            </ul>
+          </div>
+          <div>
+            <h2><i class="fas fa-eye" aria-hidden="true"></i> Visual</h2>
+            <ul>
+              <li>XD</li>
+              <li>Photoshop</li>
+              <li>Premiere</li>
+            </ul>
+          </div>
+          <div>
+            <h2>
+              <i class="fas fa-bullhorn" aria-hidden="true"></i> Marketing
+            </h2>
+            <ul>
+              <li>Wordpress</li>
+              <li>E-mail mkt</li>
+            </ul>
+          </div>
+        </div>
+        <!-- <footer>
+          <h2>Redes Sociais:</h2>
+          
+            <span v-for="item in social" :key="item.id">
+              <a :href="item.url" target="_blank" :title="item.title"
+                ><i :class="item.img" aria-hidden="true"></i
+              ></a>
+            </span>
+         
+        </footer> -->
       </article>
     </section>
   </section>
@@ -55,17 +94,17 @@ export default {
         {
           title: "Linkedin",
           img: "fab fa-linkedin",
-          url: "https://www.linkedin.com/in/renato7oliveira",
-        },
-        {
-          title: "Github",
-          img: "fab fa-github",
-          url: "https://github.com/renato7oliveira",
+          url: "https://www.linkedin.com/in/renatooliveiraweb",
         },
         {
           title: "Instagram",
           img: "fab fa-instagram",
-          url: "https://www.instagram.com/renato7oliveira",
+          url: "https://www.instagram.com/renatooliveiraweb",
+        },
+        {
+          title: "Github",
+          img: "fab fa-github-alt",
+          url: "https://github.com/renato7oliveira",
         },
       ],
     };
@@ -89,6 +128,15 @@ export default {
       // line-height: 12vh;
       span {
         color: var(--color-primary);
+      }
+    }
+    i {
+      color: var(--color-black);
+      font-size: 2.4em;
+      margin: 10px 10px 0 0;
+      &:hover {
+        color: var(--color-primary);
+        transform: translateY(-5px);
       }
     }
   }
@@ -120,19 +168,17 @@ export default {
   article {
     grid-column: 2 / 2;
   }
+  h2 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
   p {
     margin-bottom: 40px;
   }
   a {
     color: #fff;
     text-decoration: underline;
-  }
-  i {
-    font-size: 1.4em;
-    margin: 0 5px;
-    &:hover{
-      opacity: 0.5;
-    }
   }
 }
 @media (max-width: 1100px) {
@@ -159,7 +205,10 @@ export default {
       h2 {
         font-size: 2em;
         // line-height: 6vh;
-      margin-bottom: 50px;
+        // margin-bottom: 50px;
+      }
+      i {
+        font-size: 1.8em;
       }
     }
     figure {
@@ -173,6 +222,30 @@ export default {
     grid-template-columns: 1fr;
     height: auto;
     padding: 25px;
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  i {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1em;
+    margin: 15px 0;
+    text-transform: uppercase;
+  }
+  li {
+    font-size: 1.1em;
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 1100px) {
+  .skills {
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 75px;
   }
 }
 </style>

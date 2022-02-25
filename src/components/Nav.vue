@@ -4,11 +4,11 @@
       <li @click="toTop()">
         <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
-      <li @click="toTop()">
+      <!-- <li @click="toTop()">
         <router-link to="/sobre"
           ><i class="fas fa-running"></i>Sobre</router-link
         >
-      </li>
+      </li> -->
       <li @click="toTop()">
         <router-link to="/links"
           ><i class="fas fa-gamepad"></i>Links</router-link
