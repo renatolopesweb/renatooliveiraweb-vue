@@ -13,17 +13,17 @@ const routes = [
     component: Home
   },
 
-  {
-    path: '/sobre',
-    meta: { title: pageTitle + ' · SOBRE' },
-    component: () => import('../views/About.vue')
-  },
+  // {
+  //   path: '/sobre',
+  //   meta: { title: pageTitle + ' · SOBRE' },
+  //   component: () => import('../views/About.vue')
+  // },
 
-  {
-    path: '/links',
-    meta: { title: pageTitle + ' · LINKS' },
-    component: () => import('../views/Links.vue')
-  },
+  // {
+  //   path: '/links',
+  //   meta: { title: pageTitle + ' · LINKS' },
+  //   component: () => import('../views/Links.vue')
+  // },
 
   {
     path: '/*',
