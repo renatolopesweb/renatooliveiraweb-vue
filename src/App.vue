@@ -33,9 +33,9 @@ export default {
   --color-primary: #5D5AA7;
   --color-black: #151526;
   // PROPERTIES
-  --default-border-radius: 3px;
+  --default-border-radius: 5px;
   --default-transition: 0.3s;
-  --default-box-shadow: 15px 0px 10px rgba($color: #ccc, $alpha: 0.6);
+  --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
 }
 
 * {

@@ -7,11 +7,6 @@
           Sou o <span>Renato</span><br />
           Web Designer
         </h2>
-        <!-- <p>
-          <a href="" class="btn btn-primary"
-            ><i class="fas fa-gamepad"></i> Projetos</a
-          >
-        </p> -->
         <span v-for="item in social" :key="item.id">
           <a :href="item.url" target="_blank" :title="item.title"
             ><i :class="item.img" aria-hidden="true"></i
@@ -29,8 +24,8 @@
     <section class="section-about">
       <article>
         <p>
-          Meu nome é Renato Oliveira, sou de São Paulo, casado com a Delma,
-          pai da Ana Luiza e da "Cyndi". +10 anos que trabalho na web com
+          Meu nome é Renato Oliveira, sou de São Paulo, casado com a Delma, pai
+          da Ana Luiza e da "Cyndi". +10 anos que trabalho na web com
           desenvolvimento frontend e gerenciamento de projetos digitais.
         </p>
         <h2>Habilidades</h2>
@@ -38,27 +33,23 @@
           <div>
             <h2><i class="fas fa-code" aria-hidden="true"></i> Code</h2>
             <ul>
-              <li>javaScript</li>
-              <li>typeScript</li>
+              <li>JS / TS</li>
               <li>HTML5</li>
-              <li>Sass / CSS</li>
+              <li>Sass + CSS3</li>
             </ul>
           </div>
           <div>
             <h2><i class="fas fa-tools" aria-hidden="true"></i> Framework</h2>
             <ul>
               <li>Angular</li>
-              <li>Electron</li>
               <li>Ionic</li>
-              <li>Vue</li>
             </ul>
           </div>
           <div>
-            <h2><i class="fas fa-eye" aria-hidden="true"></i> Visual</h2>
+            <h2><i class="fas fa-eye" aria-hidden="true"></i> Design</h2>
             <ul>
               <li>XD</li>
               <li>Photoshop</li>
-              <li>Premiere</li>
             </ul>
           </div>
           <div>
@@ -71,16 +62,6 @@
             </ul>
           </div>
         </div>
-        <!-- <footer>
-          <h2>Redes Sociais:</h2>
-          
-            <span v-for="item in social" :key="item.id">
-              <a :href="item.url" target="_blank" :title="item.title"
-                ><i :class="item.img" aria-hidden="true"></i
-              ></a>
-            </span>
-         
-        </footer> -->
       </article>
     </section>
   </section>
@@ -155,6 +136,43 @@ export default {
     }
   }
 }
+@media (max-width: 1100px) {
+  .section-hello {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 700px) {
+  .section-hello {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "figure"
+      "description";
+    // grid-gap: 50px;
+    align-content: center;
+    // height: calc(100vh - 150px);
+    height: auto;
+    height: 100vh;
+    // padding: 50px 0;
+    text-align: center;
+    article {
+      h2 {
+        font-size: 2em;
+      }
+      i {
+        font-size: 1.8em;
+      }
+    }
+    figure {
+      img {
+        border: 15px double #f0f0f0;
+        width: 60%;
+      }
+    }
+  }
+}
+
+// ABOUT
+
 .section-about {
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.3fr;
@@ -181,43 +199,7 @@ export default {
     text-decoration: underline;
   }
 }
-@media (max-width: 1100px) {
-  .section-hello {
-    padding: 0 25px;
-  }
-  .section-about {
-    padding: 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  .section-hello {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "figure"
-      "description";
-    // grid-gap: 50px;
-    align-content: center;
-    // height: calc(100vh - 150px);
-    height: 100vh;
-    text-align: center;
-    article {
-      h2 {
-        font-size: 2em;
-        // line-height: 6vh;
-        // margin-bottom: 50px;
-      }
-      i {
-        font-size: 1.8em;
-      }
-    }
-    figure {
-      img {
-        border: 25px double #f0f0f0;
-        width: 75%;
-      }
-    }
-  }
+@media (max-width: 1300px) {
   .section-about {
     grid-template-columns: 1fr;
     height: auto;
@@ -225,9 +207,12 @@ export default {
   }
 }
 
+// SKILLS
+
 .skills {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
   i {
     font-size: 1em;
   }
@@ -238,14 +223,26 @@ export default {
   }
   li {
     font-size: 1.1em;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+  }
+  div {
+    background: rgba($color: #000000, $alpha: 0.1);
+    border-radius: var(--default-border-radius);
+    box-shadow: 15px 15px 0px rgba($color: #000, $alpha: 0.4);
+    padding: 15px 30px;
   }
 }
-@media (max-width: 1100px) {
+
+@media (max-width: 1300px) {
   .skills {
     flex-direction: column;
     gap: 25px;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
+    div {
+      box-shadow: 0px 0px 0px;
+    }
   }
 }
+
+// MEDIA QUERIE ALL
 </style>
