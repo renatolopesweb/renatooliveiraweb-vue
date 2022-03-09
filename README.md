@@ -1,5 +1,5 @@
 ## Portfolio Vue.js
-// URL -> https://www.renato7oliveira.com.br
+// URL -> https://www.renatooliveiraweb.com
 
 ### `Server Free`
 // Netlify -> https://app.netlify.com/

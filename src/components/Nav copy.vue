@@ -4,11 +4,11 @@
       <li @click="toTop()">
         <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
-      <!-- <li @click="toTop()">
+      <li @click="toTop()">
         <router-link to="/sobre"
           ><i class="fas fa-running"></i>Sobre</router-link
         >
-      </li> -->
+      </li>
       <li @click="toTop()">
         <router-link to="/links"
           ><i class="fas fa-external-link-alt"></i>Links</router-link
@@ -30,11 +30,10 @@ export default {
   },
 };
 
-// window.addEventListener("scroll", () => {
-//   const header = document.querySelector("nav");
-//   header.classList.toggle("header-mini", window.scrollY > 25);
-// });
-
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("nav");
+  header.classList.toggle("header-mini", window.scrollY > 25);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -49,14 +48,14 @@ export default {
   .link_active {
     background: none;
     color: var(--color-black);
-    // opacity: 0.4;
+    opacity: 0.4;
   }
 }
 
 nav {
   display: grid;
   background: #fff;
-  height: 70px;
+  height: 100px;
 }
 
 ul {
@@ -71,9 +70,13 @@ li {
     font-size: 1em;
     font-weight: 700;
     height: 100%;
-    margin-left: 35px;
+    padding: 0 30px;
     &:hover {
-      opacity: 0.4;
+      background: rgba($color: #f0f0f0, $alpha: 0.7);
+    }
+    &:active {
+      background: #f0f0f0;
+      color: var(--color-black);
     }
   }
   i {
@@ -94,7 +97,7 @@ li {
     align-content: center;
     bottom: 0px;
     box-shadow: 5px 2px 2px 0 rgb(0 0 0 / 55%), 0 3px 1px -2px rgb(0 0 0 / 55%), 0 10px 15px 0 rgb(0 0 0 / 55%);
-    height: 60px;
+    height: 50px;
     left: 0px;
     position: absolute;
     position: fixed;
@@ -114,7 +117,6 @@ li {
         color: var(--color-black);
         cursor: pointer;
         font-size: 0.6em;
-        margin-left: 0;
         padding: 0 15px;
         text-transform: uppercase;
         &:hover {

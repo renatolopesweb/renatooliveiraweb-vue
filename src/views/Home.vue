@@ -1,18 +1,6 @@
 <template>
   <section>
-    <section class="section-hello">
-      <article>
-        <h2>
-          Olá,<br />
-          Sou o <span>Renato</span><br />
-          Web Designer
-        </h2>
-        <span v-for="item in social" :key="item.id">
-          <a :href="item.url" target="_blank" :title="item.title"
-            ><i :class="item.img" aria-hidden="true"></i
-          ></a>
-        </span>
-      </article>
+    <article class="card">
       <figure>
         <img
           src="../assets/images/renato-oliveira-web.jpg"
@@ -20,50 +8,28 @@
           title="Renato Oliveira Web"
         />
       </figure>
-    </section>
-    <section class="section-about">
-      <article>
-        <p>
-          Meu nome é Renato Oliveira, sou de São Paulo, casado com a Delma, pai
-          da Ana Luiza e da "Cyndi". +10 anos que trabalho na web com
-          desenvolvimento frontend e gerenciamento de projetos digitais.
-        </p>
-        <h2>Habilidades</h2>
-        <div class="skills">
-          <div>
-            <h2><i class="fas fa-code" aria-hidden="true"></i> Code</h2>
-            <ul>
-              <li>JS / TS</li>
-              <li>HTML5</li>
-              <li>Sass + CSS3</li>
-            </ul>
-          </div>
-          <div>
-            <h2><i class="fas fa-tools" aria-hidden="true"></i> Framework</h2>
-            <ul>
-              <li>Angular</li>
-              <li>Ionic</li>
-            </ul>
-          </div>
-          <div>
-            <h2><i class="fas fa-eye" aria-hidden="true"></i> Design</h2>
-            <ul>
-              <li>XD</li>
-              <li>Photoshop</li>
-            </ul>
-          </div>
-          <div>
-            <h2>
-              <i class="fas fa-bullhorn" aria-hidden="true"></i> Marketing
-            </h2>
-            <ul>
-              <li>Wordpress</li>
-              <li>E-mail mkt</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </section>
+      <p>
+        Olá, sou o <span>Renato,</span> +10 anos de Frontend e Design de
+        Interface.
+      </p>
+      <p>
+        Moro em São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
+      </p>
+
+      <span v-for="item in social" :key="item.id" class="social-media">
+        <a :href="item.url" target="_blank" :title="item.title"
+          ><i :class="item.img" aria-hidden="true"></i
+        ></a>
+      </span>
+    </article>
+    <article class="card">
+      <figure>
+        <i class="fas fa-layer-group skills" aria-hidden="true"></i>
+      </figure>
+      <p v-for="(item, article) in skills" :key="article">
+        <span>{{ item.categ.content }}:</span> {{ item.list.content }}
+      </p>
+    </article>
   </section>
 </template>
 
@@ -87,6 +53,30 @@ export default {
           img: "fab fa-github-alt",
           url: "https://github.com/renato7oliveira",
         },
+        {
+          title: "Flickr",
+          img: "fab fa-flickr",
+          url: "https://github.com/renato7oliveira",
+        },
+      ],
+
+      skills: [
+        {
+          categ: { content: "Code" },
+          list: { content: "JS · TS · HTML5 · Sass + CSS3" },
+        },
+        {
+          categ: { content: "FW" },
+          list: { content: "Angular · Ionic" },
+        },
+        {
+          categ: { content: "Design" },
+          list: { content: "XD · Photoshop" },
+        },
+        {
+          categ: { content: "Marketing" },
+          list: { content: "Wordpress" },
+        },
       ],
     };
   },
@@ -94,155 +84,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.section-hello {
+span {
+  color: var(--color-primary);
+}
+
+section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "description figure";
-  // grid-gap: 50px;
-  height: calc(100vh - 125px);
-  align-items: center;
-  article {
-    grid-area: description;
-    h2 {
-      font-size: 3em;
-      font-weight: 900;
-      // line-height: 12vh;
-      span {
-        color: var(--color-primary);
-      }
-    }
-    i {
-      color: var(--color-black);
-      font-size: 2.4em;
-      margin: 10px 10px 0 0;
-      &:hover {
-        color: var(--color-primary);
-        transform: translateY(-5px);
-      }
-    }
-  }
-  figure {
-    grid-area: figure;
-    img {
-      filter: grayscale(1);
-      border: 50px double #f0f0f0;
-      border-radius: 100%;
-      transition: var(--default-transition);
-      width: 100%;
-      &:hover {
-        cursor: none;
-        filter: grayscale(0);
-      }
-    }
-  }
-}
-@media (max-width: 1100px) {
-  .section-hello {
-    padding: 0 25px;
-  }
-}
-@media (max-width: 700px) {
-  .section-hello {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "figure"
-      "description";
-    // grid-gap: 50px;
-    align-content: center;
-    // height: calc(100vh - 150px);
-    height: auto;
-    height: 100vh;
-    // padding: 50px 0;
-    text-align: center;
-    article {
-      h2 {
-        font-size: 2em;
-      }
-      i {
-        font-size: 1.8em;
-      }
-    }
-    figure {
-      img {
-        border: 15px double #f0f0f0;
-        width: 60%;
-      }
-    }
-  }
-}
-
-// ABOUT
-
-.section-about {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
-  align-items: center;
-  background: var(--color-primary);
-  color: #fff;
+  grid-gap: 25px;
   font-size: 1.2em;
-  height: calc(100vh - 50px);
-  left: 0;
-  position: absolute;
-  article {
-    grid-column: 2 / 2;
+  figure {
+    text-align: center;
+  }
+  img {
+    border-radius: 100%;
+    margin: 15px;
+    max-width: 40%;
   }
   h2 {
     font-size: 1.3em;
+    margin: 20px 0;
     text-transform: uppercase;
   }
-
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
   p {
-    margin-bottom: 40px;
+    line-height: 40px;
+    margin-bottom: 13px;
   }
   a {
-    color: #fff;
-    text-decoration: underline;
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-right: 10px;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  .skills {
+    color: var(--color-primary);
+    font-size: 6em;
+    margin-bottom: 30px;
   }
 }
-@media (max-width: 1300px) {
-  .section-about {
+@media (max-width: 1000px) {
+  section {
     grid-template-columns: 1fr;
     height: auto;
-    padding: 25px;
-  }
-}
-
-// SKILLS
-
-.skills {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  i {
-    font-size: 1em;
-  }
-  h2 {
-    font-size: 1em;
-    margin: 15px 0;
-    text-transform: uppercase;
-  }
-  li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  div {
-    background: rgba($color: #000000, $alpha: 0.1);
-    border-radius: var(--default-border-radius);
-    box-shadow: 15px 15px 0px rgba($color: #000, $alpha: 0.4);
-    padding: 15px 30px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .skills {
-    flex-direction: column;
-    gap: 25px;
-    padding-bottom: 50px;
-    div {
-      box-shadow: 0px 0px 0px;
+    padding: 25px 25px 85px 25px;
+    img {
+      max-width: 75%;
     }
   }
 }
-
-// MEDIA QUERIE ALL
 </style>

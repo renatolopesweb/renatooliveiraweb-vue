@@ -24,16 +24,15 @@ export default {
 </script>
 
 <style lang="scss">
-
 /* BOOT START */
 
 :root {
   // COLORS
+  --color-primary: #5d5aa7;
   --color-primary: #125db8;
-  --color-primary: #5D5AA7;
   --color-black: #151526;
   // PROPERTIES
-  --default-border-radius: 5px;
+  --default-border-radius: 4px;
   --default-transition: 0.3s;
   --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
 }
@@ -50,6 +49,7 @@ export default {
 html {
   overflow-y: scroll;
   background: #fafafa;
+  background: rgba($color: #ccc, $alpha: 0.2);
 }
 html,
 body {
@@ -63,7 +63,7 @@ body {
   grid-template-columns: 0.3fr 1fr 0.3fr;
 }
 h1 {
-  display: block!important;
+  display: block !important;
   font-size: 0.9em;
   span {
     color: var(--color-primary);
@@ -71,7 +71,7 @@ h1 {
 }
 p {
   font-size: 1.1em;
-  line-height: 40px;
+  // line-height: 40px;
   // margin-bottom: 40px;
 }
 
@@ -82,7 +82,9 @@ header {
   width: 100%;
   z-index: 1;
   background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  // border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 3px 1px -2px rgb(0 0 0 / 5%),
+    0 1px 5px 0 rgb(0 0 0 / 5%);
   div {
     display: flex;
     justify-content: space-between;
@@ -95,12 +97,65 @@ header {
 main {
   grid-row-start: 2;
   grid-column: 2 / 2;
-  margin-top: 25px;
+  // margin-top: 25px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   main {
     margin-top: 0;
+  }
+}
+
+// BTN
+
+.btn {
+  border: 0px;
+  border-radius: var(--default-border-radius);
+  cursor: pointer;
+  font-size: 0.7em;
+  font-weight: 500;
+  padding: 13px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: var(--default-transition);
+  i {
+    font-size: 0.9em !important;
+  }
+}
+@media (max-width: 800px) {
+  .btn {
+    display: block;
+    padding: 2px;
+    width: 100%;
+    // font-size: 0.6em;
+  }
+}
+.btn-primary {
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: #fff !important;
+  &:hover {
+    // background: var(--color-primary);
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+// CARD
+
+.card {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 3px 1px -2px rgb(0 0 0 / 5%),
+    0 1px 5px 0 rgb(0 0 0 / 5%);
+  padding: 50px 25px;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    padding: 15px 25px;
   }
 }
 
@@ -132,7 +187,7 @@ main {
 
 // HOVER
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   #app {
     grid-template-rows: 0 auto;
     grid-template-columns: 1fr;
@@ -159,7 +214,7 @@ main {
 .show-m {
   display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .show-d {
     display: none !important;
   }
