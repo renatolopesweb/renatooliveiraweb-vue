@@ -9,8 +9,7 @@
         />
       </figure>
       <p>
-        Olá, sou o <span>Renato,</span> +10 anos de Frontend e Design de
-        Interface.
+        Olá, sou o <span>Renato,</span> +10 anos de Frontend e Design.
       </p>
       <p>
         Moro em São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
@@ -24,7 +23,7 @@
     </article>
     <article class="card">
       <figure>
-        <i class="fas fa-layer-group skills" aria-hidden="true"></i>
+        <i class="fas fa-briefcase skills" aria-hidden="true"></i>
       </figure>
       <p v-for="(item, article) in skills" :key="article">
         <span>{{ item.categ.content }}:</span> {{ item.list.content }}
@@ -128,7 +127,17 @@ section {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 1000px) {
+
+@media (max-height: 628px) {
+  section{
+    article{
+      padding: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
   section {
     grid-template-columns: 1fr;
     height: auto;

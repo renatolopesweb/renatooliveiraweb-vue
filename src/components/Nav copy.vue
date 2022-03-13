@@ -44,7 +44,7 @@ window.addEventListener("scroll", () => {
     cursor: auto;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .link_active {
     background: none;
     color: var(--color-black);
@@ -90,7 +90,7 @@ li {
   height: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

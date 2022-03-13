@@ -45,7 +45,7 @@ export default {
     cursor: auto;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .link_active {
     background: none;
     color: var(--color-black);
@@ -56,7 +56,7 @@ export default {
 nav {
   display: grid;
   background: #fff;
-  height: 70px;
+  height: 65px;
 }
 
 ul {
@@ -87,7 +87,7 @@ li {
   height: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -113,7 +113,7 @@ li {
       a {
         color: var(--color-black);
         cursor: pointer;
-        font-size: 0.6em;
+        font-size: 0.7em;
         margin-left: 0;
         padding: 0 15px;
         text-transform: uppercase;

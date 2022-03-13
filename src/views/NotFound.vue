@@ -10,7 +10,6 @@
 <style lang="scss" scoped>
 
 article {
-  margin-top: 100px;
   text-align: center;
   a{
     color: var(--color-primary);

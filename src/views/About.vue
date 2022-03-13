@@ -83,7 +83,7 @@
     margin-bottom: 7px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   section{
     padding: 25px;
   }

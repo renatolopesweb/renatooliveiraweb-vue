@@ -5,17 +5,14 @@
       :key="article"
       class="card"
     >
-      <!-- <figure>
-        
+      <figure>
+        <a :href="item.url" target="_blank">
           <img :src="item.screen" :alt="item.title" :title="item.title" />
-        
-      </figure> -->
+        </a>
+      </figure>
       <div>
         <h2>{{ item.intro }}</h2>
-        <h3>
-          <a :href="item.url" class="hover" target="_blank">{{ item.title }}</a>
-        </h3>
-        <p>{{ item.stack }}</p>
+        <h3>{{ item.title }}</h3>
       </div>
     </article>
   </section>
@@ -27,52 +24,33 @@ export default {
     return {
       projects: {
         front: [
-          // {
-          //   intro: "Website",
-          //   title: "Cultivando Cia. de Teatro",
-          //   stack: "Angular / Bootstrap",
-          //   url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
-          //   screen: require("../assets/images/thumb-links-starbucks.jpg"),
-          // },
-          // {
-          //   intro: "APP Mobile",
-          //   title: "Watched",
-          //   stack: "Ionic / Primeface",
-          //   url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
-          //   screen: require("../assets/images/thumb-links-starbucks.jpg"),
-          // },
           {
-            intro: "LandPage",
+            intro: "Landpage",
             title: "Starbucks Clone",
-            stack: "Flex-Box",
             url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
             screen: require("../assets/images/thumb-links-starbucks.jpg"),
           },
           {
-            intro: "LandPage",
-            title: "CSS Challenge #1",
-            stack: "CSS-Grid / FontAwesome",
+            intro: "Landpage",
+            title: "Desafio CSS-Grid",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
             screen: require("../assets/images/thumb-links-canyon.jpg"),
           },
           {
-            intro: "LandPage",
+            intro: "Website",
             title: "Tesla Clone",
-            stack: "Flex-Box",
             url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
             screen: require("../assets/images/thumb-links-tesla.jpg"),
           },
           {
-            intro: "E-mail mkt (old)",
-            title: "VIVO",
-            stack: "HTML 1.0",
+            intro: "Email mkt (Old)",
+            title: "Vivo",
             url: "https://renato7oliveira.github.io/experimentos/Email_Mkt/Vivo/index.html",
             screen: require("../assets/images/thumb-links-email-mkt-vivo.jpg"),
           },
           {
-            intro: "Hotsite Interativo (old)",
+            intro: "Edge Animate (old)",
             title: "Street Fighter Tribute",
-            stack: "Adobe Edge Animate",
             url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
             screen: require("../assets/images/thumb-links-street-fighter.jpg"),
           },
@@ -100,13 +78,12 @@ export default {
 <style lang="scss" scoped>
 section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
   align-content: center;
   article {
-    padding: 25px 0;
+    padding: 0;
     &:hover {
-      // background: rgba($color: var(--color-primary), $alpha: 1);
       transform: translateY(-12px);
     }
     &:active {
@@ -119,22 +96,16 @@ section {
   }
   div {
     margin: 25px;
-    a {
-      color: var(--color-primary);
-      &:hover {
-        // text-decoration: underline;
-      }
-    }
   }
   h2 {
     font-size: 1em;
     font-weight: 500;
-    // text-transform: uppercase;
+    text-transform: uppercase;
   }
   h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 900;
-    margin: 10px 0;
+    margin-top: 10px;
   }
 }
 

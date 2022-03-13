@@ -59,7 +59,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 90px auto;
   grid-template-columns: 0.3fr 1fr 0.3fr;
 }
 h1 {
@@ -71,8 +71,6 @@ h1 {
 }
 p {
   font-size: 1.1em;
-  // line-height: 40px;
-  // margin-bottom: 40px;
 }
 
 header {
@@ -82,7 +80,6 @@ header {
   width: 100%;
   z-index: 1;
   background: #fff;
-  // border-bottom: 1px solid #f0f0f0;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 3px 1px -2px rgb(0 0 0 / 5%),
     0 1px 5px 0 rgb(0 0 0 / 5%);
   div {
@@ -100,7 +97,7 @@ main {
   // margin-top: 25px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   main {
     margin-top: 0;
   }
@@ -153,7 +150,7 @@ main {
   padding: 50px 25px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .card {
     padding: 15px 25px;
   }
@@ -187,7 +184,7 @@ main {
 
 // HOVER
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #app {
     grid-template-rows: 0 auto;
     grid-template-columns: 1fr;
@@ -214,7 +211,7 @@ main {
 .show-m {
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .show-d {
     display: none !important;
   }
