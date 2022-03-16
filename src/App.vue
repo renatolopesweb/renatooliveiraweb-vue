@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <header>
-      <div>
-        <h1 class="show-d">RENATO OLIVEIRA <span>WEB</span></h1>
-        <Nav />
-      </div>
-    </header>
+    <aside>
+      <Nav />
+    </aside>
     <main>
       <transition name="fade-view" mode="out-in">
         <router-view />
@@ -24,8 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-/* BOOT START */
-
+/* VARS */
 :root {
   // COLORS
   --color-primary: #5d5aa7;
@@ -49,6 +45,7 @@ export default {
 html {
   overflow-y: scroll;
   background: #fafafa;
+  background: #333;
   background: rgba($color: #ccc, $alpha: 0.2);
 }
 html,
@@ -57,86 +54,76 @@ body {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
 
-#app {
-  display: grid;
-  grid-template-rows: 90px auto;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
-}
-h1 {
-  display: block !important;
-  font-size: 0.9em;
-  span {
-    color: var(--color-primary);
-  }
-}
-p {
-  font-size: 1.1em;
+// TAGS
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
-header {
+h1 {
+  color: var(--color-primary);
+  font-size: 4.2em;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+article {
+  li {
+    font-size: 1.2em;
+    margin-top: 20px;
+    a {
+      color: var(--color-black);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#app {
   display: grid;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  grid-template-columns: 250px auto;
+  // grid-template-areas: "aside main";
+}
+
+@media (max-width: 1100px) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+}
+
+aside {
+  // grid-area: aside;
   background: #fff;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 3px 1px -2px rgb(0 0 0 / 5%),
-    0 1px 5px 0 rgb(0 0 0 / 5%);
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-row-start: 2;
-    grid-column: 2 / 2;
+  box-shadow: 0px 0px 5px 1px #ccc;
+  height: 100vh;
+  min-height: 100%;
+}
+@media (max-width: 1100px) {
+  aside {
+    height: 0;
+    min-height: 0;
   }
 }
 
 main {
-  grid-row-start: 2;
-  grid-column: 2 / 2;
-  // margin-top: 25px;
+  // grid-area: main;
+  padding: 25px 25px 25px 50px;
 }
 
 @media (max-width: 1100px) {
-  main {
-    margin-top: 0;
+  main{
+    padding: 25px;
   }
-}
-
-// BTN
-
-.btn {
-  border: 0px;
-  border-radius: var(--default-border-radius);
-  cursor: pointer;
-  font-size: 0.7em;
-  font-weight: 500;
-  padding: 13px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: var(--default-transition);
-  i {
-    font-size: 0.9em !important;
-  }
-}
-@media (max-width: 800px) {
-  .btn {
-    display: block;
-    padding: 2px;
-    width: 100%;
-    // font-size: 0.6em;
-  }
-}
-.btn-primary {
-  background: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  color: #fff !important;
-  &:hover {
-    // background: var(--color-primary);
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 0.5;
+  article {
+    padding-bottom: 50px;
   }
 }
 
@@ -153,44 +140,6 @@ main {
 @media (max-width: 1100px) {
   .card {
     padding: 15px 25px;
-  }
-}
-
-// HOVER
-
-.hover {
-  // display: inline-block;
-  position: relative;
-  color: var(--color-primary);
-}
-
-.hover:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-primary);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-// HOVER
-
-@media (max-width: 1100px) {
-  #app {
-    grid-template-rows: 0 auto;
-    grid-template-columns: 1fr;
-  }
-  main {
-    grid-column: 1 / -1;
   }
 }
 
