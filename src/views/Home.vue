@@ -60,16 +60,26 @@ article {
   display: grid;
   height: calc(100vh - 50px);
   align-content: center;
+  h1 {
+    // font-size: 4.6em;
+    font-size: 5vw;
+    margin: 0;
+  }
   h2 {
     color: var(--color-black);
-    font-size: 2.4em;
-    font-weight: 500;
+    // font-size: 3em;
+    font-size: 3vw;
+    font-weight: 900;
+    margin: 0;
   }
 }
 
 @media (max-width: 1100px) {
   article {
     text-align: center;
+    h1 {
+      font-size: 3em;
+    }
     h2 {
       font-size: 2em;
     }

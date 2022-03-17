@@ -4,7 +4,8 @@
     <ul>
       <li>Atualização em bem breve 2022❤</li>
     </ul>
-    <!-- <ul>
+    <!-- <h2>Web</h2>
+    <ul>
       <li v-for="(item, article) in projects.front"
       :key="article"><a :href="item.url" target="_blank">{{ item.title }}</a></li>
     </ul> -->

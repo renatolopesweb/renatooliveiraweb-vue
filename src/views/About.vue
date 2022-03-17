@@ -1,13 +1,40 @@
 <template>
   <article>
     <h1>Sobre</h1>
-    <div>
+    <div class="about">
+      <div class="description">
+
       <p>
         Olá, sou o <span><strong>Renato Oliveira</strong></span
         >, +10 anos que trabalho na web com Frontend e Design de Interface.
         Normalmente estou em divisões de Marketing, TI & Comunicação. Moro em
         São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
       </p>
+
+        <!-- <p>
+        I have been worked to make Web more than Search, Social and Porn,
+        helping out companies to make theirs ideas and products accessible since
+        2001.
+      </p>
+      <p>
+        Sophia's dad, Aline's husband and mama's beloved one, I'm always busy
+        trying to make them laugh.
+      </p>
+      <p>
+        Sometimes developing at the front-end, sometimes at the back, other
+        times creating layouts or taking care of user experience experiments, I
+        like to be useful.
+      </p>
+      <p>
+        Doesn't matter what, always trying to keep myself more fool than full
+        and trying to do my best.
+      </p>
+      <p>Discover more about me using those tabs above.</p> -->
+
+      
+      </div>
+
+
       <figure>
         <img
           src="../assets/images/renato-oliveira-web.jpg"
@@ -36,11 +63,19 @@
 </template>
 
 <style lang="scss" scoped>
-div {
+.about {
   display: grid;
-  grid-template-columns: auto 200px;
+  grid-template-columns: auto 150px;
   grid-template-areas: "desc photo";
   grid-gap: 25px;
+  .description {
+  grid-area: desc;
+}
+  p {
+  font-size: 1.2em;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
   img {
     grid-area: photo;
     border-radius: 100%;
@@ -52,12 +87,12 @@ div {
     }
   }
 }
-@media (max-width: 1100px) {
-  div {
+@media (max-width: 500px) {
+  .about {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "photo photo"
-      "desc desc";
+      "photo"
+      "desc";
     figure {
       text-align: center;
       img {
@@ -67,34 +102,10 @@ div {
     }
   }
 }
-p {
-  grid-area: desc;
-  font-size: 1.2em;
-  line-height: 35px;
-  margin-top: 15px;
-  margin-bottom: 45px;
-}
-span {
-  color: var(--color-primary);
-  text-transform: uppercase;
-}
-h2 {
-  color: var(--color-primary);
-  font-size: 1.8em;
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-h3 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-ul {
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
+
+
 li {
-  font-size: 1.2em;
   margin-bottom: 5px;
-  margin-top: 0px !important;
+  text-transform: uppercase;
 }
 </style>

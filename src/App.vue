@@ -44,9 +44,9 @@ export default {
 }
 html {
   overflow-y: scroll;
-  background: #fafafa;
   background: #333;
   background: rgba($color: #ccc, $alpha: 0.2);
+  background: #fafafa;
 }
 html,
 body {
@@ -66,6 +66,7 @@ h1 {
   color: var(--color-primary);
   font-size: 4.2em;
   font-weight: 900;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1100px) {
@@ -74,10 +75,31 @@ h1 {
   }
 }
 
+span {
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+
 article {
+
+h2 {
+  color: var(--color-primary);
+  font-size: 1.8em;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+ul {
+  margin-bottom: 50px;
+}
+
   li {
     font-size: 1.2em;
-    margin-top: 20px;
+    margin-bottom: 20px;
     a {
       color: var(--color-black);
       &:hover {
@@ -102,7 +124,8 @@ article {
 aside {
   // grid-area: aside;
   background: #fff;
-  box-shadow: 0px 0px 5px 1px #ccc;
+  // box-shadow: 0px 0px 5px 1px #ccc;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
   height: 100vh;
   min-height: 100%;
 }
