@@ -49,6 +49,7 @@
       <li>Angular / Vue.js</li>
       <li>Ionic</li>
       <li>HTML5 / Sass / CSS3</li>
+      <li>Github</li>
     </ul>
     <h3>Visual</h3>
     <ul>
