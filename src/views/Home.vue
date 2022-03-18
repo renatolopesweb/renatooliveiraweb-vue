@@ -64,6 +64,7 @@ article {
     // font-size: 4.6em;
     font-size: 5vw;
     margin: 0;
+    // animation: hello 0.5s ease-in-out;
   }
   h2 {
     color: var(--color-black);
@@ -85,4 +86,14 @@ article {
     }
   }
 }
+
+@keyframes hello{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 </style>

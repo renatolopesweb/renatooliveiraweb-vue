@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
 /* VARS */
 :root {
   // COLORS
@@ -29,7 +30,7 @@ export default {
   --color-black: #151526;
   // PROPERTIES
   --default-border-radius: 4px;
-  --default-transition: 0.3s;
+  --default-transition: 0.1s;
   --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
 }
 
@@ -39,13 +40,10 @@ export default {
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  animation: fadeIn 0.1s ease-out;
   transition: var(--default-transition);
 }
 html {
   overflow-y: scroll;
-  background: #333;
-  background: rgba($color: #ccc, $alpha: 0.2);
   background: #fafafa;
 }
 html,
@@ -122,9 +120,7 @@ ul {
 }
 
 aside {
-  // grid-area: aside;
   background: #fff;
-  // box-shadow: 0px 0px 5px 1px #ccc;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
   height: 100vh;
   min-height: 100%;
@@ -137,7 +133,6 @@ aside {
 }
 
 main {
-  // grid-area: main;
   padding: 25px 25px 25px 50px;
 }
 
@@ -166,16 +161,6 @@ main {
   }
 }
 
-/* TRANSITIONS START */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* TRANSITIONS END */
 /* MEDIA QUERIES START */
 .show-d {
   display: grid;
