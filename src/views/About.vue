@@ -46,7 +46,7 @@
     <h2>Habilidades</h2>
     <h3>Code</h3>
     <ul>
-      <li>Angular</li>
+      <li>Angular / Vue.js</li>
       <li>Ionic</li>
       <li>HTML5 / Sass / CSS3</li>
     </ul>
