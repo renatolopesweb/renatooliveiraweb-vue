@@ -1,17 +1,13 @@
 <template>
   <article>
     <h1>Links</h1>
+    <h2>Web</h2>
     <ul>
-      <li>
-        Atualização em bem breve 2022<span class="heart">❤</span>, estou
-        arrumando a casa para deixar só o que for relevante
+      <li v-for="(item, article) in projects.front" :key="article">
+        <a :href="item.url" target="_blank">{{ item.title }}</a>
       </li>
     </ul>
-    <!-- <h2>Web</h2>
-    <ul>
-      <li v-for="(item, article) in projects.front"
-      :key="article"><a :href="item.url" target="_blank">{{ item.title }}</a></li>
-    </ul> -->
+    <p>Atualização em bem breve 2022 ❤</p>
   </article>
 </template>
 
@@ -22,19 +18,19 @@ export default {
       projects: {
         front: [
           {
-            title: "Starbucks Clone",
-            url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
-          },
-          {
-            title: "CSS Challenge #1",
+            title: "Landpage Genérica",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
           },
           {
-            title: "Tesla Clone",
+            title: "Landpage Starbucks Clone",
+            url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
+          },
+          {
+            title: "Header Tesla",
             url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
           },
           {
-            title: "E-mail Marketing (HTML 1.0)",
+            title: "E-mail Marketing VIVO (HTML 1.0)",
             url: "https://renato7oliveira.github.io/experimentos/Email_Mkt/Vivo/index.html",
           },
           {
@@ -47,8 +43,3 @@ export default {
   },
 };
 </script>
-<style>
-.heart {
-  color: red !important;
-}
-</style>

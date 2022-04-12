@@ -7,21 +7,30 @@
           Olá, sou o <span><strong>Renato Oliveira</strong></span
           >, +10 anos que trabalho na web com Frontend e Design (UI).
           Normalmente estou em divisões de Marketing, TI & Comunicação. Moro em
-          São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
+          São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi". Veja abaixo minhas <strong>habilidades</strong>.
         </p>
+        <!-- <p>
+          Olá, sou o <span><strong>Renato Oliveira</strong></span
+          >, +10 anos que trabalho na web com Frontend e Design (UI).
+          Normalmente estou em divisões de Marketing, TI & Comunicação. Moro em
+          São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
+        </p> -->
       </div>
       <figure>
         <img
-          src="../assets/images/renato-oliveira-web.jpg"
+          src="../assets/images/renato-oliveira-web22.jpg"
           alt="Renato Oliveira Web"
           title="Renato Oliveira Web"
         />
       </figure>
     </div>
-    <h2>Habilidades</h2>
     <section class="skills">
-      <article v-for="(item, article) in skills" :key="article">
-        <figure>
+      <article
+        v-for="(item, article) in skills"
+        :key="article"
+        :title="item.categ.content"
+      >
+        <figure :class="item.bg.content">
           <i :class="item.icon.content"></i>
         </figure>
         <div>
@@ -40,20 +49,22 @@ export default {
       skills: [
         {
           categ: { content: "Code" },
-          icon: { content: "fas fa-code" },
+          icon: { content: "fas fa-code-branch" },
+          bg: { content: "skills-bg-code" },
           list: {
-            content:
-              "ANGULAR · Ionic · TS · JS · Sass + CSS · HTML5 · NPM · Github",
+            content: "Angular · Vue · TS · JS · Sass + CSS · HTML5 · NPM · Github",
           },
         },
         {
-          categ: { content: "Design" },
+          categ: { content: "Visual" },
           icon: { content: "fab fa-sketch" },
+          bg: { content: "skills-bg-design" },
           list: { content: "XD · Photoshop" },
         },
         {
           categ: { content: "Marketing" },
           icon: { content: "fas fa-bullhorn" },
+          bg: { content: "skills-bg-mkt" },
           list: { content: "Wordpress · E-mail mkt" },
         },
       ],
@@ -64,24 +75,24 @@ export default {
 
 
 <style lang="scss" scoped>
+p {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 35px;
+}
 .about {
   display: grid;
   grid-template-columns: auto 175px;
   grid-template-areas: "desc photo";
-  grid-gap: 25px;
+  grid-gap: 75px;
   .description {
     grid-area: desc;
-  }
-  p {
-    font-size: 1.2em;
-    line-height: 30px;
-    margin-bottom: 22px;
   }
   img {
     grid-area: photo;
     border-radius: 100%;
     cursor: none;
-    filter: grayscale(1);
+    // filter: grayscale(1);
     width: 100%;
     &:hover {
       filter: grayscale(0);
@@ -107,16 +118,16 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
-  margin-top: 30px;
+  margin-top: 25px;
   figure {
     display: grid;
     align-content: center;
-    background-color: rgba($color: #ccc, $alpha: 0.5);
-    height: 160px;
+    // background-color: rgba($color: #ccc, $alpha: 0.5);
+    height: 180px;
     text-align: center;
     i {
-      color: rgba($color: #000, $alpha: 0.8);
-      font-size: 4em;
+      color: rgba($color: #fff, $alpha: 0.9);
+      font-size: 6em;
     }
   }
   article {
@@ -128,11 +139,17 @@ export default {
   }
   div {
     padding: 25px;
-    text-transform: uppercase;
-    p {
-      line-height: 30px;
-    }
+    // text-transform: uppercase;
   }
+}
+.skills-bg-code {
+  background: var(--color-primary);
+}
+.skills-bg-design {
+  background: #0A4791;
+}
+.skills-bg-mkt {
+  background: #073772;
 }
 @media (max-width: 900px) {
   .skills {

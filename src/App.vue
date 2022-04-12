@@ -21,16 +21,17 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
 /* VARS */
 :root {
   // COLORS
   --color-primary: #5d5aa7;
   --color-primary: #125db8;
   --color-secondary: #FF5F04;
+  --color-black: #262626;
   --color-black: #151526;
   // PROPERTIES
-  --box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  --box-shadow: 0px 0px 8px 0px #CCCCCC;
   --default-border-radius: 4px;
   --default-transition: 0.1s;
   --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
@@ -53,6 +54,7 @@ html,
 body {
   color: var(--color-black);
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-weight: 400;
 }
 
 // TAGS
@@ -103,8 +105,11 @@ ul {
     margin-bottom: 20px;
     a {
       color: var(--color-black);
+      transition: 0.3s;
       &:hover {
-        text-decoration: underline;
+        padding: 10px;
+        background: rgba($color: #ccc, $alpha: 0.5);
+        border-radius: var(--default-border-radius);
       }
     }
   }
@@ -112,13 +117,16 @@ ul {
 
 #app {
   display: grid;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 225px auto;
   // grid-template-areas: "aside main";
 }
 
 @media (max-width: 1100px) {
   #app {
     grid-template-columns: 1fr;
+  }
+  li{
+    line-height: 30px;
   }
 }
 
@@ -145,22 +153,6 @@ main {
   }
   article {
     padding-bottom: 50px;
-  }
-}
-
-// CARD
-
-.card {
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 5%), 0 3px 1px -2px rgb(0 0 0 / 5%),
-    0 1px 5px 0 rgb(0 0 0 / 5%);
-  padding: 50px 25px;
-}
-
-@media (max-width: 1100px) {
-  .card {
-    padding: 15px 25px;
   }
 }
 

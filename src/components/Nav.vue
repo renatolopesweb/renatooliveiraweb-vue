@@ -59,9 +59,9 @@ nav {
   li {
     padding-top: 50px;
     // padding: 30px 0;
-    width: 250px;
+    width: 225px;
     i {
-      font-size: 3em;
+      font-size: 3.4em;
       padding-bottom: 10px;
       width: 100%;
     }
