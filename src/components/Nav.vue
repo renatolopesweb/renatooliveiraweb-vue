@@ -57,7 +57,8 @@ nav {
     position: fixed;
   }
   li {
-    padding: 30px 0;
+    padding-top: 50px;
+    // padding: 30px 0;
     width: 250px;
     i {
       font-size: 3em;
@@ -81,6 +82,7 @@ nav {
     box-shadow: 0px 10px 10px 5px #ccc;
     bottom: 0;
     width: 100%;
+    z-index: 1;
   li{
     font-size: 0.8em;
     font-weight: 500;

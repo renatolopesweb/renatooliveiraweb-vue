@@ -2,7 +2,10 @@
   <article>
     <h1>Links</h1>
     <ul>
-      <li>Atualização em bem breve 2022❤</li>
+      <li>
+        Atualização em bem breve 2022<span class="heart">❤</span>, estou
+        arrumando a casa para deixar só o que for relevante
+      </li>
     </ul>
     <!-- <h2>Web</h2>
     <ul>
@@ -44,10 +47,8 @@ export default {
   },
 };
 </script>
-
-
-
-<style lang="scss" scoped>
-
-
+<style>
+.heart {
+  color: red !important;
+}
 </style>

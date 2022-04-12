@@ -27,8 +27,10 @@ export default {
   // COLORS
   --color-primary: #5d5aa7;
   --color-primary: #125db8;
+  --color-secondary: #FF5F04;
   --color-black: #151526;
   // PROPERTIES
+  --box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
   --default-border-radius: 4px;
   --default-transition: 0.1s;
   --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
@@ -44,6 +46,7 @@ export default {
 }
 html {
   overflow-y: scroll;
+  background: #333;
   background: #fafafa;
 }
 html,
@@ -82,7 +85,7 @@ span {
 article {
 
 h2 {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 1.8em;
   font-weight: 900;
   margin-bottom: 15px;
@@ -121,7 +124,7 @@ ul {
 
 aside {
   background: #fff;
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--box-shadow);
   height: 100vh;
   min-height: 100%;
 }
