@@ -2,28 +2,43 @@
   <article>
     <h1>Sobre</h1>
     <div class="about">
-      <div class="description">
+      <article class="description">
         <p>
-          Olá, sou o <span><strong>Renato Oliveira</strong></span
-          >, +10 anos que trabalho na web com Frontend e Design (UI).
-          Normalmente estou em divisões de Marketing, TI & Comunicação. Moro em
-          São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi". Veja abaixo minhas <strong>habilidades</strong>.
+          Olá, sou o <span>RENATO OLIVEIRA</span>, pai da Ana Luiza e da "Cyndi".
         </p>
-        <!-- <p>
-          Olá, sou o <span><strong>Renato Oliveira</strong></span
-          >, +10 anos que trabalho na web com Frontend e Design (UI).
-          Normalmente estou em divisões de Marketing, TI & Comunicação. Moro em
-          São Paulo, casado com a Delma, pai da Ana Luiza e da "Cyndi".
-        </p> -->
-      </div>
-      <figure>
-        <img
-          src="../assets/images/renato-oliveira-web22.jpg"
-          alt="Renato Oliveira Web"
-          title="Renato Oliveira Web"
-        />
-      </figure>
+        <p>
+          +10 anos trabalhando na web, presente em áreas de Comunicação, Marketing e TI,
+          atuando no desenvolvimento front-end e design de
+          interfaces (UI). Também tive oportunidade de atuar com gestão de
+          projetos web, ou seja fiquei no time do cliente.
+        </p>
+        <p>
+          <span>Para RH ver</span>: Qualificado para codificar websites,
+          landpages, dashboards, e-mail marketing; Consumir API's e apresentar nas aplicações;  Utilizar ferramentas CMS como
+          wordpress; Prototipação de interfaces; Conduzir projetos web.
+        </p>
+      </article>
+      <article class="card card-info">
+        <figure>
+          <img
+            src="../assets/images/renato-oliveira-web22.jpg"
+            alt="Renato Oliveira Web"
+            title="Renato Oliveira Web"
+          />
+        </figure>
+        <div>
+          <ul>
+            <li v-for="item in social" :key="item.id">
+              <a :href="item.url" target="_blank" :title="item.title"
+                ><i :class="item.img" aria-hidden="true"></i>
+                {{ item.title }}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </article>
     </div>
+    <h2>+ Habilidades</h2>
     <section class="skills">
       <article
         v-for="(item, article) in skills"
@@ -46,20 +61,38 @@
 export default {
   data() {
     return {
+      social: [
+        {
+          title: "Linkedin",
+          img: "fab fa-linkedin",
+          url: "https://www.linkedin.com/in/renatooliveiraweb",
+        },
+        {
+          title: "Instagram",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renatooliveiraweb",
+        },
+        {
+          title: "Github",
+          img: "fab fa-github-alt",
+          url: "https://github.com/renato7oliveira",
+        },
+      ],
       skills: [
         {
           categ: { content: "Code" },
-          icon: { content: "fas fa-code-branch" },
+          icon: { content: "fas fa-code" },
           bg: { content: "skills-bg-code" },
           list: {
-            content: "Angular · Vue · TS · JS · Sass + CSS · HTML5 · NPM · Github",
+            content:
+              "Angular · Vue · TS · JS · Sass + CSS · HTML5 · NPM · Github",
           },
         },
         {
-          categ: { content: "Visual" },
+          categ: { content: "Design" },
           icon: { content: "fab fa-sketch" },
           bg: { content: "skills-bg-design" },
-          list: { content: "XD · Photoshop" },
+          list: { content: "XD · Photoshop · Bootstrap · Material UI" },
         },
         {
           categ: { content: "Marketing" },
@@ -82,20 +115,19 @@ p {
 }
 .about {
   display: grid;
-  grid-template-columns: auto 175px;
-  grid-template-areas: "desc photo";
+  grid-template-columns: 1fr 0.3fr;
+  grid-template-areas: "desc card-info";
   grid-gap: 75px;
   .description {
     grid-area: desc;
+    p {
+      margin-bottom: 25px;
+    }
   }
-  img {
-    grid-area: photo;
-    border-radius: 100%;
-    cursor: none;
-    // filter: grayscale(1);
-    width: 100%;
-    &:hover {
-      filter: grayscale(0);
+  .card-info {
+    grid-area: card-info;
+    img {
+      width: 100%;
     }
   }
 }
@@ -103,13 +135,22 @@ p {
   .about {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "photo"
+      "card-info"
       "desc";
-    figure {
-      text-align: center;
-      img {
-        margin-top: 25px;
-        width: 75%;
+  }
+}
+.card {
+  border-radius: var(--default-border-radius);
+  img{
+    border-radius: var(--default-border-radius);
+  }
+  li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    a {
+      color: var(--color-black);
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -117,20 +158,20 @@ p {
 .skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-gap: 25px;
   margin-top: 25px;
   figure {
     display: grid;
     align-content: center;
-    // background-color: rgba($color: #ccc, $alpha: 0.5);
     height: 180px;
     text-align: center;
     i {
       color: rgba($color: #fff, $alpha: 0.9);
-      font-size: 6em;
+      font-size: 5em;
     }
   }
   article {
+    border-radius: var(--default-border-radius);
     box-shadow: var(--box-shadow);
     transition: 0.3s;
     &:hover {
@@ -139,14 +180,13 @@ p {
   }
   div {
     padding: 25px;
-    // text-transform: uppercase;
   }
 }
 .skills-bg-code {
   background: var(--color-primary);
 }
 .skills-bg-design {
-  background: #0A4791;
+  background: #0a4791;
 }
 .skills-bg-mkt {
   background: #073772;

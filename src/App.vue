@@ -21,17 +21,17 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
 /* VARS */
 :root {
   // COLORS
   --color-primary: #5d5aa7;
   --color-primary: #125db8;
-  --color-secondary: #FF5F04;
-  --color-black: #262626;
+  --color-secondary: #ff5f04;
+  --color-third: rgba($color: #999, $alpha: 0.8);
   --color-black: #151526;
   // PROPERTIES
-  --box-shadow: 0px 0px 8px 0px #CCCCCC;
+  --box-shadow: 0px 0px 8px 0px #cccccc;
   --default-border-radius: 4px;
   --default-transition: 0.1s;
   --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
@@ -80,38 +80,19 @@ h1 {
 
 span {
   color: var(--color-primary);
-  text-transform: uppercase;
+  font-weight: bolder;
 }
-
 
 article {
-
-h2 {
-  color: var(--color-secondary);
-  font-size: 1.8em;
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-h3 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-ul {
-  margin-bottom: 50px;
-}
-
-  li {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    a {
-      color: var(--color-black);
-      transition: 0.3s;
-      &:hover {
-        padding: 10px;
-        background: rgba($color: #ccc, $alpha: 0.5);
-        border-radius: var(--default-border-radius);
-      }
-    }
+  h2 {
+    color: var(--color-secondary);
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
   }
 }
 
@@ -125,7 +106,7 @@ ul {
   #app {
     grid-template-columns: 1fr;
   }
-  li{
+  li {
     line-height: 30px;
   }
 }
@@ -148,11 +129,20 @@ main {
 }
 
 @media (max-width: 1100px) {
-  main{
+  main {
     padding: 25px;
   }
   article {
     padding-bottom: 50px;
+  }
+}
+
+/* UI COMPONENT */
+
+.card {
+  box-shadow: var(--box-shadow);
+  div {
+    padding: 15px;
   }
 }
 
@@ -168,7 +158,7 @@ main {
     display: none !important;
   }
   .show-m {
-    display: grid;
+    display: inline;
   }
 }
 /* MEDIA QUERIES END  */

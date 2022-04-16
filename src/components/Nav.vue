@@ -14,11 +14,11 @@
           ><i class="fas fa-external-link-alt"></i>Links</router-link
         >
       </li>
-      <li @click="toTop()">
+      <!-- <li @click="toTop()">
         <router-link to="/contato"
           ><i class="fas fa-paper-plane"></i>Contato</router-link
         >
-      </li>
+      </li> -->
     </ul>
   </nav>
 </template>
@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .link_active {
-  color: var(--color-black);
+  color: rgba($color: #999, $alpha: 0.7);
   &:hover {
     cursor: auto;
   }
@@ -46,7 +46,6 @@ export default {
 @media (max-width: 1100px) {
   .link_active {
     background: none;
-    color: var(--color-black);
   }
 }
 
@@ -57,8 +56,9 @@ nav {
     position: fixed;
   }
   li {
-    padding-top: 50px;
+    // padding-top: 50px;
     // padding: 30px 0;
+    margin-top: 50px;
     width: 225px;
     i {
       font-size: 3.4em;
@@ -69,7 +69,7 @@ nav {
       color: var(--color-primary);
       transition: none;
       &:hover{
-        color: var(--color-black);
+        color: rgba($color: #999, $alpha: 0.7);
       }
     }
   }
@@ -86,6 +86,7 @@ nav {
   li{
     font-size: 0.8em;
     font-weight: 500;
+    margin: 0;
     padding: 15px 0;
     i{
       font-size: 1.3em;

@@ -1,7 +1,7 @@
 <template>
   <article>
     <h1>RENATO OLIVEIRA</h1>
-    <h2>WEBDESIGN / FRONTEND</h2>
+    <h2>FRONT-END DESIGNER</h2>
   </article>
 </template>
 
@@ -67,9 +67,9 @@ article {
     // animation: hello 0.5s ease-in-out;
   }
   h2 {
-    color: var(--color-black);
+    color: rgba($color: #999, $alpha: 0.7);
     // font-size: 3em;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: 900;
     margin: 0;
   }
