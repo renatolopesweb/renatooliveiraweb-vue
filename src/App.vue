@@ -38,17 +38,19 @@ export default {
 }
 
 * {
-  padding: 0px;
-  margin: 0px;
   box-sizing: border-box;
-  text-decoration: none;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
   list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
   transition: var(--default-transition);
 }
 html {
-  overflow-y: scroll;
   background: #333;
   background: #fafafa;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -86,13 +88,11 @@ span {
 article {
   h2 {
     color: var(--color-secondary);
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: 900;
-    margin-bottom: 15px;
   }
   h3 {
     font-weight: 700;
-    margin-bottom: 10px;
   }
 }
 
@@ -132,9 +132,6 @@ main {
   main {
     padding: 25px;
   }
-  article {
-    padding-bottom: 50px;
-  }
 }
 
 /* UI COMPONENT */
@@ -142,7 +139,7 @@ main {
 .card {
   box-shadow: var(--box-shadow);
   div {
-    padding: 15px;
+    padding: 25px;
   }
 }
 

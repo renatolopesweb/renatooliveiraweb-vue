@@ -20,15 +20,15 @@ const routes = [
   },
 
   {
-    path: '/links',
-    meta: { title: pageTitle + ' · LINKS' },
-    component: () => import('../views/Links.vue')
+    path: '/skills',
+    meta: { title: pageTitle + ' · SOBRE' },
+    component: () => import('../views/About.vue')
   },
 
   {
-    path: '/contato',
-    meta: { title: pageTitle + ' · CONTATO' },
-    component: () => import('../views/Contact.vue')
+    path: '/links',
+    meta: { title: pageTitle + ' · LINKS' },
+    component: () => import('../views/Links.vue')
   },
 
   {

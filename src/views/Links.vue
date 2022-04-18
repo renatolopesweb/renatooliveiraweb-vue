@@ -55,7 +55,9 @@ li {
   a {
     color: var(--color-black);
     &:hover {
-      background: rgba($color: #ccc, $alpha: 0.5);
+      background-image: linear-gradient(#fff, #f0f0f0);
+      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+        0 1px 5px 0 rgb(0 0 0 / 20%);
       border-radius: var(--default-border-radius);
       border: 1px solid #ccc;
       padding: 10px;
