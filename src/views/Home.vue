@@ -2,7 +2,7 @@
   <section>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <h2>FRONT-END DESIGNER</h2>
+      <h2>FRONT-END DEV.</h2>
     </header>
     <article>
       <div class="description">
@@ -81,7 +81,7 @@ header {
   h2 {
     color: var(--color-black);
     // font-size: 3em;
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-weight: 900;
     margin: 0;
   }
@@ -139,33 +139,15 @@ article {
     }
   }
 }
-.btn {
-  background-color: rgba($color: #000, $alpha: 0.2);
-  border: 0;
-  border-radius: var(--df-border-radius);
-  box-shadow: var(--box-shadow);
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
-    0 1px 5px 0 rgb(0 0 0 / 20%);
-  color: #fff;
-  cursor: pointer;
-  font-size: 0.8em;
-  font-weight: 700;
-  padding: 20px 40px;
-  text-align: center;
-  text-transform: uppercase;
-  i {
-    margin-right: 5px;
-  }
-}
 
 @media (max-width: 1000px) {
   header {
     padding: 25px;
     h1 {
-      font-size: 1.7em;
+      font-size: 8vw;
     }
     h2 {
-      font-size: 1.2em;
+      font-size: 7vw;
     }
   }
 

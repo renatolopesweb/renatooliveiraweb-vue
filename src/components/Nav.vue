@@ -76,7 +76,7 @@ nav {
     font-size: 0.8em;
     font-weight: 500;
     margin: 0;
-    padding: 10px 0;
+    padding: 15px 0;
     i{
       font-size: 1.3em;
     }
