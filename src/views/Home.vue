@@ -1,8 +1,40 @@
 <template>
-  <article>
-    <h1>RENATO OLIVEIRA</h1>
-    <h2>FRONT-END DESIGNER</h2>
-  </article>
+  <section>
+    <header>
+      <h1>RENATO OLIVEIRA</h1>
+      <h2>FRONT-END DESIGNER</h2>
+    </header>
+    <article>
+      <div class="description">
+        <h2>Sobre</h2>
+        <p>
+          Olá, sou o <strong>RENATO OLIVEIRA</strong>, moro em São Paulo/SP,
+          formado em Comunicação Web pela UNIP. +10 anos trabalhando com
+          front-end e design (UI). Onipresente em áreas de Comunicação,
+          Marketing e TI.
+        </p>
+
+        <p>Pai da Ana Luiza e da “Cyndi”.</p>
+
+        <h3>Redes Sociais</h3>
+
+        <ul>
+          <li v-for="item in social" :key="item.id">
+            <a :href="item.url" target="_blank" :title="item.title"
+              ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <figure>
+        <img
+          src="../assets/images/mulher.jpg"
+          alt="Renato Oliveira Web"
+          title="Renato Oliveira Web"
+        />
+      </figure>
+    </article>
+  </section>
 </template>
 
 <script>
@@ -25,30 +57,6 @@ export default {
           img: "fab fa-github-alt",
           url: "https://github.com/renato7oliveira",
         },
-        {
-          title: "Flickr",
-          img: "fab fa-flickr",
-          url: "https://github.com/renato7oliveira",
-        },
-      ],
-
-      skills: [
-        {
-          categ: { content: "Code" },
-          list: { content: "JS · TS · HTML5 · Sass + CSS3" },
-        },
-        {
-          categ: { content: "FW" },
-          list: { content: "Angular · Ionic" },
-        },
-        {
-          categ: { content: "Design" },
-          list: { content: "XD · Photoshop" },
-        },
-        {
-          categ: { content: "Marketing" },
-          list: { content: "Wordpress" },
-        },
       ],
     };
   },
@@ -56,10 +64,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-article {
+section {
+  padding: 0;
+}
+header {
   display: grid;
-  height: calc(100vh - 50px);
   align-content: center;
+  height: 100vh;
+  padding: var(--df-padding);
   h1 {
     // font-size: 4.6em;
     font-size: 5vw;
@@ -67,33 +79,114 @@ article {
     // animation: hello 0.5s ease-in-out;
   }
   h2 {
-    color: rgba($color: #999, $alpha: 0.7);
+    color: var(--color-black);
     // font-size: 3em;
     font-size: 3.5vw;
     font-weight: 900;
     margin: 0;
   }
 }
+article {
+  display: grid;
+  grid-template-columns: auto 350px;
+  grid-gap: 75px;
+  grid-template-areas: "desc photo";
+  align-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  height: 100vh;
+  padding: var(--df-padding);
+  .description {
+    grid-area: desc;
+  }
+  h2 {
+    color: #fff;
+    font-size: 4.2em;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 1.8em;
+    font-weight: 900;
+  }
+  p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  li {
+    font-size: 1.1em;
+    margin-top: 15px;
+    i {
+      margin-left: -3px;
+      text-align: center;
+      width: 20px;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  figure {
+    display: grid;
+    align-content: center;
+    grid-area: photo;
+    img {
+      width: 100%;
+    }
+  }
+}
+.btn {
+  background-color: rgba($color: #000, $alpha: 0.2);
+  border: 0;
+  border-radius: var(--df-border-radius);
+  box-shadow: var(--box-shadow);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 20px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  i {
+    margin-right: 5px;
+  }
+}
 
-@media (max-width: 1100px) {
-  article {
-    text-align: center;
+@media (max-width: 1000px) {
+  header {
+    padding: 25px;
     h1 {
-      font-size: 3em;
+      font-size: 1.7em;
     }
     h2 {
+      font-size: 1.2em;
+    }
+  }
+
+  article {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    grid-template-areas:
+      "photo"
+      "desc";
+    height: auto;
+    padding: 25px;
+    h2 {
       font-size: 2em;
+      margin-top: 25px;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+    ul{
+      padding-bottom: 75px;
     }
   }
 }
-
-@keyframes hello{
-  0%{
-    transform: scale(0);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-
 </style>

@@ -2,23 +2,18 @@
   <nav>
     <ul>
       <li @click="toTop()">
-        <router-link to="/"><i class="fas fa-home"></i>Home</router-link>
+        <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
       <li @click="toTop()">
         <router-link to="/sobre"
-          ><i class="fas fa-running"></i>Sobre</router-link
+          ><i class="fas fa-chess-knight"></i>Skills</router-link
         >
       </li>
       <li @click="toTop()">
         <router-link to="/links"
-          ><i class="fas fa-external-link-alt"></i>Links</router-link
+          ><i class="fas fa-link"></i>Links</router-link
         >
       </li>
-      <!-- <li @click="toTop()">
-        <router-link to="/contato"
-          ><i class="fas fa-paper-plane"></i>Contato</router-link
-        >
-      </li> -->
     </ul>
   </nav>
 </template>
@@ -43,11 +38,6 @@ export default {
     cursor: auto;
   }
 }
-@media (max-width: 1100px) {
-  .link_active {
-    background: none;
-  }
-}
 
 nav {
   text-align: center;
@@ -56,8 +46,6 @@ nav {
     position: fixed;
   }
   li {
-    // padding-top: 50px;
-    // padding: 30px 0;
     margin-top: 50px;
     width: 225px;
     i {
@@ -78,8 +66,9 @@ nav {
 @media(max-width: 1100px){
   ul{
     display: flex;
+    justify-content: space-between;
     background: #fff;
-    box-shadow: 0px 10px 10px 5px #ccc;
+    box-shadow: var(--df-box-shadow);
     bottom: 0;
     width: 100%;
     z-index: 1;
@@ -87,7 +76,7 @@ nav {
     font-size: 0.8em;
     font-weight: 500;
     margin: 0;
-    padding: 15px 0;
+    padding: 10px 0;
     i{
       font-size: 1.3em;
     }

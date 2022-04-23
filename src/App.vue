@@ -31,10 +31,15 @@ export default {
   --color-third: rgba($color: #999, $alpha: 0.8);
   --color-black: #151526;
   // PROPERTIES
-  --box-shadow: 0px 0px 8px 0px #cccccc;
-  --default-border-radius: 4px;
-  --default-transition: 0.1s;
-  --default-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
+  // --box-shadow: 0px 0px 8px 0px #cccccc;
+  --df-border-radius: 2px;
+  --df-transition: 0.1s;
+  --df-box-shadow: -1 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+  --df-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
+  --df-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  --df-padding: 25px 25px 0px 50px;
 }
 
 * {
@@ -44,7 +49,7 @@ export default {
   margin: 0px;
   padding: 0px;
   text-decoration: none;
-  transition: var(--default-transition);
+  transition: var(--df-transition);
 }
 html {
   background: #333;
@@ -79,21 +84,15 @@ h1 {
     font-size: 3em;
   }
 }
+@media (max-width: 280px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 span {
   color: var(--color-primary);
   font-weight: bolder;
-}
-
-article {
-  h2 {
-    color: var(--color-secondary);
-    font-size: 2.2em;
-    font-weight: 900;
-  }
-  h3 {
-    font-weight: 700;
-  }
 }
 
 #app {
@@ -106,38 +105,36 @@ article {
   #app {
     grid-template-columns: 1fr;
   }
-  li {
-    line-height: 30px;
-  }
 }
 
 aside {
   background: #fff;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--df-box-shadow);
   height: 100vh;
   min-height: 100%;
+}
+section {
+  padding: var(--df-padding);
 }
 @media (max-width: 1100px) {
   aside {
     height: 0;
     min-height: 0;
   }
-}
-
-main {
-  padding: 25px 25px 25px 50px;
-}
-
-@media (max-width: 1100px) {
-  main {
+  section {
     padding: 25px;
   }
 }
 
 /* UI COMPONENT */
 
+// CARD
 .card {
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--df-box-shadow);
+  border-radius: var(--df-border-radius);
+  img {
+    border-radius: var(--df-border-radius);
+  }
   div {
     padding: 25px;
   }

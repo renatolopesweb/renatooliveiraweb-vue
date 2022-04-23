@@ -1,14 +1,12 @@
 <template>
-  <article>
+  <section>
     <h1>Links</h1>
-    <!-- <h2>Web</h2> -->
     <ul>
       <li v-for="(item, article) in projects.front" :key="article">
-        <a :href="item.url" target="_blank">{{ item.title }}</a>
+         {{ item.title }} <a :href="item.url" target="_blank" title="Ver case"><i class="fas fa-external-link-alt"></i></a>
       </li>
     </ul>
-    <!-- <p>Atualização em bem breve 2022 ❤</p> -->
-  </article>
+  </section>
 </template>
 
 <script>
@@ -22,7 +20,7 @@ export default {
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
           },
           {
-            title: "Landpage Starbucks Clone",
+            title: "Starbucks Clone",
             url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
           },
           {
@@ -46,24 +44,15 @@ export default {
 
 <style lang="scss" scoped>
 ul {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
-
 li {
   font-size: 1.2em;
   margin-bottom: 20px;
   a {
-    color: var(--color-black);
+    color: var(--color-primary);
     &:hover {
-      background-image: linear-gradient(#fff, #f0f0f0);
-      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
-        0 1px 5px 0 rgb(0 0 0 / 20%);
-      border-radius: var(--default-border-radius);
-      border: 1px solid #ccc;
-      padding: 10px;
-      &:active {
-        background: #fff;
-      }
+      color: rgba($color: #999, $alpha: 0.7);
     }
   }
 }
