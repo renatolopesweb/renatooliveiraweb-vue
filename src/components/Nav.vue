@@ -5,7 +5,7 @@
         <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/sobre"
+        <router-link to="/skills"
           ><i class="fas fa-chess-knight"></i>Skills</router-link
         >
       </li>

@@ -14,15 +14,9 @@ const routes = [
   },
 
   {
-    path: '/sobre',
-    meta: { title: pageTitle + ' · SOBRE' },
-    component: () => import('../views/About.vue')
-  },
-
-  {
     path: '/skills',
-    meta: { title: pageTitle + ' · SOBRE' },
-    component: () => import('../views/About.vue')
+    meta: { title: pageTitle + ' · SKILLS' },
+    component: () => import('../views/Skills.vue')
   },
 
   {

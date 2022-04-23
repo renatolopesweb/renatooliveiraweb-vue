@@ -28,7 +28,7 @@
       </div>
       <figure>
         <img
-          src="../assets/images/mulher.jpg"
+          src="../assets/images/renato-oliveira-web.jpg"
           alt="Renato Oliveira Web"
           title="Renato Oliveira Web"
         />
