@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <section>
     <h1>Contato</h1>
     <ul>
       <li v-for="item in social" :key="item.id">
@@ -8,7 +8,7 @@
         > {{ item.title }}</a>
       </li>
     </ul>
-  </article>
+  </section>
 </template>
 
 
@@ -37,3 +37,24 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+  ul{
+    margin-bottom: 75px;
+  }
+  li {
+    font-size: 1.1em;
+    margin-top: 15px;
+    i {
+      text-align: center;
+      width: 20px;
+    }
+    a {
+      color: var(--color-primary);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+</style>

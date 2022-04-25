@@ -30,6 +30,7 @@ export default {
   --color-secondary: #ff5f04;
   --color-third: rgba($color: #999, $alpha: 0.8);
   --color-black: #151526;
+  --color-black: #001132;
   // PROPERTIES
   // --box-shadow: 0px 0px 8px 0px #cccccc;
   --df-border-radius: 2px;

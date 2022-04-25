@@ -26,6 +26,12 @@ const routes = [
   },
 
   {
+    path: '/contact',
+    meta: { title: pageTitle + ' · CONTATO' },
+    component: () => import('../views/Contact.vue')
+  },
+
+  {
     path: '/*',
     meta: { title: pageTitle + ' · PÁGINA NÃO ENCONTRADA' },
     component: () => import('../views/NotFound.vue')

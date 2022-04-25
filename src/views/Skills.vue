@@ -169,6 +169,10 @@ export default {
     color: var(--color-black);
   }
   article {
+    transition: 0.3s;
+    &:hover{
+      transform: translateY(-10px);
+    }
     figure {
       display: grid;
       align-content: center;

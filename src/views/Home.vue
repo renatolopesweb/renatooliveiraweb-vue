@@ -8,23 +8,27 @@
       <div class="description">
         <h2>Sobre</h2>
         <p>
-          Olá, sou o <strong>RENATO OLIVEIRA</strong>, moro em São Paulo/SP,
-          formado em Comunicação Web pela UNIP. +10 anos trabalhando com
-          front-end e design (UI). Onipresente em áreas de Comunicação,
-          Marketing e TI.
+          Olá, sou o <strong>RENATO OLIVEIRA</strong>, formado em Comunicação
+          Web pela UNIP. +10 anos trabalhando com front-end e design (UI).
+          Onipresente em áreas de Comunicação, Marketing e TI.
         </p>
 
-        <p>Pai da Ana Luiza e da “Cyndi”.</p>
+        <p>
+          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
+          Transporte público, Culinária Japonesa, Pedalar, TV, Cinema, Ser
+          pai da AnaLu e da “Cyndi”.
+        </p>
 
-        <h3>Redes Sociais</h3>
+        <p>
+          <strong>Para RH ver</strong>: Ser humano qualificado para codificar websites,
+          landpages, dashboards, e-mail marketing; Utilizar ferramentas CMS como
+          wordpress; Prototipação de interfaces, Tratamento de imagens.
+        </p>
 
-        <ul>
-          <li v-for="item in social" :key="item.id">
-            <a :href="item.url" target="_blank" :title="item.title"
-              ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
-            >
-          </li>
-        </ul>
+        <div class="btn-content" @click="toTop()">
+          <router-link to="/skills" class="btn"><i class="fas fa-chess-knight"></i>Skills</router-link>
+          <router-link to="/contact" class="btn"><i class="fas fa-share-alt"></i>Contato</router-link>
+        </div>
       </div>
       <figure>
         <img
@@ -38,7 +42,18 @@
 </template>
 
 <script>
+
+
+
 export default {
+  methods: {
+    toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
   data() {
     return {
       social: [
@@ -86,6 +101,17 @@ header {
     margin: 0;
   }
 }
+@media (max-width: 1000px) {
+  header {
+    padding: 25px;
+    h1 {
+      font-size: 8vw;
+    }
+    h2 {
+      font-size: 7vw;
+    }
+  }
+}
 article {
   display: grid;
   grid-template-columns: auto 350px;
@@ -94,7 +120,7 @@ article {
   align-content: center;
   background: var(--color-primary);
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
   padding: var(--df-padding);
   .description {
     grid-area: desc;
@@ -115,21 +141,6 @@ article {
     line-height: 30px;
     margin-bottom: 30px;
   }
-  li {
-    font-size: 1.1em;
-    margin-top: 15px;
-    i {
-      margin-left: -3px;
-      text-align: center;
-      width: 20px;
-    }
-    a {
-      color: #fff;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
   figure {
     display: grid;
     align-content: center;
@@ -139,18 +150,39 @@ article {
     }
   }
 }
-
-@media (max-width: 1000px) {
-  header {
-    padding: 25px;
-    h1 {
-      font-size: 8vw;
-    }
-    h2 {
-      font-size: 7vw;
-    }
+.btn-content{
+  display: flex;
+  gap: 25px;
+  padding-bottom: 50px;
+}
+.btn {
+  background-color: rgba($color: #000, $alpha: 0.4);
+  border: 0;
+  border-radius: var(--df-border-radius);
+  box-shadow: var(--box-shadow);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover{
+    background: none;
   }
-
+  i {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 1100px) {
+    .btn-content{
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+}
+@media (max-width: 800px) {
   article {
     grid-template-columns: 1fr;
     grid-gap: 0;
@@ -166,9 +198,9 @@ article {
     h3 {
       font-size: 1.5em;
     }
-    ul{
-      padding-bottom: 75px;
-    }
   }
+  .btn-content{
+      margin-bottom: 25px;
+    }
 }
 </style>
