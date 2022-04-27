@@ -10,8 +10,8 @@
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/contact"
-          ><i class="fas fa-share-alt"></i>Contato</router-link
+        <router-link to="/links"
+          ><i class="fas fa-link"></i>Links</router-link
         >
       </li>
     </ul>
@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .link_active {
-  color: rgba($color: #999, $alpha: 0.7);
+  color: var(--color-primary);
   &:hover {
     cursor: auto;
   }
@@ -54,10 +54,9 @@ nav {
       width: 100%;
     }
     a {
-      color: var(--color-primary);
-      transition: none;
+      color: rgba($color: #000, $alpha: 0.3);
       &:hover{
-        color: rgba($color: #999, $alpha: 0.7);
+        color: var(--color-primary);
       }
     }
   }

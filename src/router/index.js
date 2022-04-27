@@ -25,11 +25,11 @@ const routes = [
     component: () => import('../views/Links.vue')
   },
 
-  {
-    path: '/contact',
-    meta: { title: pageTitle + ' · CONTATO' },
-    component: () => import('../views/Contact.vue')
-  },
+  // {
+  //   path: '/contact',
+  //   meta: { title: pageTitle + ' · CONTATO' },
+  //   component: () => import('../views/Contact.vue')
+  // },
 
   {
     path: '/*',

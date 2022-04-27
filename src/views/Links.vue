@@ -1,13 +1,23 @@
 <template>
   <section>
     <h1>Links</h1>
+    <h2>Experimentos Web</h2>
     <ul>
       <li v-for="(item, article) in projects.front" :key="article">
-         {{ item.title }} <a :href="item.url" target="_blank" title="Ver case"><i class="fas fa-external-link-alt"></i></a>
+        <a :href="item.url" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul>
+    <h2>Minhas Redes Sociais</h2>
+    <ul>
+      <li v-for="item in social" :key="item.id">
+        <a :href="item.url" target="_blank" :title="item.title"
+          ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
+        >
       </li>
     </ul>
   </section>
 </template>
+
 
 <script>
 export default {
@@ -16,12 +26,8 @@ export default {
       projects: {
         front: [
           {
-            title: "Landpage Genérica",
+            title: "Landpage CSS-Grid",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
-          },
-          {
-            title: "Starbucks Clone",
-            url: "https://renato7oliveira.github.io/experimentos/Starbucks/src/",
           },
           {
             title: "Header Tesla",
@@ -37,22 +43,43 @@ export default {
           },
         ],
       },
+      social: [
+        {
+          title: "Linkedin",
+          img: "fab fa-linkedin",
+          url: "https://www.linkedin.com/in/renatooliveiraweb",
+        },
+        {
+          title: "Instagram",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renatooliveiraweb",
+        },
+        {
+          title: "Github",
+          img: "fab fa-github-alt",
+          url: "https://github.com/renato7oliveira",
+        },
+      ],
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 ul {
   margin-bottom: 75px;
 }
 li {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1.1em;
+  margin-top: 15px;
+  i {
+    text-align: center;
+    width: 20px;
+  }
   a {
     color: var(--color-primary);
     &:hover {
-      color: rgba($color: #999, $alpha: 0.7);
+      text-decoration: underline;
     }
   }
 }

@@ -79,6 +79,11 @@ h1 {
   font-weight: 900;
   margin-bottom: 15px;
 }
+h2 {
+  font-size: 1.2em;
+  font-weight: 900;
+  color: var(--color-black);
+}
 
 @media (max-width: 1100px) {
   h1 {
@@ -89,11 +94,6 @@ h1 {
   h1 {
     font-size: 2em;
   }
-}
-
-span {
-  color: var(--color-primary);
-  font-weight: bolder;
 }
 
 #app {

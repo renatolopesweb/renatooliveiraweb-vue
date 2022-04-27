@@ -74,6 +74,16 @@ export default {
           ],
         },
         {
+          categ: { title: "Frameworks" },
+          lists: [
+            {
+              logo: "fab fa-vuejs",
+              bg: "color: #3FB27F",
+              title: "Vue.js",
+            }
+          ],
+        },
+        {
           categ: { title: "Visual" },
           lists: [
             {
@@ -163,11 +173,7 @@ export default {
   grid-gap: 25px;
   // margin-bottom: 75px;
   margin-bottom: 50px;
-  h2 {
-    font-size: 1.2em;
-    font-weight: 900;
-    color: var(--color-black);
-  }
+  
   article {
     transition: 0.3s;
     &:hover{

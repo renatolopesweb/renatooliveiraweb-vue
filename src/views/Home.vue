@@ -14,20 +14,29 @@
         </p>
 
         <p>
-          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
-          Transporte público, Culinária Japonesa, Pedalar, TV, Cinema, Ser
-          pai da AnaLu e da “Cyndi”.
+          A missão de um taurino é transformar as sementes em substância, acredito que seja
+          por isso que me identifico com web, tenho prazer em fazer as coisas acontecerem.
         </p>
 
         <p>
-          <strong>Para RH ver</strong>: Ser humano qualificado para codificar websites,
-          landpages, dashboards, e-mail marketing; Utilizar ferramentas CMS como
-          wordpress; Prototipação de interfaces, Tratamento de imagens.
+          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
+          Transporte público, Pedalar, TV, Cinema, Ser pai da AnaLu e da
+          “Cyndi”.
         </p>
 
+        <!-- <p>
+          <strong>Para RH ver</strong>: Ser humano que codifica websites,
+          landpages, dashboards, e-mail marketing; Utiliza ferramentas CMS como
+          wordpress; Prototipação de interfaces, Tratamento de imagens.
+        </p> -->
+
         <div class="btn-content" @click="toTop()">
-          <router-link to="/skills" class="btn"><i class="fas fa-chess-knight"></i>Skills</router-link>
-          <router-link to="/contact" class="btn"><i class="fas fa-share-alt"></i>Contato</router-link>
+          <router-link to="/skills" class="btn"
+            ><i class="fas fa-chess-knight"></i>Skills</router-link
+          >
+          <router-link to="/contact" class="btn"
+            ><i class="fas fa-share-alt"></i>Contato</router-link
+          >
         </div>
       </div>
       <figure>
@@ -42,9 +51,6 @@
 </template>
 
 <script>
-
-
-
 export default {
   methods: {
     toTop() {
@@ -150,7 +156,7 @@ article {
     }
   }
 }
-.btn-content{
+.btn-content {
   display: flex;
   gap: 25px;
   padding-bottom: 50px;
@@ -169,7 +175,7 @@ article {
   padding: 15px 30px;
   text-align: center;
   text-transform: uppercase;
-  &:hover{
+  &:hover {
     background: none;
   }
   i {
@@ -177,10 +183,10 @@ article {
   }
 }
 @media (max-width: 1100px) {
-    .btn-content{
-      flex-direction: column;
-      margin-bottom: 50px;
-    }
+  .btn-content {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 800px) {
   article {
@@ -199,8 +205,8 @@ article {
       font-size: 1.5em;
     }
   }
-  .btn-content{
-      margin-bottom: 25px;
-    }
+  .btn-content {
+    margin-bottom: 25px;
+  }
 }
 </style>
