@@ -1,12 +1,6 @@
 <template>
   <section>
-    <h1>Links</h1>
-    <h2>Experimentos Web</h2>
-    <ul>
-      <li v-for="(item, article) in projects.front" :key="article">
-        <a :href="item.url" target="_blank">{{ item.title }}</a>
-      </li>
-    </ul>
+    <h1>Contato</h1>
     <h2>Minhas Redes Sociais</h2>
     <ul>
       <li v-for="item in social" :key="item.id">
@@ -15,6 +9,12 @@
         >
       </li>
     </ul>
+    <!-- <h2>Experimentos Web</h2>
+    <ul>
+      <li v-for="(item, article) in projects.front" :key="article">
+        <a :href="item.url" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul> -->
   </section>
 </template>
 

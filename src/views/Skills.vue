@@ -84,7 +84,7 @@ export default {
           ],
         },
         {
-          categ: { title: "Visual" },
+          categ: { title: "Design / Visual" },
           lists: [
             {
               logo: "fab fa-sketch",

@@ -14,8 +14,8 @@
         </p>
 
         <p>
-          A missão de um taurino é transformar as sementes em substância, acredito que seja
-          por isso que me identifico com web, tenho prazer em fazer as coisas acontecerem.
+          A missão de um taurino é transformar as sementes em substância, talvez seja
+          por isso que me identifico com web.
         </p>
 
         <p>
@@ -33,9 +33,6 @@
         <div class="btn-content" @click="toTop()">
           <router-link to="/skills" class="btn"
             ><i class="fas fa-chess-knight"></i>Skills</router-link
-          >
-          <router-link to="/contact" class="btn"
-            ><i class="fas fa-share-alt"></i>Contato</router-link
           >
         </div>
       </div>
@@ -120,7 +117,7 @@ header {
 }
 article {
   display: grid;
-  grid-template-columns: auto 350px;
+  grid-template-columns: auto 300px;
   grid-gap: 75px;
   grid-template-areas: "desc photo";
   align-content: center;

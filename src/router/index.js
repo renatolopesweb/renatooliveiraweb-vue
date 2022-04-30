@@ -19,17 +19,17 @@ const routes = [
     component: () => import('../views/Skills.vue')
   },
 
-  {
-    path: '/links',
-    meta: { title: pageTitle + ' · LINKS' },
-    component: () => import('../views/Links.vue')
-  },
-
   // {
-  //   path: '/contact',
-  //   meta: { title: pageTitle + ' · CONTATO' },
-  //   component: () => import('../views/Contact.vue')
+  //   path: '/links',
+  //   meta: { title: pageTitle + ' · LINKS' },
+  //   component: () => import('../views/Links.vue')
   // },
+
+  {
+    path: '/contact',
+    meta: { title: pageTitle + ' · CONTATO' },
+    component: () => import('../views/Contact.vue')
+  },
 
   {
     path: '/*',
