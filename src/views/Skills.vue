@@ -142,25 +142,7 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
-.card {
-  background: #fff;
-  border-radius: var(--df-border-radius);
-  img {
-    border-radius: var(--df-border-radius);
-  }
-  li {
-    font-size: 1em;
-    margin-bottom: 10px;
-    a {
-      color: var(--color-black);
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
 .intro_category {
   grid-row: 1;
   grid-column: 1 / -1;

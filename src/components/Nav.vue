@@ -10,8 +10,8 @@
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/contact"
-          ><i class="fas fa-share-alt"></i>Contato</router-link
+        <router-link to="/links"
+          ><i class="fas fa-link"></i>Links</router-link
         >
       </li>
     </ul>

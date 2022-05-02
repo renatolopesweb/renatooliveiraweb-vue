@@ -6,23 +6,30 @@
     </header>
     <article>
       <div class="description">
-        <h2>Sobre</h2>
+        <p><strong>Nome</strong>: Renato Oliveira.</p>
+        <p><strong>Aniversário</strong>: 12/05.</p>
+        <p><strong>Signo</strong>: Touro.</p>
+        <p><strong>Formação</strong>: Comunicação Web UNIP.</p>
+        <p><strong>Posição</strong>: Web Designer / Front-end Dev.</p>
+        <p><strong>Departamentos</strong>: Comunicação / Marketing / TI.</p>
+        <p><strong>Missão</strong>: Transformar semente em substância.</p>
         <p>
-          Olá, sou o <strong>RENATO OLIVEIRA</strong>, formado em Comunicação
-          Web pela UNIP. +10 anos trabalhando com front-end e design (UI).
-          Onipresente em áreas de Comunicação, Marketing e TI.
+          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
+          Transporte público, Culinária Familiar, Pedalar, Ler, Assistir TV, Ser
+          pai da AnaLu e da “Cyndi”.
         </p>
-
-        <p>
-          A missão de um taurino é transformar as sementes em substância, talvez seja
-          por isso que me identifico com web.
+        <!-- <h2>Sobre</h2> -->
+        <!-- <p>
+          Olá, sou o <strong>RENATO OLIVEIRA</strong>, formado em Comunicação
+          Web pela UNIP. +10 anos trabalhando com front-end, design (UI) e transformando sementes em substância.
+          Onipresente em áreas de Comunicação, Marketing e TI.
         </p>
 
         <p>
           <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
           Transporte público, Pedalar, TV, Cinema, Ser pai da AnaLu e da
           “Cyndi”.
-        </p>
+        </p> -->
 
         <!-- <p>
           <strong>Para RH ver</strong>: Ser humano que codifica websites,
@@ -36,13 +43,25 @@
           >
         </div>
       </div>
-      <figure>
-        <img
-          src="../assets/images/renato-oliveira-web.jpg"
-          alt="Renato Oliveira Web"
-          title="Renato Oliveira Web"
-        />
-      </figure>
+      <div>
+        <figure>
+          <img
+            src="../assets/images/renato-oliveira-web.jpg"
+            alt="Renato Oliveira Web"
+            title="Renato Oliveira Web"
+          />
+        </figure>
+        <div class="social">
+          <h2>Redes Sociais</h2>
+          <ul>
+            <li v-for="item in social" :key="item.id">
+              <a :href="item.url" target="_blank" :title="item.title"
+                ><i :class="item.img" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </article>
   </section>
 </template>
@@ -66,14 +85,14 @@ export default {
           url: "https://www.linkedin.com/in/renatooliveiraweb",
         },
         {
-          title: "Instagram",
-          img: "fab fa-instagram",
-          url: "https://www.instagram.com/renatooliveiraweb",
-        },
-        {
           title: "Github",
           img: "fab fa-github-alt",
           url: "https://github.com/renato7oliveira",
+        },
+        {
+          title: "Instagram",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renatooliveiraweb",
         },
       ],
     };
@@ -130,19 +149,30 @@ article {
   }
   h2 {
     color: #fff;
-    font-size: 4.2em;
+    font-size: 1.7em;
     font-weight: 900;
-    margin-bottom: 15px;
-  }
-  h3 {
-    font-size: 1.8em;
-    font-weight: 900;
+    margin: 15px 0;
   }
   p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .social {
+    // border: 2px solid red;
+    text-align: center;
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    a {
+      color: #fff;
+      font-size: 1.4em;
+      &:hover {
+        color: rgba($color: #fff, $alpha: 0.7);
+      }
+    }
   }
   figure {
     display: grid;
@@ -155,17 +185,17 @@ article {
 }
 .btn-content {
   display: flex;
-  gap: 25px;
-  padding-bottom: 50px;
+  margin-top: 30px;
+  padding-bottom: 35px;
 }
 .btn {
-  background-color: rgba($color: #000, $alpha: 0.4);
+  background-color: #fff;
   border: 0;
   border-radius: var(--df-border-radius);
   box-shadow: var(--box-shadow);
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
     0 1px 5px 0 rgb(0 0 0 / 20%);
-  color: #fff;
+  color: var(--color-primary);
   cursor: pointer;
   font-size: 0.8em;
   font-weight: 500;
@@ -173,7 +203,7 @@ article {
   text-align: center;
   text-transform: uppercase;
   &:hover {
-    background: none;
+    background: rgba($color: #fff, $alpha: 0.7);
   }
   i {
     margin-right: 5px;
@@ -198,12 +228,6 @@ article {
       font-size: 2em;
       margin-top: 25px;
     }
-    h3 {
-      font-size: 1.5em;
-    }
-  }
-  .btn-content {
-    margin-bottom: 25px;
   }
 }
 </style>
