@@ -1,20 +1,20 @@
 <template>
   <section>
     <h1>Links</h1>
-    <h2>Minhas Redes Sociais</h2>
+    <!-- <h2>Minhas Redes Sociais</h2>
     <ul>
       <li v-for="item in social" :key="item.id">
         <a :href="item.url" target="_blank" :title="item.title"
           ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
         >
       </li>
-    </ul>
-    <!-- <h2>Experimentos Web</h2>
+    </ul> -->
+    <!-- <h2>Experimentos Web</h2>-->
     <ul>
       <li v-for="(item, article) in projects.front" :key="article">
         <a :href="item.url" target="_blank">{{ item.title }}</a>
       </li>
-    </ul> -->
+    </ul> 
   </section>
 </template>
 
@@ -26,21 +26,37 @@ export default {
       projects: {
         front: [
           {
-            title: "Landpage CSS-Grid",
+            title: "Responsive Landpage (CSS-Grid)",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
           },
           {
-            title: "Header Tesla",
+            title: "Website Tesla (Flex-Box)",
             url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
-          },
-          {
-            title: "E-mail Marketing VIVO (HTML 1.0)",
-            url: "https://renato7oliveira.github.io/experimentos/Email_Mkt/Vivo/index.html",
           },
           {
             title: "Street Fighter Animate (Old School)",
             url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
           },
+          // {
+          //   title: "APP Ionic - GYM Series",
+          //   url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
+          // },
+          // {
+          //   title: "APP Ionic - Dashboard Portfolio",
+          //   url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
+          // },
+          // {
+          //   title: "Angular - PWA Sony",
+          //   url: "https://renato7oliveira.github.io/experimentos/Email_Mkt/Vivo/index.html",
+          // },
+          // {
+          //   title: "Angular - PWA Summit Hotel",
+          //   url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
+          // },
+          // {
+          //   title: "Landpage - Tema Genérico CSS-Grid",
+          //   url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
+          // },
         ],
       },
       social: [
