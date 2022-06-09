@@ -10,9 +10,7 @@
         >
       </li>
       <li @click="toTop()">
-        <router-link to="/links"
-          ><i class="fas fa-link"></i>Links</router-link
-        >
+        <router-link to="/links"><i class="fas fa-link"></i>Links</router-link>
       </li>
     </ul>
   </nav>
@@ -33,37 +31,46 @@ export default {
 
 <style lang="scss" scoped>
 .link_active {
-  color: var(--color-primary);
+  // color: #ccc;
   &:hover {
     cursor: auto;
   }
 }
 
 nav {
-  text-align: center;
+  // text-align: center;
   text-transform: uppercase;
   ul {
     position: fixed;
   }
   li {
-    margin-top: 50px;
+    display: grid;
+    align-content: center;
+    border-bottom: 1px solid rgba($color: #125db8, $alpha: 0.1);
+    // height: 150px;
     width: 300px;
-    i {
-      font-size: 3.4em;
-      padding-bottom: 10px;
-      width: 100%;
+    background: #fff;
+    &:hover{
+      background-color: rgba($color: #125db8, $alpha: 0.1);
+    }
+    &:active{
+      background-color: rgba($color: #125db8, $alpha: 0.2);
     }
     a {
-      color: rgba($color: #000, $alpha: 0.3);
-      &:hover{
-        color: var(--color-primary);
-      }
+      color: var(--color-primary);
+      font-size: 1.2em;
+      padding: 50px 0;
+    }
+    i {
+      font-size: 1.2em;
+      padding: 0 15px;
     }
   }
 }
 
-@media(max-width: 1100px){
-  ul{
+
+@media (max-width: 1100px) {
+  ul {
     display: flex;
     justify-content: space-between;
     background: #fff;
@@ -71,15 +78,20 @@ nav {
     bottom: 0;
     width: 100%;
     z-index: 1;
-  li{
-    font-size: 0.8em;
-    font-weight: 500;
-    margin: 0;
-    padding: 15px 0;
-    i{
-      font-size: 1.3em;
+    li {
+      font-size: 0.6em;
+      font-weight: 500;
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+      a{
+        padding: 0;
+      }
+      i {
+        font-size: 1em;
+        width: 100%;
+      }
     }
-  }
   }
 }
 </style>

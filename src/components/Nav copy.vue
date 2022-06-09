@@ -47,7 +47,7 @@ nav {
   }
   li {
     margin-top: 50px;
-    width: 300px;
+    width: 225px;
     i {
       font-size: 3.4em;
       padding-bottom: 10px;

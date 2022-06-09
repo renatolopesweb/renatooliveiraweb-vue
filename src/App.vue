@@ -53,6 +53,7 @@ export default {
   transition: var(--df-transition);
 }
 html {
+  background: #f1f1f1;
   background: #333;
   background: #fafafa;
   overflow-y: scroll;
@@ -98,7 +99,7 @@ h2 {
 
 #app {
   display: grid;
-  grid-template-columns: 225px auto;
+  grid-template-columns: 300px auto;
   // grid-template-areas: "aside main";
 }
 

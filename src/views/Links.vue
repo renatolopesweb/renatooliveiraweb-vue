@@ -10,11 +10,12 @@
       </li>
     </ul> -->
     <!-- <h2>Experimentos Web</h2>-->
-    <ul>
-      <li v-for="(item, article) in projects.front" :key="article">
+    <div v-for="(item, article) in projects.front" :key="article">
+      <h2>
         <a :href="item.url" target="_blank">{{ item.title }}</a>
-      </li>
-    </ul> 
+      </h2>
+      <span>{{ item.stack }}</span>
+    </div>
   </section>
 </template>
 
@@ -25,38 +26,22 @@ export default {
     return {
       projects: {
         front: [
+
           {
-            title: "Responsive Landpage (CSS-Grid)",
+            title: "Responsive Landpage",
+            stack: "CSS-Grid",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
           },
           {
-            title: "Website Tesla (Flex-Box)",
+            title: "Website Tesla",
+            stack: "Flex-Box",
             url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
           },
           {
-            title: "Street Fighter Animate (Old School)",
+            title: "Street Fighter Animate",
+            stack: "Adobe Edge (Old School)",
             url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
-          },
-          // {
-          //   title: "APP Ionic - GYM Series",
-          //   url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
-          // },
-          // {
-          //   title: "APP Ionic - Dashboard Portfolio",
-          //   url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
-          // },
-          // {
-          //   title: "Angular - PWA Sony",
-          //   url: "https://renato7oliveira.github.io/experimentos/Email_Mkt/Vivo/index.html",
-          // },
-          // {
-          //   title: "Angular - PWA Summit Hotel",
-          //   url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
-          // },
-          // {
-          //   title: "Landpage - Tema Genérico CSS-Grid",
-          //   url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
-          // },
+          }
         ],
       },
       social: [
@@ -82,6 +67,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+div{
+  font-size: 1em;
+  margin-bottom: 25px;
+}
+h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+  text-transform: unset;
+  a {
+    color: var(--color-primary);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
 ul {
   margin-bottom: 75px;
 }
@@ -94,6 +94,7 @@ li {
   }
   a {
     color: var(--color-primary);
+    width: 100%;
     &:hover {
       text-decoration: underline;
     }
