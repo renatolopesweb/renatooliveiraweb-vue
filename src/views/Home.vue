@@ -2,40 +2,16 @@
   <section>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <h2>FRONT-END DEV.</h2>
+      <h2>PORTFOLIO WEB</h2>
     </header>
     <article>
       <div class="description">
-        <p><strong>Nome</strong>: Renato Oliveira.</p>
-        <p><strong>Aniversário</strong>: 12/05.</p>
-        <p><strong>Signo</strong>: Touro.</p>
-        <p><strong>Formação</strong>: Comunicação Web UNIP.</p>
-        <p><strong>Posição</strong>: Web Designer / Front-end Dev.</p>
-        <p><strong>Departamentos</strong>: Comunicação / Marketing / TI.</p>
-        <p><strong>Missão</strong>: Transformar semente em substância.</p>
         <p>
-          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
-          Transporte público, Culinária Familiar, Pedalar, Ler, Assistir TV, Ser
-          pai da AnaLu e da “Cyndi”.
+          Profissional da web dedicado ao front-end e design (UI). Tive
+          oportunidade de trabalhar em startups de marketing digital e de TI.
+          Sou incansável, me esforço diariamente para entregar o melhor
+          possível. Casado com a Delma, pai da Ana Luiza e da "Cyndi".
         </p>
-        <!-- <h2>Sobre</h2> -->
-        <!-- <p>
-          Olá, sou o <strong>RENATO OLIVEIRA</strong>, formado em Comunicação
-          Web pela UNIP. +10 anos trabalhando com front-end, design (UI) e transformando sementes em substância.
-          Onipresente em áreas de Comunicação, Marketing e TI.
-        </p>
-
-        <p>
-          <strong>Amo</strong>: São Paulo (onde vivo), Profissão, MPB,
-          Transporte público, Pedalar, TV, Cinema, Ser pai da AnaLu e da
-          “Cyndi”.
-        </p> -->
-
-        <!-- <p>
-          <strong>Para RH ver</strong>: Ser humano que codifica websites,
-          landpages, dashboards, e-mail marketing; Utiliza ferramentas CMS como
-          wordpress; Prototipação de interfaces, Tratamento de imagens.
-        </p> -->
 
         <div class="btn-content" @click="toTop()">
           <router-link to="/skills" class="btn"
@@ -46,13 +22,12 @@
       <div>
         <figure>
           <img
-            src="../assets/images/renato-oliveira-web.jpg"
+            src="../assets/images/renato-oliveira-web-2.jpg"
             alt="Renato Oliveira Web"
             title="Renato Oliveira Web"
           />
         </figure>
         <div class="social">
-          <h2>Redes Sociais</h2>
           <ul>
             <li v-for="item in social" :key="item.id">
               <a :href="item.url" target="_blank" :title="item.title"
@@ -107,43 +82,44 @@ section {
 header {
   display: grid;
   align-content: center;
-  height: 100vh;
-  padding: var(--df-padding);
+  background: var(--color-primary);
+  height: 50vh;
+  padding: 0 50px;
   h1 {
-    // font-size: 4.6em;
-    font-size: 5vw;
+    color: #fff;
+    font-size: 4vw;
     margin: 0;
     // animation: hello 0.5s ease-in-out;
   }
   h2 {
-    color: var(--color-black);
+    color: #fff;
     // font-size: 3em;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: 900;
     margin: 0;
   }
 }
 @media (max-width: 1000px) {
   header {
+    height: 100vh;
     padding: 25px;
     h1 {
-      font-size: 8vw;
+      font-size: 7.5vw;
     }
     h2 {
-      font-size: 7vw;
+      font-size: 6vw;
     }
   }
 }
 article {
   display: grid;
-  grid-template-columns: auto 300px;
+  grid-template-columns: auto 175px;
   grid-gap: 75px;
   grid-template-areas: "desc photo";
   align-content: center;
-  background: var(--color-primary);
-  color: #fff;
-  min-height: 100vh;
-  padding: var(--df-padding);
+  // color: var(--color-primary);
+  min-height: 50vh;
+  padding: 0 50px;
   .description {
     grid-area: desc;
   }
@@ -155,9 +131,9 @@ article {
   }
   p {
     font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 30px;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
   .social {
     // border: 2px solid red;
@@ -165,12 +141,13 @@ article {
     ul {
       display: flex;
       justify-content: space-around;
+      margin: 15px 0;
     }
     a {
-      color: #fff;
+      color: var(--color-primary);
       font-size: 1.4em;
       &:hover {
-        color: rgba($color: #fff, $alpha: 0.7);
+        color: rgba($color: #000, $alpha: 0.9);
       }
     }
   }
@@ -179,6 +156,7 @@ article {
     align-content: center;
     grid-area: photo;
     img {
+      border-radius: 100%;
       width: 100%;
     }
   }

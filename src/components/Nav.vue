@@ -48,6 +48,9 @@ nav {
   li {
     margin-top: 50px;
     width: 300px;
+    &:hover{
+      transform: scale(1.2);
+    }
     i {
       font-size: 3.4em;
       padding-bottom: 10px;
@@ -76,6 +79,9 @@ nav {
     font-weight: 500;
     margin: 0;
     padding: 15px 0;
+    &:hover{
+      transform: scale(1);
+    }
     i{
       font-size: 1.3em;
     }

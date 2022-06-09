@@ -53,9 +53,9 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: #f1f1f1;
   background: #333;
   background: #fafafa;
+  background: #f1f1f1;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
