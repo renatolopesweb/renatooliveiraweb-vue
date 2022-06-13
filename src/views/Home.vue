@@ -7,22 +7,22 @@
     <article>
       <div class="description">
         <p>
-          Profissional da web dedicado ao front-end e design (UI). Tive
-          oportunidade de trabalhar em startups de marketing digital e de TI.
-          Sou incansável, me esforço diariamente para entregar o melhor
-          possível. Casado com a Delma, pai da Ana Luiza e da "Cyndi".
+          Profissional de web dedicado ao front-end e design (UI). Tive
+          oportunidade de trabalhar em empresas de Marketing Digital e TI. Me
+          esforço diariamente para entregar o melhor possível. Casado com a
+          Delma, pai da Ana Luiza e da "Cyndi".
         </p>
 
         <div class="btn-content" @click="toTop()">
-          <router-link to="/skills" class="btn"
-            ><i class="fas fa-chess-knight"></i>Skills</router-link
+          <router-link to="/curriculo" class="btn"
+            ><i class="far fa-file-alt"></i>Currículo</router-link
           >
         </div>
       </div>
       <div>
         <figure>
           <img
-            src="../assets/images/renato-oliveira-web-2.jpg"
+            src="../assets/images/renato-oliveira-web-4.jpg"
             alt="Renato Oliveira Web"
             title="Renato Oliveira Web"
           />
@@ -87,12 +87,12 @@ header {
   padding: 0 50px;
   h1 {
     color: #fff;
-    font-size: 4vw;
+    font-size: 3.5vw;
     margin: 0;
     // animation: hello 0.5s ease-in-out;
   }
   h2 {
-    color: #fff;
+    color: rgba($color: #000, $alpha: 0.5);
     // font-size: 3em;
     font-size: 3vw;
     font-weight: 900;
@@ -113,8 +113,8 @@ header {
 }
 article {
   display: grid;
-  grid-template-columns: auto 175px;
-  grid-gap: 75px;
+  grid-template-columns: auto 150px;
+  grid-gap: 25px;
   grid-template-areas: "desc photo";
   align-content: center;
   // color: var(--color-primary);
@@ -131,9 +131,7 @@ article {
   }
   p {
     font-size: 1.1em;
-    font-weight: 500;
     line-height: 30px;
-    // margin-top: 20px;
   }
   .social {
     // border: 2px solid red;
@@ -141,56 +139,29 @@ article {
     ul {
       display: flex;
       justify-content: space-around;
-      margin: 15px 0;
+      // margin: 15px 0;
+    }
+    li:hover {
+      transform: scale(1.2);
     }
     a {
       color: var(--color-primary);
       font-size: 1.4em;
       &:hover {
-        color: rgba($color: #000, $alpha: 0.9);
+        color: #092e5c;
       }
     }
   }
   figure {
-    display: grid;
-    align-content: center;
     grid-area: photo;
     img {
       border-radius: 100%;
+      filter: grayscale(1);
       width: 100%;
+      &:hover {
+        filter: grayscale(0);
+      }
     }
-  }
-}
-.btn-content {
-  display: flex;
-  margin-top: 30px;
-  padding-bottom: 35px;
-}
-.btn {
-  background-color: #fff;
-  border: 0;
-  border-radius: var(--df-border-radius);
-  box-shadow: var(--box-shadow);
-  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
-    0 1px 5px 0 rgb(0 0 0 / 20%);
-  color: var(--color-primary);
-  cursor: pointer;
-  font-size: 0.8em;
-  font-weight: 500;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  &:hover {
-    background: rgba($color: #fff, $alpha: 0.7);
-  }
-  i {
-    margin-right: 5px;
-  }
-}
-@media (max-width: 1100px) {
-  .btn-content {
-    flex-direction: column;
-    margin-bottom: 50px;
   }
 }
 @media (max-width: 800px) {
@@ -202,9 +173,10 @@ article {
       "desc";
     height: auto;
     padding: 25px;
-    h2 {
-      font-size: 2em;
-      margin-top: 25px;
+  }
+  .social {
+    ul {
+      margin: 15px 0;
     }
   }
 }

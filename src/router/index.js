@@ -14,15 +14,21 @@ const routes = [
   },
 
   {
-    path: '/skills',
-    meta: { title: pageTitle + ' · SKILLS' },
-    component: () => import('../views/Skills.vue')
+    path: '/sobre',
+    meta: { title: pageTitle + ' · SOBRE' },
+    component: () => import('../views/About.vue')
   },
 
   {
     path: '/links',
     meta: { title: pageTitle + ' · LINKS' },
     component: () => import('../views/Links.vue')
+  },
+
+  {
+    path: '/curriculo',
+    meta: { title: pageTitle + ' · CURRÍCULO' },
+    component: () => import('../views/Vitae.vue')
   },
 
   // {

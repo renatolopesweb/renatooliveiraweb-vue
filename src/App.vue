@@ -53,8 +53,8 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: #333;
   background: #fafafa;
+  background: #333;
   background: #f1f1f1;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -76,7 +76,7 @@ h3 {
 
 h1 {
   color: var(--color-primary);
-  font-size: 4.2em;
+  font-size: 3.2em;
   font-weight: 900;
   margin-bottom: 15px;
 }
@@ -88,12 +88,27 @@ h2 {
 
 @media (max-width: 1100px) {
   h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 @media (max-width: 280px) {
   h1 {
     font-size: 2em;
+  }
+}
+p {
+  font-size: 1.1em;
+  line-height: 30px;
+}
+li {
+  font-size: 1.1em;
+  margin-top: 15px;
+  a {
+    color: var(--color-primary);
+    width: 100%;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -111,9 +126,10 @@ h2 {
 
 aside {
   background: #fff;
-  box-shadow: var(--df-box-shadow);
+  // box-shadow: var(--df-box-shadow);
   height: 100vh;
   min-height: 100%;
+  border-right: 1px solid rgba($color: #ccc, $alpha: 0.7);
 }
 section {
   padding: var(--df-padding);
@@ -130,15 +146,33 @@ section {
 
 /* UI COMPONENT */
 
-// CARD
-.card {
-  box-shadow: var(--df-box-shadow);
+.btn-content {
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 35px;
+}
+.btn {
+  background-color: var(--color-primary);
+  border: 0;
   border-radius: var(--df-border-radius);
-  img {
-    border-radius: var(--df-border-radius);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover {
+    background: #092e5c;
   }
-  div {
-    padding: 25px;
+  i {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .btn-content {
+    flex-direction: column;
+    margin-bottom: 50px;
   }
 }
 

@@ -10,12 +10,17 @@
       </li>
     </ul> -->
     <!-- <h2>Experimentos Web</h2>-->
+
+
+    <!-- <p>Em breve...🐶</p> -->
     <div v-for="(item, article) in projects.front" :key="article">
       <h2>
         <a :href="item.url" target="_blank">{{ item.title }}</a>
       </h2>
       <span>{{ item.stack }}</span>
     </div>
+
+
   </section>
 </template>
 
@@ -26,16 +31,20 @@ export default {
     return {
       projects: {
         front: [
-
+          // {
+          //   title: "Jade Arts",
+          //   stack: "Next.js / Material Design",
+          //   url: "https://next-amazona-phi.vercel.app/",
+          // },
+          // {
+          //   title: "International Churchill Society",
+          //   stack: "Wordpress / Bootstrap",
+          //   url: "https://winstonchurchill.org/",
+          // },
           {
-            title: "Responsive Landpage",
-            stack: "CSS-Grid",
+            title: "Frontend Job Test",
+            stack: "CSS-Grid / Sass",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
-          },
-          {
-            title: "Website Tesla",
-            stack: "Flex-Box",
-            url: "https://renato7oliveira.github.io/experimentos/Tesla/src/",
           },
           {
             title: "Street Fighter Animate",
@@ -67,7 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div{
+div {
   font-size: 1em;
   margin-bottom: 25px;
 }
@@ -77,24 +86,6 @@ h2 {
   text-transform: unset;
   a {
     color: var(--color-primary);
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-}
-ul {
-  margin-bottom: 75px;
-}
-li {
-  font-size: 1.1em;
-  margin-top: 15px;
-  i {
-    text-align: center;
-    width: 20px;
-  }
-  a {
-    color: var(--color-primary);
-    width: 100%;
     &:hover {
       text-decoration: underline;
     }

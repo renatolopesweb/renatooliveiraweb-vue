@@ -5,8 +5,8 @@
         <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/skills"
-          ><i class="fas fa-chess-knight"></i>Skills</router-link
+        <router-link to="/sobre"
+          ><i class="fas fa-running"></i>Sobre</router-link
         >
       </li>
       <li @click="toTop()">
@@ -46,10 +46,11 @@ nav {
     position: fixed;
   }
   li {
+    font-size: 1em;
     margin-top: 50px;
     width: 300px;
     &:hover{
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
     i {
       font-size: 3.4em;
@@ -60,6 +61,7 @@ nav {
       color: rgba($color: #000, $alpha: 0.3);
       &:hover{
         color: var(--color-primary);
+        text-decoration: none;
       }
     }
   }
@@ -70,10 +72,11 @@ nav {
     display: flex;
     justify-content: space-between;
     background: #fff;
-    box-shadow: var(--df-box-shadow);
+    // box-shadow: var(--df-box-shadow);
+    border-top: 1px solid rgba($color: #ccc, $alpha: 0.7);
     bottom: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 5;
   li{
     font-size: 0.8em;
     font-weight: 500;
