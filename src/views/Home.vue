@@ -9,13 +9,13 @@
         <p>
           Profissional de web dedicado ao front-end e design (UI). Tive
           oportunidade de trabalhar em empresas de Marketing Digital e TI. Me
-          esforço diariamente para entregar o melhor possível. Casado com a
+          esforço diariamente para entregar meu melhor. Casado com a
           Delma, pai da Ana Luiza e da "Cyndi".
         </p>
 
         <div class="btn-content" @click="toTop()">
-          <router-link to="/curriculo" class="btn"
-            ><i class="far fa-file-alt"></i>Currículo</router-link
+          <router-link to="/sobre" class="btn"
+            ><i class="fas fa-running"></i>Sobre</router-link
           >
         </div>
       </div>
@@ -130,8 +130,7 @@ article {
     margin: 15px 0;
   }
   p {
-    font-size: 1.1em;
-    line-height: 30px;
+    font-size: 1.2em;
   }
   .social {
     // border: 2px solid red;

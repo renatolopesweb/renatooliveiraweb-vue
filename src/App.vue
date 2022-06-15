@@ -111,7 +111,12 @@ li {
     }
   }
 }
-
+a {
+    color: var(--color-primary);
+    &:hover {
+      text-decoration: underline;
+    }
+}
 #app {
   display: grid;
   grid-template-columns: 300px auto;
@@ -140,7 +145,7 @@ section {
     min-height: 0;
   }
   section {
-    padding: 25px;
+    padding: 25px 25px 75px 25px;
   }
 }
 
@@ -164,6 +169,7 @@ section {
   text-transform: uppercase;
   &:hover {
     background: #092e5c;
+    text-decoration: none;
   }
   i {
     margin-right: 5px;

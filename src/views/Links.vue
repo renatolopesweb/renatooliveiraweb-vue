@@ -50,26 +50,9 @@ export default {
             title: "Street Fighter Animate",
             stack: "Adobe Edge (Old School)",
             url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
-          }
-        ],
-      },
-      social: [
-        {
-          title: "Linkedin",
-          img: "fab fa-linkedin",
-          url: "https://www.linkedin.com/in/renatooliveiraweb",
-        },
-        {
-          title: "Instagram",
-          img: "fab fa-instagram",
-          url: "https://www.instagram.com/renatooliveiraweb",
-        },
-        {
-          title: "Github",
-          img: "fab fa-github-alt",
-          url: "https://github.com/renato7oliveira",
-        },
-      ],
+          },
+        ]
+      }
     };
   },
 };
@@ -77,18 +60,11 @@ export default {
 
 <style scoped lang="scss">
 div {
-  font-size: 1em;
   margin-bottom: 25px;
 }
 h2 {
   font-weight: normal;
-  margin-bottom: 5px;
+  line-height: 30px;
   text-transform: unset;
-  a {
-    color: var(--color-primary);
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 </style>

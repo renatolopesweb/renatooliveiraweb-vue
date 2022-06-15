@@ -25,12 +25,6 @@ const routes = [
     component: () => import('../views/Links.vue')
   },
 
-  {
-    path: '/curriculo',
-    meta: { title: pageTitle + ' · CURRÍCULO' },
-    component: () => import('../views/Vitae.vue')
-  },
-
   // {
   //   path: '/contact',
   //   meta: { title: pageTitle + ' · CONTATO' },
