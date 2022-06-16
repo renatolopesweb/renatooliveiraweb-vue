@@ -145,7 +145,7 @@ section {
     min-height: 0;
   }
   section {
-    padding: 25px 25px 75px 25px;
+    padding: 25px;
   }
 }
 

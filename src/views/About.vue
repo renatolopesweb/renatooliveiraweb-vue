@@ -7,20 +7,24 @@
         <p><strong>Aniversário</strong>: 12/05</p>
         <p><strong>Signo</strong>: Touro</p>
         <p><strong>Formação</strong>: Comunicação Web UNIP</p>
-        <p><strong>Posição</strong>: Web Designer / Front-end Dev.</p>
-        <p><strong>Currículo</strong>: <a href="https://www.dropbox.com/s/0keqpe495bhw5a9/curriculo-renato-oliveira-portfolio.pdf?dl=0" target="_blank">Padrão</a> ou <a href="https://www.dropbox.com/s/noy1kl2iayaycay/renato-oliveira-canvas-portfolio.pdf?dl=0" target="_blank"> Canvas</a></p>
+        <p><strong>Posição</strong>: Web Designer / Front-end</p>
         <p><strong>Departamentos</strong>: TI / Marketing / Comunicação</p>
         <p><strong>Missão</strong>: Transformar semente em substância</p>
         <p>
           <strong>Amo</strong>: Minha profissão, pedalar, cinema, centro de São
-          Paulo, MPB, culinária Peruana, assistir TV, quebra cabeça, xadrez,
+          Paulo, MPB, temaki, assistir TV, quebra cabeça, xadrez,
           youtube
         </p>
+        <div class="btn-content" @click="toTop()">
+          <router-link to="/curriculo" class="btn"
+            ><i class="far fa-file-alt"></i>Currículo</router-link
+          >
+        </div>
       </div>
       <div>
         <figure>
           <img
-            src="../assets/images/renato-oliveira-web-about.jpg"
+            src="../assets/images/renato-oliveira-web.jpg"
             alt="Renato Oliveira Web"
             title="Renato Oliveira Web"
           />
@@ -29,6 +33,18 @@
     </article>
   </section>
 </template>
+
+<script>
+export default {
+  methods: {
+    toTop() {
+      window.scrollTo({
+        top: 0,
+      });
+    }
+  }
+}
+  </script>
 
 <style lang="scss" scoped>
 article {
@@ -49,6 +65,7 @@ article {
     align-content: center;
     grid-area: photo;
     img {
+      border-radius: var(--df-border-radius);
       width: 100%;
     }
   }
