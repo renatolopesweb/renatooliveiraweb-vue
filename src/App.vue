@@ -26,18 +26,10 @@ export default {
 /* VARS */
 :root {
   // COLORS
-  --color-primary: #06174f;
-  --color-secondary: #F77725;
+  --color-primary: #634F46;
+  --color-secondary: #E04F23;
   // PROPERTIES
-  // --box-shadow: 0px 0px 8px 0px #cccccc;
-  --df-border-radius: 2px;
   --df-transition: 0.1s;
-  --df-box-shadow: -1 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-    0 0 0 1px rgb(10 10 10 / 2%);
-  --df-box-shadow: 15px 0px 10px rgba($color: #000, $alpha: 0.6);
-  --df-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
-    0 1px 5px 0 rgb(0 0 0 / 20%);
-  --df-padding: 25px 25px 0px 50px;
 }
 
 * {
@@ -50,10 +42,7 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: #fafafa;
-  background: #333;
-  background: #e5e5e5;
-  background: #f1f1f1;
+  background: #FCFCFC;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -65,9 +54,7 @@ body {
 }
 
 // TAGS
-h1,
-h2,
-h3 {
+h1{
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -77,11 +64,6 @@ h1 {
   font-size: 3.2em;
   font-weight: 300;
   margin-bottom: 15px;
-}
-h2 {
-  font-size: 1.2em;
-  font-weight: 900;
-  color: var(--color-black);
 }
 
 @media (max-width: 1100px) {

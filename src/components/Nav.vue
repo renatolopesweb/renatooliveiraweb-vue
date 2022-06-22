@@ -44,7 +44,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, rgba(15,37,110,1) 0%, rgba(59,16,110,1) 100%);
+  background-color: var(--color-primary);
   bottom: 0;
   height: 150px;
   position: fixed;
@@ -86,6 +86,11 @@ li {
         font-size: 1.3em;
       }
     }
+  }
+}
+@media (max-width: 500px) {
+  ul {
+    justify-content: space-around;
   }
 }
 </style>

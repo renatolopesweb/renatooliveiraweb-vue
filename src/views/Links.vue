@@ -54,7 +54,8 @@ h2 {
   text-transform: unset;
 }
 span{
-  font-size: 1.1em;
-  font-weight: 500;
+  color: #000;
+  font-size: 0.9em;
+  font-weight: bolder;
 }
 </style>
