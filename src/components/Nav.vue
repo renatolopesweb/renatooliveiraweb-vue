@@ -1,21 +1,21 @@
 <template>
-  <nav>
-    <ul>
-      <li @click="toTop()">
-        <router-link to="/"><i class="fas fa-house-user"></i>Home</router-link>
-      </li>
-      <li @click="toTop()">
-        <router-link to="/sobre"
-          ><i class="fas fa-running"></i>Sobre</router-link
-        >
-      </li>
-      <li @click="toTop()">
-        <router-link to="/links"
-          ><i class="fas fa-link"></i>Links</router-link
-        >
-      </li>
-    </ul>
-  </nav>
+  <ul>
+    <li @click="toTop()">
+      <router-link to="/">
+        <i class="fas fa-running"></i>Home
+      </router-link>
+    </li>
+    <li @click="toTop()">
+      <router-link to="/links">
+        <i class="fas fa-link"></i>Links
+      </router-link>
+    </li>
+    <li @click="toTop()">
+      <router-link to="/contato">
+        <i class="fas fa-share-alt"></i>Contato
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -24,71 +24,68 @@ export default {
     toTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behavior: "smooth"
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .link_active {
-  color: var(--color-primary);
+  color: rgba($color: #fff, $alpha: 0.1);
   &:hover {
     cursor: auto;
   }
 }
 
-nav {
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(15,37,110,1) 0%, rgba(59,16,110,1) 100%);
+  bottom: 0;
+  height: 150px;
+  position: fixed;
   text-align: center;
   text-transform: uppercase;
-  ul {
-    position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+li {
+  margin-left: 10px;
+  margin-right: 10px;
+  &:hover {
+    transform: scale(1.2);
   }
-  li {
+  i {
+    padding-bottom: 5px;
+    font-size: 3em;
+    width: 100%;
+  }
+  a {
+    color: rgba($color: #fff, $alpha: 0.8);
+    font-weight: normal;
     font-size: 1em;
-    margin-top: 50px;
-    width: 300px;
-    &:hover{
-      transform: scale(1.1);
-    }
-    i {
-      font-size: 3.4em;
-      padding-bottom: 10px;
-      width: 100%;
-    }
-    a {
-      color: rgba($color: #000, $alpha: 0.3);
-      &:hover{
-        color: var(--color-primary);
-        text-decoration: none;
-      }
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
-
-@media(max-width: 1100px){
-  ul{
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    // box-shadow: var(--df-box-shadow);
-    border-top: 1px solid rgba($color: #ccc, $alpha: 0.7);
-    bottom: 0;
-    width: 100%;
-    z-index: 5;
-  li{
-    font-size: 0.8em;
-    font-weight: 500;
-    margin: 0;
-    padding: 15px 0;
-    &:hover{
-      transform: scale(1);
+@media (max-width: 1100px) {
+  ul {
+    height: 75px;
+    li {
+      font-size: 0.8em;
+      &:hover {
+        transform: scale(1);
+      }
+      i {
+        font-size: 1.3em;
+      }
     }
-    i{
-      font-size: 1.3em;
-    }
-  }
   }
 }
 </style>

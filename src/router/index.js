@@ -26,6 +26,12 @@ const routes = [
   },
 
   {
+    path: '/contato',
+    meta: { title: pageTitle + ' · CONTATO' },
+    component: () => import('../views/Contact.vue')
+  },
+
+  {
     path: '/curriculo',
     meta: { title: pageTitle + ' · CURRÍCULO' },
     component: () => import('../views/Vitae.vue')

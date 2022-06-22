@@ -31,26 +31,11 @@ export default {
     return {
       projects: {
         front: [
-          // {
-          //   title: "Jade Arts",
-          //   stack: "Next.js / Material Design",
-          //   url: "https://next-amazona-phi.vercel.app/",
-          // },
-          // {
-          //   title: "International Churchill Society",
-          //   stack: "Wordpress / Bootstrap",
-          //   url: "https://winstonchurchill.org/",
-          // },
           {
             title: "Frontend Job Test",
-            stack: "CSS-Grid / Sass",
+            stack: "HTML / CSS-Grid",
             url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
-          },
-          {
-            title: "Street Fighter Animate",
-            stack: "Adobe Edge (Old School)",
-            url: "https://renato7oliveira.github.io/street-fighter-audio-project/",
-          },
+          }
         ]
       }
     };
@@ -63,8 +48,13 @@ div {
   margin-bottom: 25px;
 }
 h2 {
-  font-weight: normal;
+  font-size: 1.1em;
+  font-weight: 500;
   line-height: 30px;
   text-transform: unset;
+}
+span{
+  font-size: 1.1em;
+  font-weight: 500;
 }
 </style>
