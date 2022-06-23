@@ -26,8 +26,8 @@ export default {
 /* VARS */
 :root {
   // COLORS
-  --color-primary: #634F46;
-  --color-secondary: #E04F23;
+  --color-primary: #69452b;
+  --color-secondary: #E57545;
   // PROPERTIES
   --df-transition: 0.1s;
 }
@@ -95,7 +95,7 @@ main {
   padding-bottom: 250px;
   text-align: center;
   li {
-    margin-top: 25px;
+    margin-bottom: 25px;
     a {
       font-size: 1.1em;
       font-weight: bold;

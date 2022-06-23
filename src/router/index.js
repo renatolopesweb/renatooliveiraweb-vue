@@ -4,12 +4,12 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const pageTitle = 'Renato Oliveira · '
+const pageTitle = 'Renato Oliveira Web · '
 const routes = [
 
   {
     path: '/',
-    meta: { title: pageTitle + 'Front-end / Web-designer'},
+    meta: { title: pageTitle + 'Front-end · Web-designer'},
     component: Home
   },
 

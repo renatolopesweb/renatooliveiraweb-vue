@@ -3,7 +3,7 @@
     <div class="header-hero"></div>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <h2>front-end / web-designer</h2>
+      <h2>front-end · web-designer</h2>
     </header>
     <article>
       <figure>
@@ -13,15 +13,6 @@
           title="Renato Oliveira Web"
         />
       </figure>
-      <!-- <div class="social">
-        <ul>
-          <li v-for="item in social" :key="item.id">
-            <a :href="item.url" target="_blank" :title="item.title">
-              <i :class="item.img" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>-->
       <p>
         Olá, sou o Renato, profissional de web dedicado ao front-end e design. 
         Formado em Comunicação para Web pela UNIP, tive oportunidade de trabalhar em áreas de TI, 
@@ -49,6 +40,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+$color-primary: #69452b;
+
 header {
   display: grid;
   align-content: center;
@@ -63,7 +57,7 @@ header {
   z-index: 3;
   h1,
   h2 {
-    color: rgba($color: #54452E, $alpha: 0.9);
+    color: rgba($color: $color-primary, $alpha: 0.9);
     font-family: "Poiret One", cursive;
     font-weight: lighter;
     margin: 0;
@@ -82,7 +76,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(1);
   height: 100vh;
   position: absolute;
   left: 0;
@@ -95,18 +88,17 @@ article {
   margin-top: 100vh;
   img {
     border-radius: 100%;
-    margin: 100px auto 5px auto;
-
+    margin: 75px auto 0 auto;
     width: 150px;
   }
   p {
     color: var(--color-primary);
-    margin-bottom: 25px;
+    margin-top: 25px;
   }
 }
 @media (max-width: 1100px) {
   header {
-    background: rgba($color: #634F46, $alpha: 0.9);
+    background: rgba($color: $color-primary, $alpha: 0.9);
     h1, h2{
       color: rgba($color: #fff, $alpha: 0.9);
     }

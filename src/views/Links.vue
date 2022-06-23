@@ -8,9 +8,8 @@
           ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
         >
       </li>
-    </ul> -->
+    </ul>-->
     <!-- <h2>Experimentos Web</h2>-->
-
 
     <!-- <p>Em breve...🐶</p> -->
     <div v-for="(item, article) in projects.front" :key="article">
@@ -19,8 +18,6 @@
       </h2>
       <span>{{ item.stack }}</span>
     </div>
-
-
   </section>
 </template>
 
@@ -32,18 +29,22 @@ export default {
       projects: {
         front: [
           {
-            title: "Frontend Job Test",
+            title: "Front-end Test",
             stack: "HTML / CSS-Grid",
-            url: "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/",
-          }
+            url:
+              "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/"
+          },
         ]
       }
     };
-  },
+  }
 };
 </script>
 
 <style scoped lang="scss">
+section{
+  padding-bottom: 50px;
+}
 div {
   margin-bottom: 25px;
 }
@@ -53,8 +54,8 @@ h2 {
   line-height: 30px;
   text-transform: unset;
 }
-span{
-  color: #000;
+span {
+  // color: #78657E;
   font-size: 0.9em;
   font-weight: bolder;
 }

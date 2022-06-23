@@ -34,6 +34,11 @@ export default {
           title: "Github",
           img: "fab fa-github-alt",
           url: "https://github.com/renato7oliveira"
+        },
+        {
+          title: "E-mail",
+          img: "far fa-envelope",
+          url: "mailto:renato.ldeoliveira@gmail.com"
         }
       ]
     };
