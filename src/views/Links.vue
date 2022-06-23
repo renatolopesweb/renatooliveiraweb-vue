@@ -1,23 +1,12 @@
 <template>
   <section>
     <h1>Links</h1>
-    <!-- <h2>Minhas Redes Sociais</h2>
-    <ul>
-      <li v-for="item in social" :key="item.id">
-        <a :href="item.url" target="_blank" :title="item.title"
-          ><i :class="item.img" aria-hidden="true"></i> {{ item.title }}</a
-        >
-      </li>
-    </ul>-->
-    <!-- <h2>Experimentos Web</h2>-->
-
-    <!-- <p>Em breve...🐶</p> -->
-    <div v-for="(item, article) in projects.front" :key="article">
+    <article v-for="(item, article) in projects.front" :key="article">
       <h2>
         <a :href="item.url" target="_blank">{{ item.title }}</a>
       </h2>
       <span>{{ item.stack }}</span>
-    </div>
+    </article>
   </section>
 </template>
 
@@ -45,7 +34,7 @@ export default {
 section{
   padding-bottom: 50px;
 }
-div {
+article {
   margin-bottom: 25px;
 }
 h2 {

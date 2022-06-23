@@ -26,8 +26,8 @@ export default {
 /* VARS */
 :root {
   // COLORS
-  --color-primary: #69452b;
-  --color-secondary: #E57545;
+  --color-primary: #3e2723;
+  --color-secondary: #ff5722;
   // PROPERTIES
   --df-transition: 0.1s;
 }
@@ -42,7 +42,7 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: #FCFCFC;
+  background: #f8f5f5;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }

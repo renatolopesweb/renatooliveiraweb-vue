@@ -41,12 +41,12 @@ export default {
 
 <style lang="scss" scoped>
 
-$color-primary: #69452b;
+$color-primary: #3e2723 ;
 
 header {
   display: grid;
   align-content: center;
-  background: rgba($color: #fff, $alpha: 0.9);
+  background: rgba($color: #fff, $alpha: 0.8);
   padding-left: 25px;
   position: absolute;
   left: 0;
