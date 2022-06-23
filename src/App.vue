@@ -54,27 +54,13 @@ body {
 }
 
 // TAGS
-h1{
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
 h1 {
   color: var(--color-primary);
+  font-family: "Poiret One", cursive;
   font-size: 3.2em;
   font-weight: 300;
   margin-bottom: 15px;
-}
-
-@media (max-width: 1100px) {
-  h1 {
-    font-size: 2.5em;
-  }
-}
-@media (max-width: 280px) {
-  h1 {
-    font-size: 2em;
-  }
+  text-transform: uppercase;
 }
 p {
   font-size: 1.1em;
