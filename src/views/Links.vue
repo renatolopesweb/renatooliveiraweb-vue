@@ -17,6 +17,18 @@ export default {
     return {
       projects: {
         front: [
+          // {
+          //   title: "Haus Ink Tattoo",
+          //   stack: "Next.js / Bootstrap",
+          //   url:
+          //     "https://haus.ink"
+          // },
+          // {
+          //   title: "Jade Arts",
+          //   stack: "Wordpress / Tailwind",
+          //   url:
+          //     "https://next-amazona-phi.vercel.app"
+          // },
           {
             title: "Front-end Test",
             stack: "HTML / CSS-Grid",
@@ -32,7 +44,7 @@ export default {
 
 <style scoped lang="scss">
 section{
-  padding-bottom: 50px;
+  padding-bottom: 75px;
 }
 article {
   margin-bottom: 25px;
@@ -46,6 +58,6 @@ h2 {
 span {
   // color: #78657E;
   font-size: 0.9em;
-  font-weight: bolder;
+  font-weight: 500;
 }
 </style>

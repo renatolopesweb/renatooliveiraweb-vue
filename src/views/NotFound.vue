@@ -9,12 +9,10 @@
 
 <style lang="scss" scoped>
 article {
-  display: grid;
-  align-content: center;
-  height: calc(100vh - 90px);
   text-align: center;
   a {
-    color: var(--color-primary);
+    color: var(--color-secondary);
+    text-decoration: none;
   }
 }
 

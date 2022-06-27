@@ -1,10 +1,10 @@
 <template>
   <section>
+    <div class="header-hero"></div>
     <header>
       <h1>RENATO OLIVEIRA</h1>
       <h2>front-end · web-designer</h2>
     </header>
-    <div class="header-bg"></div>
     <article>
       <figure>
         <img
@@ -13,15 +13,34 @@
           title="Renato Oliveira Web"
         />
       </figure>
-      <div>
-        <h2>Olá, meu nome é Renato Oliveira, profissional de front-end e design</h2>
-        <p>Desde 2009 que sou onipresente em áreas de TI, Comunicação e Marketing. Quer seja desenvolvendo ou coordenando, minha missão é tornar aspirações em algo tátil e simples.</p>
-        <p>Formado em Comunicação para Web pela Universidade Paulista (UNIP), pseudo-músico, pseudo-ciclista, pai da Ana Luiza e da “Cyndi”.</p>
-        <p>Navegue nos links e me conheça melhor...</p>
-      </div>
+
+      <p>Pseudo-músico, apaixonado por front-end e design.</p>
+      <p>
+        Formado em Comunicação para Web pela Universidade Paulista (UNIP), já trabalhei em áreas de TI,
+        Comunicação e Marketing.
+        <span
+          @click="toTop()"
+        >
+          <router-link to="/curriculo">Ver Currículo</router-link>
+        </span>
+      </p>
+      <p>Casado com a Delma, pai da Ana Luiza e da "Cyndi".</p>
     </article>
   </section>
 </template>
+
+<script>
+export default {
+  methods: {
+    toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 $color-primary: #3e2723;
@@ -52,7 +71,7 @@ header {
     text-transform: none;
   }
 }
-.header-bg {
+.header-hero {
   background-image: url("../assets/images/header-bg.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -67,62 +86,30 @@ header {
 }
 article {
   display: grid;
-  grid-template-columns: 250px auto;
-  grid-gap: 75px;
-  // align-content: center;
   min-height: 100vh;
-  margin-top: 100vh;
-  text-align: left;
-  h2 {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-  p {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-top: 25px;
-  }
-  span {
-    color: var(--color-secondary);
-  }
-}
-figure,
-div {
-  display: grid;
-  height: calc(100vh - 100px);
   align-content: center;
-}
-figure {
+  margin-top: 100vh;
   img {
     border-radius: 100%;
-    width: 200px;
+    margin-top: -100px;
+    width: 150px;
+  }
+  p {
+    margin-top: 25px;
   }
 }
 @media (max-width: 1000px) {
   article {
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-    min-height: auto;
-    padding-bottom: 75px;
-    text-align: center;
-  }
-  figure {
-    display: grid;
-    // align-content: center;
-    justify-content: center;
     height: auto;
+    padding: 50px 0;
     img {
-      margin: 125px 0 25px 0;
-      // width: 100%;
+      margin-top: 0;
     }
-  }
-  div {
-    height: auto;
   }
 }
 @media (max-width: 500px) {
   header {
-    background: rgba($color: #fff, $alpha: 0.7);
+    background: rgba($color: #fff, $alpha: 0.5);
     h1,
     h2 {
       font-weight: bold;

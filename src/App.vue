@@ -5,17 +5,19 @@
         <router-view />
       </transition>
     </main>
-    <nav>
-      <Nav />
-    </nav>
+    <Nav />
+    <NavFooter />
+    <footer></footer>
   </div>
 </template>
 
 <script>
 import Nav from "../src/components/Nav";
+import NavFooter from "../src/components/NavFooter";
 export default {
   components: {
-    Nav
+    Nav,
+    NavFooter
   }
 };
 </script>
@@ -27,11 +29,11 @@ export default {
 :root {
   // COLORS
   --color-primary: #3e2723;
-  --color-secondary: #ff5722;
+  --color-secondary: #e65100;
+  --color-bg: #f8f5f5;
   // PROPERTIES
   --df-transition: 0.1s;
 }
-
 * {
   box-sizing: border-box;
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
@@ -42,7 +44,7 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: #f8f5f5;
+  background: var(--color-bg);
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -52,13 +54,12 @@ body {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 400;
 }
-
 // TAGS
 h1 {
   color: var(--color-primary);
   font-family: "Poiret One", cursive;
-  font-size: 3.2em;
-  font-weight: 300;
+  font-size: 2.8em;
+  font-weight: lighter;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -69,46 +70,54 @@ p {
 }
 a {
   color: var(--color-secondary);
-  font-weight: bold;
+  font-size: 1.1em;
+  font-weight: 500;
   text-decoration: underline;
+  &:active {
+    color: blue;
+  }
 }
 // TAGS
-
 // TEMPLATE
 main {
-  max-width: 700px;
-  margin: 25px auto;
-  padding-bottom: 250px;
+  max-width: 1310px;
+  margin: 20px auto 0 auto;
+  padding: 0 25px;
   text-align: center;
   li {
     margin-bottom: 25px;
     a {
       font-size: 1.1em;
-      font-weight: bold;
+      font-weight: 500;
       line-height: 30px;
     }
   }
 }
-@media (max-width: 1100px) {
-  main {
-    padding: 0 25px;
+footer {
+  background-image: url("./assets/images/header-bg.jpg");
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  footer {
+    height: 50px;
+    background-size: cover;
   }
 }
-// TEMPLATE
-
+@media (max-width: 500px) {
+  h1 {
+    font-weight: 700;
+    margin-top: 95px;
+  }
+}
+// 4k
 /* MEDIA QUERIES START */
-.show-d {
-  display: grid;
-}
-.show-m {
-  display: none;
-}
-@media (max-width: 1100px) {
-  .show-d {
-    display: none !important;
-  }
-  .show-m {
-    display: inline;
+@media (min-width: 1537px) {
+  p {
+    font-size: 1vw;
   }
 }
 /* MEDIA QUERIES END  */
