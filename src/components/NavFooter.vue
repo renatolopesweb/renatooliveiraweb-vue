@@ -10,9 +10,6 @@
       <li @click="toTop()">
         <router-link to="/curriculo">Currículo</router-link>
       </li>
-      <li @click="toTop()">
-        <router-link to="/contato">Contato</router-link>
-      </li>
     </ul>
   </nav>
 </template>

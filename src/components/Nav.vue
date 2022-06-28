@@ -23,11 +23,6 @@
           <i class="far fa-file-alt"></i>Currículo
         </router-link>
       </li>
-      <li @click="toTop()">
-        <router-link to="/contato">
-          <i class="fas fa-share-alt"></i>Contato
-        </router-link>
-      </li>
     </ul>
   </nav>
 </template>
@@ -161,7 +156,6 @@ a {
     transform: scale(1.1);
   }
   &:active {
-    color: var(--color-primary);
     transform: scale(1);
   }
 }

@@ -15,13 +15,52 @@
       </figure>
       <div>
         <h2>Olá, meu nome é Renato Oliveira, profissional de front-end e design</h2>
-        <p>Desde 2009 que sou onipresente em áreas de TI, Comunicação e Marketing. Quer seja desenvolvendo ou coordenando, minha missão é tornar aspirações em algo tátil e simples.</p>
-        <p>Formado em Comunicação para Web pela Universidade Paulista (UNIP), pseudo-músico, pseudo-ciclista, pai da Ana Luiza e da “Cyndi”.</p>
-        <p>Navegue nos links e me conheça melhor...</p>
+        <p>Onipresente desde 2009 em áreas de TI, Comunicação e Marketing. Desenvolvendo ou planejando, minha missão é tornar aspirações em algo tátil e simples.</p>
+        <p>Ficou com vontade de me conhecer melhor? Quer falar sobre web? Quer ver meus códigos? Então toque em alguma rede abaixo e envie uma mensagem, pode ser?</p>
+        <!-- <p>Formado em Comunicação para Web pela Universidade Paulista (UNIP), pseudo-músico, pseudo-ciclista, pai da Ana Luiza e da “Cyndi”.</p>
+        <p>Navegue nos links e me conheça melhor...</p>-->
+        <ul class="social">
+          <li v-for="item in social" :key="item.id">
+            <a :href="item.url" target="_blank" :title="item.title">
+              <i :class="item.img" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      social: [
+        {
+          title: "Linkedin",
+          img: "fab fa-linkedin",
+          url: "https://www.linkedin.com/in/renatooliveiraweb"
+        },
+        {
+          title: "Github",
+          img: "fab fa-github-alt",
+          url: "https://github.com/renato7oliveira"
+        },
+        {
+          title: "Instagram",
+          img: "fab fa-instagram",
+          url: "https://www.instagram.com/renatooliveiraweb"
+        },
+        {
+          title: "E-mail",
+          img: "far fa-envelope",
+          url: "mailto:renato.ldeoliveira@gmail.com"
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 $color-primary: #3e2723;
@@ -98,6 +137,20 @@ figure {
     width: 200px;
   }
 }
+.social {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  a {
+    font-size: 1.6em;
+    :hover {
+      transform: scale(1.3);
+    }
+    :active {
+      transform: scale(1);
+    }
+  }
+}
 @media (max-width: 1000px) {
   article {
     grid-template-columns: 1fr;
@@ -108,16 +161,17 @@ figure {
   }
   figure {
     display: grid;
-    // align-content: center;
     justify-content: center;
     height: auto;
     img {
       margin: 125px 0 25px 0;
-      // width: 100%;
     }
   }
   div {
     height: auto;
+  }
+  .social{
+    justify-content: center;
   }
 }
 @media (max-width: 500px) {
