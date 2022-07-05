@@ -8,25 +8,25 @@
     <article>
       <figure>
         <img
-          src="../assets/images/renato-oliveira-web-about.jpg"
+          src="../assets/images/renato-oliveira-web-parati.jpg"
           alt="Renato Oliveira Web"
           title="Renato Oliveira Web"
         />
       </figure>
-      <div>
-        <h2>Olá, meu nome é Renato Oliveira, profissional de front-end e design</h2>
-        <p>Onipresente desde 2009 em áreas de TI, Comunicação e Marketing. Desenvolvendo ou planejando, minha missão é tornar aspirações em algo tátil e simples.</p>
-        <p>Ficou com vontade de me conhecer melhor? Quer falar sobre web? Quer ver meus códigos? Então toque em alguma rede abaixo e envie uma mensagem, pode ser?</p>
-        <!-- <p>Formado em Comunicação para Web pela Universidade Paulista (UNIP), pseudo-músico, pseudo-ciclista, pai da Ana Luiza e da “Cyndi”.</p>
-        <p>Navegue nos links e me conheça melhor...</p>-->
-        <ul class="social">
-          <li v-for="item in social" :key="item.id">
-            <a :href="item.url" target="_blank" :title="item.title">
-              <i :class="item.img" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <p>
+        Olá, meu nome é
+        <strong>Renato Oliveira</strong>, profissional focado em front-end e web-design.
+        Desde 2009 que venho batendo cabeça com web, me desafiando diariamente para entregar meu melhor e ver ideias tomarem forma. Passei por belas empresas e você pode ver detalhes em meu
+        <router-link to="/curriculo">currículo</router-link>.
+      </p>
+      <p>Envie mensagem pelas redes abaixo, pode ser?</p>
+      <ul class="social">
+        <li v-for="item in social" :key="item.id">
+          <a :href="item.url" target="_blank" :title="item.title">
+            <i :class="item.img" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
     </article>
   </section>
 </template>
@@ -63,22 +63,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color-primary: #3e2723;
-
 header {
   display: grid;
   align-content: center;
+  height: 100vh;
+  left: 0;
   padding-left: 19px;
   position: absolute;
-  left: 0;
+  text-align: left;
   top: 0;
   width: 100%;
-  height: 100vh;
-  text-align: left;
   z-index: 3;
   h1,
   h2 {
-    color: $color-primary;
+    color: var(--color-primary);
     font-family: "Poiret One", cursive;
     font-weight: 300;
     margin: 0;
@@ -106,12 +104,16 @@ header {
 }
 article {
   display: grid;
-  grid-template-columns: 250px auto;
-  grid-gap: 75px;
-  // align-content: center;
+  align-content: center;
   min-height: 100vh;
   margin-top: 100vh;
-  text-align: left;
+  img {
+    border: 15px solid var(--color-primary);
+    border-radius: 3px;
+    // border-radius: 100%;
+    // margin-top: -75px;
+    width: 150px;
+  }
   h2 {
     font-size: 1.4em;
     font-weight: 500;
@@ -122,29 +124,19 @@ article {
     margin-top: 25px;
   }
   span {
-    color: var(--color-secondary);
-  }
-}
-figure,
-div {
-  display: grid;
-  height: calc(100vh - 100px);
-  align-content: center;
-}
-figure {
-  img {
-    border-radius: 100%;
-    width: 200px;
+    color: #1B3BA4;
   }
 }
 .social {
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  justify-content: center;
   a {
+    color: #000;
     font-size: 1.6em;
     :hover {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
     :active {
       transform: scale(1);
@@ -156,7 +148,7 @@ figure {
     grid-template-columns: 1fr;
     grid-gap: 0;
     min-height: auto;
-    padding-bottom: 75px;
+    padding-bottom: 100px;
     text-align: center;
   }
   figure {
@@ -170,7 +162,7 @@ figure {
   div {
     height: auto;
   }
-  .social{
+  .social {
     justify-content: center;
   }
 }

@@ -8,14 +8,6 @@
 </template>
 
 <style lang="scss" scoped>
-article {
-  text-align: center;
-  a {
-    color: var(--color-secondary);
-    text-decoration: none;
-  }
-}
-
 .ghost {
   font-size: 1.8em;
   animation: ghost 0.5s ease-in-out alternate infinite;
