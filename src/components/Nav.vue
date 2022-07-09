@@ -7,13 +7,13 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/curriculo">
-          <i class="far fa-file-alt"></i>Currículo
+        <router-link to="/links">
+          <i class="fas fa-link"></i>Links
         </router-link>
       </li>
       <li>
-        <router-link to="/links">
-          <i class="fas fa-link"></i>Links
+        <router-link to="/contato">
+          <i class="fas fa-paper-plane"></i>Contato
         </router-link>
       </li>
     </ul>

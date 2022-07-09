@@ -2,7 +2,7 @@
   <section>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <h2>front-end · web-designer</h2>
+      <h2>front-end · web-design</h2>
     </header>
     <div class="header-bg"></div>
     <article>
@@ -15,11 +15,11 @@
       </figure>
       <p>
         Olá, meu nome é
-        <strong>Renato Oliveira</strong>, profissional focado em front-end e web-design.
-        Desde 2009 que venho batendo cabeça com web, me desafiando diariamente para entregar meu melhor e ver ideias tomarem forma. Passei por belas empresas e você pode ver detalhes em meu
+        <strong>Renato Oliveira</strong>, profissional destinado ao front-end e web-design.
+        Desde 2009 batendo cabeça com web, me desafiando diariamente para ver ideias tomarem forma. Passei por belas empresas, veja em detalhes no meu
         <router-link to="/curriculo">currículo</router-link>.
       </p>
-      <p>Envie mensagem pelas redes abaixo, pode ser?</p>
+      <p>Contato pelas redes abaixo ok?</p>
       <ul class="social">
         <li v-for="item in social" :key="item.id">
           <a :href="item.url" target="_blank" :title="item.title">
@@ -124,16 +124,15 @@ article {
     margin-top: 25px;
   }
   span {
-    color: #1B3BA4;
+    color: #1b3ba4;
   }
 }
 .social {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
   justify-content: center;
   a {
-    color: #000;
     font-size: 1.6em;
     :hover {
       transform: scale(1.2);
