@@ -2,7 +2,6 @@
   <section>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <!-- <h2>front-end · web-design</h2> -->
       <h2>
         <svg height="75" stroke="#000" stroke-width="2" class="animate-title" width="100%">
           <text
@@ -16,38 +15,6 @@
     </header>
   </section>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      social: [
-        {
-          title: "Linkedin",
-          img: "fab fa-linkedin",
-          url: "https://www.linkedin.com/in/renatooliveiraweb"
-        },
-        {
-          title: "Github",
-          img: "fab fa-github-alt",
-          url: "https://github.com/renato7oliveira"
-        },
-        {
-          title: "Instagram",
-          img: "fab fa-instagram",
-          url: "https://www.instagram.com/renatooliveiraweb"
-        },
-        {
-          title: "E-mail",
-          img: "far fa-envelope",
-          url: "mailto:renato.ldeoliveira@gmail.com"
-        }
-      ]
-    };
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 header {
   display: grid;
@@ -65,8 +32,6 @@ header {
     font-size: 3.1vw;
     font-weight: 900;
     margin: 0;
-    // -webkit-text-stroke-width: 1.5px;
-    // -webkit-text-stroke-color: #000;
   }
 }
 
@@ -74,7 +39,6 @@ header {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: dash 3s linear forwards, animateTitle 1s ease-in forwards;
-  // font-size: 80px;
 }
 
 @keyframes dash {
@@ -96,12 +60,15 @@ header {
 }
 @media (max-width: 600px) {
   header {
+    height: calc(100vh - 50px);
     h1 {
-      font-size: 8vw;
-      margin-bottom: -10px;
+      font-size: 8.5vw;
+      letter-spacing: -1px;
+      margin-bottom: -15px;
     }
     h2 {
-      font-size: 4.5vw;
+      font-size: 5vw;
+      letter-spacing: 1px;
     }
   }
 }

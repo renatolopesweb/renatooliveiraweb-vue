@@ -48,7 +48,6 @@ nav {
     gap: 25px;
     height: 100px;
     padding-left: var(--mar-pad-dft);
-    // justify-content: center;
     i {
       width: 100%;
     }
@@ -62,7 +61,6 @@ nav {
         color: rgba($color: #fff, $alpha: 0.9);
         font-size: 1.1em;
         font-weight: 900;
-        // height: 100%;
         padding: var(--mar-pad-dft);
         text-decoration: none;
         text-transform: uppercase;
@@ -98,10 +96,11 @@ nav {
 @media (max-width: 600px) {
   nav {
     ul {
-      height: 75px;
+      height: 50px;
       justify-content: space-around;
       padding-left: 0;
       li{
+        width: 100%;
         a{
           font-size: 0.8rem;
           font-weight: 500;

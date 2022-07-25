@@ -90,7 +90,6 @@ main {
     }
   }
 }
-// 4k
 /* MEDIA QUERIES START */
 @media (max-width: 600px) {
   a {
