@@ -13,21 +13,22 @@
 import Nav from "../src/components/Nav";
 export default {
   components: {
-    Nav,
+    Nav
   }
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 /* VARS */
 :root {
   // COLORS
-  --color-primary: #171413;
-  --color-secondary: #F8B430;
+  --color-primary: #111;
+  --color-secondary: #0062ff;
+  --color-bg: #f8f9fa;
   // PROPERTIES
-  --df-transition: 0.1s;
+  --df-transition: 0.5s;
+  --mar-pad-dft: 50px;
 }
 * {
   box-sizing: border-box;
@@ -39,7 +40,8 @@ export default {
   transition: var(--df-transition);
 }
 html {
-  background: var(--color-secondary);
+  background: var(--color-bg);
+  color: #0d0d0d;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -47,53 +49,63 @@ html,
 body {
   color: var(--color-primary);
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
-  font-weight: 400;
 }
 // TAGS
-h1 {
-  color: var(--color-primary);
-  font-family: "Poiret One", cursive;
-  font-size: 2.8em;
-  font-weight: lighter;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-p {
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 30px;
-}
 a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 1.1rem;
   font-weight: 700;
   text-decoration: underline;
 }
 // TAGS
-// TEMPLATE
-main {
-  max-width: 800px;
-  margin: 20px auto 0 auto;
-  padding: 0 20px;
-  text-align: center;
-  li {
-    margin-bottom: 25px;
-    a {
-      font-size: 1.1em;
-      font-weight: 700;
-      line-height: 30px;
-    }
-  }
+h1,
+h2 {
+  text-transform: uppercase;
 }
-@media (max-width: 500px) {
+// TEMPLATE
+section {
+  padding-bottom: 100px;
+}
+main {
+  padding: var(--mar-pad-dft);
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 35px;
+  }
   h1 {
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 25px 0;
+  }
+  li {
+    margin-bottom: 15px;
+    i {
+      margin-right: 15px;
+    }
   }
 }
 // 4k
 /* MEDIA QUERIES START */
-@media (min-width: 1537px) {
-  p {
-    font-size: 1vw;
+@media (max-width: 600px) {
+  a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  main {
+    padding: 20px;
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 27px;
+    }
   }
 }
 /* MEDIA QUERIES END  */

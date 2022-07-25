@@ -26,9 +26,9 @@ const routes = [
   },
 
   {
-    path: '/curriculo',
-    meta: { title: pageTitle + 'CURRÍCULO' },
-    component: () => import('../views/Vitae.vue')
+    path: '/sobre',
+    meta: { title: pageTitle + 'SOBRE' },
+    component: () => import('../views/About.vue')
   },
 
   {

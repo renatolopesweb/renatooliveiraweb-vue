@@ -2,32 +2,18 @@
   <section>
     <header>
       <h1>RENATO OLIVEIRA</h1>
-      <h2>front-end · web-design</h2>
+      <!-- <h2>front-end · web-design</h2> -->
+      <h2>
+        <svg height="75" stroke="#000" stroke-width="2" class="animate-title" width="100%">
+          <text
+            x="50%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            y="25px"
+          >front-end · web-design</text>
+        </svg>
+      </h2>
     </header>
-    <div class="header-bg"></div>
-    <article>
-      <figure>
-        <img
-          src="../assets/images/renato-oliveira-web-parati.jpg"
-          alt="Renato Oliveira Web"
-          title="Renato Oliveira Web"
-        />
-      </figure>
-      <p>
-        Olá, meu nome é
-        <strong>Renato Oliveira</strong>, profissional destinado ao front-end e web-design.
-        Desde 2009 batendo cabeça com web, me desafiando diariamente para ver ideias tomarem forma. Passei por belas empresas, veja em detalhes no meu
-        <router-link to="/curriculo">currículo</router-link>.
-      </p>
-      <p>Contato pelas redes abaixo ok?</p>
-      <ul class="social">
-        <li v-for="item in social" :key="item.id">
-          <a :href="item.url" target="_blank" :title="item.title">
-            <i :class="item.img" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </article>
   </section>
 </template>
 
@@ -66,118 +52,56 @@ export default {
 header {
   display: grid;
   align-content: center;
-  height: 100vh;
-  left: 0;
-  padding-left: 19px;
-  position: absolute;
-  text-align: left;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-  h1,
-  h2 {
-    color: var(--color-primary);
-    font-family: "Poiret One", cursive;
-    font-weight: 300;
+  height: calc(100vh - 200px);
+  text-align: center;
+  h1 {
+    font-size: 5.2vw;
+    font-weight: 900;
+    letter-spacing: -4px;
     margin: 0;
   }
-  h1 {
-    font-size: 5vw;
-  }
   h2 {
-    font-size: 3vw;
-    text-transform: none;
+    color: var(--color-bg);
+    font-size: 3.1vw;
+    font-weight: 900;
+    margin: 0;
+    // -webkit-text-stroke-width: 1.5px;
+    // -webkit-text-stroke-color: #000;
   }
 }
-.header-bg {
-  background-image: url("../assets/images/header-bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 2;
+
+.animate-title {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 3s linear forwards, animateTitle 1s ease-in forwards;
+  // font-size: 80px;
 }
-article {
-  display: grid;
-  align-content: center;
-  min-height: 100vh;
-  margin-top: 100vh;
-  img {
-    border: 15px solid var(--color-primary);
-    border-radius: 3px;
-    // border-radius: 100%;
-    // margin-top: -75px;
-    width: 150px;
-  }
-  h2 {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-  p {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-top: 25px;
-  }
-  span {
-    color: #1b3ba4;
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
-.social {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
-  justify-content: center;
-  a {
-    font-size: 1.6em;
-    :hover {
-      transform: scale(1.2);
-    }
-    :active {
-      transform: scale(1);
-    }
+
+@keyframes animateTitle {
+  0%,
+  90% {
+    fill: var(--color-bg);
+    fill-opacity: 0;
+  }
+  100% {
+    fill: var(--color-bg);
+    fill-opacity: 1;
   }
 }
-@media (max-width: 1000px) {
-  article {
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-    min-height: auto;
-    padding-bottom: 100px;
-    text-align: center;
-  }
-  figure {
-    display: grid;
-    justify-content: center;
-    height: auto;
-    img {
-      margin: 125px 0 25px 0;
-    }
-  }
-  div {
-    height: auto;
-  }
-  .social {
-    justify-content: center;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header {
-    background: rgba($color: #fff, $alpha: 0.7);
-    h1,
-    h2 {
-      font-weight: bold;
-    }
     h1 {
-      font-size: 9vw;
+      font-size: 8vw;
+      margin-bottom: -10px;
     }
     h2 {
-      font-size: 5vw;
-      font-weight: bold;
+      font-size: 4.5vw;
     }
   }
 }

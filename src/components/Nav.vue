@@ -1,20 +1,14 @@
 <template>
   <nav>
     <ul>
-      <li>
-        <router-link to="/">
-          <i class="fas fa-house-user"></i>Home
-        </router-link>
+      <li @click="toTop()">
+        <router-link to="/">Home</router-link>
       </li>
-      <li>
-        <router-link to="/links">
-          <i class="fas fa-link"></i>Links
-        </router-link>
+      <li @click="toTop()">
+        <router-link to="/sobre">Sobre</router-link>
       </li>
-      <li>
-        <router-link to="/contato">
-          <i class="fas fa-paper-plane"></i>Contato
-        </router-link>
+      <li @click="toTop()">
+        <router-link to="/links">Links</router-link>
       </li>
     </ul>
   </nav>
@@ -32,49 +26,86 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.link_active::after {
+  background: var(--color-secondary);
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 3s;
+  width: 100%;
+}
+
 nav {
   position: fixed;
   bottom: 0;
-  background: rgba($color: #000000, $alpha: 1);
+  background: #111;
   width: 100%;
   ul {
     display: flex;
     align-items: center;
     gap: 25px;
     height: 100px;
-    justify-content: center;
+    padding-left: var(--mar-pad-dft);
+    // justify-content: center;
     i {
       width: 100%;
     }
     li {
+      display: grid;
+      align-content: center;
+      height: 100%;
+      position: relative;
       text-align: center;
       a {
-        color: var(--color-secondary);
-        font-size: 1em;
-        font-weight: normal;
+        color: rgba($color: #fff, $alpha: 0.9);
+        font-size: 1.1em;
+        font-weight: 900;
+        // height: 100%;
+        padding: var(--mar-pad-dft);
         text-decoration: none;
         text-transform: uppercase;
       }
       &:hover {
-        transform: scale(1.2);
-      }
-      &:active {
-        color: var(--color-secondary);
-        transform: scale(1);
+        ::after {
+          content: "";
+          height: 7px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: var(--color-secondary);
+          animation-name: navUnderline;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+        }
       }
     }
   }
 }
-@media (max-width: 500px) {
+@keyframes navUnderline {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
   nav {
     ul {
       height: 75px;
-      li {
-        a {
-          font-size: 0.9em;
-        }
-        &:hover {
-          transform: scale(1);
+      justify-content: space-around;
+      padding-left: 0;
+      li{
+        a{
+          font-size: 0.8rem;
+          font-weight: 500;
+          padding: 0;
         }
       }
     }

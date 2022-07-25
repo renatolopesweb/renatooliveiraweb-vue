@@ -8,6 +8,12 @@
 </template>
 
 <style lang="scss" scoped>
+article{
+  display: grid;
+  height: calc(100vh - 200px);
+  align-content: center;
+  text-align: center;
+}
 .ghost {
   font-size: 1.8em;
   animation: ghost 0.5s ease-in-out alternate infinite;

@@ -1,12 +1,14 @@
 <template>
   <section>
     <h1>Links</h1>
-    <article v-for="(item, article) in projects.front" :key="article">
+    <div>
+      <article v-for="(item, article) in projects.front" :key="article">
       <h2>
         <a :href="item.url" target="_blank">{{ item.title }}</a>
       </h2>
       <span>{{ item.stack }}</span>
     </article>
+    </div>
   </section>
 </template>
 
@@ -17,23 +19,23 @@ export default {
     return {
       projects: {
         front: [
-          // {
-          //   title: "Haus Ink Tattoo",
-          //   stack: "Next.js / Bootstrap",
-          //   url:
-          //     "https://haus.ink"
-          // },
-          // {
-          //   title: "Jade Arts",
-          //   stack: "Wordpress / Tailwind",
-          //   url:
-          //     "https://next-amazona-phi.vercel.app"
-          // },
           {
-            title: "Front-end Test",
-            stack: "HTML / CSS-Grid",
+            title: "Teste Responsivo",
+            stack: "Javascript",
             url:
-              "https://renato7oliveira.github.io/experimentos/Grid_CSS_Template_Canyon/src/"
+              "https://renato7oliveira.github.io/teste-responsivo/src/"
+          },
+          {
+            title: "Landpage Genérica",
+            stack: "Sass / CSS-Grid",
+            url:
+              "https://renato7oliveira.github.io/landpage-generica/src/"
+          },
+          {
+            title: "Street Fighter Tribute",
+            stack: "Edge Animate (old school)",
+            url:
+              "https://renato7oliveira.github.io/street-fighter-audio-project/"
           },
         ]
       }
@@ -43,21 +45,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
-section{
-  padding-bottom: 75px;
+div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
 }
-article {
-  margin-bottom: 25px;
+article{
+  h2{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: none;
+  }
+  span{
+    color: #000;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
 }
-h2 {
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 30px;
-  text-transform: unset;
-}
-span {
-  // color: #78657E;
-  font-size: 0.9em;
-  font-weight: 500;
+@media(max-width: 600px){
+  div{
+    gap: 25px 50px;
+  }
 }
 </style>
