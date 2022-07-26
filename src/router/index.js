@@ -26,12 +26,6 @@ const routes = [
   },
 
   {
-    path: '/sobre',
-    meta: { title: pageTitle + 'SOBRE' },
-    component: () => import('../views/About.vue')
-  },
-
-  {
     path: '/*',
     meta: { title: pageTitle + 'NADA ENCONTRADO...' },
     component: () => import('../views/NotFound.vue')

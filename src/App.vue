@@ -23,7 +23,7 @@ export default {
 /* VARS */
 :root {
   // COLORS
-  --color-primary: #111;
+  --color-primary: #0d0d0d;
   --color-secondary: #0062ff;
   --color-bg: #f8f9fa;
   // PROPERTIES
@@ -41,7 +41,7 @@ export default {
 }
 html {
   background: var(--color-bg);
-  color: #0d0d0d;
+  color: var(--color-primary);
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -63,9 +63,6 @@ h2 {
   text-transform: uppercase;
 }
 // TEMPLATE
-section {
-  padding-bottom: 100px;
-}
 main {
   padding: var(--mar-pad-dft);
   p {
@@ -76,7 +73,7 @@ main {
   h1 {
     font-size: 3.5rem;
     font-weight: 900;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   h2 {
     font-size: 1.5rem;
@@ -91,7 +88,10 @@ main {
   }
 }
 /* MEDIA QUERIES START */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  section {
+    padding-bottom: 50px;
+  }
   a {
     font-size: 1rem;
     font-weight: 500;

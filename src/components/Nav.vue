@@ -5,10 +5,10 @@
         <router-link to="/">Home</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/sobre">Sobre</router-link>
+        <router-link to="/links">Links</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/links">Links</router-link>
+        <router-link to="/contato">Contato</router-link>
       </li>
     </ul>
   </nav>
@@ -40,8 +40,12 @@ export default {
 nav {
   position: fixed;
   bottom: 0;
-  background: #111;
+  background-color: var(--color-primary);
+  // opacity: 0.3;
   width: 100%;
+  &:hover{
+    opacity: 1;
+  }
   ul {
     display: flex;
     align-items: center;
@@ -93,7 +97,7 @@ nav {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   nav {
     ul {
       height: 50px;
