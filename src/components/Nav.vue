@@ -2,13 +2,13 @@
   <nav>
     <ul>
       <li @click="toTop()">
-        <router-link to="/">Home</router-link>
+        <router-link to="/"><i class="fas fa-house-user"></i> Home</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/links">Links</router-link>
+        <router-link to="/links"><i class="fas fa-link"></i>Links</router-link>
       </li>
       <li @click="toTop()">
-        <router-link to="/contato">Contato</router-link>
+        <router-link to="/contato"><i class="fas fa-share-alt"></i>Contato</router-link>
       </li>
     </ul>
   </nav>
@@ -41,7 +41,6 @@ nav {
   position: fixed;
   bottom: 0;
   background-color: var(--color-primary);
-  // opacity: 0.3;
   width: 100%;
   &:hover{
     opacity: 1;
@@ -100,7 +99,7 @@ nav {
 @media (max-width: 700px) {
   nav {
     ul {
-      height: 50px;
+      height: 60px;
       justify-content: space-around;
       padding-left: 0;
       li{

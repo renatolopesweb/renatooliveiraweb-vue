@@ -90,7 +90,7 @@ main {
 /* MEDIA QUERIES START */
 @media (max-width: 700px) {
   section {
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
   a {
     font-size: 1rem;
