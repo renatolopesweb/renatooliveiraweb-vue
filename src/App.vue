@@ -73,7 +73,7 @@ main {
   h1 {
     font-size: 3.5rem;
     font-weight: 900;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   h2 {
     font-size: 1.5rem;
@@ -90,7 +90,7 @@ main {
 /* MEDIA QUERIES START */
 @media (max-width: 700px) {
   section {
-    padding-bottom: 55px;
+    padding-bottom: 65px;
   }
   a {
     font-size: 1rem;
@@ -100,10 +100,11 @@ main {
     padding: 20px;
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 15px;
     }
     p {
       font-size: 1rem;
-      line-height: 27px;
+      line-height: 28px;
     }
   }
 }

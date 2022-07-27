@@ -99,7 +99,7 @@ nav {
 @media (max-width: 700px) {
   nav {
     ul {
-      height: 60px;
+      height: 75px;
       justify-content: space-around;
       padding-left: 0;
       li{

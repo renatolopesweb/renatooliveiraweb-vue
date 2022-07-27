@@ -25,30 +25,29 @@
         <p>
           Olá, meu nome é
           <strong>RENATO OLIVEIRA</strong>, profissional de front-end e web-design. Obstinado desde 2009 em
-          materializar ideias e torna-las responsivas com meu conhecimento e experiência. Onipresente em Comunicação, Marketing e
-          TI. Mais detalhes em
+          materializar ideias com meu conhecimento e experiência. Onipresente em Comunicação, Marketing e
+          TI. Mais detalhes em meu 
           <a
             href="https://drive.google.com/file/d/1Xc1jfuPX1rzA3627AHtKe_HWVZaeaYr8/view?usp=sharing"
             target="_blank"
           >currículo (PDF)</a>.
         </p>
-        <h2>Habilidades</h2>
-        <p>
-          <span>Code:</span> JS, Sass > CSS, HTML5
-        </p>
-        <p>
-          <span>Libs:</span> Bootstrap, Material Design
-        </p>
-        <p>
-          <span>Design:</span> XD, Photoshop
-        </p>
-        <p>
-          <span>Extra:</span> Wordpress, Github, NPM, E-mail mkt
-        </p>
+        <h2>Contato</h2>
+        <Social />
       </article>
     </div>
   </section>
 </template>
+
+<script>
+import Social from "../components/Social";
+export default {
+  components: {
+    Social
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 header {
   display: grid;
@@ -120,9 +119,10 @@ figure {
   .about {
     height: auto;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
   }
   figure img {
+    border-radius: 30px;
     filter: grayscale(0);
     width: 100%;
   }
