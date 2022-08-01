@@ -96,7 +96,7 @@ nav {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   nav {
     ul {
       height: 75px;

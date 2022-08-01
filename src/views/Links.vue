@@ -21,7 +21,7 @@ export default {
         front: [
           {
             title: "Teste Responsivo",
-            stack: "Javascript",
+            stack: "Javascript / Materialize",
             url:
               "https://renato7oliveira.github.io/teste-responsivo/src/"
           },
@@ -63,7 +63,7 @@ article{
     font-style: italic;
   }
 }
-@media(max-width: 600px){
+@media(max-width: 900px){
   div{
     gap: 25px 50px;
   }

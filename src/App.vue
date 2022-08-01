@@ -51,8 +51,9 @@ body {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
 // TAGS
-a {
+a , summary{
   color: var(--color-secondary);
+  cursor: pointer;
   font-size: 1.1rem;
   font-weight: 700;
   text-decoration: underline;
@@ -88,11 +89,11 @@ main {
   }
 }
 /* MEDIA QUERIES START */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   section {
     padding-bottom: 65px;
   }
-  a {
+  a, summary {
     font-size: 1rem;
     font-weight: 500;
   }

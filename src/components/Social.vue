@@ -5,6 +5,12 @@
         <i :class="item.img" aria-hidden="true"></i>{{ item.title }}
       </a>
     </li>
+    <li>
+      <details>
+        <summary><i class="far fa-envelope" aria-hidden="true"></i>E-mail
+        </summary><p>renato.ldeoliveira@gmail.com</p>
+      </details>
+    </li>
   </ul>
 </template>
 
@@ -27,11 +33,6 @@ export default {
           title: "Instagram",
           img: "fab fa-instagram",
           url: "https://www.instagram.com/renatooliveiraweb"
-        },
-        {
-          title: "E-mail",
-          img: "far fa-envelope",
-          url: "mailto:renato.ldeoliveira@gmail.com"
         }
       ]
     };

@@ -68,7 +68,7 @@ header {
     margin: 0;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   header {
     display: none;
   }
@@ -100,10 +100,6 @@ header {
   align-items: center;
   height: 100vh;
   gap: 50px;
-  span {
-    font-weight: 900;
-    text-transform: uppercase;
-  }
 }
 figure {
   img {
@@ -115,7 +111,7 @@ figure {
     }
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .about {
     height: auto;
     flex-direction: column;
