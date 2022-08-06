@@ -20,6 +20,12 @@ export default {
       projects: {
         front: [
           {
+            title: "Speed Locações",
+            stack: "Wix! / Freelance",
+            url:
+              "https://www.speedlocacoes.com.br"
+          },
+          {
             title: "Teste Responsivo",
             stack: "Javascript / Materialize",
             url:
