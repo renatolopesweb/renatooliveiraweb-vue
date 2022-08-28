@@ -6,3 +6,6 @@
 
 ### `Frontend`
 // Vue.js -> https://vuejs.org
+
+### `Images Credit`
+// Quadrado psd criado por juanitobanano - br.freepik.com (bg da home)

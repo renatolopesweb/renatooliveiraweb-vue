@@ -54,8 +54,8 @@ body {
 a , summary{
   color: var(--color-secondary);
   cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: underline;
 }
 // TAGS
@@ -64,8 +64,10 @@ h2 {
   text-transform: uppercase;
 }
 // TEMPLATE
-main {
+section{
   padding: var(--mar-pad-dft);
+}
+main {
   p {
     font-size: 1.2rem;
     font-weight: 500;
@@ -82,23 +84,63 @@ main {
     margin: 25px 0;
   }
   li {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     i {
       margin-right: 15px;
     }
   }
 }
+
+// BUTTON
+
+.btn {
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  border: 1px solid var(--color-secondary);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: --df-transition;
+  i {
+    font-size: 0.9rem!important;
+  }
+  &:hover {
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+  }
+}
+// BUTTON
+
+// CLASS
+
+.card{
+  background: #fff;
+  border: 1px solid rgba($color: #ccc, $alpha: 0.6);
+  img{
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    margin: 20px;
+  }
+}
+
 /* MEDIA QUERIES START */
 @media (max-width: 900px) {
-  section {
-    padding-bottom: 65px;
-  }
   a, summary {
     font-size: 1rem;
-    font-weight: 500;
+  }
+  details p{
+    font-size: 0.9rem!important;
   }
   main {
-    padding: 20px;
+    // padding: 20px;
     h1 {
       font-size: 2.5rem;
       margin-bottom: 15px;
@@ -107,6 +149,9 @@ main {
       font-size: 1rem;
       line-height: 28px;
     }
+  }
+  section{
+    padding: 20px;
   }
 }
 /* MEDIA QUERIES END  */

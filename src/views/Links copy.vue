@@ -19,19 +19,19 @@ export default {
     return {
       social: [
         {
-          title: "Speed Locações (Wix / Freelance)",
+          title: "Speed Locações (Wix! / Freelance)",
           url: "https://www.speedlocacoes.com.br"
         },
         {
-          title: "Landpage Verão (SVG animado)",
+          title: "Landpage em SVG (Greensocks / Javascript)",
           url: "https://renato7oliveira.github.io/svg-animate/src"
         },
         {
-          title: "Landpage Genérica (HTML / CSS-Grid + Sass)",
+          title: "Landpage Genérica (CSS-Grid + Sass)",
           url: "https://renato7oliveira.github.io/landpage-generica/src/"
         },
         {
-          title: "Street Fighter (Adobe Edge)",
+          title: "Street Fighter Tribute (Edge Animate)",
           url: "https://renato7oliveira.github.io/street-fighter-audio-project"
         }
       ]
